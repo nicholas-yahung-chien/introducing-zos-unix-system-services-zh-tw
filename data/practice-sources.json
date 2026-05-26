@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "staticPracticeQuestions": 19,
+    "staticPracticeSources": 8,
+    "badgeQuizQuestionsPerAttempt": 20,
+    "badgeQuizCapturedUniqueQuestions": 0,
+    "labPages": 6,
+    "badgeQuizScopePracticeQuestions": 0,
+    "badgeQuizPublicMode": "not reproduced; formal quiz remains in IBM Learn"
+  },
+  "sources": [
+    {
+      "id": "checkpoint-1",
+      "title": "Checkpoint #1",
+      "titleZh": "檢核點 1",
+      "type": "hvp",
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193094",
+      "sectionSlug": "course-overview",
+      "sectionTitle": "z/OS UNIX 課程概觀",
+      "status": "captured",
+      "questionCount": 4,
+      "intendedUse": "已從 IBM Learn H5P checkpoint 擷取，轉為非計分靜態互動練習；正式課程完成狀態仍回 IBM Learn。"
+    },
+    {
+      "id": "checkpoint-2",
+      "title": "Checkpoint #2",
+      "titleZh": "檢核點 2",
+      "type": "hvp",
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193099",
+      "sectionSlug": "introduction-to-zos-unix",
+      "sectionTitle": "z/OS UNIX 入門",
+      "status": "captured",
+      "questionCount": 1,
+      "intendedUse": "已從 IBM Learn H5P checkpoint 擷取，轉為非計分靜態互動練習；正式課程完成狀態仍回 IBM Learn。"
+    },
+    {
+      "id": "checkpoint-3",
+      "title": "Checkpoint #3",
+      "titleZh": "檢核點 3",
+      "type": "hvp",
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193112",
+      "sectionSlug": "hierarchical-file-system",
+      "sectionTitle": "階層式檔案系統",
+      "status": "captured",
+      "questionCount": 0,
+      "intendedUse": "已從 IBM Learn H5P checkpoint 擷取，轉為非計分靜態互動練習；正式課程完成狀態仍回 IBM Learn。"
+    },
+    {
+      "id": "checkpoint-4",
+      "title": "Checkpoint #4",
+      "titleZh": "檢核點 4",
+      "type": "hvp",
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193118",
+      "sectionSlug": "shell-and-utilities",
+      "sectionTitle": "z/OS UNIX shell 與 utilities",
+      "status": "captured",
+      "questionCount": 3,
+      "intendedUse": "已從 IBM Learn H5P checkpoint 擷取，轉為非計分靜態互動練習；正式課程完成狀態仍回 IBM Learn。"
+    },
+    {
+      "id": "checkpoint-5",
+      "title": "Checkpoint #5",
+      "titleZh": "檢核點 5",
+      "type": "hvp",
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193124",
+      "sectionSlug": "shell-commands",
+      "sectionTitle": "z/OS UNIX shell commands 指令",
+      "status": "captured",
+      "questionCount": 3,
+      "intendedUse": "已從 IBM Learn H5P checkpoint 擷取，轉為非計分靜態互動練習；正式課程完成狀態仍回 IBM Learn。"
+    },
+    {
+      "id": "checkpoint-6",
+      "title": "Checkpoint #6",
+      "titleZh": "檢核點 6",
+      "type": "hvp",
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193132",
+      "sectionSlug": "working-with-the-shell",
+      "sectionTitle": "使用 shell 工作",
+      "status": "captured",
+      "questionCount": 2,
+      "intendedUse": "已從 IBM Learn H5P checkpoint 擷取，轉為非計分靜態互動練習；正式課程完成狀態仍回 IBM Learn。"
+    },
+    {
+      "id": "checkpoint-7",
+      "title": "Checkpoint #7",
+      "titleZh": "檢核點 7",
+      "type": "hvp",
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193138",
+      "sectionSlug": "functions-in-zos-unix",
+      "sectionTitle": "z/OS UNIX functions 功能",
+      "status": "captured",
+      "questionCount": 4,
+      "intendedUse": "已從 IBM Learn H5P checkpoint 擷取，轉為非計分靜態互動練習；正式課程完成狀態仍回 IBM Learn。"
+    },
+    {
+      "id": "checkpoint-8",
+      "title": "Checkpoint #8",
+      "titleZh": "檢核點 8",
+      "type": "hvp",
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193143",
+      "sectionSlug": "unix-environment",
+      "sectionTitle": "使用 z/OS UNIX 環境",
+      "status": "captured",
+      "questionCount": 2,
+      "intendedUse": "已從 IBM Learn H5P checkpoint 擷取，轉為非計分靜態互動練習；正式課程完成狀態仍回 IBM Learn。"
+    },
+    {
+      "id": "badge-quiz",
+      "title": "Take the quiz",
+      "titleZh": "正式測驗",
+      "type": "moodle-quiz",
+      "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+      "sectionSlug": "badge-information",
+      "sectionTitle": "正式測驗資訊",
+      "status": "source-only",
+      "questionCount": 20,
+      "intendedUse": "正式 quiz 每次 20 題，需要 16 題正確通過；本站不公開重製 IBM 正式題庫原文，正式成績、attempt 與 badge eligibility 仍回 IBM Learn。"
+    }
+  ]
+}

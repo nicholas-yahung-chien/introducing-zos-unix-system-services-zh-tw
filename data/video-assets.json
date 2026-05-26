@@ -1,0 +1,352 @@
+[
+  {
+    "slug": "introduction-to-unix-standards",
+    "title": "Introduction to UNIX Standards",
+    "titleZh": "UNIX 標準入門",
+    "section": "z/OS UNIX Course Overview",
+    "sectionTitleZh": "z/OS UNIX 課程概觀",
+    "entryId": "1_a3edezg7",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193092",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "unix-implementation-on-zos",
+    "title": "UNIX Implementation on z/OS",
+    "titleZh": "z/OS 上的 UNIX 實作",
+    "section": "z/OS UNIX Course Overview",
+    "sectionTitleZh": "z/OS UNIX 課程概觀",
+    "entryId": "1_kt2xnn6y",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193091",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "zos-unit-component",
+    "title": "z/OS Unit Component",
+    "titleZh": "z/OS UNIX 元件",
+    "section": "z/OS UNIX Course Overview",
+    "sectionTitleZh": "z/OS UNIX 課程概觀",
+    "entryId": "1_hipb0mvo",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193093",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "components-of-a-unix-system",
+    "title": "Components of a UNIX System",
+    "titleZh": "UNIX 系統元件",
+    "section": "Introduction to z/OS UNIX",
+    "sectionTitleZh": "z/OS UNIX 入門",
+    "entryId": "1_gb9hrqdy",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193096",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "fundamental-functions",
+    "title": "Fundamental Functions",
+    "titleZh": "基本功能",
+    "section": "Introduction to z/OS UNIX",
+    "sectionTitleZh": "z/OS UNIX 入門",
+    "entryId": "1_aomv0tq1",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193097",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "more-fundamental-functions",
+    "title": "More Fundamental Functions",
+    "titleZh": "更多基本功能",
+    "section": "Introduction to z/OS UNIX",
+    "sectionTitleZh": "z/OS UNIX 入門",
+    "entryId": "1_8tq0t0g0",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193098",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "hierarchical-system-introduction",
+    "title": "Hierarchical System Introduction",
+    "titleZh": "階層式系統入門",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_lk9agppe",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193101",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "types",
+    "title": "Types",
+    "titleZh": "類型",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_jwoqqa5m",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193102",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "hfs-and-zfs-data-set-fundamentals",
+    "title": "HFS and zFS data set fundamentals",
+    "titleZh": "HFS 與 zFS data set 基礎",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_34nut98r",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193103",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "hfs-and-zfs-file-systems",
+    "title": "HFS and zFS file systems",
+    "titleZh": "HFS 與 zFS 檔案系統",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_griczpau",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193104",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "ishell-and-directory-list-utility",
+    "title": "ISHELL and Directory List Utility",
+    "titleZh": "ISHELL 與 Directory List Utility",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_f3el88sl",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193105",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "directory-list-utility-panels",
+    "title": "Directory List Utility panels",
+    "titleZh": "Directory List Utility panels",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_iugkoedg",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193106",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "ispf-and-zos-unix",
+    "title": "ISPF and zOS UNIX",
+    "titleZh": "ISPF 與 z/OS UNIX",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_te3t0o79",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193107",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "system-structure",
+    "title": "system structure",
+    "titleZh": "系統結構",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_w37ha2pb",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193108",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "backup-and-recovery",
+    "title": "Backup and recovery",
+    "titleZh": "備份與復原",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_iov0qts1",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193109",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "network-file-system-and-file-security",
+    "title": "Network file system and file security",
+    "titleZh": "Network file system 與 file security",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_pnx8ipij",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193110",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "lab-familiarization",
+    "title": "Lab familiarization",
+    "titleZh": "Lab 環境熟悉",
+    "section": "Hierarchical File System",
+    "sectionTitleZh": "階層式檔案系統",
+    "entryId": "1_599iixml",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=321355",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "the-zos-shell",
+    "title": "The zOS shell",
+    "titleZh": "z/OS shell",
+    "section": "z/OS UNIX Shell and Utilities",
+    "sectionTitleZh": "z/OS UNIX shell 與 utilities",
+    "entryId": "1_iv4h5dcz",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193114",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "tso-and-the-zos-unix-shell",
+    "title": "TSO and the zOS UNIX shell",
+    "titleZh": "TSO 與 z/OS UNIX shell",
+    "section": "z/OS UNIX Shell and Utilities",
+    "sectionTitleZh": "z/OS UNIX shell 與 utilities",
+    "entryId": "1_ccnbuqha",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193115",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "commands-and-jobs",
+    "title": "Commands and jobs",
+    "titleZh": "Commands 與 jobs",
+    "section": "z/OS UNIX Shell and Utilities",
+    "sectionTitleZh": "z/OS UNIX shell 與 utilities",
+    "entryId": "1_q81uk4xi",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193116",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "getting-help-and-working-with-code-pages",
+    "title": "Getting help and working with code pages",
+    "titleZh": "取得說明與使用 code pages",
+    "section": "z/OS UNIX Shell Commands",
+    "sectionTitleZh": "z/OS UNIX shell commands 指令",
+    "entryId": "1_bf9i3fo8",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193120",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "system-shell-commands",
+    "title": "system shell commands",
+    "titleZh": "System shell commands",
+    "section": "z/OS UNIX Shell Commands",
+    "sectionTitleZh": "z/OS UNIX shell commands 指令",
+    "entryId": "1_bvrm90tq",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193121",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "more-shell-commands",
+    "title": "More shell commands",
+    "titleZh": "更多 shell commands",
+    "section": "z/OS UNIX Shell Commands",
+    "sectionTitleZh": "z/OS UNIX shell commands 指令",
+    "entryId": "1_wp4d7ohx",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193122",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "working-with-the-shell",
+    "title": "Working with the shell",
+    "titleZh": "使用 shell 工作",
+    "section": "Working with the Shell",
+    "sectionTitleZh": "使用 shell 工作",
+    "entryId": "1_udrgkkbw",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193126",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "shell-scripts-and-rexx",
+    "title": "Shell scripts and REXX",
+    "titleZh": "Shell scripts 與 REXX",
+    "section": "Working with the Shell",
+    "sectionTitleZh": "使用 shell 工作",
+    "entryId": "1_ohj8iew1",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193127",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "bpxbatch",
+    "title": "BPXBATCH",
+    "titleZh": "BPXBATCH",
+    "section": "Working with the Shell",
+    "sectionTitleZh": "使用 shell 工作",
+    "entryId": "1_3ggir589",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193128",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "ascii-and-ebcdic-considerations",
+    "title": "ASCII and EBCDIC considerations",
+    "titleZh": "ASCII 與 EBCDIC 考量",
+    "section": "Working with the Shell",
+    "sectionTitleZh": "使用 shell 工作",
+    "entryId": "1_xhceuc8r",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193129",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "translation-considerations",
+    "title": "Translation considerations",
+    "titleZh": "轉換考量",
+    "section": "Working with the Shell",
+    "sectionTitleZh": "使用 shell 工作",
+    "entryId": "1_cg8lhe0n",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193130",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "functions-and-processes",
+    "title": "Functions and processes",
+    "titleZh": "Functions 與 processes",
+    "section": "Functions in z/OS UNIX",
+    "sectionTitleZh": "z/OS UNIX functions 功能",
+    "entryId": "1_156jj3h4",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193134",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "daemons-and-superusers",
+    "title": "Daemons and superusers",
+    "titleZh": "Daemons 與 superusers",
+    "section": "Functions in z/OS UNIX",
+    "sectionTitleZh": "z/OS UNIX functions 功能",
+    "entryId": "1_yttr8bkz",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193135",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "child-processes",
+    "title": "Child processes",
+    "titleZh": "Child processes",
+    "section": "Functions in z/OS UNIX",
+    "sectionTitleZh": "z/OS UNIX functions 功能",
+    "entryId": "1_9qo8xsow",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193136",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "communications-and-threads",
+    "title": "Communications and threads",
+    "titleZh": "Communications 與 threads",
+    "section": "Functions in z/OS UNIX",
+    "sectionTitleZh": "z/OS UNIX functions 功能",
+    "entryId": "1_ktj4ke4p",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193137",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "application-programming-in-zos-unix",
+    "title": "Application programming in zOS UNIX",
+    "titleZh": "z/OS UNIX 應用程式設計",
+    "section": "Working with the z/OS UNIX Environment",
+    "sectionTitleZh": "使用 z/OS UNIX 環境",
+    "entryId": "1_8ihdkrd8",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193139",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "printing-and-access-control-lists",
+    "title": "Printing and access control lists",
+    "titleZh": "Printing 與 access control lists",
+    "section": "Working with the z/OS UNIX Environment",
+    "sectionTitleZh": "使用 z/OS UNIX 環境",
+    "entryId": "1_fxdv609j",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193140",
+    "mediaStatus": "source-only"
+  },
+  {
+    "slug": "additional-considerations",
+    "title": "Additional considerations",
+    "titleZh": "其他考量",
+    "section": "Working with the z/OS UNIX Environment",
+    "sectionTitleZh": "使用 z/OS UNIX 環境",
+    "entryId": "1_jxyrdq28",
+    "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193141",
+    "mediaStatus": "source-only"
+  }
+]

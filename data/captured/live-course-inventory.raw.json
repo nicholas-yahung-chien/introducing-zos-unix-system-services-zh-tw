@@ -1,0 +1,1585 @@
+{
+  "capturedAt": "2026-05-26T16:13:19.104Z",
+  "courseId": "9890",
+  "courseUrl": "https://learn.ibm.com/course/view.php?id=9890",
+  "title": "Course: Introducing z/OS Unix System Services",
+  "h1": "Confirm revalidation",
+  "sections": [
+    {
+      "order": 2,
+      "title": "z/OS UNIX Course Overview",
+      "activities": [
+        {
+          "section": "z/OS UNIX Course Overview",
+          "order": 1,
+          "type": "page",
+          "id": "193089",
+          "title": "Course overview",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193089"
+        },
+        {
+          "section": "z/OS UNIX Course Overview",
+          "order": 2,
+          "type": "forum",
+          "id": "193090",
+          "title": "Introduce Yourself!",
+          "href": "https://learn.ibm.com/mod/forum/view.php?id=193090"
+        },
+        {
+          "section": "z/OS UNIX Course Overview",
+          "order": 3,
+          "type": "video",
+          "id": "193092",
+          "title": "Introduction to UNIX Standards",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193092"
+        },
+        {
+          "section": "z/OS UNIX Course Overview",
+          "order": 4,
+          "type": "video",
+          "id": "193091",
+          "title": "UNIX Implementation on z/OS",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193091"
+        },
+        {
+          "section": "z/OS UNIX Course Overview",
+          "order": 5,
+          "type": "video",
+          "id": "193093",
+          "title": "z/OS Unit Component",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193093"
+        },
+        {
+          "section": "z/OS UNIX Course Overview",
+          "order": 6,
+          "type": "hvp",
+          "id": "193094",
+          "title": "Checkpoint #1",
+          "href": "https://learn.ibm.com/mod/hvp/view.php?id=193094"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Introduction to z/OS UNIX",
+      "activities": [
+        {
+          "section": "Introduction to z/OS UNIX",
+          "order": 1,
+          "type": "page",
+          "id": "193095",
+          "title": "Highlights - Introduction to z/OS UNIX",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193095"
+        },
+        {
+          "section": "Introduction to z/OS UNIX",
+          "order": 2,
+          "type": "video",
+          "id": "193096",
+          "title": "Components of a UNIX System",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193096"
+        },
+        {
+          "section": "Introduction to z/OS UNIX",
+          "order": 3,
+          "type": "video",
+          "id": "193097",
+          "title": "Fundamental Functions",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193097"
+        },
+        {
+          "section": "Introduction to z/OS UNIX",
+          "order": 4,
+          "type": "video",
+          "id": "193098",
+          "title": "More Fundamental Functions",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193098"
+        },
+        {
+          "section": "Introduction to z/OS UNIX",
+          "order": 5,
+          "type": "hvp",
+          "id": "193099",
+          "title": "Checkpoint #2",
+          "href": "https://learn.ibm.com/mod/hvp/view.php?id=193099"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Hierarchical File System",
+      "activities": [
+        {
+          "section": "Hierarchical File System",
+          "order": 1,
+          "type": "page",
+          "id": "193100",
+          "title": "Highlights - Hierarchical System",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193100"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 2,
+          "type": "video",
+          "id": "193101",
+          "title": "Hierarchical System Introduction",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193101"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 3,
+          "type": "video",
+          "id": "193102",
+          "title": "Types",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193102"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 4,
+          "type": "video",
+          "id": "193103",
+          "title": "HFS and zFS data set fundamentals",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193103"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 5,
+          "type": "video",
+          "id": "193104",
+          "title": "HFS and zFS file systems",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193104"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 6,
+          "type": "video",
+          "id": "193105",
+          "title": "ISHELL and Directory List Utility",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193105"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 7,
+          "type": "video",
+          "id": "193106",
+          "title": "Directory List Utility panels",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193106"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 8,
+          "type": "video",
+          "id": "193107",
+          "title": "ISPF and zOS UNIX",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193107"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 9,
+          "type": "video",
+          "id": "193108",
+          "title": "system structure",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193108"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 10,
+          "type": "video",
+          "id": "193109",
+          "title": "Backup and recovery",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193109"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 11,
+          "type": "video",
+          "id": "193110",
+          "title": "Network file system and file security",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193110"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 12,
+          "type": "video",
+          "id": "321355",
+          "title": "Lab familiarization",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=321355"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 13,
+          "type": "page",
+          "id": "322178",
+          "title": "Course kit / Exercise guide",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=322178"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 14,
+          "type": "page",
+          "id": "322179",
+          "title": "Checklist before starting labs",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=322179"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 15,
+          "type": "page",
+          "id": "322188",
+          "title": "Exercise 1",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=322188"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 16,
+          "type": "page",
+          "id": "322181",
+          "title": "Exercise 2",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=322181"
+        },
+        {
+          "section": "Hierarchical File System",
+          "order": 17,
+          "type": "hvp",
+          "id": "193112",
+          "title": "Checkpoint #3",
+          "href": "https://learn.ibm.com/mod/hvp/view.php?id=193112"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "title": "z/OS UNIX Shell and Utilities",
+      "activities": [
+        {
+          "section": "z/OS UNIX Shell and Utilities",
+          "order": 1,
+          "type": "page",
+          "id": "193113",
+          "title": "Highlights - z/OS UNIX Shell and Utilities",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193113"
+        },
+        {
+          "section": "z/OS UNIX Shell and Utilities",
+          "order": 2,
+          "type": "video",
+          "id": "193114",
+          "title": "The zOS shell",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193114"
+        },
+        {
+          "section": "z/OS UNIX Shell and Utilities",
+          "order": 3,
+          "type": "video",
+          "id": "193115",
+          "title": "TSO and the zOS UNIX shell",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193115"
+        },
+        {
+          "section": "z/OS UNIX Shell and Utilities",
+          "order": 4,
+          "type": "video",
+          "id": "193116",
+          "title": "Commands and jobs",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193116"
+        },
+        {
+          "section": "z/OS UNIX Shell and Utilities",
+          "order": 5,
+          "type": "page",
+          "id": "193117",
+          "title": "Exercise 3",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193117"
+        },
+        {
+          "section": "z/OS UNIX Shell and Utilities",
+          "order": 6,
+          "type": "hvp",
+          "id": "193118",
+          "title": "Checkpoint #4",
+          "href": "https://learn.ibm.com/mod/hvp/view.php?id=193118"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "title": "z/OS UNIX Shell Commands",
+      "activities": [
+        {
+          "section": "z/OS UNIX Shell Commands",
+          "order": 1,
+          "type": "page",
+          "id": "193119",
+          "title": "Highlights - z/OS UNIX Shell Commands",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193119"
+        },
+        {
+          "section": "z/OS UNIX Shell Commands",
+          "order": 2,
+          "type": "video",
+          "id": "193120",
+          "title": "Getting help and working with code pages",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193120"
+        },
+        {
+          "section": "z/OS UNIX Shell Commands",
+          "order": 3,
+          "type": "video",
+          "id": "193121",
+          "title": "system shell commands",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193121"
+        },
+        {
+          "section": "z/OS UNIX Shell Commands",
+          "order": 4,
+          "type": "video",
+          "id": "193122",
+          "title": "More shell commands",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193122"
+        },
+        {
+          "section": "z/OS UNIX Shell Commands",
+          "order": 5,
+          "type": "page",
+          "id": "193123",
+          "title": "Exercise 4",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193123"
+        },
+        {
+          "section": "z/OS UNIX Shell Commands",
+          "order": 6,
+          "type": "hvp",
+          "id": "193124",
+          "title": "Checkpoint #5",
+          "href": "https://learn.ibm.com/mod/hvp/view.php?id=193124"
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Working with the Shell",
+      "activities": [
+        {
+          "section": "Working with the Shell",
+          "order": 1,
+          "type": "page",
+          "id": "193125",
+          "title": "Highlights - Working with the Shell",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193125"
+        },
+        {
+          "section": "Working with the Shell",
+          "order": 2,
+          "type": "video",
+          "id": "193126",
+          "title": "Working with the shell",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193126"
+        },
+        {
+          "section": "Working with the Shell",
+          "order": 3,
+          "type": "video",
+          "id": "193127",
+          "title": "Shell scripts and REXX",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193127"
+        },
+        {
+          "section": "Working with the Shell",
+          "order": 4,
+          "type": "video",
+          "id": "193128",
+          "title": "BPXBATCH",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193128"
+        },
+        {
+          "section": "Working with the Shell",
+          "order": 5,
+          "type": "video",
+          "id": "193129",
+          "title": "ASCII and EBCDIC considerations",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193129"
+        },
+        {
+          "section": "Working with the Shell",
+          "order": 6,
+          "type": "video",
+          "id": "193130",
+          "title": "Translation considerations",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193130"
+        },
+        {
+          "section": "Working with the Shell",
+          "order": 7,
+          "type": "page",
+          "id": "193131",
+          "title": "Exercise 5",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193131"
+        },
+        {
+          "section": "Working with the Shell",
+          "order": 8,
+          "type": "hvp",
+          "id": "193132",
+          "title": "Checkpoint #6",
+          "href": "https://learn.ibm.com/mod/hvp/view.php?id=193132"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Functions in z/OS UNIX",
+      "activities": [
+        {
+          "section": "Functions in z/OS UNIX",
+          "order": 1,
+          "type": "page",
+          "id": "193133",
+          "title": "Highlights - Functions in z/OS UNIX",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193133"
+        },
+        {
+          "section": "Functions in z/OS UNIX",
+          "order": 2,
+          "type": "video",
+          "id": "193134",
+          "title": "Functions and processes",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193134"
+        },
+        {
+          "section": "Functions in z/OS UNIX",
+          "order": 3,
+          "type": "video",
+          "id": "193135",
+          "title": "Daemons and superusers",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193135"
+        },
+        {
+          "section": "Functions in z/OS UNIX",
+          "order": 4,
+          "type": "video",
+          "id": "193136",
+          "title": "Child processes",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193136"
+        },
+        {
+          "section": "Functions in z/OS UNIX",
+          "order": 5,
+          "type": "video",
+          "id": "193137",
+          "title": "Communications and threads",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193137"
+        },
+        {
+          "section": "Functions in z/OS UNIX",
+          "order": 6,
+          "type": "hvp",
+          "id": "193138",
+          "title": "Checkpoint #7",
+          "href": "https://learn.ibm.com/mod/hvp/view.php?id=193138"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Working with the z/OS UNIX Environment",
+      "activities": [
+        {
+          "section": "Working with the z/OS UNIX Environment",
+          "order": 1,
+          "type": "video",
+          "id": "193139",
+          "title": "Application programming in zOS UNIX",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193139"
+        },
+        {
+          "section": "Working with the z/OS UNIX Environment",
+          "order": 2,
+          "type": "video",
+          "id": "193140",
+          "title": "Printing and access control lists",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193140"
+        },
+        {
+          "section": "Working with the z/OS UNIX Environment",
+          "order": 3,
+          "type": "video",
+          "id": "193141",
+          "title": "Additional considerations",
+          "href": "https://learn.ibm.com/mod/video/view.php?id=193141"
+        },
+        {
+          "section": "Working with the z/OS UNIX Environment",
+          "order": 4,
+          "type": "page",
+          "id": "193142",
+          "title": "Exercise 6",
+          "href": "https://learn.ibm.com/mod/page/view.php?id=193142"
+        },
+        {
+          "section": "Working with the z/OS UNIX Environment",
+          "order": 5,
+          "type": "hvp",
+          "id": "193143",
+          "title": "Checkpoint #8",
+          "href": "https://learn.ibm.com/mod/hvp/view.php?id=193143"
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Badge information",
+      "activities": [
+        {
+          "section": "Badge information",
+          "order": 1,
+          "type": "label",
+          "id": "",
+          "title": "This badge earner understands an overview of UNIX System Services, the role of z/OS as a server in the open systems environment, & how open standards are implemented in a z/OS system by z/OS UNIX. They can identify basic terms used in z/OS UNIX, define components of z/OS UNIX, explain major functions provided in z/OS UNIX, discuss opportunities for applications in a z/OS UNIX environment, identify z/OS base elements & optional features that make up z/OS UNIX, & use the 3 interactive interfaces.This quiz consists of 20 questions and requires a passing score of 16 correct answers. You are granted 2 attempts to pass the quiz, and will then need to wait 5 days before trying again. There are no limits on your total number of attempts.",
+          "href": ""
+        },
+        {
+          "section": "Badge information",
+          "order": 2,
+          "type": "quiz",
+          "id": "193152",
+          "title": "Take the quiz",
+          "href": "https://learn.ibm.com/mod/quiz/view.php?id=193152"
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "title": "Finish here",
+      "activities": [
+        {
+          "section": "Finish here",
+          "order": 1,
+          "type": "certificate",
+          "id": "193145",
+          "title": "Course completion certificate",
+          "href": "https://learn.ibm.com/mod/certificate/view.php?id=193145"
+        },
+        {
+          "section": "Finish here",
+          "order": 2,
+          "type": "questionnaire",
+          "id": "193146",
+          "title": "Course survey",
+          "href": "https://learn.ibm.com/mod/questionnaire/view.php?id=193146"
+        },
+        {
+          "section": "Finish here",
+          "order": 3,
+          "type": "label",
+          "id": "",
+          "title": "Here are some resources for you to continue learning after completing this course: Recommended courses Resources Thank you for using IBM TechXchange Training!",
+          "href": ""
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193092",
+      "title": "Introduction to UNIX Standards",
+      "section": "z/OS UNIX Course Overview",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_a3edezg7&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_na79kzs8",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_a3edezg7"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193091",
+      "title": "UNIX Implementation on z/OS",
+      "section": "z/OS UNIX Course Overview",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_kt2xnn6y&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_q04h0jkk",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_kt2xnn6y"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193093",
+      "title": "z/OS Unit Component",
+      "section": "z/OS UNIX Course Overview",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_hipb0mvo&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_xzg59m5f",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_hipb0mvo"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193096",
+      "title": "Components of a UNIX System",
+      "section": "Introduction to z/OS UNIX",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_gb9hrqdy&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_icd5kfea",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_gb9hrqdy"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193097",
+      "title": "Fundamental Functions",
+      "section": "Introduction to z/OS UNIX",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_aomv0tq1&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_88phscm8",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_aomv0tq1"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193098",
+      "title": "More Fundamental Functions",
+      "section": "Introduction to z/OS UNIX",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_8tq0t0g0&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_g09kat1b",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_8tq0t0g0"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193101",
+      "title": "Hierarchical System Introduction",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_lk9agppe&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_s9h1uagg",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_lk9agppe"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193102",
+      "title": "Types",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_jwoqqa5m&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_zitnnu1l",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_jwoqqa5m"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193103",
+      "title": "HFS and zFS data set fundamentals",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_34nut98r&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_jkk27b7k",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_34nut98r"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193104",
+      "title": "HFS and zFS file systems",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_griczpau&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_2zlie392",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_griczpau"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193105",
+      "title": "ISHELL and Directory List Utility",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_f3el88sl&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_es535vgy",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_f3el88sl"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193106",
+      "title": "Directory List Utility panels",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_iugkoedg&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_zymjrlrd",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_iugkoedg"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193107",
+      "title": "ISPF and zOS UNIX",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_te3t0o79&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_h6vlqgee",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_te3t0o79"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193108",
+      "title": "system structure",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_w37ha2pb&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_fpnmczs5",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_w37ha2pb"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193109",
+      "title": "Backup and recovery",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_iov0qts1&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_bsngj1s5",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_iov0qts1"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193110",
+      "title": "Network file system and file security",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_pnx8ipij&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_4w08uwbg",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_pnx8ipij"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=321355",
+      "title": "Lab familiarization",
+      "section": "Hierarchical File System",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_599iixml&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_ytm0ov1o",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_599iixml"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193114",
+      "title": "The zOS shell",
+      "section": "z/OS UNIX Shell and Utilities",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_iv4h5dcz&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_xrzzws6n",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_iv4h5dcz"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193115",
+      "title": "TSO and the zOS UNIX shell",
+      "section": "z/OS UNIX Shell and Utilities",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_ccnbuqha&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_8f2fpblf",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_ccnbuqha"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193116",
+      "title": "Commands and jobs",
+      "section": "z/OS UNIX Shell and Utilities",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_q81uk4xi&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_1qca9966",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_q81uk4xi"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193120",
+      "title": "Getting help and working with code pages",
+      "section": "z/OS UNIX Shell Commands",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_bf9i3fo8&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_plawdysz",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_bf9i3fo8"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193121",
+      "title": "system shell commands",
+      "section": "z/OS UNIX Shell Commands",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_bvrm90tq&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_zgtt8qai",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_bvrm90tq"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193122",
+      "title": "More shell commands",
+      "section": "z/OS UNIX Shell Commands",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_wp4d7ohx&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_ts8u8ipj",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_wp4d7ohx"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193126",
+      "title": "Working with the shell",
+      "section": "Working with the Shell",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_udrgkkbw&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_8xuaewl1",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_udrgkkbw"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193127",
+      "title": "Shell scripts and REXX",
+      "section": "Working with the Shell",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_ohj8iew1&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_6ikb8yei",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_ohj8iew1"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193128",
+      "title": "BPXBATCH",
+      "section": "Working with the Shell",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_3ggir589&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_ofngqjmz",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_3ggir589"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193129",
+      "title": "ASCII and EBCDIC considerations",
+      "section": "Working with the Shell",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_xhceuc8r&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_1kz44m56",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_xhceuc8r"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193130",
+      "title": "Translation considerations",
+      "section": "Working with the Shell",
+      "iframeSrc": "https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_cg8lhe0n",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_cg8lhe0n"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193134",
+      "title": "Functions and processes",
+      "section": "Functions in z/OS UNIX",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_156jj3h4&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_ye9x6272",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_156jj3h4"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193135",
+      "title": "Daemons and superusers",
+      "section": "Functions in z/OS UNIX",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_yttr8bkz&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_p9a3c3w4",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_yttr8bkz"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193136",
+      "title": "Child processes",
+      "section": "Functions in z/OS UNIX",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_9qo8xsow&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_vxj3j88c",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_9qo8xsow"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193137",
+      "title": "Communications and threads",
+      "section": "Functions in z/OS UNIX",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_ktj4ke4p&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_w0es4tnl",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_ktj4ke4p"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193139",
+      "title": "Application programming in zOS UNIX",
+      "section": "Working with the z/OS UNIX Environment",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_8ihdkrd8&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_9ugxjxtk",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_8ihdkrd8"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193140",
+      "title": "Printing and access control lists",
+      "section": "Working with the z/OS UNIX Environment",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_fxdv609j&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_38o4of7v",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_fxdv609j"
+      }
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/video/view.php?id=193141",
+      "title": "Additional considerations",
+      "section": "Working with the z/OS UNIX Environment",
+      "iframeSrc": "https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/39954662/partner_id/1773841?iframeembed=true&playerId=kaltura_player&entry_id=1_jxyrdq28&flashvars[akamaiHD.loadingPolicy]=preInitialize&flashvars[akamaiHD.asyncInit]=true&flashvars[twoPhaseManifest]=true&flashvars[streamerType]=hdnetworkmanifest&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=1_pirezrv8",
+      "kaltura": {
+        "partnerId": "1773841",
+        "uiconfId": "39954662",
+        "entryId": "1_jxyrdq28"
+      }
+    }
+  ],
+  "hvp": [
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193094",
+      "title": "Checkpoint #1",
+      "section": "z/OS UNIX Course Overview",
+      "library": "H5P.QuestionSet 1.17",
+      "questions": [
+        {
+          "prompt": "What is the UNIX version of z/OS called?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "z/UNIX",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "OpenEdition",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "UNIX System Services",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "The UNIX version of z/OS conforms to which standard?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "UNIX95",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "UNIX98",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "XPG4.2",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "UNIX03",
+              "correct": false
+            },
+            {
+              "id": "e",
+              "text": "All of the above",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "True or False: Porting applications from UNIX to z/OS USS requires conversion from ASCII to EBCDIC",
+          "choices": [
+            {
+              "id": "a",
+              "text": "True",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "False",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Which of the following are valid file systems in z/OS UNIX?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "DFS",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "HFS",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "zFS",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "DFS and zFS",
+              "correct": false
+            },
+            {
+              "id": "e",
+              "text": "HFS and zFS",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193099",
+      "title": "Checkpoint #2",
+      "section": "Introduction to z/OS UNIX",
+      "library": "H5P.QuestionSet 1.17",
+      "questions": [
+        {
+          "prompt": "Name two programming languages used to develop UNIX applications in z/OS.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "C",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "C++",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "REXX",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "All options are correct",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193112",
+      "title": "Checkpoint #3",
+      "section": "Hierarchical File System",
+      "library": "H5P.QuestionSet 1.17",
+      "questions": []
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193118",
+      "title": "Checkpoint #4",
+      "section": "z/OS UNIX Shell and Utilities",
+      "library": "H5P.QuestionSet 1.17",
+      "questions": [
+        {
+          "prompt": "How can shell scripts be run?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Interactively",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "In batch mode",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "In the background",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "All options are correct",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "You can terminate a background job with the kill command and the job's _____.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "ID",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "Name",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "PID(process ID)",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "You can use the submit command to submit jobs residing in which of the following:",
+          "choices": [
+            {
+              "id": "a",
+              "text": "STDIN",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "A UNIX file",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "A member of a z/OS PDS",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "A z/OS sequential data set",
+              "correct": false
+            },
+            {
+              "id": "e",
+              "text": "All options are correct",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193124",
+      "title": "Checkpoint #5",
+      "section": "z/OS UNIX Shell Commands",
+      "library": "H5P.QuestionSet 1.17",
+      "questions": [
+        {
+          "prompt": "With what is the UNIX help command invoked?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "help",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "man",
+              "correct": true
+            },
+            {
+              "id": "c",
+              "text": "Vv",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "What is the UNIX command to assign a value to an environment variable used for the current process and for any other processes spawned by the current process? &nbsp;",
+          "choices": [
+            {
+              "id": "a",
+              "text": "set",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "env",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "export",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Way(s) to display file system information.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "F OMVS Command",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "df UNIX command",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "D OMVS",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "All options are correct",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193132",
+      "title": "Checkpoint #6",
+      "section": "Working with the Shell",
+      "library": "H5P.QuestionSet 1.17",
+      "questions": [
+        {
+          "prompt": "What is the REXX statement used to direct commands to the z/OS UNIX environment?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Syscalls('ON')",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "Address syscall",
+              "correct": true
+            },
+            {
+              "id": "c",
+              "text": "Syscall()",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "STDOUT can be allocated to which of the following?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "z/OS Data Stack",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "A PDS Member",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "A UNIX file",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "Any one of the options",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193138",
+      "title": "Checkpoint #7",
+      "section": "Functions in z/OS UNIX",
+      "library": "H5P.QuestionSet 1.17",
+      "questions": [
+        {
+          "prompt": "UNIX functions are invoked through a runtime library using callable services. What are the prefix letters of the assembler callable services of z/OS? &nbsp;",
+          "choices": [
+            {
+              "id": "a",
+              "text": "FRK1",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "BPX1",
+              "correct": true
+            },
+            {
+              "id": "c",
+              "text": "OMVS",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "What is the equivalent of a UNIX daemon in z/OS?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "An automation job",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "A started task",
+              "correct": true
+            },
+            {
+              "id": "c",
+              "text": "A job scheduler",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "prompt": "What is the name of the daemon which listens for incoming login requests?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "rlogind",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "sshd",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "inetd",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "Which of the following function or functions will create a new address space:",
+          "choices": [
+            {
+              "id": "a",
+              "text": "fork()",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "exec()",
+              "correct": false
+            },
+            {
+              "id": "c",
+              "text": "spawn()",
+              "correct": false
+            },
+            {
+              "id": "d",
+              "text": "All options are correct",
+              "correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193143",
+      "title": "Checkpoint #8",
+      "section": "Working with the z/OS UNIX Environment",
+      "library": "H5P.QuestionSet 1.17",
+      "questions": [
+        {
+          "prompt": "Which utility or utilities can be used to compile a z/OS UNIX C++ source program? (This question has two answers)",
+          "choices": [
+            {
+              "id": "a",
+              "text": "c89",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "c++",
+              "correct": true
+            },
+            {
+              "id": "c",
+              "text": "cxx",
+              "correct": true
+            }
+          ]
+        },
+        {
+          "prompt": "If the z/OS UNIX application is a load module in an z/OS PDS, the program can be started from ____________.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "TSO/E",
+              "correct": false
+            },
+            {
+              "id": "b",
+              "text": "In batch by traditional JCL",
+              "correct": true
+            },
+            {
+              "id": "c",
+              "text": "In batch by BPXBATCH",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "section": "z/OS UNIX Course Overview",
+      "order": 1,
+      "type": "page",
+      "id": "193089",
+      "title": "Course overview",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193089"
+    },
+    {
+      "section": "Introduction to z/OS UNIX",
+      "order": 1,
+      "type": "page",
+      "id": "193095",
+      "title": "Highlights - Introduction to z/OS UNIX",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193095"
+    },
+    {
+      "section": "Hierarchical File System",
+      "order": 1,
+      "type": "page",
+      "id": "193100",
+      "title": "Highlights - Hierarchical System",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193100"
+    },
+    {
+      "section": "Hierarchical File System",
+      "order": 13,
+      "type": "page",
+      "id": "322178",
+      "title": "Course kit / Exercise guide",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=322178"
+    },
+    {
+      "section": "Hierarchical File System",
+      "order": 14,
+      "type": "page",
+      "id": "322179",
+      "title": "Checklist before starting labs",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=322179"
+    },
+    {
+      "section": "Hierarchical File System",
+      "order": 15,
+      "type": "page",
+      "id": "322188",
+      "title": "Exercise 1",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=322188"
+    },
+    {
+      "section": "Hierarchical File System",
+      "order": 16,
+      "type": "page",
+      "id": "322181",
+      "title": "Exercise 2",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=322181"
+    },
+    {
+      "section": "z/OS UNIX Shell and Utilities",
+      "order": 1,
+      "type": "page",
+      "id": "193113",
+      "title": "Highlights - z/OS UNIX Shell and Utilities",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193113"
+    },
+    {
+      "section": "z/OS UNIX Shell and Utilities",
+      "order": 5,
+      "type": "page",
+      "id": "193117",
+      "title": "Exercise 3",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193117"
+    },
+    {
+      "section": "z/OS UNIX Shell Commands",
+      "order": 1,
+      "type": "page",
+      "id": "193119",
+      "title": "Highlights - z/OS UNIX Shell Commands",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193119"
+    },
+    {
+      "section": "z/OS UNIX Shell Commands",
+      "order": 5,
+      "type": "page",
+      "id": "193123",
+      "title": "Exercise 4",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193123"
+    },
+    {
+      "section": "Working with the Shell",
+      "order": 1,
+      "type": "page",
+      "id": "193125",
+      "title": "Highlights - Working with the Shell",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193125"
+    },
+    {
+      "section": "Working with the Shell",
+      "order": 7,
+      "type": "page",
+      "id": "193131",
+      "title": "Exercise 5",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193131"
+    },
+    {
+      "section": "Functions in z/OS UNIX",
+      "order": 1,
+      "type": "page",
+      "id": "193133",
+      "title": "Highlights - Functions in z/OS UNIX",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193133"
+    },
+    {
+      "section": "Working with the z/OS UNIX Environment",
+      "order": 4,
+      "type": "page",
+      "id": "193142",
+      "title": "Exercise 6",
+      "href": "https://learn.ibm.com/mod/page/view.php?id=193142"
+    }
+  ]
+}

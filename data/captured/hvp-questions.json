@@ -1,0 +1,495 @@
+[
+  {
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193094",
+    "title": "Checkpoint #1",
+    "section": "z/OS UNIX Course Overview",
+    "library": "H5P.QuestionSet 1.17",
+    "questions": [
+      {
+        "prompt": "What is the UNIX version of z/OS called?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "z/UNIX",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "OpenEdition",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "UNIX System Services",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "prompt": "The UNIX version of z/OS conforms to which standard?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "UNIX95",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "UNIX98",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "XPG4.2",
+            "correct": false
+          },
+          {
+            "id": "d",
+            "text": "UNIX03",
+            "correct": false
+          },
+          {
+            "id": "e",
+            "text": "All of the above",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "prompt": "True or False: Porting applications from UNIX to z/OS USS requires conversion from ASCII to EBCDIC",
+        "choices": [
+          {
+            "id": "a",
+            "text": "True",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "False",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "prompt": "Which of the following are valid file systems in z/OS UNIX?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "DFS",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "HFS",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "zFS",
+            "correct": false
+          },
+          {
+            "id": "d",
+            "text": "DFS and zFS",
+            "correct": false
+          },
+          {
+            "id": "e",
+            "text": "HFS and zFS",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193099",
+    "title": "Checkpoint #2",
+    "section": "Introduction to z/OS UNIX",
+    "library": "H5P.QuestionSet 1.17",
+    "questions": [
+      {
+        "prompt": "Name two programming languages used to develop UNIX applications in z/OS.",
+        "choices": [
+          {
+            "id": "a",
+            "text": "C",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "C++",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "REXX",
+            "correct": false
+          },
+          {
+            "id": "d",
+            "text": "All options are correct",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193112",
+    "title": "Checkpoint #3",
+    "section": "Hierarchical File System",
+    "library": "H5P.QuestionSet 1.17",
+    "questions": []
+  },
+  {
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193118",
+    "title": "Checkpoint #4",
+    "section": "z/OS UNIX Shell and Utilities",
+    "library": "H5P.QuestionSet 1.17",
+    "questions": [
+      {
+        "prompt": "How can shell scripts be run?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Interactively",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "In batch mode",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "In the background",
+            "correct": false
+          },
+          {
+            "id": "d",
+            "text": "All options are correct",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "prompt": "You can terminate a background job with the kill command and the job's _____.",
+        "choices": [
+          {
+            "id": "a",
+            "text": "ID",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "Name",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "PID(process ID)",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "prompt": "You can use the submit command to submit jobs residing in which of the following:",
+        "choices": [
+          {
+            "id": "a",
+            "text": "STDIN",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "A UNIX file",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "A member of a z/OS PDS",
+            "correct": false
+          },
+          {
+            "id": "d",
+            "text": "A z/OS sequential data set",
+            "correct": false
+          },
+          {
+            "id": "e",
+            "text": "All options are correct",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193124",
+    "title": "Checkpoint #5",
+    "section": "z/OS UNIX Shell Commands",
+    "library": "H5P.QuestionSet 1.17",
+    "questions": [
+      {
+        "prompt": "With what is the UNIX help command invoked?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "help",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "man",
+            "correct": true
+          },
+          {
+            "id": "c",
+            "text": "Vv",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What is the UNIX command to assign a value to an environment variable used for the current process and for any other processes spawned by the current process? &nbsp;",
+        "choices": [
+          {
+            "id": "a",
+            "text": "set",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "env",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "export",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "prompt": "Way(s) to display file system information.",
+        "choices": [
+          {
+            "id": "a",
+            "text": "F OMVS Command",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "df UNIX command",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "D OMVS",
+            "correct": false
+          },
+          {
+            "id": "d",
+            "text": "All options are correct",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193132",
+    "title": "Checkpoint #6",
+    "section": "Working with the Shell",
+    "library": "H5P.QuestionSet 1.17",
+    "questions": [
+      {
+        "prompt": "What is the REXX statement used to direct commands to the z/OS UNIX environment?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Syscalls('ON')",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "Address syscall",
+            "correct": true
+          },
+          {
+            "id": "c",
+            "text": "Syscall()",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "STDOUT can be allocated to which of the following?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "z/OS Data Stack",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "A PDS Member",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "A UNIX file",
+            "correct": false
+          },
+          {
+            "id": "d",
+            "text": "Any one of the options",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193138",
+    "title": "Checkpoint #7",
+    "section": "Functions in z/OS UNIX",
+    "library": "H5P.QuestionSet 1.17",
+    "questions": [
+      {
+        "prompt": "UNIX functions are invoked through a runtime library using callable services. What are the prefix letters of the assembler callable services of z/OS? &nbsp;",
+        "choices": [
+          {
+            "id": "a",
+            "text": "FRK1",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "BPX1",
+            "correct": true
+          },
+          {
+            "id": "c",
+            "text": "OMVS",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What is the equivalent of a UNIX daemon in z/OS?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "An automation job",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "A started task",
+            "correct": true
+          },
+          {
+            "id": "c",
+            "text": "A job scheduler",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What is the name of the daemon which listens for incoming login requests?",
+        "choices": [
+          {
+            "id": "a",
+            "text": "rlogind",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "sshd",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "inetd",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "prompt": "Which of the following function or functions will create a new address space:",
+        "choices": [
+          {
+            "id": "a",
+            "text": "fork()",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "exec()",
+            "correct": false
+          },
+          {
+            "id": "c",
+            "text": "spawn()",
+            "correct": false
+          },
+          {
+            "id": "d",
+            "text": "All options are correct",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193143",
+    "title": "Checkpoint #8",
+    "section": "Working with the z/OS UNIX Environment",
+    "library": "H5P.QuestionSet 1.17",
+    "questions": [
+      {
+        "prompt": "Which utility or utilities can be used to compile a z/OS UNIX C++ source program? (This question has two answers)",
+        "choices": [
+          {
+            "id": "a",
+            "text": "c89",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "c++",
+            "correct": true
+          },
+          {
+            "id": "c",
+            "text": "cxx",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "prompt": "If the z/OS UNIX application is a load module in an z/OS PDS, the program can be started from ____________.",
+        "choices": [
+          {
+            "id": "a",
+            "text": "TSO/E",
+            "correct": false
+          },
+          {
+            "id": "b",
+            "text": "In batch by traditional JCL",
+            "correct": true
+          },
+          {
+            "id": "c",
+            "text": "In batch by BPXBATCH",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+]

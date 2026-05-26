@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "sections": 10,
+    "publicLearningSections": 8,
+    "activities": 64,
+    "videos": 35,
+    "labs": 6,
+    "hvpActivities": 8,
+    "staticPracticeQuestions": 19,
+    "badgeQuizScopePracticeQuestions": 0
+  },
+  "liveCounts": {
+    "page": 15,
+    "forum": 1,
+    "video": 35,
+    "hvp": 8,
+    "label": 2,
+    "quiz": 1,
+    "certificate": 1,
+    "questionnaire": 1
+  },
+  "sections": [
+    {
+      "title": "z/OS UNIX Course Overview",
+      "activityCount": 6
+    },
+    {
+      "title": "Introduction to z/OS UNIX",
+      "activityCount": 5
+    },
+    {
+      "title": "Hierarchical File System",
+      "activityCount": 17
+    },
+    {
+      "title": "z/OS UNIX Shell and Utilities",
+      "activityCount": 6
+    },
+    {
+      "title": "z/OS UNIX Shell Commands",
+      "activityCount": 6
+    },
+    {
+      "title": "Working with the Shell",
+      "activityCount": 8
+    },
+    {
+      "title": "Functions in z/OS UNIX",
+      "activityCount": 6
+    },
+    {
+      "title": "Working with the z/OS UNIX Environment",
+      "activityCount": 5
+    },
+    {
+      "title": "Badge information",
+      "activityCount": 2
+    },
+    {
+      "title": "Finish here",
+      "activityCount": 3
+    }
+  ]
+}

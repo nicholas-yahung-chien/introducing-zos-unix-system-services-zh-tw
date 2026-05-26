@@ -1,0 +1,125 @@
+[
+  {
+    "id": "exercise-1",
+    "title": "Exercise 1",
+    "titleZh": "Exercise 1",
+    "type": "Lab",
+    "sourceUrl": "https://learn.ibm.com/mod/page/view.php?id=322188",
+    "courseUrl": "https://learn.ibm.com/course/view.php?id=9890",
+    "section": "階層式檔案系統",
+    "summary": "Exercise 1 需要在 IBM Learn 原課程的 IBM Remote Lab Platform / Skytap 環境中完成。本站保留學習定位與回原活動連結。",
+    "learningPurpose": [
+      "練習本章 z/OS UNIX 概念",
+      "把影片中的操作流程放回原課程 Lab 環境"
+    ],
+    "recommendedBefore": [
+      "階層式系統入門",
+      "類型",
+      "HFS 與 zFS data set 基礎",
+      "HFS 與 zFS 檔案系統"
+    ],
+    "launchGuidance": "此活動需要原 IBM Learn 環境與授權 session。本站不重建 Lab runtime、不保存 credential 或學習者進度。"
+  },
+  {
+    "id": "exercise-2",
+    "title": "Exercise 2",
+    "titleZh": "Exercise 2",
+    "type": "Lab",
+    "sourceUrl": "https://learn.ibm.com/mod/page/view.php?id=322181",
+    "courseUrl": "https://learn.ibm.com/course/view.php?id=9890",
+    "section": "階層式檔案系統",
+    "summary": "Exercise 2 需要在 IBM Learn 原課程的 IBM Remote Lab Platform / Skytap 環境中完成。本站保留學習定位與回原活動連結。",
+    "learningPurpose": [
+      "練習本章 z/OS UNIX 概念",
+      "把影片中的操作流程放回原課程 Lab 環境"
+    ],
+    "recommendedBefore": [
+      "階層式系統入門",
+      "類型",
+      "HFS 與 zFS data set 基礎",
+      "HFS 與 zFS 檔案系統"
+    ],
+    "launchGuidance": "此活動需要原 IBM Learn 環境與授權 session。本站不重建 Lab runtime、不保存 credential 或學習者進度。"
+  },
+  {
+    "id": "exercise-3",
+    "title": "Exercise 3",
+    "titleZh": "Exercise 3",
+    "type": "Lab",
+    "sourceUrl": "https://learn.ibm.com/mod/page/view.php?id=193117",
+    "courseUrl": "https://learn.ibm.com/course/view.php?id=9890",
+    "section": "z/OS UNIX shell 與 utilities",
+    "summary": "Exercise 3 需要在 IBM Learn 原課程的 IBM Remote Lab Platform / Skytap 環境中完成。本站保留學習定位與回原活動連結。",
+    "learningPurpose": [
+      "練習本章 z/OS UNIX 概念",
+      "把影片中的操作流程放回原課程 Lab 環境"
+    ],
+    "recommendedBefore": [
+      "z/OS shell",
+      "TSO 與 z/OS UNIX shell",
+      "Commands 與 jobs"
+    ],
+    "launchGuidance": "此活動需要原 IBM Learn 環境與授權 session。本站不重建 Lab runtime、不保存 credential 或學習者進度。"
+  },
+  {
+    "id": "exercise-4",
+    "title": "Exercise 4",
+    "titleZh": "Exercise 4",
+    "type": "Lab",
+    "sourceUrl": "https://learn.ibm.com/mod/page/view.php?id=193123",
+    "courseUrl": "https://learn.ibm.com/course/view.php?id=9890",
+    "section": "z/OS UNIX shell commands 指令",
+    "summary": "Exercise 4 需要在 IBM Learn 原課程的 IBM Remote Lab Platform / Skytap 環境中完成。本站保留學習定位與回原活動連結。",
+    "learningPurpose": [
+      "練習本章 z/OS UNIX 概念",
+      "把影片中的操作流程放回原課程 Lab 環境"
+    ],
+    "recommendedBefore": [
+      "取得說明與使用 code pages",
+      "System shell commands",
+      "更多 shell commands"
+    ],
+    "launchGuidance": "此活動需要原 IBM Learn 環境與授權 session。本站不重建 Lab runtime、不保存 credential 或學習者進度。"
+  },
+  {
+    "id": "exercise-5",
+    "title": "Exercise 5",
+    "titleZh": "Exercise 5",
+    "type": "Lab",
+    "sourceUrl": "https://learn.ibm.com/mod/page/view.php?id=193131",
+    "courseUrl": "https://learn.ibm.com/course/view.php?id=9890",
+    "section": "使用 shell 工作",
+    "summary": "Exercise 5 需要在 IBM Learn 原課程的 IBM Remote Lab Platform / Skytap 環境中完成。本站保留學習定位與回原活動連結。",
+    "learningPurpose": [
+      "練習本章 z/OS UNIX 概念",
+      "把影片中的操作流程放回原課程 Lab 環境"
+    ],
+    "recommendedBefore": [
+      "使用 shell 工作",
+      "Shell scripts 與 REXX",
+      "BPXBATCH",
+      "ASCII 與 EBCDIC 考量"
+    ],
+    "launchGuidance": "此活動需要原 IBM Learn 環境與授權 session。本站不重建 Lab runtime、不保存 credential 或學習者進度。"
+  },
+  {
+    "id": "exercise-6",
+    "title": "Exercise 6",
+    "titleZh": "Exercise 6",
+    "type": "Lab",
+    "sourceUrl": "https://learn.ibm.com/mod/page/view.php?id=193142",
+    "courseUrl": "https://learn.ibm.com/course/view.php?id=9890",
+    "section": "使用 z/OS UNIX 環境",
+    "summary": "Exercise 6 需要在 IBM Learn 原課程的 IBM Remote Lab Platform / Skytap 環境中完成。本站保留學習定位與回原活動連結。",
+    "learningPurpose": [
+      "練習本章 z/OS UNIX 概念",
+      "把影片中的操作流程放回原課程 Lab 環境"
+    ],
+    "recommendedBefore": [
+      "z/OS UNIX 應用程式設計",
+      "Printing 與 access control lists",
+      "其他考量"
+    ],
+    "launchGuidance": "此活動需要原 IBM Learn 環境與授權 session。本站不重建 Lab runtime、不保存 credential 或學習者進度。"
+  }
+]

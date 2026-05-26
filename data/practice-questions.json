@@ -1,0 +1,708 @@
+[
+  {
+    "id": "q001",
+    "section": "z/OS UNIX 課程概觀",
+    "lessonSlug": "course-overview",
+    "lessonTitle": "z/OS UNIX 課程概觀",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193094",
+    "sourceReference": "checkpoint-1",
+    "prompt": "z/OS 的 UNIX 版本稱為什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "z/UNIX"
+      },
+      {
+        "id": "b",
+        "text": "OpenEdition"
+      },
+      {
+        "id": "c",
+        "text": "UNIX System Services"
+      }
+    ],
+    "correctChoiceIds": [
+      "c"
+    ],
+    "explanation": "這題來自 檢核點 1。正確答案請回到「z/OS UNIX 課程概觀」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX 課程概觀",
+      "coursePath": "/course/course-overview",
+      "videoEntryId": "1_a3edezg7",
+      "hint": "回到「z/OS UNIX 課程概觀」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 1"
+  },
+  {
+    "id": "q002",
+    "section": "z/OS UNIX 課程概觀",
+    "lessonSlug": "course-overview",
+    "lessonTitle": "z/OS UNIX 課程概觀",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193094",
+    "sourceReference": "checkpoint-1",
+    "prompt": "z/OS 的 UNIX 版本符合哪一個標準？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "UNIX95"
+      },
+      {
+        "id": "b",
+        "text": "UNIX98"
+      },
+      {
+        "id": "c",
+        "text": "XPG4.2"
+      },
+      {
+        "id": "d",
+        "text": "UNIX03"
+      },
+      {
+        "id": "e",
+        "text": "以上皆是"
+      }
+    ],
+    "correctChoiceIds": [
+      "e"
+    ],
+    "explanation": "這題來自 檢核點 1。正確答案請回到「z/OS UNIX 課程概觀」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX 課程概觀",
+      "coursePath": "/course/course-overview",
+      "videoEntryId": "1_a3edezg7",
+      "hint": "回到「z/OS UNIX 課程概觀」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 1"
+  },
+  {
+    "id": "q003",
+    "section": "z/OS UNIX 課程概觀",
+    "lessonSlug": "course-overview",
+    "lessonTitle": "z/OS UNIX 課程概觀",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193094",
+    "sourceReference": "checkpoint-1",
+    "prompt": "True or False：將應用程式從 UNIX 移植到 z/OS USS 時，需要處理 ASCII 到 EBCDIC 的轉換。",
+    "choices": [
+      {
+        "id": "a",
+        "text": "True（是）"
+      },
+      {
+        "id": "b",
+        "text": "False（否）"
+      }
+    ],
+    "correctChoiceIds": [
+      "b"
+    ],
+    "explanation": "這題來自 檢核點 1。正確答案請回到「z/OS UNIX 課程概觀」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX 課程概觀",
+      "coursePath": "/course/course-overview",
+      "videoEntryId": "1_a3edezg7",
+      "hint": "回到「z/OS UNIX 課程概觀」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 1"
+  },
+  {
+    "id": "q004",
+    "section": "z/OS UNIX 課程概觀",
+    "lessonSlug": "course-overview",
+    "lessonTitle": "z/OS UNIX 課程概觀",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193094",
+    "sourceReference": "checkpoint-1",
+    "prompt": "下列哪些是 z/OS UNIX 中有效的 file system？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "DFS"
+      },
+      {
+        "id": "b",
+        "text": "HFS"
+      },
+      {
+        "id": "c",
+        "text": "zFS"
+      },
+      {
+        "id": "d",
+        "text": "DFS and zFS"
+      },
+      {
+        "id": "e",
+        "text": "HFS and zFS"
+      }
+    ],
+    "correctChoiceIds": [
+      "e"
+    ],
+    "explanation": "這題來自 檢核點 1。正確答案請回到「z/OS UNIX 課程概觀」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX 課程概觀",
+      "coursePath": "/course/course-overview",
+      "videoEntryId": "1_a3edezg7",
+      "hint": "回到「z/OS UNIX 課程概觀」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 1"
+  },
+  {
+    "id": "q005",
+    "section": "z/OS UNIX 入門",
+    "lessonSlug": "introduction-to-zos-unix",
+    "lessonTitle": "z/OS UNIX 入門",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193099",
+    "sourceReference": "checkpoint-2",
+    "prompt": "請選出兩種可用於開發 z/OS UNIX 應用程式的 programming language。",
+    "choices": [
+      {
+        "id": "a",
+        "text": "C"
+      },
+      {
+        "id": "b",
+        "text": "C++"
+      },
+      {
+        "id": "c",
+        "text": "REXX"
+      },
+      {
+        "id": "d",
+        "text": "All options are correct"
+      }
+    ],
+    "correctChoiceIds": [
+      "d"
+    ],
+    "explanation": "這題來自 檢核點 2。正確答案請回到「z/OS UNIX 入門」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX 入門",
+      "coursePath": "/course/introduction-to-zos-unix",
+      "videoEntryId": "1_gb9hrqdy",
+      "hint": "回到「z/OS UNIX 入門」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 2"
+  },
+  {
+    "id": "q006",
+    "section": "z/OS UNIX shell 與 utilities",
+    "lessonSlug": "shell-and-utilities",
+    "lessonTitle": "z/OS UNIX shell 與 utilities",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193118",
+    "sourceReference": "checkpoint-4",
+    "prompt": "Shell scripts 可以用哪些方式執行？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Interactively"
+      },
+      {
+        "id": "b",
+        "text": "In batch mode"
+      },
+      {
+        "id": "c",
+        "text": "In the background"
+      },
+      {
+        "id": "d",
+        "text": "All options are correct"
+      }
+    ],
+    "correctChoiceIds": [
+      "d"
+    ],
+    "explanation": "這題來自 檢核點 4。正確答案請回到「z/OS UNIX shell 與 utilities」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX shell 與 utilities",
+      "coursePath": "/course/shell-and-utilities",
+      "videoEntryId": "1_iv4h5dcz",
+      "hint": "回到「z/OS UNIX shell 與 utilities」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 4"
+  },
+  {
+    "id": "q007",
+    "section": "z/OS UNIX shell 與 utilities",
+    "lessonSlug": "shell-and-utilities",
+    "lessonTitle": "z/OS UNIX shell 與 utilities",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193118",
+    "sourceReference": "checkpoint-4",
+    "prompt": "你可以使用 kill command 搭配 background job 的哪個資訊終止該 job？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "ID"
+      },
+      {
+        "id": "b",
+        "text": "Name"
+      },
+      {
+        "id": "c",
+        "text": "PID(process ID)"
+      }
+    ],
+    "correctChoiceIds": [
+      "c"
+    ],
+    "explanation": "這題來自 檢核點 4。正確答案請回到「z/OS UNIX shell 與 utilities」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX shell 與 utilities",
+      "coursePath": "/course/shell-and-utilities",
+      "videoEntryId": "1_iv4h5dcz",
+      "hint": "回到「z/OS UNIX shell 與 utilities」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 4"
+  },
+  {
+    "id": "q008",
+    "section": "z/OS UNIX shell 與 utilities",
+    "lessonSlug": "shell-and-utilities",
+    "lessonTitle": "z/OS UNIX shell 與 utilities",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193118",
+    "sourceReference": "checkpoint-4",
+    "prompt": "submit command 可以提交位於下列哪些位置的 jobs？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "STDIN"
+      },
+      {
+        "id": "b",
+        "text": "A UNIX file"
+      },
+      {
+        "id": "c",
+        "text": "A member of a z/OS PDS"
+      },
+      {
+        "id": "d",
+        "text": "A z/OS sequential data set"
+      },
+      {
+        "id": "e",
+        "text": "All options are correct"
+      }
+    ],
+    "correctChoiceIds": [
+      "e"
+    ],
+    "explanation": "這題來自 檢核點 4。正確答案請回到「z/OS UNIX shell 與 utilities」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX shell 與 utilities",
+      "coursePath": "/course/shell-and-utilities",
+      "videoEntryId": "1_iv4h5dcz",
+      "hint": "回到「z/OS UNIX shell 與 utilities」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 4"
+  },
+  {
+    "id": "q009",
+    "section": "z/OS UNIX shell commands 指令",
+    "lessonSlug": "shell-commands",
+    "lessonTitle": "z/OS UNIX shell commands 指令",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193124",
+    "sourceReference": "checkpoint-5",
+    "prompt": "UNIX help command 要用什麼方式呼叫？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "help"
+      },
+      {
+        "id": "b",
+        "text": "man"
+      },
+      {
+        "id": "c",
+        "text": "Vv"
+      }
+    ],
+    "correctChoiceIds": [
+      "b"
+    ],
+    "explanation": "這題來自 檢核點 5。正確答案請回到「z/OS UNIX shell commands 指令」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX shell commands 指令",
+      "coursePath": "/course/shell-commands",
+      "videoEntryId": "1_bf9i3fo8",
+      "hint": "回到「z/OS UNIX shell commands 指令」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 5"
+  },
+  {
+    "id": "q010",
+    "section": "z/OS UNIX shell commands 指令",
+    "lessonSlug": "shell-commands",
+    "lessonTitle": "z/OS UNIX shell commands 指令",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193124",
+    "sourceReference": "checkpoint-5",
+    "prompt": "哪個 UNIX command 可將值指定給 environment variable，並讓目前 process 及其產生的其他 process 使用？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "set"
+      },
+      {
+        "id": "b",
+        "text": "env"
+      },
+      {
+        "id": "c",
+        "text": "export"
+      }
+    ],
+    "correctChoiceIds": [
+      "c"
+    ],
+    "explanation": "這題來自 檢核點 5。正確答案請回到「z/OS UNIX shell commands 指令」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX shell commands 指令",
+      "coursePath": "/course/shell-commands",
+      "videoEntryId": "1_bf9i3fo8",
+      "hint": "回到「z/OS UNIX shell commands 指令」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 5"
+  },
+  {
+    "id": "q011",
+    "section": "z/OS UNIX shell commands 指令",
+    "lessonSlug": "shell-commands",
+    "lessonTitle": "z/OS UNIX shell commands 指令",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193124",
+    "sourceReference": "checkpoint-5",
+    "prompt": "哪些方式可用來顯示 file system information？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "F OMVS Command"
+      },
+      {
+        "id": "b",
+        "text": "df UNIX command"
+      },
+      {
+        "id": "c",
+        "text": "D OMVS"
+      },
+      {
+        "id": "d",
+        "text": "All options are correct"
+      }
+    ],
+    "correctChoiceIds": [
+      "d"
+    ],
+    "explanation": "這題來自 檢核點 5。正確答案請回到「z/OS UNIX shell commands 指令」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX shell commands 指令",
+      "coursePath": "/course/shell-commands",
+      "videoEntryId": "1_bf9i3fo8",
+      "hint": "回到「z/OS UNIX shell commands 指令」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 5"
+  },
+  {
+    "id": "q012",
+    "section": "使用 shell 工作",
+    "lessonSlug": "working-with-the-shell",
+    "lessonTitle": "使用 shell 工作",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193132",
+    "sourceReference": "checkpoint-6",
+    "prompt": "哪個 REXX statement 可將 commands 導向 z/OS UNIX environment？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Syscalls('ON')"
+      },
+      {
+        "id": "b",
+        "text": "Address syscall"
+      },
+      {
+        "id": "c",
+        "text": "Syscall()"
+      }
+    ],
+    "correctChoiceIds": [
+      "b"
+    ],
+    "explanation": "這題來自 檢核點 6。正確答案請回到「使用 shell 工作」單元與原課程 activity 複習。",
+    "review": {
+      "label": "使用 shell 工作",
+      "coursePath": "/course/working-with-the-shell",
+      "videoEntryId": "1_udrgkkbw",
+      "hint": "回到「使用 shell 工作」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 6"
+  },
+  {
+    "id": "q013",
+    "section": "使用 shell 工作",
+    "lessonSlug": "working-with-the-shell",
+    "lessonTitle": "使用 shell 工作",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193132",
+    "sourceReference": "checkpoint-6",
+    "prompt": "STDOUT 可以配置到下列哪些項目？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "z/OS Data Stack"
+      },
+      {
+        "id": "b",
+        "text": "A PDS Member"
+      },
+      {
+        "id": "c",
+        "text": "A UNIX file"
+      },
+      {
+        "id": "d",
+        "text": "Any one of the options"
+      }
+    ],
+    "correctChoiceIds": [
+      "d"
+    ],
+    "explanation": "這題來自 檢核點 6。正確答案請回到「使用 shell 工作」單元與原課程 activity 複習。",
+    "review": {
+      "label": "使用 shell 工作",
+      "coursePath": "/course/working-with-the-shell",
+      "videoEntryId": "1_udrgkkbw",
+      "hint": "回到「使用 shell 工作」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 6"
+  },
+  {
+    "id": "q014",
+    "section": "z/OS UNIX functions 功能",
+    "lessonSlug": "functions-in-zos-unix",
+    "lessonTitle": "z/OS UNIX functions 功能",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193138",
+    "sourceReference": "checkpoint-7",
+    "prompt": "UNIX functions 透過 runtime library 使用 callable services 呼叫。z/OS assembler callable services 的 prefix letters 是什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "FRK1"
+      },
+      {
+        "id": "b",
+        "text": "BPX1"
+      },
+      {
+        "id": "c",
+        "text": "OMVS"
+      }
+    ],
+    "correctChoiceIds": [
+      "b"
+    ],
+    "explanation": "這題來自 檢核點 7。正確答案請回到「z/OS UNIX functions 功能」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX functions 功能",
+      "coursePath": "/course/functions-in-zos-unix",
+      "videoEntryId": "1_156jj3h4",
+      "hint": "回到「z/OS UNIX functions 功能」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 7"
+  },
+  {
+    "id": "q015",
+    "section": "z/OS UNIX functions 功能",
+    "lessonSlug": "functions-in-zos-unix",
+    "lessonTitle": "z/OS UNIX functions 功能",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193138",
+    "sourceReference": "checkpoint-7",
+    "prompt": "在 z/OS 中，UNIX daemon 的對應概念是什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "An automation job"
+      },
+      {
+        "id": "b",
+        "text": "A started task"
+      },
+      {
+        "id": "c",
+        "text": "A job scheduler"
+      }
+    ],
+    "correctChoiceIds": [
+      "b"
+    ],
+    "explanation": "這題來自 檢核點 7。正確答案請回到「z/OS UNIX functions 功能」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX functions 功能",
+      "coursePath": "/course/functions-in-zos-unix",
+      "videoEntryId": "1_156jj3h4",
+      "hint": "回到「z/OS UNIX functions 功能」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 7"
+  },
+  {
+    "id": "q016",
+    "section": "z/OS UNIX functions 功能",
+    "lessonSlug": "functions-in-zos-unix",
+    "lessonTitle": "z/OS UNIX functions 功能",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193138",
+    "sourceReference": "checkpoint-7",
+    "prompt": "負責監聽 incoming login requests 的 daemon 名稱是什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "rlogind"
+      },
+      {
+        "id": "b",
+        "text": "sshd"
+      },
+      {
+        "id": "c",
+        "text": "inetd"
+      }
+    ],
+    "correctChoiceIds": [
+      "c"
+    ],
+    "explanation": "這題來自 檢核點 7。正確答案請回到「z/OS UNIX functions 功能」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX functions 功能",
+      "coursePath": "/course/functions-in-zos-unix",
+      "videoEntryId": "1_156jj3h4",
+      "hint": "回到「z/OS UNIX functions 功能」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 7"
+  },
+  {
+    "id": "q017",
+    "section": "z/OS UNIX functions 功能",
+    "lessonSlug": "functions-in-zos-unix",
+    "lessonTitle": "z/OS UNIX functions 功能",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193138",
+    "sourceReference": "checkpoint-7",
+    "prompt": "下列哪些 function 會建立新的 address space？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "fork()"
+      },
+      {
+        "id": "b",
+        "text": "exec()"
+      },
+      {
+        "id": "c",
+        "text": "spawn()"
+      },
+      {
+        "id": "d",
+        "text": "All options are correct"
+      }
+    ],
+    "correctChoiceIds": [
+      "d"
+    ],
+    "explanation": "這題來自 檢核點 7。正確答案請回到「z/OS UNIX functions 功能」單元與原課程 activity 複習。",
+    "review": {
+      "label": "z/OS UNIX functions 功能",
+      "coursePath": "/course/functions-in-zos-unix",
+      "videoEntryId": "1_156jj3h4",
+      "hint": "回到「z/OS UNIX functions 功能」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 7"
+  },
+  {
+    "id": "q018",
+    "section": "使用 z/OS UNIX 環境",
+    "lessonSlug": "unix-environment",
+    "lessonTitle": "使用 z/OS UNIX 環境",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193143",
+    "sourceReference": "checkpoint-8",
+    "prompt": "哪些 utility 可用來編譯 z/OS UNIX C++ source program？（本題有兩個答案）",
+    "choices": [
+      {
+        "id": "a",
+        "text": "c89"
+      },
+      {
+        "id": "b",
+        "text": "c++"
+      },
+      {
+        "id": "c",
+        "text": "cxx"
+      }
+    ],
+    "correctChoiceIds": [
+      "b",
+      "c"
+    ],
+    "explanation": "這題來自 檢核點 8。正確答案請回到「使用 z/OS UNIX 環境」單元與原課程 activity 複習。",
+    "review": {
+      "label": "使用 z/OS UNIX 環境",
+      "coursePath": "/course/unix-environment",
+      "videoEntryId": "1_8ihdkrd8",
+      "hint": "回到「使用 z/OS UNIX 環境」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 8"
+  },
+  {
+    "id": "q019",
+    "section": "使用 z/OS UNIX 環境",
+    "lessonSlug": "unix-environment",
+    "lessonTitle": "使用 z/OS UNIX 環境",
+    "sourceType": "hvp",
+    "sourceUrl": "https://learn.ibm.com/mod/hvp/view.php?id=193143",
+    "sourceReference": "checkpoint-8",
+    "prompt": "如果 z/OS UNIX application 是 z/OS PDS 中的 load module，該 program 可以從哪裡啟動？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "TSO/E"
+      },
+      {
+        "id": "b",
+        "text": "In batch by traditional JCL"
+      },
+      {
+        "id": "c",
+        "text": "In batch by BPXBATCH"
+      }
+    ],
+    "correctChoiceIds": [
+      "b"
+    ],
+    "explanation": "這題來自 檢核點 8。正確答案請回到「使用 z/OS UNIX 環境」單元與原課程 activity 複習。",
+    "review": {
+      "label": "使用 z/OS UNIX 環境",
+      "coursePath": "/course/unix-environment",
+      "videoEntryId": "1_8ihdkrd8",
+      "hint": "回到「使用 z/OS UNIX 環境」單元複習相關影片。"
+    },
+    "sourceLabel": "檢核點 8"
+  }
+]

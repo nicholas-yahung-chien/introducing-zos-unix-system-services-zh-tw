@@ -1,0 +1,484 @@
+{
+  "introduction-to-unix-standards": {
+    "summary": "UNIX 標準入門 這段影片協助學習者理解 Introduction to UNIX Standards 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "z/OS UNIX",
+      "POSIX",
+      "XPG4",
+      "EBCDIC"
+    ]
+  },
+  "unix-implementation-on-zos": {
+    "summary": "z/OS 上的 UNIX 實作 這段影片協助學習者理解 UNIX Implementation on z/OS 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "z/OS UNIX",
+      "POSIX",
+      "XPG4",
+      "EBCDIC"
+    ]
+  },
+  "zos-unit-component": {
+    "summary": "z/OS UNIX 元件 這段影片協助學習者理解 z/OS Unit Component 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "z/OS UNIX",
+      "POSIX",
+      "XPG4",
+      "EBCDIC"
+    ]
+  },
+  "components-of-a-unix-system": {
+    "summary": "UNIX 系統元件 這段影片協助學習者理解 Components of a UNIX System 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "z/OS UNIX",
+      "POSIX",
+      "XPG4",
+      "EBCDIC"
+    ]
+  },
+  "fundamental-functions": {
+    "summary": "基本功能 這段影片協助學習者理解 Fundamental Functions 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Kernel",
+      "Shell",
+      "Process",
+      "Runtime library"
+    ]
+  },
+  "more-fundamental-functions": {
+    "summary": "更多基本功能 這段影片協助學習者理解 More Fundamental Functions 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Kernel",
+      "Shell",
+      "Process",
+      "Runtime library"
+    ]
+  },
+  "hierarchical-system-introduction": {
+    "summary": "階層式系統入門 這段影片協助學習者理解 Hierarchical System Introduction 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "HFS",
+      "zFS",
+      "Mount point",
+      "ISHELL"
+    ]
+  },
+  "types": {
+    "summary": "類型 這段影片協助學習者理解 Types 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "z/OS UNIX",
+      "USS"
+    ]
+  },
+  "hfs-and-zfs-data-set-fundamentals": {
+    "summary": "HFS 與 zFS data set 基礎 這段影片協助學習者理解 HFS and zFS data set fundamentals 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "HFS",
+      "zFS",
+      "Mount point",
+      "ISHELL"
+    ]
+  },
+  "hfs-and-zfs-file-systems": {
+    "summary": "HFS 與 zFS 檔案系統 這段影片協助學習者理解 HFS and zFS file systems 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "HFS",
+      "zFS",
+      "Mount point",
+      "ISHELL"
+    ]
+  },
+  "ishell-and-directory-list-utility": {
+    "summary": "ISHELL 與 Directory List Utility 這段影片協助學習者理解 ISHELL and Directory List Utility 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "HFS",
+      "zFS",
+      "Mount point",
+      "ISHELL"
+    ]
+  },
+  "directory-list-utility-panels": {
+    "summary": "Directory List Utility panels 這段影片協助學習者理解 Directory List Utility panels 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "HFS",
+      "zFS",
+      "Mount point",
+      "ISHELL"
+    ]
+  },
+  "ispf-and-zos-unix": {
+    "summary": "ISPF 與 z/OS UNIX 這段影片協助學習者理解 ISPF and zOS UNIX 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "HFS",
+      "zFS",
+      "Mount point",
+      "ISHELL"
+    ]
+  },
+  "system-structure": {
+    "summary": "系統結構 這段影片協助學習者理解 system structure 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "z/OS UNIX",
+      "USS"
+    ]
+  },
+  "backup-and-recovery": {
+    "summary": "備份與復原 這段影片協助學習者理解 Backup and recovery 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "HFS",
+      "zFS",
+      "Mount point",
+      "ISHELL"
+    ]
+  },
+  "network-file-system-and-file-security": {
+    "summary": "Network file system 與 file security 這段影片協助學習者理解 Network file system and file security 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "HFS",
+      "zFS",
+      "Mount point",
+      "ISHELL"
+    ]
+  },
+  "lab-familiarization": {
+    "summary": "Lab 環境熟悉 這段影片協助學習者理解 Lab familiarization 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "z/OS UNIX",
+      "USS"
+    ]
+  },
+  "the-zos-shell": {
+    "summary": "z/OS shell 這段影片協助學習者理解 The zOS shell 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Shell",
+      "Environment variable",
+      "Code page",
+      "Background job"
+    ]
+  },
+  "tso-and-the-zos-unix-shell": {
+    "summary": "TSO 與 z/OS UNIX shell 這段影片協助學習者理解 TSO and the zOS UNIX shell 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Shell",
+      "Environment variable",
+      "Code page",
+      "Background job"
+    ]
+  },
+  "commands-and-jobs": {
+    "summary": "Commands 與 jobs 這段影片協助學習者理解 Commands and jobs 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Shell",
+      "Environment variable",
+      "Code page",
+      "Background job"
+    ]
+  },
+  "getting-help-and-working-with-code-pages": {
+    "summary": "取得說明與使用 code pages 這段影片協助學習者理解 Getting help and working with code pages 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Shell",
+      "Environment variable",
+      "Code page",
+      "Background job"
+    ]
+  },
+  "system-shell-commands": {
+    "summary": "System shell commands 這段影片協助學習者理解 system shell commands 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Shell",
+      "Environment variable",
+      "Code page",
+      "Background job"
+    ]
+  },
+  "more-shell-commands": {
+    "summary": "更多 shell commands 這段影片協助學習者理解 More shell commands 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Shell",
+      "Environment variable",
+      "Code page",
+      "Background job"
+    ]
+  },
+  "working-with-the-shell": {
+    "summary": "使用 shell 工作 這段影片協助學習者理解 Working with the shell 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Shell",
+      "Environment variable",
+      "Code page",
+      "Background job"
+    ]
+  },
+  "shell-scripts-and-rexx": {
+    "summary": "Shell scripts 與 REXX 這段影片協助學習者理解 Shell scripts and REXX 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Shell",
+      "Environment variable",
+      "Code page",
+      "Background job"
+    ]
+  },
+  "bpxbatch": {
+    "summary": "BPXBATCH 這段影片協助學習者理解 BPXBATCH 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "REXX",
+      "BPXBATCH",
+      "ASCII",
+      "EBCDIC"
+    ]
+  },
+  "ascii-and-ebcdic-considerations": {
+    "summary": "ASCII 與 EBCDIC 考量 這段影片協助學習者理解 ASCII and EBCDIC considerations 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "REXX",
+      "BPXBATCH",
+      "ASCII",
+      "EBCDIC"
+    ]
+  },
+  "translation-considerations": {
+    "summary": "轉換考量 這段影片協助學習者理解 Translation considerations 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "REXX",
+      "BPXBATCH",
+      "ASCII",
+      "EBCDIC"
+    ]
+  },
+  "functions-and-processes": {
+    "summary": "Functions 與 processes 這段影片協助學習者理解 Functions and processes 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Kernel",
+      "Shell",
+      "Process",
+      "Runtime library"
+    ]
+  },
+  "daemons-and-superusers": {
+    "summary": "Daemons 與 superusers 這段影片協助學習者理解 Daemons and superusers 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Daemon",
+      "Superuser",
+      "Child process",
+      "Thread"
+    ]
+  },
+  "child-processes": {
+    "summary": "Child processes 這段影片協助學習者理解 Child processes 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Daemon",
+      "Superuser",
+      "Child process",
+      "Thread"
+    ]
+  },
+  "communications-and-threads": {
+    "summary": "Communications 與 threads 這段影片協助學習者理解 Communications and threads 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "Daemon",
+      "Superuser",
+      "Child process",
+      "Thread"
+    ]
+  },
+  "application-programming-in-zos-unix": {
+    "summary": "z/OS UNIX 應用程式設計 這段影片協助學習者理解 Application programming in zOS UNIX 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "C++",
+      "Load module",
+      "ACL",
+      "PDS"
+    ]
+  },
+  "printing-and-access-control-lists": {
+    "summary": "Printing 與 access control lists 這段影片協助學習者理解 Printing and access control lists 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "C++",
+      "Load module",
+      "ACL",
+      "PDS"
+    ]
+  },
+  "additional-considerations": {
+    "summary": "其他考量 這段影片協助學習者理解 Additional considerations 在 z/OS UNIX System Services 中的角色，並把概念連回原課程的 checkpoint 或 Lab。",
+    "keyPoints": [
+      "先掌握主題在 z/OS UNIX 學習路徑中的定位。",
+      "留意影片中出現的 UNIX、z/OS、file system、shell 或 process 相關術語。",
+      "看完後回到對應 checkpoint 或 Lab metadata 確認概念。"
+    ],
+    "terms": [
+      "z/OS UNIX",
+      "USS"
+    ]
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=348813",
+  "reviewAttemptsChecked": 3,
+  "questionsPerAttempt": 20,
+  "uniqueConceptsObserved": 34,
+  "publicPracticeMode": "original-paraphrased-questions",
+  "reproductionNote": "The logged-in IBM Learn Badge Quiz warns that quiz content may not be reproduced. This file records concept coverage only; public practice questions are original paraphrases rather than copied quiz text.",
+  "topics": [
+    {
+      "id": "badge-quiz-scope-q01",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JES 與 JCL 綜合回顧",
+      "answerFocus": "Static"
+    },
+    {
+      "id": "badge-quiz-scope-q02",
+      "lessonSlug": "system-programming-components",
+      "concept": "z/OS 公用程式綜合回顧",
+      "answerFocus": "IEFBR14"
+    },
+    {
+      "id": "badge-quiz-scope-q03",
+      "lessonSlug": "zosmf-and-unix-system-services",
+      "concept": "z/OSMF 綜合回顧",
+      "answerFocus": "具備可用於 z/OSMF 的 RACF 使用者 ID"
+    },
+    {
+      "id": "badge-quiz-scope-q04",
+      "lessonSlug": "zosmf-and-unix-system-services",
+      "concept": "z/OSMF 綜合回顧",
+      "answerFocus": "支援現代化 z/OS 管理與自動化"
+    },
+    {
+      "id": "badge-quiz-scope-q05",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "資料集與 JCL 綜合回顧",
+      "answerFocus": "PDSE"
+    },
+    {
+      "id": "badge-quiz-scope-q06",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JCL 程序綜合回顧",
+      "answerFocus": "JCLLIB"
+    },
+    {
+      "id": "badge-quiz-scope-q07",
+      "lessonSlug": "system-programming-components",
+      "concept": "安全與系統元件綜合回顧",
+      "answerFocus": "RACF"
+    },
+    {
+      "id": "badge-quiz-scope-q08",
+      "lessonSlug": "system-programming-components",
+      "concept": "z/OS 公用程式綜合回顧",
+      "answerFocus": "IEBGENER"
+    },
+    {
+      "id": "badge-quiz-scope-q09",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JCL 資料集配置綜合回顧",
+      "answerFocus": "LIKE"
+    },
+    {
+      "id": "badge-quiz-scope-q10",
+      "lessonSlug": "zosmf-and-unix-system-services",
+      "concept": "USS 綜合回顧",
+      "answerFocus": "OMVS"
+    },
+    {
+      "id": "badge-quiz-scope-q11",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JCL 資料流綜合回顧",
+      "answerFocus": "在 JCL 陳述式內直接提供的一段資料"
+    },
+    {
+      "id": "badge-quiz-scope-q12",
+      "lessonSlug": "system-programming-components",
+      "concept": "z/OS 公用程式綜合回顧",
+      "answerFocus": "IEBCOPY"
+    },
+    {
+      "id": "badge-quiz-scope-q13",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JES 與工作執行綜合回顧",
+      "answerFocus": "Job"
+    },
+    {
+      "id": "badge-quiz-scope-q14",
+      "lessonSlug": "zosmf-and-unix-system-services",
+      "concept": "USS 檔案系統綜合回顧",
+      "answerFocus": "Mount point"
+    },
+    {
+      "id": "badge-quiz-scope-q15",
+      "lessonSlug": "system-programming-components",
+      "concept": "z/OS 公用程式綜合回顧",
+      "answerFocus": "ICKDSF"
+    },
+    {
+      "id": "badge-quiz-scope-q16",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JCL 語法綜合回顧",
+      "answerFocus": "//"
+    },
+    {
+      "id": "badge-quiz-scope-q17",
+      "lessonSlug": "system-programming-components",
+      "concept": "z/OS 公用程式綜合回顧",
+      "answerFocus": "IEBUPDTE"
+    },
+    {
+      "id": "badge-quiz-scope-q18",
+      "lessonSlug": "system-programming-components",
+      "concept": "系統程式庫綜合回顧",
+      "answerFocus": "IEASYSxx"
+    },
+    {
+      "id": "badge-quiz-scope-q19",
+      "lessonSlug": "system-programming-components",
+      "concept": "系統程式庫綜合回顧",
+      "answerFocus": "SYS1.LPALIB"
+    },
+    {
+      "id": "badge-quiz-scope-q20",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "Job 結束狀態綜合回顧",
+      "answerFocus": "ABEND"
+    },
+    {
+      "id": "badge-quiz-scope-q21",
+      "lessonSlug": "system-programming-components",
+      "concept": "網路元件綜合回顧",
+      "answerFocus": "Communications Server"
+    },
+    {
+      "id": "badge-quiz-scope-q22",
+      "lessonSlug": "zosmf-and-unix-system-services",
+      "concept": "z/OSMF 綜合回顧",
+      "answerFocus": "HTTPS"
+    },
+    {
+      "id": "badge-quiz-scope-q23",
+      "lessonSlug": "system-programming-components",
+      "concept": "RAIM 綜合回顧",
+      "answerFocus": "RAIM"
+    },
+    {
+      "id": "badge-quiz-scope-q24",
+      "lessonSlug": "system-programming-components",
+      "concept": "GDG 綜合回顧",
+      "answerFocus": "相對 generation number"
+    },
+    {
+      "id": "badge-quiz-scope-q25",
+      "lessonSlug": "zosmf-and-unix-system-services",
+      "concept": "z/OSMF 綜合回顧",
+      "answerFocus": "z/OS classic interfaces"
+    },
+    {
+      "id": "badge-quiz-scope-q26",
+      "lessonSlug": "system-programming-components",
+      "concept": "系統程式庫綜合回顧",
+      "answerFocus": "MSTJCL00"
+    },
+    {
+      "id": "badge-quiz-scope-q27",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JES 綜合回顧",
+      "answerFocus": "JES"
+    },
+    {
+      "id": "badge-quiz-scope-q28",
+      "lessonSlug": "zosmf-and-unix-system-services",
+      "concept": "USS 檔案系統綜合回顧",
+      "answerFocus": "讓檔案系統可由多個 LPAR 與使用者一致存取"
+    },
+    {
+      "id": "badge-quiz-scope-q29",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JCL Symbol 綜合回顧",
+      "answerFocus": "&SYSUID"
+    },
+    {
+      "id": "badge-quiz-scope-q30",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "PDS 維護綜合回顧",
+      "answerFocus": "COMPRESS"
+    },
+    {
+      "id": "badge-quiz-scope-q31",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "DISP 參數綜合回顧",
+      "answerFocus": "建立新資料集，正常結束時傳給後續 step 使用"
+    },
+    {
+      "id": "badge-quiz-scope-q32",
+      "lessonSlug": "jes-and-jcl",
+      "concept": "JCL Procedure 綜合回顧",
+      "answerFocus": "INCLUDE"
+    },
+    {
+      "id": "badge-quiz-scope-q33",
+      "lessonSlug": "system-programming-components",
+      "concept": "IBM Z 硬體概念綜合回顧",
+      "answerFocus": "32 TB"
+    },
+    {
+      "id": "badge-quiz-scope-q34",
+      "lessonSlug": "system-programming-components",
+      "concept": "z/OS 元件綜合回顧",
+      "answerFocus": "WLM"
+    }
+  ]
+}
