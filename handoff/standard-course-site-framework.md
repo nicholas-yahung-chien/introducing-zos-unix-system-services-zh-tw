@@ -1,12 +1,13 @@
 # IBM Learn 課程網站標準化轉置框架與經驗學習
 
-本文件彙整前三個 IBM Learn 課程靜態網站轉置的流程經驗，特別納入本次 `Introduction to System Programming on IBM Z` 實作與驗收時發現的問題。後續其他課程轉置專案應以此作為標準框架，再依單一課程的活動數量、影片授權、Lab 型態與評量範圍做差異化調整。
+本文件彙整前三個 IBM Learn 課程靜態網站轉置的流程經驗，並作為本次 `Introducing z/OS Unix System Services` 轉置的標準框架。後續其他課程轉置專案應以此作為基準，再依單一課程的活動數量、影片授權、Lab 型態與評量範圍做差異化調整。
 
 已完成可參考站：
 
 - `Introduction to IBM z/OS`：https://introduction-to-ibm-zos-zh-tw.pages.dev/
 - `Introduction to z/OS Commands and Panels`：https://introduction-to-zos-commands-and-panels-zh-tw.pages.dev/
 - `Introduction to System Programming on IBM Z`：https://introduction-to-system-programming-on-ibm-z-zh-tw.pages.dev/
+- `Introducing z/OS Unix System Services`：https://introducing-zos-unix-system-services-zh-tw.pages.dev/
 
 ## 核心原則
 
@@ -192,7 +193,7 @@
 
 標準做法：
 
-- `data/captured/badge-quiz-scope.json` 只記錄概念範圍與 reproduction note。
+- 若課程有 formal badge quiz 範圍盤點，僅記錄概念範圍與 reproduction note，不把正式題庫搬進公開站。
 - 公開題目必須是原創改寫。
 - 公開頁稱為非計分綜合回顧，不暗示等同正式題庫。
 - 題目數、正式 attempt 每次題數與公開回顧題數要在 inventory check 中分開驗證。

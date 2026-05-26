@@ -5,6 +5,7 @@ import path from 'node:path'
 const root = process.cwd()
 const mediaDist = path.join(root, 'dist-media')
 const manifest = JSON.parse(await readFile(path.join(root, 'data', 'course-manifest.json'), 'utf8'))
+const courseTitle = manifest.course?.title || 'Introducing z/OS Unix System Services'
 const videos = manifest.sections
   .flatMap((section) => section.activities)
   .filter((activity) => activity.type === 'video' && activity.mediaStatus !== 'source-only')
@@ -61,8 +62,8 @@ await writeFile(
     '<!doctype html>',
     '<html lang="zh-Hant-TW">',
     '<meta charset="utf-8">',
-    '<title>Introduction to System Programming on IBM Z media</title>',
-    '<h1>Introduction to System Programming on IBM Z media</h1>',
+    `<title>${courseTitle} media</title>`,
+    `<h1>${courseTitle} media</h1>`,
     `<p>${videos.length} deployed video playlist(s), subtitles, and public media manifest are packaged here.</p>`,
     '</html>',
   ].join('\n'),

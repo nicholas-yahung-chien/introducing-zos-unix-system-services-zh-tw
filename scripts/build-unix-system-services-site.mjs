@@ -493,6 +493,19 @@ async function writeJson(file, value) {
   await writeText(file, JSON.stringify(value, null, 2) + '\n')
 }
 
+const staleTemplateFiles = [
+  'data/captured/badge-quiz-scope.json',
+  'handoff/course-site-implementation-framework.md',
+  'handoff/course-template-playbook.md',
+  'handoff/glossary-relevance-report.md',
+  'scripts/build-system-programming-site.mjs',
+  'scripts/refresh-second-phase-content.mjs',
+]
+
+for (const file of staleTemplateFiles) {
+  await rm(path.join(root, file), { force: true })
+}
+
 await writeJson('data/course-manifest.json', {
   course: {
     id: course.id,
@@ -545,6 +558,8 @@ await writeText('docs/practice/index.md', practicePage)
 await writeText('docs/labs/index.md', labsPage)
 await writeText('docs/license-notes.md', licensePage)
 await writeText('README.md', readme)
+await writeText('references/README.md', `# References\n\nThis directory is for non-public maintenance references. Public glossary pages live under \`docs/glossary/\`.\n\nThis z/OS UNIX System Services baseline uses IBM Learn authenticated capture plus IBM public documentation links in the unit pages. Do not copy login-only IBM Learn source material into public pages beyond the authorized summaries, metadata, lab inventory, and static checkpoint practice scope recorded in this repository.\n`)
+await writeText('references/glossary-source-readme.md', `# Glossary Source Notes\n\nThe public glossary was curated for \`${course.title}\` and should remain focused on learner-facing terms used in the course pages, Lab metadata, and practice questions.\n\nWhen adding terms, prefer IBM product names and official English abbreviations, with Taiwan Traditional Chinese explanations.\n`)
 await writeText('RELEASE-CHECKLIST.md', `# Release Checklist\n\n## Content\n\n- [ ] Confirm IBM Learn source URL is ${course.sourceUrl}\n- [ ] Confirm public pages do not imply Lab runtime, formal quiz scoring, certificate, badge claim, or learner progress are hosted on this site.\n- [ ] Confirm H5P checkpoint practice remains non-scoring.\n- [ ] Confirm video assets, HLS playlists, and subtitles are deployed or clearly documented if unavailable.\n\n## Verification\n\n\`\`\`powershell\nnpm run verify:release\n\`\`\`\n\n## Deployment\n\n- Cloudflare Pages project: \`${course.repo}\`\n- GitHub Pages base path: \`/${course.repo}/\`\n`)
 await writeText('FIRST-EDITION-SIGNOFF.md', `# First Edition Signoff\n\nThis file records the first converted baseline for the Traditional Chinese static course site. It is a repository planning and handoff record only; do not link it from the public VitePress site.\n\n## Signoff Status\n\n- Status: prepared for review\n- Prepared date: ${new Date().toISOString().slice(0, 10)}\n- Course source: \`${course.sourceUrl}\`\n- Course title: \`${course.title}\`\n- Locale: \`zh-Hant-TW\`\n\n## Included Scope\n\n- VitePress static course site.\n- Course landing page and learner-facing unit pages.\n- ${videos.length} course video entries with Kaltura metadata and source links.\n- ${practiceQuestions.length} static practice questions from ${hvpSources.length} H5P checkpoint activities.\n- Lab metadata for ${labs.length} IBM Remote Lab Platform activities.\n- Glossary, license notes, release checklist, and automated quality checks.\n\n## Excluded From This Baseline\n\n- Formal quiz scoring, attempt workflow, and verbatim question bank reproduction.\n- Certificate, survey, badge claim, and Moodle learner-state workflows.\n- Login-dependent learner progress tracking.\n- Recreated IBM Remote Lab Platform runtime.\n- HLS media and subtitles until media authorization is confirmed.\n`)
 await writeJson('package.json', packageJson)

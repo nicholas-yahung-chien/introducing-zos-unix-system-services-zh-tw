@@ -234,7 +234,7 @@ if (existsSync(terminologyGuide)) {
   await copyFile(terminologyGuide, path.join(referencesDir, 'terminology-guide.md'))
 }
 
-await writeFile(path.join(referencesDir, 'README.md'), `# References\n\nLocal source project:\n\n\`${sourceRoot}\`\n\nImported source files:\n\n- \`docs/01-concepts/ibm-z-glossary/*.md\`\n- \`docs/01-concepts/terminology-guide.md\`\n\nThe public glossary in \`docs/glossary/\` is filtered to terms that are mentioned in or directly relevant to this Introduction to System Programming on IBM Z course. The original PDF is intentionally not copied into this public repo by default:\n\n- \`${path.join(sourceRoot, 'IBM-Z-Glossary-of-Terms.pdf')}\`\n\n`, 'utf8')
+await writeFile(path.join(referencesDir, 'README.md'), `# References\n\nLocal source project:\n\n\`${sourceRoot}\`\n\nImported source files:\n\n- \`docs/01-concepts/ibm-z-glossary/*.md\`\n- \`docs/01-concepts/terminology-guide.md\`\n\nThe public glossary in \`docs/glossary/\` is filtered to terms that are mentioned in or directly relevant to this Introducing z/OS Unix System Services course. The original PDF is intentionally not copied into this public repo by default:\n\n- \`${path.join(sourceRoot, 'IBM-Z-Glossary-of-Terms.pdf')}\`\n\n`, 'utf8')
 
 const keptReport = finalEntries
   .map((entry) => `- ${entry.term} (${entry.reason})`)
