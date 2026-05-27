@@ -2,8 +2,7 @@ WEBVTT
 
 1
 00:00:03.890 --> 00:00:09.890
-您好，我是 Mackenzie Manna，專精 IBM Z 的 IBM
-Redbooks 專案主管。
+您好，我是 IBM Redbooks 的 Mackenzie Manna。
 
 2
 00:00:09.890 --> 00:00:15.890
@@ -230,9 +229,8 @@ chmod 還有一種稱為符號形式的用法。
 
 56
 00:06:12.890 --> 00:06:24.890
-擁有 UNIX PRIV 類別配置檔中
-superuser.filesys.changeperms 讀取權限的使用者，
-可以變更任何檔案的權限位元。
+具備 changeperms read access 者，可用 chmod
+變更權限。
 
 57
 00:06:24.890 --> 00:06:35.890

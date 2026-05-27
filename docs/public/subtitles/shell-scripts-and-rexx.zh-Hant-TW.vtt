@@ -38,8 +38,8 @@ Quit all 結束所有工作階段並返回 TSOE。
 
 10
 00:00:40.560 --> 00:00:47.420
-Next sesh 會切換到下一個工作階段，previous sesh
-會切換到前一個工作階段。
+nextsess 切到下一個 session，prevsess 切到前一個
+session。
 
 11
 00:00:47.420 --> 00:00:53.760
@@ -136,8 +136,7 @@ Rex 的 zosunix 擴充稱為 syscall 指令，名稱與
 
 34
 00:02:36.600 --> 00:02:43.340
-使用 zosunix 擴展的 Rex execs 可以從 TSOE 或
-zosbatch 執行，並存取 zosunix
+REXX exec 可從 TSO/E 或 batch 執行並存取 z/OS UNIX
 
 35
 00:02:43.340 --> 00:02:50.060

@@ -109,8 +109,8 @@ ZOS 使用者可以下載 ASCII 資料到支援 ASCII 字元集的工作站，�
 
 27
 00:02:46.980 --> 00:02:53.460
-ASCII 和 LF 指令用於編輯儲存在 z/OS 資料集中的 ASCII 資料。
-對於 Unix 檔案，你有
+ASCII 與 LF commands 可編輯 z/OS data set 中的
+ASCII 資料。
 
 28
 00:02:53.460 --> 00:03:00.860

@@ -10,8 +10,7 @@ WEBVTT
 
 3
 00:00:12.860 --> 00:00:19.340
-ZOS UNIX 應用程式可使用 POSIX 函數 printf、fprintf、
-write 或 fwrite
+可使用 printf、fprintf、write、fwrite。
 
 4
 00:00:19.340 --> 00:00:22.920

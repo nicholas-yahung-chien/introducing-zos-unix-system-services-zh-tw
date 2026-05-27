@@ -12,8 +12,8 @@ shell 和指令直譯器中類 UNIX 的介面
 
 3
 00:00:24.700 --> 00:00:32.700
-UNIX 使用者可使用 ZOS UNIX shell OMVS，TSO 使用者可在
-TSO 下使用 i-shell。
+UNIX users 可用 OMVS shell，TSO users 可用
+ISHELL。
 
 4
 00:00:32.700 --> 00:00:40.700

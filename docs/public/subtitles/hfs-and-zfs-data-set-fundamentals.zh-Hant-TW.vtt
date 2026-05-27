@@ -94,8 +94,8 @@ HFS 在每個磁碟最多可有 123 個配置區段（extent）。
 
 24
 00:02:04.700 --> 00:02:12.700
-ZFS aggregate 是一個 VSAM linear data set 或
-LDS，包含一個或多個 ZFS 檔案系統。
+zFS aggregate 是 VSAM LDS，可包含多個 zFS file
+systems。
 
 25
 00:02:12.700 --> 00:02:16.700

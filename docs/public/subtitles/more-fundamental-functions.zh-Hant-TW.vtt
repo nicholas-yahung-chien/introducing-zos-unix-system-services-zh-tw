@@ -14,7 +14,7 @@ process 是由 fork 系統呼叫建立，並由執行
 
 4
 00:00:15.980 --> 00:00:21.100
-exit 系統呼叫來終止，更多時候是另一個 process 傳送的 kill 訊號。
+可由 exit system call 或 kill signal 結束。
 每個 process 都有
 
 5

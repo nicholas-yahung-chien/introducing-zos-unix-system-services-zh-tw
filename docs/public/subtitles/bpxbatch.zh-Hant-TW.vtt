@@ -2,8 +2,8 @@ WEBVTT
 
 1
 00:00:03.760 --> 00:00:13.760
-BPX batch 提供了方便在 ZOS UNIX 應用程式中透過 ZOS
-批次環境執行 shell 腳本的方法，這些應用程式位於 HFS 中。
+BPXBATCH 可在 z/OS batch 中執行 HFS 的 shell
+scripts。
 
 2
 00:00:13.760 --> 00:00:19.760
@@ -12,8 +12,7 @@ shell。
 
 3
 00:00:19.760 --> 00:00:27.760
-BPX batch 可由 JCL 以批次作業呼叫，或在 TSOE 中當成命令，或在
-rex exec 內部使用，亦可透過 oshell 執行。
+BPXBATCH 可由 JCL、TSO/E、REXX 或 oshell 呼叫。
 
 4
 00:00:27.760 --> 00:00:33.760
@@ -89,9 +88,8 @@ pdse 成員。
 
 20
 00:02:41.760 --> 00:02:55.760
-BPX batsl 提供了另一種進入 BPX batch 的入口，
-並強制程式使用本地 spawn 執行，而非 BPX batch 通常的 fork
-或 exec。
+BPXBATCHL 是 BPXBATCH 的替代 entry point，
+會強制程式使用 local spawn，而非 fork/exec。
 
 21
 00:02:55.760 --> 00:02:58.760

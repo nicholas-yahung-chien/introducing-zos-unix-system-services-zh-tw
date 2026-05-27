@@ -22,8 +22,7 @@ NFSS 使主機處理器能作為檔案伺服器，授權 NFS 用戶端及 TCP/IP
 
 6
 00:00:36.670 --> 00:00:44.110
-安裝有 NFS 用戶端軟體的 Windows、Unix 或 Linux 系統與
-z/OS。且 NFS 伺服器允許
+Windows、UNIX、Linux NFS client 可與 z/OS 搭配。
 
 7
 00:00:44.110 --> 00:00:50.670

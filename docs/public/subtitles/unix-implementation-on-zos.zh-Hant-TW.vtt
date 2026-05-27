@@ -194,8 +194,7 @@ BPX batch 是一個工具，可用來透過批次設施執行 shell 命令或可
 
 48
 00:04:02.190 --> 00:04:03.970
-您可以從批次作業或 TSLE 環境以呼叫命令、C 程式清單或 RexxXEC 執行
-BPX batch。
+batch facility。
 
 49
 00:04:03.990 --> 00:04:09.570
@@ -211,8 +210,7 @@ BPX batch 可透過 call 命令、C 程式清單或 RexxXEC 被呼叫。
 
 52
 00:04:24.690 --> 00:04:31.570
-現在來看看兩個利用這些功能的例子：IBM HTTP server 與 IBM
-WebSphere
+接著看 IBM HTTP Server 與 IBM WebSphere 兩個例子。
 
 53
 00:04:31.570 --> 00:04:33.970
