@@ -486,6 +486,7 @@ const packageJson = {
     'subtitles:wrap': 'node scripts/wrap-subtitle-lines.mjs',
     'subtitles:audit': 'node scripts/audit-subtitle-alignment.mjs',
     'media:package': 'node scripts/package-media-site.mjs',
+    'deploy:check': 'node scripts/check-deployment.mjs',
     'site:check': 'node scripts/check-public-site.mjs',
     'content:quality': 'node scripts/check-content-quality.mjs',
     'practice:check': 'node scripts/check-practice-data.mjs',
