@@ -704,5 +704,785 @@
       "hint": "回到「使用 z/OS UNIX 環境」單元複習相關影片。"
     },
     "sourceLabel": "檢核點 8"
+  },
+  {
+    "id": "q020",
+    "section": "z/OS UNIX 課程概觀",
+    "lessonSlug": "course-overview",
+    "lessonTitle": "z/OS UNIX 課程概觀",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "在 z/OS 中，UNIX System Services 主要扮演什麼角色？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "提供符合 UNIX/open systems 標準的執行環境與介面"
+      },
+      {
+        "id": "b",
+        "text": "取代所有 MVS batch 工作"
+      },
+      {
+        "id": "c",
+        "text": "只用來顯示 ISPF panel"
+      },
+      {
+        "id": "d",
+        "text": "只負責管理 JES spool"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "z/OS UNIX System Services 讓 z/OS 能支援 UNIX 標準介面、shell、file system、process 與相關 API，同時仍與 z/OS 工作流共存。",
+    "review": {
+      "label": "z/OS UNIX 課程概觀",
+      "coursePath": "/course/course-overview",
+      "videoEntryId": "1_a3edezg7",
+      "hint": "回到「z/OS UNIX 課程概觀」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q021",
+    "section": "z/OS UNIX 入門",
+    "lessonSlug": "introduction-to-zos-unix",
+    "lessonTitle": "z/OS UNIX 標準與元件",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "POSIX 與 XPG4 在 z/OS UNIX 脈絡中的重點是什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "定義開放系統介面與可攜式應用程式行為"
+      },
+      {
+        "id": "b",
+        "text": "指定 DASD volume serial 的命名方式"
+      },
+      {
+        "id": "c",
+        "text": "定義 RACF user profile 的唯一格式"
+      },
+      {
+        "id": "d",
+        "text": "只規範 3270 terminal 的 PF key"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "POSIX 與 XPG4 是 UNIX/open systems 相關標準，z/OS UNIX 透過這些介面支援可攜式應用與常見 UNIX 行為。",
+    "review": {
+      "label": "z/OS UNIX 標準與元件",
+      "coursePath": "/course/introduction-to-zos-unix",
+      "videoEntryId": "1_gb9hrqdy",
+      "hint": "回到「z/OS UNIX 標準與元件」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q022",
+    "section": "z/OS UNIX 入門",
+    "lessonSlug": "introduction-to-zos-unix",
+    "lessonTitle": "z/OS UNIX 字元編碼",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "在 z/OS UNIX 與分散式 UNIX 系統交換資料時，為什麼常需要注意 ASCII 與 EBCDIC？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "因為不同平台常使用不同字元編碼，文字資料可能需要轉換"
+      },
+      {
+        "id": "b",
+        "text": "因為 ASCII 只能用在 JCL，EBCDIC 只能用在 shell"
+      },
+      {
+        "id": "c",
+        "text": "因為二者都是檔案權限模型"
+      },
+      {
+        "id": "d",
+        "text": "因為二者會決定 process ID 的範圍"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "大型主機常見 EBCDIC，許多 UNIX 與網路環境常見 ASCII；資料交換或程式介接時必須留意 code page 與轉換。",
+    "review": {
+      "label": "z/OS UNIX 字元編碼",
+      "coursePath": "/course/introduction-to-zos-unix",
+      "videoEntryId": "1_gb9hrqdy",
+      "hint": "回到「z/OS UNIX 字元編碼」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q023",
+    "section": "階層式檔案系統",
+    "lessonSlug": "hierarchical-file-system",
+    "lessonTitle": "階層式檔案系統",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "mount point 在 z/OS UNIX file system 中代表什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "把一個 file system 接到 UNIX directory tree 的位置"
+      },
+      {
+        "id": "b",
+        "text": "登入 TSO/E 時輸入密碼的位置"
+      },
+      {
+        "id": "c",
+        "text": "JES2 job class 的排序欄位"
+      },
+      {
+        "id": "d",
+        "text": "只用來指定 printer destination"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "z/OS UNIX 使用階層式目錄樹；mount point 是 file system 被掛接到目錄樹中的節點。",
+    "review": {
+      "label": "階層式檔案系統",
+      "coursePath": "/course/hierarchical-file-system",
+      "videoEntryId": "1_lk9agppe",
+      "hint": "回到「階層式檔案系統」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q024",
+    "section": "階層式檔案系統",
+    "lessonSlug": "hierarchical-file-system",
+    "lessonTitle": "HFS 與 zFS",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "在 z/OS UNIX 學習中，zFS 通常應如何定位？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "z/OS UNIX 常用且較新的 UNIX file system 實作"
+      },
+      {
+        "id": "b",
+        "text": "只存放 JES spool record 的資料庫"
+      },
+      {
+        "id": "c",
+        "text": "ISPF editor 的語法高亮設定"
+      },
+      {
+        "id": "d",
+        "text": "用來取代 RACF group 的安全機制"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "課程會介紹 HFS 與 zFS；zFS 是現代 z/OS UNIX 環境常用的 file system 實作。",
+    "review": {
+      "label": "HFS 與 zFS",
+      "coursePath": "/course/hierarchical-file-system",
+      "videoEntryId": "1_lk9agppe",
+      "hint": "回到「HFS 與 zFS」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q025",
+    "section": "階層式檔案系統",
+    "lessonSlug": "hierarchical-file-system",
+    "lessonTitle": "檔案安全與 ACL",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "Access Control List (ACL) 在 z/OS UNIX file system 中主要補充哪一類能力？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "比傳統 owner/group/other permission bits 更細緻的存取控制"
+      },
+      {
+        "id": "b",
+        "text": "將 shell command 自動轉成 JCL"
+      },
+      {
+        "id": "c",
+        "text": "壓縮所有 sequential data set"
+      },
+      {
+        "id": "d",
+        "text": "指定 TCP/IP port number 的預設值"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "ACL 可在傳統 UNIX 權限位元之外提供更細的檔案與目錄存取控制。",
+    "review": {
+      "label": "檔案安全與 ACL",
+      "coursePath": "/course/hierarchical-file-system",
+      "videoEntryId": "1_lk9agppe",
+      "hint": "回到「檔案安全與 ACL」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q026",
+    "section": "z/OS UNIX shell 與 utilities",
+    "lessonSlug": "shell-and-utilities",
+    "lessonTitle": "Shell 與 TSO/E",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "學習者通常可以透過哪一類方式從 z/OS 互動環境進入 z/OS UNIX shell？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "從 TSO/E 使用 OMVS 相關入口啟動 shell session"
+      },
+      {
+        "id": "b",
+        "text": "只能重新 IPL 整個 LPAR"
+      },
+      {
+        "id": "c",
+        "text": "只能提交 JES2 purge 命令"
+      },
+      {
+        "id": "d",
+        "text": "只能透過印表機 destination"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "課程中的 shell 操作會連結 z/OS 互動環境；OMVS 是常見進入 z/OS UNIX shell 的入口之一。",
+    "review": {
+      "label": "Shell 與 TSO/E",
+      "coursePath": "/course/shell-and-utilities",
+      "videoEntryId": "1_iv4h5dcz",
+      "hint": "回到「Shell 與 TSO/E」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q027",
+    "section": "z/OS UNIX shell 與 utilities",
+    "lessonSlug": "shell-and-utilities",
+    "lessonTitle": "Shell 環境變數",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "environment variable 對 shell 與 process 的意義是什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "保存可被 shell 或子程序讀取的環境設定值"
+      },
+      {
+        "id": "b",
+        "text": "記錄每個 DASD cylinder 的錯誤率"
+      },
+      {
+        "id": "c",
+        "text": "指定 3270 螢幕的實體亮度"
+      },
+      {
+        "id": "d",
+        "text": "只用來控制 JES initiator 數量"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "Shell 透過環境變數傳遞設定，例如路徑、locale 或應用需要的參數；子 process 也可繼承相關值。",
+    "review": {
+      "label": "Shell 環境變數",
+      "coursePath": "/course/shell-and-utilities",
+      "videoEntryId": "1_iv4h5dcz",
+      "hint": "回到「Shell 環境變數」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q028",
+    "section": "z/OS UNIX shell commands 指令",
+    "lessonSlug": "shell-commands",
+    "lessonTitle": "Shell command 組合",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "在 UNIX shell 中使用 pipe 的主要目的為何？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "把前一個 command 的輸出接給下一個 command 使用"
+      },
+      {
+        "id": "b",
+        "text": "把所有檔案改成可執行"
+      },
+      {
+        "id": "c",
+        "text": "建立新的 RACF userid"
+      },
+      {
+        "id": "d",
+        "text": "關閉整個 UNIX kernel"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "Pipe 是 shell 常見組合技巧，讓多個小工具串接處理資料。",
+    "review": {
+      "label": "Shell command 組合",
+      "coursePath": "/course/shell-commands",
+      "videoEntryId": "1_bf9i3fo8",
+      "hint": "回到「Shell command 組合」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q029",
+    "section": "z/OS UNIX shell commands 指令",
+    "lessonSlug": "shell-commands",
+    "lessonTitle": "檔案與權限指令",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "若要查看 UNIX 檔案的權限、owner、group 與時間等詳細資訊，常用哪一種操作？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "使用 ls 的 long listing 形式，例如 ls -l"
+      },
+      {
+        "id": "b",
+        "text": "使用 cd 刪除目前目錄"
+      },
+      {
+        "id": "c",
+        "text": "使用 pwd 修改檔案 owner"
+      },
+      {
+        "id": "d",
+        "text": "使用 echo 掛載 file system"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "ls -l 可顯示檔案類型、permission bits、owner、group、大小與時間等資訊，是理解 UNIX 權限的重要入口。",
+    "review": {
+      "label": "檔案與權限指令",
+      "coursePath": "/course/shell-commands",
+      "videoEntryId": "1_bf9i3fo8",
+      "hint": "回到「檔案與權限指令」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q030",
+    "section": "使用 shell 工作",
+    "lessonSlug": "working-with-the-shell",
+    "lessonTitle": "Shell script 腳本",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "Shell script 最適合用來處理哪一類工作？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "把一串 shell commands 與控制邏輯保存成可重複執行的程序"
+      },
+      {
+        "id": "b",
+        "text": "取代所有 system programmer 的 RACF 權限審核"
+      },
+      {
+        "id": "c",
+        "text": "只用來設定硬體 microcode"
+      },
+      {
+        "id": "d",
+        "text": "只用來建立 3270 emulator profile"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "Shell script 可把常用命令、變數、條件與迴圈包成自動化流程，便於重複執行與維護。",
+    "review": {
+      "label": "Shell script 腳本",
+      "coursePath": "/course/working-with-the-shell",
+      "videoEntryId": "1_udrgkkbw",
+      "hint": "回到「Shell script 腳本」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q031",
+    "section": "使用 shell 工作",
+    "lessonSlug": "working-with-the-shell",
+    "lessonTitle": "REXX 與 UNIX command",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "在 z/OS UNIX 課程脈絡中，REXX 與 shell command 的關係可以如何理解？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "REXX 可與 z/OS UNIX 互動，用於自動化或呼叫相關 command"
+      },
+      {
+        "id": "b",
+        "text": "REXX 只能在印表機中執行"
+      },
+      {
+        "id": "c",
+        "text": "REXX 是 zFS 的替代格式"
+      },
+      {
+        "id": "d",
+        "text": "REXX 會停用所有 POSIX 介面"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "課程把 REXX 放在 z/OS 工作流與 UNIX shell 之間，說明大型主機自動化可以接上 UNIX command 與服務。",
+    "review": {
+      "label": "REXX 與 UNIX command",
+      "coursePath": "/course/working-with-the-shell",
+      "videoEntryId": "1_udrgkkbw",
+      "hint": "回到「REXX 與 UNIX command」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q032",
+    "section": "使用 shell 工作",
+    "lessonSlug": "working-with-the-shell",
+    "lessonTitle": "BPXBATCH 批次執行",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "BPXBATCH 常用於哪一個情境？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "從 MVS batch 執行 z/OS UNIX shell command 或 program"
+      },
+      {
+        "id": "b",
+        "text": "只用來格式化 3270 螢幕"
+      },
+      {
+        "id": "c",
+        "text": "只負責 RACF 密碼到期通知"
+      },
+      {
+        "id": "d",
+        "text": "用來把 PDS 變成 tape volume"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "BPXBATCH 是連接傳統 z/OS batch 與 z/OS UNIX shell/program 的重要工具。",
+    "review": {
+      "label": "BPXBATCH 批次執行",
+      "coursePath": "/course/working-with-the-shell",
+      "videoEntryId": "1_udrgkkbw",
+      "hint": "回到「BPXBATCH 批次執行」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q033",
+    "section": "z/OS UNIX functions 功能",
+    "lessonSlug": "functions-in-zos-unix",
+    "lessonTitle": "Callable services 可呼叫服務",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "z/OS UNIX callable services 對應用程式開發者的主要價值是什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "提供可呼叫的 UNIX 相關服務介面，例如 process、file 與 thread 服務"
+      },
+      {
+        "id": "b",
+        "text": "只用來產生 ISPF panel 顏色"
+      },
+      {
+        "id": "c",
+        "text": "只負責列印課程證書"
+      },
+      {
+        "id": "d",
+        "text": "會自動清除所有 RACF profile"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "z/OS UNIX 透過 runtime library 與 callable services 提供程式可使用的 UNIX 相關功能。",
+    "review": {
+      "label": "Callable services 可呼叫服務",
+      "coursePath": "/course/functions-in-zos-unix",
+      "videoEntryId": "1_156jj3h4",
+      "hint": "回到「Callable services 可呼叫服務」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q034",
+    "section": "z/OS UNIX functions 功能",
+    "lessonSlug": "functions-in-zos-unix",
+    "lessonTitle": "Process 與 child process",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "UNIX process 建立 child process 的典型概念是什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "父 process 建立子 process，子 process 可接著執行指定程式"
+      },
+      {
+        "id": "b",
+        "text": "每個 child process 都必須是新的 LPAR"
+      },
+      {
+        "id": "c",
+        "text": "child process 只存在於 JES spool 中"
+      },
+      {
+        "id": "d",
+        "text": "child process 代表資料集 member 的別名"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "課程介紹 process 與 child process，是理解 fork/exec 類型 UNIX 行為與 z/OS UNIX 執行模型的基礎。",
+    "review": {
+      "label": "Process 與 child process",
+      "coursePath": "/course/functions-in-zos-unix",
+      "videoEntryId": "1_156jj3h4",
+      "hint": "回到「Process 與 child process」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q035",
+    "section": "z/OS UNIX functions 功能",
+    "lessonSlug": "functions-in-zos-unix",
+    "lessonTitle": "Daemon 背景服務程序",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "daemon 在 UNIX 系統中通常是什麼類型的程序？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "在背景執行並提供服務或等待事件的程序"
+      },
+      {
+        "id": "b",
+        "text": "只在前景要求使用者輸入 3270 PF key 的程式"
+      },
+      {
+        "id": "c",
+        "text": "只能儲存在 partitioned data set 的註解"
+      },
+      {
+        "id": "d",
+        "text": "一種 JCL DD statement"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "Daemon 是 UNIX 常見背景服務程序概念，在 z/OS UNIX 中也要理解其與 process、started task 或服務角色的關係。",
+    "review": {
+      "label": "Daemon 背景服務程序",
+      "coursePath": "/course/functions-in-zos-unix",
+      "videoEntryId": "1_156jj3h4",
+      "hint": "回到「Daemon 背景服務程序」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q036",
+    "section": "z/OS UNIX functions 功能",
+    "lessonSlug": "functions-in-zos-unix",
+    "lessonTitle": "Superuser 超級使用者",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "superuser 權限在 z/OS UNIX 中代表什麼風險與責任？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "具備高度系統權限，應受嚴格控管與審核"
+      },
+      {
+        "id": "b",
+        "text": "只能讀取自己的暫存檔"
+      },
+      {
+        "id": "c",
+        "text": "只能使用 help command"
+      },
+      {
+        "id": "d",
+        "text": "代表一般無登入權限的 guest 帳號"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "Superuser 可執行高權限操作；在企業主機環境中必須與安全控管、審核與最小權限原則一起考量。",
+    "review": {
+      "label": "Superuser 超級使用者",
+      "coursePath": "/course/functions-in-zos-unix",
+      "videoEntryId": "1_156jj3h4",
+      "hint": "回到「Superuser 超級使用者」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q037",
+    "section": "使用 z/OS UNIX 環境",
+    "lessonSlug": "unix-environment",
+    "lessonTitle": "Thread 與 process",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "thread 與 process 的關係可如何簡化理解？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "thread 是 process 內可並行執行的控制流程"
+      },
+      {
+        "id": "b",
+        "text": "thread 是 file system 的 mount point"
+      },
+      {
+        "id": "c",
+        "text": "thread 是 RACF group 的同義詞"
+      },
+      {
+        "id": "d",
+        "text": "thread 只能代表 shell prompt 的顏色"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "課程在 process 之後延伸到 thread，幫助學習者理解 z/OS UNIX 應用如何在 process 內管理多個執行流程。",
+    "review": {
+      "label": "Thread 與 process",
+      "coursePath": "/course/unix-environment",
+      "videoEntryId": "1_8ihdkrd8",
+      "hint": "回到「Thread 與 process」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q038",
+    "section": "使用 z/OS UNIX 環境",
+    "lessonSlug": "unix-environment",
+    "lessonTitle": "UNIX 通訊模型",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "在 z/OS UNIX 環境中，socket 或 interprocess communication 相關概念主要支援什麼？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "process 或應用程式之間的通訊與資料交換"
+      },
+      {
+        "id": "b",
+        "text": "只用來顯示課程影片字幕"
+      },
+      {
+        "id": "c",
+        "text": "只用來建立 DASD volume label"
+      },
+      {
+        "id": "d",
+        "text": "只用來修改 3270 keyboard map"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "z/OS UNIX 支援常見 UNIX 通訊模式，讓應用可以透過 sockets 或其他 IPC 機制交換資料。",
+    "review": {
+      "label": "UNIX 通訊模型",
+      "coursePath": "/course/unix-environment",
+      "videoEntryId": "1_8ihdkrd8",
+      "hint": "回到「UNIX 通訊模型」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
+  },
+  {
+    "id": "q039",
+    "section": "使用 z/OS UNIX 環境",
+    "lessonSlug": "unix-environment",
+    "lessonTitle": "應用程式與 z/OS UNIX 環境",
+    "sourceType": "moodle-quiz",
+    "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
+    "sourceReference": "badge-quiz",
+    "prompt": "將應用程式部署到 z/OS UNIX 環境時，最需要同時考量哪一組因素？",
+    "choices": [
+      {
+        "id": "a",
+        "text": "UNIX API、file system、security、code page 與 z/OS 作業流程"
+      },
+      {
+        "id": "b",
+        "text": "只需要改變瀏覽器首頁"
+      },
+      {
+        "id": "c",
+        "text": "只需要刪除所有 shell profile"
+      },
+      {
+        "id": "d",
+        "text": "只需要把所有資料改名為 .txt"
+      }
+    ],
+    "correctChoiceIds": [
+      "a"
+    ],
+    "explanation": "z/OS UNIX 是 UNIX 介面與 z/OS 企業環境的交會處；應用部署要同時理解 API、檔案、安全、編碼與既有工作流。",
+    "review": {
+      "label": "應用程式與 z/OS UNIX 環境",
+      "coursePath": "/course/unix-environment",
+      "videoEntryId": "1_8ihdkrd8",
+      "hint": "回到「應用程式與 z/OS UNIX 環境」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。"
+    },
+    "sourceLabel": "綜合回顧"
   }
 ]

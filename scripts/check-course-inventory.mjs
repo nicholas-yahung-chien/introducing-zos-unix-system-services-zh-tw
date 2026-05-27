@@ -12,6 +12,7 @@ const videos = activities.filter((activity) => activity.type === 'video')
 const labs = activities.filter((activity) => activity.type === 'lab')
 const hvp = activities.filter((activity) => activity.type === 'hvp')
 const quizzes = activities.filter((activity) => activity.type === 'quiz')
+const publicPracticeSources = audit.summary.hvpActivities + (assessment.summary.badgeQuizScopePracticeQuestions > 0 ? 1 : 0)
 
 function expect(label, actual, expected) {
   if (actual !== expected) findings.push(`${label}: expected ${expected}, found ${actual}`)
@@ -23,12 +24,14 @@ expect('manifest videos', videos.length, audit.summary.videos)
 expect('manifest labs', labs.length, audit.summary.labs)
 expect('manifest HVP activities', hvp.length, audit.summary.hvpActivities)
 expect('static practice questions', practiceQuestions.length, assessment.summary.staticPracticeQuestions)
-expect('assessment static practice sources', assessment.summary.staticPracticeSources, audit.summary.hvpActivities)
+expect('assessment static practice sources', assessment.summary.staticPracticeSources, publicPracticeSources)
 expect('assessment lab pages', assessment.summary.labPages, labsData.length)
 expect('formal quiz per attempt', assessment.summary.badgeQuizQuestionsPerAttempt, 20)
+expect('badge quiz scope practice questions', assessment.summary.badgeQuizScopePracticeQuestions, 20)
 
 if (quizzes.length !== 1) findings.push(`manifest Moodle quizzes: expected 1 formal quiz, found ${quizzes.length}`)
 if (assessment.summary.badgeQuizCapturedUniqueQuestions !== 0) findings.push('formal quiz question bank must not be reproduced')
+if (!practiceQuestions.some((question) => question.sourceReference === 'badge-quiz')) findings.push('practice questions must include Badge Quiz scope review')
 
 for (const video of videos) {
   if (!video.kaltura?.entryId) findings.push(`${video.slug}: missing Kaltura entryId`)

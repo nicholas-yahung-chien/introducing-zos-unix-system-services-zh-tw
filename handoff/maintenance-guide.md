@@ -52,6 +52,7 @@ npm run deploy:check
 ## 維護原則
 
 - 公開頁面只放學習者需要的導覽、摘要、影片 metadata、練習、Lab metadata、字幕與授權資訊。
+- Badge Quiz practice 只能維護為原創改寫的範圍練習；不得公開重製正式題庫原文。
 - Formal quiz attempt、certificate、survey、badge claim、Lab runtime 與 learner progress 一律回 IBM Learn。
 - 修改練習題後必跑 `npm run practice:check`。
 - 修改 manifest、Lab 或 activity 清單後必跑 `npm run course:inventory:check`。

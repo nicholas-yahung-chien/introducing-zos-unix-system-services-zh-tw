@@ -24,7 +24,7 @@ features:
     link: /videos/
     linkText: 查看影片
   - title: 互動練習
-    details: 19 題 H5P checkpoint 非計分靜態練習，答題後立即顯示解析。
+    details: 39 題非計分靜態練習，涵蓋 H5P checkpoint 與 Badge Quiz 範圍綜合回顧。
     link: /practice/
     linkText: 開始練習
   - title: Lab 與互動實作

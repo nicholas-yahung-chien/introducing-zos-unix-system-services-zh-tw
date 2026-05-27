@@ -6,7 +6,7 @@
 - Course title: Introducing z/OS Unix System Services
 - Captured inventory: 10 sections, 64 activities, 35 videos, 8 H5P checkpoints, 6 Labs.
 - Static site framework: VitePress.
-- Public practice: 19 non-scoring checkpoint questions.
+- Public practice: 39 non-scoring questions, including 20 original paraphrased Badge Quiz scope questions.
 
 ## Notes
 

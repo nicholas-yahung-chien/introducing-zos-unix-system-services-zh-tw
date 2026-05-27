@@ -6,6 +6,7 @@ const root = process.cwd()
 const distDir = path.join(root, 'docs', '.vitepress', 'dist')
 const manifest = JSON.parse(await readFile(path.join(root, 'data/course-manifest.json'), 'utf8'))
 const practiceQuestions = JSON.parse(await readFile(path.join(root, 'data/practice-questions.json'), 'utf8'))
+const assessment = JSON.parse(await readFile(path.join(root, 'data/assessment-inventory.json'), 'utf8'))
 const labs = JSON.parse(await readFile(path.join(root, 'data/labs.json'), 'utf8'))
 
 const learningSections = manifest.sections.filter((section) => section.activities.some((activity) => activity.type === 'video'))
@@ -13,7 +14,7 @@ const requiredPages = [
   { name: 'home', source: 'docs/index.md', output: 'index.html', requiredText: ['課程內容', '影片', '互動練習', 'Lab 與互動實作', '詞彙表', '授權資訊'] },
   { name: 'course', source: 'docs/course/index.md', output: 'course/index.html', requiredText: ['課程首頁', '課程活動', '建議學習方式'] },
   { name: 'videos', source: 'docs/videos/index.md', output: 'videos/index.html', requiredText: ['影片清單', '單元', '活動', '類型'] },
-  { name: 'practice', source: 'docs/practice/index.md', output: 'practice/index.html', requiredText: ['互動練習', '練習題目', '檢核點 1'] },
+  { name: 'practice', source: 'docs/practice/index.md', output: 'practice/index.html', requiredText: ['互動練習', '練習題目', '檢核點 1', '綜合回顧'] },
   { name: 'labs', source: 'docs/labs/index.md', output: 'labs/index.html', requiredText: ['Lab 與互動實作', 'Exercise 6'] },
   { name: 'glossary', source: 'docs/glossary/index.md', output: 'glossary/index.html', requiredText: ['z/OS UNIX 詞彙表', '依字母查閱', '課程相關詞彙'] },
   { name: 'license', source: 'docs/license-notes.md', output: 'license-notes.html', requiredText: ['授權資訊', 'IBM Learn'] },
@@ -111,7 +112,12 @@ for (const file of htmlFiles) {
 const videos = manifest.sections.flatMap((section) => section.activities).filter((activity) => activity.type === 'video')
 if (manifest.course.id !== 9890) findings.push('manifest: course id must be 9890')
 if (videos.length !== 35) findings.push(`video manifest: expected 35 source videos, found ${videos.length}`)
-if (practiceQuestions.length !== 19) findings.push(`practice questions: expected 19, found ${practiceQuestions.length}`)
+if (practiceQuestions.length !== assessment.summary.staticPracticeQuestions) {
+  findings.push(`practice questions: expected ${assessment.summary.staticPracticeQuestions}, found ${practiceQuestions.length}`)
+}
+if (assessment.summary.badgeQuizScopePracticeQuestions !== 20) {
+  findings.push(`badge quiz scope practice: expected 20, found ${assessment.summary.badgeQuizScopePracticeQuestions}`)
+}
 if (labs.length !== 6) findings.push(`labs: expected 6 lab items, found ${labs.length}`)
 for (const video of videos) {
   if (!video.kaltura?.entryId) findings.push(`${video.slug}: missing Kaltura entryId`)

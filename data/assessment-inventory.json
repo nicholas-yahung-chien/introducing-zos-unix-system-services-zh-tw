@@ -1,12 +1,12 @@
 {
   "summary": {
-    "staticPracticeQuestions": 19,
-    "staticPracticeSources": 8,
+    "staticPracticeQuestions": 39,
+    "staticPracticeSources": 9,
     "badgeQuizQuestionsPerAttempt": 20,
     "badgeQuizCapturedUniqueQuestions": 0,
     "labPages": 6,
-    "badgeQuizScopePracticeQuestions": 0,
-    "badgeQuizPublicMode": "not reproduced; formal quiz remains in IBM Learn"
+    "badgeQuizScopePracticeQuestions": 20,
+    "badgeQuizPublicMode": "original paraphrased scope practice; formal quiz remains in IBM Learn"
   },
   "sources": [
     {
@@ -113,9 +113,10 @@
       "sourceUrl": "https://learn.ibm.com/mod/quiz/view.php?id=193152",
       "sectionSlug": "badge-information",
       "sectionTitle": "正式測驗資訊",
-      "status": "source-only",
+      "status": "scope-practice",
       "questionCount": 20,
-      "intendedUse": "正式 quiz 每次 20 題，需要 16 題正確通過；本站不公開重製 IBM 正式題庫原文，正式成績、attempt 與 badge eligibility 仍回 IBM Learn。"
+      "publicPracticeQuestionCount": 20,
+      "intendedUse": "正式 quiz 每次 20 題，需要 16 題正確通過；本站只提供 Badge Quiz 範圍的原創改寫綜合回顧，不公開重製 IBM 正式題庫原文，正式成績、attempt 與 badge eligibility 仍回 IBM Learn。"
     }
   ]
 }

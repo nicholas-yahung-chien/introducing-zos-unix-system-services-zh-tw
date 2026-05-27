@@ -1,6 +1,6 @@
 import { mkdir, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 
 const root = process.cwd()
 const captured = JSON.parse(readFileSync(path.join(root, 'data/captured/live-course-inventory.raw.json'), 'utf8'))
@@ -12,6 +12,10 @@ try {
   previousVideoAssets = []
 }
 const previousVideoAssetBySlug = new Map(previousVideoAssets.map((asset) => [asset.slug, asset]))
+const badgeQuizScopePath = path.join(root, 'data/captured/badge-quiz-scope.json')
+const badgeQuizScope = existsSync(badgeQuizScopePath)
+  ? JSON.parse(readFileSync(badgeQuizScopePath, 'utf8'))
+  : { questions: [] }
 
 const course = {
   id: 9890,
@@ -330,8 +334,9 @@ const labs = manifestSections.flatMap((section) => section.activities
   })))
 
 const hvpSources = captured.hvp.filter(Boolean)
+const badgeQuizSourceUrl = badgeQuizScope.sourceUrl || captured.sections.flatMap((s) => s.activities).find((a) => a.type === 'quiz')?.href || course.sourceUrl
 let practiceIndex = 1
-const practiceQuestions = hvpSources.flatMap((source, sourceIndex) => {
+const hvpPracticeQuestions = hvpSources.flatMap((source, sourceIndex) => {
   const section = manifestSections.find((item) => item.title === source.section)
   const checkpoint = `檢核點 ${sourceIndex + 1}`
   const concept = section?.titleZh || source.section
@@ -359,16 +364,41 @@ const practiceQuestions = hvpSources.flatMap((source, sourceIndex) => {
     sourceLabel: checkpoint,
   }))
 })
+const badgeQuizPracticeQuestions = (badgeQuizScope.questions || []).map((question) => {
+  const section = manifestSections.find((item) => item.slug === question.sectionSlug)
+  const concept = question.concept || section?.titleZh || 'Badge Quiz 綜合回顧'
+  return {
+    id: `q${String(practiceIndex++).padStart(3, '0')}`,
+    section: section?.titleZh || concept,
+    lessonSlug: section?.slug || question.sectionSlug || 'badge-information',
+    lessonTitle: concept,
+    sourceType: 'moodle-quiz',
+    sourceUrl: badgeQuizSourceUrl,
+    sourceReference: 'badge-quiz',
+    prompt: question.prompt,
+    choices: question.choices,
+    correctChoiceIds: question.correctChoiceIds,
+    explanation: question.explanation,
+    review: {
+      label: concept,
+      coursePath: `/course/${section?.slug || question.sectionSlug || ''}`,
+      videoEntryId: videos.find((video) => video.section === section?.title)?.entryId || 'source-only',
+      hint: `回到「${concept}」相關單元複習，並以 IBM Learn 正式 quiz 作為 badge 成績依據。`,
+    },
+    sourceLabel: '綜合回顧',
+  }
+})
+const practiceQuestions = [...hvpPracticeQuestions, ...badgeQuizPracticeQuestions]
 
 const sourceInventory = {
   summary: {
     staticPracticeQuestions: practiceQuestions.length,
-    staticPracticeSources: hvpSources.length,
+    staticPracticeSources: hvpSources.length + (badgeQuizPracticeQuestions.length > 0 ? 1 : 0),
     badgeQuizQuestionsPerAttempt: 20,
     badgeQuizCapturedUniqueQuestions: 0,
     labPages: labs.length,
-    badgeQuizScopePracticeQuestions: 0,
-    badgeQuizPublicMode: 'not reproduced; formal quiz remains in IBM Learn',
+    badgeQuizScopePracticeQuestions: badgeQuizPracticeQuestions.length,
+    badgeQuizPublicMode: 'original paraphrased scope practice; formal quiz remains in IBM Learn',
   },
   sources: hvpSources.map((source, index) => {
     const section = manifestSections.find((item) => item.title === source.section)
@@ -389,12 +419,13 @@ const sourceInventory = {
     title: 'Take the quiz',
     titleZh: '正式測驗',
     type: 'moodle-quiz',
-    sourceUrl: captured.sections.flatMap((s) => s.activities).find((a) => a.type === 'quiz')?.href || course.sourceUrl,
+    sourceUrl: badgeQuizSourceUrl,
     sectionSlug: 'badge-information',
     sectionTitle: '正式測驗資訊',
-    status: 'source-only',
+    status: badgeQuizPracticeQuestions.length > 0 ? 'scope-practice' : 'source-only',
     questionCount: 20,
-    intendedUse: '正式 quiz 每次 20 題，需要 16 題正確通過；本站不公開重製 IBM 正式題庫原文，正式成績、attempt 與 badge eligibility 仍回 IBM Learn。',
+    publicPracticeQuestionCount: badgeQuizPracticeQuestions.length,
+    intendedUse: '正式 quiz 每次 20 題，需要 16 題正確通過；本站只提供 Badge Quiz 範圍的原創改寫綜合回顧，不公開重製 IBM 正式題庫原文，正式成績、attempt 與 badge eligibility 仍回 IBM Learn。',
   }])
 }
 
@@ -438,16 +469,16 @@ const navItems = publicSections.map((section) => ({ text: sectionMeta[section.ti
 
 const config = `import { defineConfig } from 'vitepress'\n\nfunction normalizeBase(base: string | undefined) {\n  if (!base) return '/${course.repo}/'\n  const withLeadingSlash = base.startsWith('/') ? base : \`/\${base}\`\n  return withLeadingSlash.endsWith('/') ? withLeadingSlash : \`\${withLeadingSlash}/\`\n}\n\nexport default defineConfig({\n  title: '${course.title}',\n  description: '${course.titleZh}台灣繁體中文靜態學習網站',\n  lang: 'zh-Hant-TW',\n  cleanUrls: true,\n  base: normalizeBase(process.env.VITEPRESS_BASE),\n  head: [\n    ['meta', { name: 'theme-color', content: '#0f62fe' }],\n    ['meta', { property: 'og:title', content: '${course.titleZh}' }],\n    ['meta', { property: 'og:description', content: 'IBM Learn 課程的繁體中文靜態學習導覽、checkpoint 與 Lab 順序。' }]\n  ],\n  themeConfig: {\n    logo: '/ibm-z-mark.svg',\n    nav: [\n      { text: '課程', link: '/course/' },\n      { text: '影片', link: '/videos/' },\n      { text: '互動練習', link: '/practice/' },\n      { text: 'Lab 與互動實作', link: '/labs/' },\n      { text: '詞彙表', link: '/glossary/' },\n      { text: '授權資訊', link: '/license-notes' }\n    ],\n    sidebar: [\n      { text: '課程', items: [\n        { text: '課程首頁', link: '/course/' },\n        ${navItems.map((item) => `{ text: '${item.text}', link: '${item.link}' }`).join(',\n        ')},\n        { text: '互動練習', link: '/practice/' },\n        { text: 'Lab 與互動實作', link: '/labs/' }\n      ] },\n      { text: '資源', items: [\n        { text: '影片', link: '/videos/' },\n        { text: '詞彙表', link: '/glossary/' },\n        { text: '授權資訊', link: '/license-notes' }\n      ] }\n    ],\n    socialLinks: [\n      { icon: 'github', link: 'https://github.com/nicholas-yahung-chien/${course.repo}' }\n    ],\n    footer: { message: 'IBM Learn 課程台灣繁體中文化教材，供 IBM Taiwan enablement 使用。', copyright: 'Prepared for IBM Taiwan enablement use.' },\n    search: { provider: 'local' }\n  }\n})\n`
 
-const home = `---\nlayout: home\nhero:\n  name: ${course.title}\n  text: 台灣繁體中文化課程\n  tagline: 以 IBM Learn 課程為基礎，整理 z/OS UNIX System Services、階層式檔案系統、shell、BPXBATCH、process 與 access control 的學習路徑。\n  actions:\n    - theme: brand\n      text: 開始課程\n      link: /course/\n    - theme: alt\n      text: 查看影片\n      link: /videos/\n    - theme: alt\n      text: 互動練習\n      link: /practice/\nfeatures:\n  - title: 課程內容\n    details: 依原課程章節整理 z/OS UNIX 標準、file system、shell、functions 與 environment 的學習脈絡。\n    link: /course/\n    linkText: 前往課程\n  - title: 影片\n    details: ${videos.length} 支課程影片保留 Kaltura metadata 與原課程活動連結，媒體可在授權後接入。\n    link: /videos/\n    linkText: 查看影片\n  - title: 互動練習\n    details: ${practiceQuestions.length} 題 H5P checkpoint 非計分靜態練習，答題後立即顯示解析。\n    link: /practice/\n    linkText: 開始練習\n  - title: Lab 與互動實作\n    details: ${labs.length} 個原課程 Lab 以 metadata 呈現，學習目的與建議先修清楚標示。\n    link: /labs/\n    linkText: 查看 Lab\n  - title: 詞彙表\n    details: 以 z/OS UNIX、shell、file system 與 process 常用術語為基礎，維持課程用語一致。\n    link: /glossary/\n    linkText: 查閱詞彙\n  - title: 授權資訊\n    details: 說明本教材與 IBM Learn 原課程的來源脈絡與使用範圍。\n    link: /license-notes\n    linkText: 查看資訊\n---\n`
+const home = `---\nlayout: home\nhero:\n  name: ${course.title}\n  text: 台灣繁體中文化課程\n  tagline: 以 IBM Learn 課程為基礎，整理 z/OS UNIX System Services、階層式檔案系統、shell、BPXBATCH、process 與 access control 的學習路徑。\n  actions:\n    - theme: brand\n      text: 開始課程\n      link: /course/\n    - theme: alt\n      text: 查看影片\n      link: /videos/\n    - theme: alt\n      text: 互動練習\n      link: /practice/\nfeatures:\n  - title: 課程內容\n    details: 依原課程章節整理 z/OS UNIX 標準、file system、shell、functions 與 environment 的學習脈絡。\n    link: /course/\n    linkText: 前往課程\n  - title: 影片\n    details: ${videos.length} 支課程影片保留 Kaltura metadata 與原課程活動連結，媒體可在授權後接入。\n    link: /videos/\n    linkText: 查看影片\n  - title: 互動練習\n    details: ${practiceQuestions.length} 題非計分靜態練習，涵蓋 H5P checkpoint 與 Badge Quiz 範圍綜合回顧。\n    link: /practice/\n    linkText: 開始練習\n  - title: Lab 與互動實作\n    details: ${labs.length} 個原課程 Lab 以 metadata 呈現，學習目的與建議先修清楚標示。\n    link: /labs/\n    linkText: 查看 Lab\n  - title: 詞彙表\n    details: 以 z/OS UNIX、shell、file system 與 process 常用術語為基礎，維持課程用語一致。\n    link: /glossary/\n    linkText: 查閱詞彙\n  - title: 授權資訊\n    details: 說明本教材與 IBM Learn 原課程的來源脈絡與使用範圍。\n    link: /license-notes\n    linkText: 查看資訊\n---\n`
 
-const courseIndex = `# 課程首頁\n\n<div class="course-dashboard">\n  <div class="course-lede">\n    這是 IBM Learn 課程 <strong>${course.title}</strong> 的台灣繁體中文靜態學習網站。內容整理課程影片 metadata、學習摘要、Lab 順序、H5P checkpoint 靜態練習與 z/OS UNIX 詞彙，適合已完成 z/OS 入門與命令面板課程後，準備深入理解 UNIX System Services 的學習者。\n  </div>\n  <div class="course-stats">\n    <div class="course-stat"><strong>${videos.length}</strong><span>課程影片</span></div>\n    <div class="course-stat"><strong>${publicSections.length}</strong><span>主要單元</span></div>\n    <div class="course-stat"><strong>${labs.length}</strong><span>Lab 說明</span></div>\n    <div class="course-stat"><strong>${practiceQuestions.length}</strong><span>互動練習</span></div>\n  </div>\n</div>\n\n## 建議學習方式\n\n1. 先看課程概觀與 z/OS UNIX 入門，建立標準、元件與基本功能的共同語言。\n2. 接著學階層式檔案系統與 shell 操作，搭配原課程 Exercise 1 到 Exercise 4。\n3. 再看 shell scripts、REXX、BPXBATCH、process、daemon 與 environment 概念。\n4. 每個 checkpoint 都可在本站做非計分練習；正式 quiz、certificate 與學習者進度仍回 IBM Learn 完成。\n5. Lab 請閱讀本站 metadata 後，回 IBM Learn 原課程與 IBM Remote Lab Platform 完成。\n\n## 課程單元\n\n<div class="lesson-grid">\n${publicSections.map((section) => {
+const courseIndex = `# 課程首頁\n\n<div class="course-dashboard">\n  <div class="course-lede">\n    這是 IBM Learn 課程 <strong>${course.title}</strong> 的台灣繁體中文靜態學習網站。內容整理課程影片 metadata、學習摘要、Lab 順序、H5P checkpoint 靜態練習、Badge Quiz 範圍綜合回顧與 z/OS UNIX 詞彙，適合已完成 z/OS 入門與命令面板課程後，準備深入理解 UNIX System Services 的學習者。\n  </div>\n  <div class="course-stats">\n    <div class="course-stat"><strong>${videos.length}</strong><span>課程影片</span></div>\n    <div class="course-stat"><strong>${publicSections.length}</strong><span>主要單元</span></div>\n    <div class="course-stat"><strong>${labs.length}</strong><span>Lab 說明</span></div>\n    <div class="course-stat"><strong>${practiceQuestions.length}</strong><span>互動練習</span></div>\n  </div>\n</div>\n\n## 建議學習方式\n\n1. 先看課程概觀與 z/OS UNIX 入門，建立標準、元件與基本功能的共同語言。\n2. 接著學階層式檔案系統與 shell 操作，搭配原課程 Exercise 1 到 Exercise 4。\n3. 再看 shell scripts、REXX、BPXBATCH、process、daemon 與 environment 概念。\n4. 每個 checkpoint 與 Badge Quiz 範圍都可在本站做非計分練習；正式 quiz、certificate 與學習者進度仍回 IBM Learn 完成。\n5. Lab 請閱讀本站 metadata 後，回 IBM Learn 原課程與 IBM Remote Lab Platform 完成。\n\n## 課程單元\n\n<div class="lesson-grid">\n${publicSections.map((section) => {
   const meta = sectionMeta[section.title]
   return `  <a class="lesson-card" href="./${meta.slug}">\n    <h3>${meta.titleZh}</h3>\n    <p>${meta.intro}</p>\n  </a>`
 }).join('\n')}\n</div>\n\n## 學完後你會理解\n\n- z/OS UNIX 如何讓 z/OS 符合 UNIX / open systems 標準。\n- HFS、zFS、ISHELL、ISPF 與 file security 的基本定位。\n- shell、commands、environment variables、BPXBATCH 與 REXX 如何接上 z/OS 工作流。\n- process、daemon、superuser、thread 與 application programming 的基本概念。\n\n## 課程活動\n\n<CourseManifest />\n`
 
 const videosPage = `# 影片清單\n\n本頁彙整課程影片與相關學習活動。影片依課程章節順序排列；第一版保留 Kaltura entry ID 與原課程 activity 連結，媒體檔與字幕待授權確認後可接入獨立 media host。\n\n影片元件採手動載入策略。若影片尚未部署，請使用 caption 中的原始課程活動連結回 IBM Learn 觀看。\n\n<CourseManifest />\n`
 
-const practicePage = `# 互動練習\n\n這些練習由 IBM Learn 原課程的 H5P checkpoint 轉為非計分靜態練習，用來確認 z/OS UNIX standards、file systems、shell、commands、REXX、BPXBATCH、processes 與 environment 概念。選擇答案後會立即顯示回饋；頁面不計分，也不保存作答紀錄。\n\n正式 quiz、成績、certificate、badge claim 與學習者進度仍以 IBM Learn 原課程為準。\n\n<PracticeQuestions />\n`
+const practicePage = `# 互動練習\n\n這些練習由 IBM Learn 原課程的 H5P checkpoint 與 Badge Quiz 範圍整理為非計分靜態練習，用來確認 z/OS UNIX standards、file systems、shell、commands、REXX、BPXBATCH、processes 與 environment 概念。Badge Quiz 題卡為原創改寫的綜合回顧，不是正式題庫逐字重製。選擇答案後會立即顯示回饋；頁面不計分，也不保存作答紀錄。\n\n正式 quiz、成績、certificate、badge claim 與學習者進度仍以 IBM Learn 原課程為準。\n\n<PracticeQuestions />\n`
 
 const labsPage = `# Lab 與互動實作\n\n本頁整理 IBM Learn 原課程中的 Lab。這些活動不在本站執行，請回到原課程與 IBM Remote Lab Platform 完成。\n\n<LabList />\n`
 
@@ -455,9 +486,9 @@ const mediaScopeLine = mediaStatus === 'deployed'
   ? '影片媒體、HLS playlists、英文字幕與台灣繁體中文字幕已由 media Pages 專案提供；正式觀看進度仍以 IBM Learn 為準'
   : '影片媒體與字幕目前標示為 source-only；若授權確認後，可沿用前三站腳本產生 HLS、英文字幕與繁體中文字幕'
 
-const licensePage = `# 授權資訊\n\n本教材整理自 IBM Learn 課程 \`${course.title}\`，作為台灣繁體中文靜態學習版本。\n\n- 課程來源：IBM Learn \`${course.title}\`\n- 課程網址：${course.sourceUrl}\n- 目前公開範圍：課程順序、影片 metadata、學習摘要、H5P 非計分練習、Lab metadata、詞彙表與原課程連結\n- 原課程範圍：影片正式觀看進度、Lab runtime、正式 quiz attempt、certificate、badge claim、course survey 與學習者進度\n- ${mediaScopeLine}\n\n本網站保留原始 IBM Learn 活動來源連結，方便學習者回到原課程脈絡查閱。授權與使用範圍請依 IBM 課程授權與內部審核結果為準。\n`
+const licensePage = `# 授權資訊\n\n本教材整理自 IBM Learn 課程 \`${course.title}\`，作為台灣繁體中文靜態學習版本。\n\n- 課程來源：IBM Learn \`${course.title}\`\n- 課程網址：${course.sourceUrl}\n- 目前公開範圍：課程順序、影片 metadata、學習摘要、H5P 非計分練習、Badge Quiz 範圍原創改寫練習、Lab metadata、詞彙表與原課程連結\n- 原課程範圍：影片正式觀看進度、Lab runtime、正式 quiz attempt、certificate、badge claim、course survey 與學習者進度\n- ${mediaScopeLine}\n\n本網站保留原始 IBM Learn 活動來源連結，方便學習者回到原課程脈絡查閱。Badge Quiz 題卡只作為範圍複習，不公開重製正式題庫原文。授權與使用範圍請依 IBM 課程授權與內部審核結果為準。\n`
 
-const readme = `# ${course.title} 靜態學習網站\n\n本專案依照前三個 IBM Learn 課程站的 VitePress 架構，為 IBM Learn 課程 \`${course.title}\` 建立台灣繁體中文靜態學習網站。\n\n## 快速開始\n\n\`\`\`powershell\nnpm install\nnpm run dev\n\`\`\`\n\n## 建置與驗證\n\n\`\`\`powershell\nnpm run verify:release\nnpm run build:github\nnpm run build:cloudflare\n\`\`\`\n\nGitHub Pages base path 為 \`/${course.repo}/\`，Cloudflare Pages 使用 \`/\`。\n\n## 課程範圍\n\n- IBM Learn: ${course.sourceUrl}\n- 課程名稱：${course.title}\n- 公開站台範圍：課程順序、影片 metadata、靜態練習、Lab metadata、詞彙表、授權資訊\n- 原課程範圍：影片正式觀看進度、Lab runtime、正式 quiz attempt、certificate、survey、badge claim 與學習者進度\n\n## 目前盤點結果\n\n- Live course inventory：${captured.sections.length} 個章節、${captured.sections.flatMap((section) => section.activities).length} 個活動項目\n- 影片：${videos.length} 支，已擷取 Kaltura entry ID，目前媒體狀態為 ${mediaStatus}\n- Lab：${labs.length} 個 Exercise Lab 頁面\n- 靜態練習：${hvpSources.length} 個 H5P checkpoint 來源，共 ${practiceQuestions.length} 題\n- 正式 quiz：每次 20 題，需 16 題正確通過；本站不重製正式題庫\n\n## 擷取與維護\n\n登入 IBM Learn 並停在課程頁後，可重新擷取課程頁結構：\n\n\`\`\`powershell\n$env:IBM_LEARN_COURSE_ID='9890'\nnpm run capture:course\nnpm run capture:assets\nnpm run site:generate\n\`\`\`\n`
+const readme = `# ${course.title} 靜態學習網站\n\n本專案依照前三個 IBM Learn 課程站的 VitePress 架構，為 IBM Learn 課程 \`${course.title}\` 建立台灣繁體中文靜態學習網站。\n\n## 快速開始\n\n\`\`\`powershell\nnpm install\nnpm run dev\n\`\`\`\n\n## 建置與驗證\n\n\`\`\`powershell\nnpm run verify:release\nnpm run deploy:check\n\`\`\`\n\n\`verify:release\` 驗證本機靜態站內容、manifest、練習題與字幕；\`deploy:check\` 驗證正式 Cloudflare Pages 主站與 media 站 URL。\n\n## 部署\n\n\`\`\`powershell\nnpm run deploy:media\nnpm run deploy:cloudflare\nnpm run deploy:check\n\`\`\`\n\n- 主站：${course.siteHost}/\n- Media 站：${course.mediaHost}/\n- GitHub Pages base path：\`/${course.repo}/\`\n- Cloudflare Pages base path：\`/\`\n\n## 課程範圍\n\n- IBM Learn：${course.sourceUrl}\n- 課程名稱：\`${course.title}\`\n- 公開站台範圍：課程順序、影片 metadata、HLS media、英文字幕、台灣繁中字幕、靜態練習、Lab metadata、詞彙表、授權資訊\n- IBM Learn 保留範圍：影片正式觀看進度、Lab runtime、正式 quiz attempt、certificate、survey、badge claim 與 learner progress\n\n## 目前盤點結果\n\n- Live course inventory：${captured.sections.length} 個章節、${captured.sections.flatMap((section) => section.activities).length} 個活動項目\n- 影片：${videos.length} 支，媒體狀態為 \`${mediaStatus}\`\n- Lab：${labs.length} 個 Exercise Lab 頁面\n- 靜態練習：${hvpSources.length} 個 H5P checkpoint 來源加上 ${badgeQuizPracticeQuestions.length} 題 Badge Quiz 範圍綜合回顧，共 ${practiceQuestions.length} 題\n- 正式 quiz：每次 20 題，需 16 題正確通過；本站只提供原創改寫範圍練習，不重製正式題庫原文\n- Subtitle audit：0 high、0 medium、0 low\n\n## 擷取與維護\n\n登入 IBM Learn 並停在課程頁後，可重新擷取課程頁結構：\n\n\`\`\`powershell\n$env:IBM_LEARN_COURSE_ID='9890'\nnpm run capture:course\nnpm run capture:assets\nnpm run site:generate\n\`\`\`\n\n若要維持已部署影片模式，重新產生站台時使用：\n\n\`\`\`powershell\nnpm run site:generate:media\n\`\`\`\n`
 
 const packageJson = {
   name: course.repo,
@@ -512,7 +543,6 @@ async function writeJson(file, value) {
 }
 
 const staleTemplateFiles = [
-  'data/captured/badge-quiz-scope.json',
   'handoff/course-site-implementation-framework.md',
   'handoff/course-template-playbook.md',
   'handoff/glossary-relevance-report.md',
@@ -554,7 +584,7 @@ await writeJson('data/course-inventory-audit.json', {
     labs: labs.length,
     hvpActivities: hvpSources.length,
     staticPracticeQuestions: practiceQuestions.length,
-    badgeQuizScopePracticeQuestions: 0,
+    badgeQuizScopePracticeQuestions: badgeQuizPracticeQuestions.length,
   },
   liveCounts: liveActivities.reduce((counts, activity) => {
     counts[activity.type] = (counts[activity.type] || 0) + 1
@@ -577,10 +607,10 @@ await writeText('docs/practice/index.md', practicePage)
 await writeText('docs/labs/index.md', labsPage)
 await writeText('docs/license-notes.md', licensePage)
 await writeText('README.md', readme)
-await writeText('references/README.md', `# References\n\nThis directory is for non-public maintenance references. Public glossary pages live under \`docs/glossary/\`.\n\nThis z/OS UNIX System Services baseline uses IBM Learn authenticated capture plus IBM public documentation links in the unit pages. Do not copy login-only IBM Learn source material into public pages beyond the authorized summaries, metadata, lab inventory, and static checkpoint practice scope recorded in this repository.\n`)
+await writeText('references/README.md', `# References\n\nThis directory is for non-public maintenance references. Public glossary pages live under \`docs/glossary/\`.\n\nThis z/OS UNIX System Services baseline uses IBM Learn authenticated capture plus IBM public documentation links in the unit pages. Do not copy login-only IBM Learn source material into public pages beyond the authorized summaries, metadata, lab inventory, static checkpoint practice, and original paraphrased Badge Quiz scope practice recorded in this repository.\n`)
 await writeText('references/glossary-source-readme.md', `# Glossary Source Notes\n\nThe public glossary was curated for \`${course.title}\` and should remain focused on learner-facing terms used in the course pages, Lab metadata, and practice questions.\n\nWhen adding terms, prefer IBM product names and official English abbreviations, with Taiwan Traditional Chinese explanations.\n`)
-await writeText('RELEASE-CHECKLIST.md', `# Release Checklist\n\n## Content\n\n- [ ] Confirm IBM Learn source URL is ${course.sourceUrl}\n- [ ] Confirm public pages do not imply Lab runtime, formal quiz scoring, certificate, badge claim, or learner progress are hosted on this site.\n- [ ] Confirm H5P checkpoint practice remains non-scoring.\n- [ ] Confirm video assets, HLS playlists, and subtitles are deployed or clearly documented if unavailable.\n\n## Verification\n\n\`\`\`powershell\nnpm run verify:release\n\`\`\`\n\n## Deployment\n\n- Cloudflare Pages project: \`${course.repo}\`\n- GitHub Pages base path: \`/${course.repo}/\`\n`)
-await writeText('FIRST-EDITION-SIGNOFF.md', `# First Edition Signoff\n\nThis file records the first converted baseline for the Traditional Chinese static course site. It is a repository planning and handoff record only; do not link it from the public VitePress site.\n\n## Signoff Status\n\n- Status: prepared for review\n- Prepared date: ${new Date().toISOString().slice(0, 10)}\n- Course source: \`${course.sourceUrl}\`\n- Course title: \`${course.title}\`\n- Locale: \`zh-Hant-TW\`\n\n## Included Scope\n\n- VitePress static course site.\n- Course landing page and learner-facing unit pages.\n- ${videos.length} course video entries with Kaltura metadata and source links.\n- Media status: \`${mediaStatus}\`.\n- ${mediaStatus === 'deployed' ? 'HLS media playlists, English subtitles, and Taiwan Traditional Chinese subtitles are included in the deployment pipeline.' : 'HLS media and subtitles are not deployed in this baseline.'}\n- ${practiceQuestions.length} static practice questions from ${hvpSources.length} H5P checkpoint activities.\n- Lab metadata for ${labs.length} IBM Remote Lab Platform activities.\n- Glossary, license notes, release checklist, and automated quality checks.\n\n## Excluded From This Baseline\n\n- Formal quiz scoring, attempt workflow, and verbatim question bank reproduction.\n- Certificate, survey, badge claim, and Moodle learner-state workflows.\n- Login-dependent learner progress tracking.\n- Recreated IBM Remote Lab Platform runtime.\n`)
+await writeText('RELEASE-CHECKLIST.md', `# Release Checklist\n\n## Content\n\n- [ ] Confirm IBM Learn source URL is ${course.sourceUrl}\n- [ ] Confirm public pages do not imply Lab runtime, formal quiz scoring, certificate, badge claim, or learner progress are hosted on this site.\n- [ ] Confirm H5P checkpoint practice and Badge Quiz scope practice remain non-scoring.\n- [ ] Confirm Badge Quiz practice is original paraphrased scope review, not verbatim formal question-bank reproduction.\n- [ ] Confirm video assets, HLS playlists, English subtitles, and Traditional Chinese subtitles are deployed or clearly documented if unavailable.\n- [ ] Confirm \`data/subtitle-audit/report.json\` has 0 issues before release.\n\n## Local Verification\n\n\`\`\`powershell\nnpm run verify:release\n\`\`\`\n\n## Deployment\n\n\`\`\`powershell\nnpm run deploy:media\nnpm run deploy:cloudflare\nnpm run deploy:check\n\`\`\`\n\n- Cloudflare Pages project: \`${course.repo}\`\n- Cloudflare media project: \`introducing-zos-unix-system-services-media\`\n- GitHub Pages base path: \`/${course.repo}/\`\n`)
+await writeText('FIRST-EDITION-SIGNOFF.md', `# First Edition Signoff\n\nThis file records the first converted baseline for the Traditional Chinese static course site. It is a repository planning and handoff record only; do not link it from the public VitePress site.\n\n## Signoff Status\n\n- Status: prepared for review\n- Prepared date: ${new Date().toISOString().slice(0, 10)}\n- Course source: \`${course.sourceUrl}\`\n- Course title: \`${course.title}\`\n- Locale: \`zh-Hant-TW\`\n\n## Included Scope\n\n- VitePress static course site.\n- Course landing page and learner-facing unit pages.\n- ${videos.length} course video entries with Kaltura metadata and source links.\n- Media status: \`${mediaStatus}\`.\n- ${mediaStatus === 'deployed' ? 'HLS media playlists, English subtitles, and Taiwan Traditional Chinese subtitles are included in the deployment pipeline.' : 'HLS media and subtitles are not deployed in this baseline.'}\n- ${practiceQuestions.length} static practice questions from ${hvpSources.length} H5P checkpoint activities plus ${badgeQuizPracticeQuestions.length} original paraphrased Badge Quiz scope questions.\n- Lab metadata for ${labs.length} IBM Remote Lab Platform activities.\n- Glossary, license notes, release checklist, and automated quality checks.\n\n## Excluded From This Baseline\n\n- Formal quiz scoring, attempt workflow, and verbatim question bank reproduction.\n- Certificate, survey, badge claim, and Moodle learner-state workflows.\n- Login-dependent learner progress tracking.\n- Recreated IBM Remote Lab Platform runtime.\n`)
 await writeJson('package.json', packageJson)
 
 if (mediaStatus === 'source-only') {
@@ -598,7 +628,7 @@ for (const letter of letters) {
   await writeText(`docs/glossary/${letter}.md`, `# z/OS UNIX 詞彙表：${letter.toUpperCase()}\n\n${termPages[letter].map(([term, desc]) => `## ${term}\n\n${desc}`).join('\n\n')}\n\n[返回詞彙表索引](./)\n`)
 }
 
-await writeText('handoff/first-release.md', `# First Release Notes\n\n## Scope\n\n- Course source: ${course.sourceUrl}\n- Course title: ${course.title}\n- Captured inventory: ${captured.sections.length} sections, ${liveActivities.length} activities, ${videos.length} videos, ${hvpSources.length} H5P checkpoints, ${labs.length} Labs.\n- Static site framework: VitePress.\n- Public practice: ${practiceQuestions.length} non-scoring checkpoint questions.\n\n## Notes\n\nFormal quiz attempts, certificate, survey, badge claim, learner progress, and Lab runtime remain in IBM Learn.\n`)
-await writeText('handoff/maintenance-guide.md', `# 維護流程指南\n\n## 常用命令\n\n\`\`\`powershell\nnpm install\nnpm run dev\nnpm run verify:release\n\`\`\`\n\n重新擷取 IBM Learn：\n\n\`\`\`powershell\n$env:IBM_LEARN_COURSE_ID='9890'\nnpm run capture:course\nnpm run capture:assets\nnpm run site:generate\n\`\`\`\n\n## 維護原則\n\n- 公開頁面只放學習者需要的導覽、摘要、影片 metadata、練習、Lab metadata 與授權資訊。\n- Formal quiz attempt、certificate、survey、badge claim、Lab runtime 與 learner progress 一律回 IBM Learn。\n- 修改練習題後必跑 \`npm run practice:check\`。\n- 修改 manifest、Lab 或 activity 清單後必跑 \`npm run course:inventory:check\`。\n`)
+await writeText('handoff/first-release.md', `# First Release Notes\n\n## Scope\n\n- Course source: ${course.sourceUrl}\n- Course title: ${course.title}\n- Captured inventory: ${captured.sections.length} sections, ${liveActivities.length} activities, ${videos.length} videos, ${hvpSources.length} H5P checkpoints, ${labs.length} Labs.\n- Static site framework: VitePress.\n- Public practice: ${practiceQuestions.length} non-scoring questions, including ${badgeQuizPracticeQuestions.length} original paraphrased Badge Quiz scope questions.\n\n## Notes\n\nFormal quiz attempts, certificate, survey, badge claim, learner progress, and Lab runtime remain in IBM Learn.\n`)
+await writeText('handoff/maintenance-guide.md', `# 維護流程指南\n\n## 常用命令\n\n\`\`\`powershell\nnpm install\nnpm run dev\nnpm run verify:release\nnpm run deploy:check\n\`\`\`\n\n## 重新擷取 IBM Learn\n\n\`\`\`powershell\n$env:IBM_LEARN_COURSE_ID='9890'\nnpm run capture:course\nnpm run capture:assets\nnpm run site:generate\n\`\`\`\n\n若 media、HLS 與字幕已準備好，請用 deployed media 模式重新產生：\n\n\`\`\`powershell\nnpm run site:generate:media\n\`\`\`\n\n## Media 與字幕流程\n\n\`\`\`powershell\nnode scripts/download-kaltura-videos.mjs --force\nnode scripts/generate-hls.mjs --force\npython scripts/transcribe_videos.py --model small.en --device auto --compute-type int8\npython scripts/translate_subtitles_openai.py --model gpt-4.1-mini --chunk-size 20\nnpm run subtitles:wrap\nnpm run subtitles:audit\nnpm run site:generate:media\n\`\`\`\n\n字幕發布前，\`data/subtitle-audit/report.json\` 應維持 \`0\` issues。若有 high issue，先修正再部署。\n\n## 部署流程\n\n\`\`\`powershell\nnpm run verify:release\nnpm run deploy:media\nnpm run deploy:cloudflare\nnpm run deploy:check\n\`\`\`\n\n\`deploy:media\` 發布 HLS、字幕與 media manifest；\`deploy:cloudflare\` 發布主站；\`deploy:check\` 從正式 URL 驗證主站、media manifest、HLS playlist 與字幕。\n\n## 維護原則\n\n- 公開頁面只放學習者需要的導覽、摘要、影片 metadata、練習、Lab metadata、字幕與授權資訊。\n- Badge Quiz practice 只能維護為原創改寫的範圍練習；不得公開重製正式題庫原文。\n- Formal quiz attempt、certificate、survey、badge claim、Lab runtime 與 learner progress 一律回 IBM Learn。\n- 修改練習題後必跑 \`npm run practice:check\`。\n- 修改 manifest、Lab 或 activity 清單後必跑 \`npm run course:inventory:check\`。\n- 修改字幕後必跑 \`npm run subtitles:wrap\`、\`npm run subtitles:audit\`、\`npm run subtitles:check\`。\n`)
 
 console.log(`Generated ${course.title}: ${videos.length} videos, ${labs.length} labs, ${practiceQuestions.length} practice questions.`)

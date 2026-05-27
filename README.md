@@ -43,8 +43,8 @@ npm run deploy:check
 - Live course inventory：10 個章節、64 個活動項目
 - 影片：35 支，媒體狀態為 `deployed`
 - Lab：6 個 Exercise Lab 頁面
-- 靜態練習：8 個 H5P checkpoint 來源，共 19 題
-- 正式 quiz：每次 20 題，需 16 題正確通過；本站不重製正式題庫
+- 靜態練習：8 個 H5P checkpoint 來源加上 20 題 Badge Quiz 範圍綜合回顧，共 39 題
+- 正式 quiz：每次 20 題，需 16 題正確通過；本站只提供原創改寫範圍練習，不重製正式題庫原文
 - Subtitle audit：0 high、0 medium、0 low
 
 ## 擷取與維護

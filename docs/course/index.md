@@ -2,13 +2,13 @@
 
 <div class="course-dashboard">
   <div class="course-lede">
-    這是 IBM Learn 課程 <strong>Introducing z/OS Unix System Services</strong> 的台灣繁體中文靜態學習網站。內容整理課程影片 metadata、學習摘要、Lab 順序、H5P checkpoint 靜態練習與 z/OS UNIX 詞彙，適合已完成 z/OS 入門與命令面板課程後，準備深入理解 UNIX System Services 的學習者。
+    這是 IBM Learn 課程 <strong>Introducing z/OS Unix System Services</strong> 的台灣繁體中文靜態學習網站。內容整理課程影片 metadata、學習摘要、Lab 順序、H5P checkpoint 靜態練習、Badge Quiz 範圍綜合回顧與 z/OS UNIX 詞彙，適合已完成 z/OS 入門與命令面板課程後，準備深入理解 UNIX System Services 的學習者。
   </div>
   <div class="course-stats">
     <div class="course-stat"><strong>35</strong><span>課程影片</span></div>
     <div class="course-stat"><strong>8</strong><span>主要單元</span></div>
     <div class="course-stat"><strong>6</strong><span>Lab 說明</span></div>
-    <div class="course-stat"><strong>19</strong><span>互動練習</span></div>
+    <div class="course-stat"><strong>39</strong><span>互動練習</span></div>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
 1. 先看課程概觀與 z/OS UNIX 入門，建立標準、元件與基本功能的共同語言。
 2. 接著學階層式檔案系統與 shell 操作，搭配原課程 Exercise 1 到 Exercise 4。
 3. 再看 shell scripts、REXX、BPXBATCH、process、daemon 與 environment 概念。
-4. 每個 checkpoint 都可在本站做非計分練習；正式 quiz、certificate 與學習者進度仍回 IBM Learn 完成。
+4. 每個 checkpoint 與 Badge Quiz 範圍都可在本站做非計分練習；正式 quiz、certificate 與學習者進度仍回 IBM Learn 完成。
 5. Lab 請閱讀本站 metadata 後，回 IBM Learn 原課程與 IBM Remote Lab Platform 完成。
 
 ## 課程單元

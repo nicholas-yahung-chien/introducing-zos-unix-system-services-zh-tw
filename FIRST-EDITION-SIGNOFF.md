@@ -17,7 +17,7 @@ This file records the first converted baseline for the Traditional Chinese stati
 - 35 course video entries with Kaltura metadata and source links.
 - Media status: `deployed`.
 - HLS media playlists, English subtitles, and Taiwan Traditional Chinese subtitles are included in the deployment pipeline.
-- 19 static practice questions from 8 H5P checkpoint activities.
+- 39 static practice questions from 8 H5P checkpoint activities plus 20 original paraphrased Badge Quiz scope questions.
 - Lab metadata for 6 IBM Remote Lab Platform activities.
 - Glossary, license notes, release checklist, and automated quality checks.
 
