@@ -1,0 +1,213 @@
+{
+  "slug": "ascii-and-ebcdic-considerations",
+  "title": "ASCII and EBCDIC considerations",
+  "language": "en",
+  "duration": 255.3963125,
+  "segments": [
+    {
+      "start": 3.7,
+      "end": 10.82,
+      "text": "Okay, so we're going to look at some common issues that we need to take into consideration."
+    },
+    {
+      "start": 10.82,
+      "end": 16.52,
+      "text": "Data transferred into ZOS from any non-ZOS platform probably requires ASCII to epsidic"
+    },
+    {
+      "start": 16.52,
+      "end": 22.26,
+      "text": "translation. Most workstation and UNIX systems store their data in ASCII format. Also, the"
+    },
+    {
+      "start": 22.26,
+      "end": 27.7,
+      "text": "terminals on those systems use the ASCII format for display characters. The translation is"
+    },
+    {
+      "start": 27.7,
+      "end": 33.06,
+      "text": "easy to do if the file is all text data. The transfer tool that you use has the capability"
+    },
+    {
+      "start": 33.06,
+      "end": 39.38,
+      "text": "to specify conversion. For example, a PAX command explodes, translates, and decompresses"
+    },
+    {
+      "start": 39.38,
+      "end": 45.86,
+      "text": "a file archived on a UNIX system. NFS and FTP do this translation automatically unless"
+    },
+    {
+      "start": 45.86,
+      "end": 51.18,
+      "text": "the data is defined as binary. You can also customize the translation tables that these"
+    },
+    {
+      "start": 51.18,
+      "end": 57.38,
+      "text": "tools use. If your data is part numeric and part text, you might have to do some translation"
+    },
+    {
+      "start": 57.38,
+      "end": 63.1,
+      "text": "manually on a field-by-field basis. Some sorting functions might give different results"
+    },
+    {
+      "start": 63.1,
+      "end": 69.02,
+      "text": "on an epsidic system from an ASCII system, and this difference might require some application"
+    },
+    {
+      "start": 69.02,
+      "end": 78.81,
+      "text": "changes. COS UNIX is epsidic. Most other UNIX platforms are ASCII. ASCII programs with"
+    },
+    {
+      "start": 78.81,
+      "end": 85.81,
+      "text": "nasty dirty programming like that shown here cannot be easily ported. Now, one solution"
+    },
+    {
+      "start": 85.89,
+      "end": 92.65,
+      "text": "is programs can be compiled as ASCII programs. Programs are marked in USS if they are epsidic"
+    },
+    {
+      "start": 92.65,
+      "end": 97.97,
+      "text": "or ASCII. Another problem that occurs when porting programs is IOTA files, which was"
+    },
+    {
+      "start": 97.97,
+      "end": 104.21,
+      "text": "originally ASCII. Solutions here include keeping the file as ASCII, marking the file as ASCII,"
+    },
+    {
+      "start": 104.21,
+      "end": 110.57,
+      "text": "and let auto-conversion be done in the USS logical file system, or tagging the file"
+    },
+    {
+      "start": 110.57,
+      "end": 118.9,
+      "text": "as a text file with coded character set ID, or CCSID, of 819. If you're not using"
+    },
+    {
+      "start": 118.9,
+      "end": 124.42,
+      "text": "enhanced ASCII and auto-conversion, then currently there are few facilities available on ZOS"
+    },
+    {
+      "start": 124.42,
+      "end": 131.74,
+      "text": "to display and change ASCII or Unicode data. You can't use ISPF or OEdit. The increasing"
+    },
+    {
+      "start": 131.74,
+      "end": 136.62,
+      "text": "use of Java on ZOS and the use of ASCII encoded XML documents means there is more"
+    },
+    {
+      "start": 136.62,
+      "end": 142.46,
+      "text": "and more ASCII data being stored on ZOS. Unfortunately, it's generally necessary for"
+    },
+    {
+      "start": 142.46,
+      "end": 148.54,
+      "text": "ZOS users to download ASCII data to a workstation supporting the ASCII character set in order"
+    },
+    {
+      "start": 148.54,
+      "end": 154.78,
+      "text": "to view or change this data. Since the ISPF editor is the most popular and well-known"
+    },
+    {
+      "start": 154.78,
+      "end": 160.42,
+      "text": "editor on ZOS, the benefit of being able to display and change ASCII data on ZOS is"
+    },
+    {
+      "start": 160.42,
+      "end": 166.98,
+      "text": "best delivered by adding this support to the ISPF editor. With ZOS, use the source"
+    },
+    {
+      "start": 166.98,
+      "end": 173.46,
+      "text": "ASCII and LF commands to edit ASCII data stored in ZOS datasets. For Unix files, you have"
+    },
+    {
+      "start": 173.46,
+      "end": 180.86,
+      "text": "to use ISPF 3.17, EA, edit an ASCII file, or VA, view an ASCII file. We're showing"
+    },
+    {
+      "start": 180.86,
+      "end": 188.3,
+      "text": "an example of using the edit source ASCII and LF commands to display ASCII data. To"
+    },
+    {
+      "start": 188.3,
+      "end": 192.74,
+      "text": "activate the ASCII editing facility for a file, the user will first start editing the"
+    },
+    {
+      "start": 192.74,
+      "end": 199.74,
+      "text": "file as they would for a normal EBCDIC file. When the editor primary line command source"
+    },
+    {
+      "start": 199.74,
+      "end": 205.18,
+      "text": "ASCII is entered, the editor will treat the source data as though it is ASCII data"
+    },
+    {
+      "start": 205.18,
+      "end": 210.74,
+      "text": "and it will convert it from ASCII to the CCSID of the terminal for display purposes,"
+    },
+    {
+      "start": 210.74,
+      "end": 216.66,
+      "text": "although the data will remain unchanged within the file itself. When the user add the terminal"
+    },
+    {
+      "start": 216.66,
+      "end": 221.3,
+      "text": "inputs or modifies data at the terminal, the editor will translate the data entered from"
+    },
+    {
+      "start": 221.3,
+      "end": 227.98,
+      "text": "the CCSID of the terminal to ASCII prior to storing the data in the file. The edit"
+    },
+    {
+      "start": 227.98,
+      "end": 232.66,
+      "text": "reset primary command has been modified to support the source keyword, which will cause"
+    },
+    {
+      "start": 232.66,
+      "end": 237.62,
+      "text": "the editor to revert back to a normal mode where the data is not translated from and"
+    },
+    {
+      "start": 237.62,
+      "end": 243.46,
+      "text": "to ASCII when displaying and receiving input from the terminal."
+    },
+    {
+      "start": 243.46,
+      "end": 249.42,
+      "text": "In the final video in this module, we're going to revisit everybody's favourite topic,"
+    },
+    {
+      "start": 249.42,
+      "end": 250.38,
+      "text": "code pages."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+WEBVTT
+
+1
+00:00:03.700 --> 00:00:10.820
+Okay, so we're going to look at some common issues that we need to take into consideration.
+
+2
+00:00:10.820 --> 00:00:16.520
+Data transferred into ZOS from any non-ZOS platform probably requires ASCII to epsidic
+
+3
+00:00:16.520 --> 00:00:22.260
+translation. Most workstation and UNIX systems store their data in ASCII format. Also, the
+
+4
+00:00:22.260 --> 00:00:27.700
+terminals on those systems use the ASCII format for display characters. The translation is
+
+5
+00:00:27.700 --> 00:00:33.060
+easy to do if the file is all text data. The transfer tool that you use has the capability
+
+6
+00:00:33.060 --> 00:00:39.380
+to specify conversion. For example, a PAX command explodes, translates, and decompresses
+
+7
+00:00:39.380 --> 00:00:45.860
+a file archived on a UNIX system. NFS and FTP do this translation automatically unless
+
+8
+00:00:45.860 --> 00:00:51.180
+the data is defined as binary. You can also customize the translation tables that these
+
+9
+00:00:51.180 --> 00:00:57.380
+tools use. If your data is part numeric and part text, you might have to do some translation
+
+10
+00:00:57.380 --> 00:01:03.100
+manually on a field-by-field basis. Some sorting functions might give different results
+
+11
+00:01:03.100 --> 00:01:09.020
+on an epsidic system from an ASCII system, and this difference might require some application
+
+12
+00:01:09.020 --> 00:01:18.810
+changes. COS UNIX is epsidic. Most other UNIX platforms are ASCII. ASCII programs with
+
+13
+00:01:18.810 --> 00:01:25.810
+nasty dirty programming like that shown here cannot be easily ported. Now, one solution
+
+14
+00:01:25.890 --> 00:01:32.650
+is programs can be compiled as ASCII programs. Programs are marked in USS if they are epsidic
+
+15
+00:01:32.650 --> 00:01:37.970
+or ASCII. Another problem that occurs when porting programs is IOTA files, which was
+
+16
+00:01:37.970 --> 00:01:44.210
+originally ASCII. Solutions here include keeping the file as ASCII, marking the file as ASCII,
+
+17
+00:01:44.210 --> 00:01:50.570
+and let auto-conversion be done in the USS logical file system, or tagging the file
+
+18
+00:01:50.570 --> 00:01:58.900
+as a text file with coded character set ID, or CCSID, of 819. If you're not using
+
+19
+00:01:58.900 --> 00:02:04.420
+enhanced ASCII and auto-conversion, then currently there are few facilities available on ZOS
+
+20
+00:02:04.420 --> 00:02:11.740
+to display and change ASCII or Unicode data. You can't use ISPF or OEdit. The increasing
+
+21
+00:02:11.740 --> 00:02:16.620
+use of Java on ZOS and the use of ASCII encoded XML documents means there is more
+
+22
+00:02:16.620 --> 00:02:22.460
+and more ASCII data being stored on ZOS. Unfortunately, it's generally necessary for
+
+23
+00:02:22.460 --> 00:02:28.540
+ZOS users to download ASCII data to a workstation supporting the ASCII character set in order
+
+24
+00:02:28.540 --> 00:02:34.780
+to view or change this data. Since the ISPF editor is the most popular and well-known
+
+25
+00:02:34.780 --> 00:02:40.420
+editor on ZOS, the benefit of being able to display and change ASCII data on ZOS is
+
+26
+00:02:40.420 --> 00:02:46.980
+best delivered by adding this support to the ISPF editor. With ZOS, use the source
+
+27
+00:02:46.980 --> 00:02:53.460
+ASCII and LF commands to edit ASCII data stored in ZOS datasets. For Unix files, you have
+
+28
+00:02:53.460 --> 00:03:00.860
+to use ISPF 3.17, EA, edit an ASCII file, or VA, view an ASCII file. We're showing
+
+29
+00:03:00.860 --> 00:03:08.300
+an example of using the edit source ASCII and LF commands to display ASCII data. To
+
+30
+00:03:08.300 --> 00:03:12.740
+activate the ASCII editing facility for a file, the user will first start editing the
+
+31
+00:03:12.740 --> 00:03:19.740
+file as they would for a normal EBCDIC file. When the editor primary line command source
+
+32
+00:03:19.740 --> 00:03:25.180
+ASCII is entered, the editor will treat the source data as though it is ASCII data
+
+33
+00:03:25.180 --> 00:03:30.740
+and it will convert it from ASCII to the CCSID of the terminal for display purposes,
+
+34
+00:03:30.740 --> 00:03:36.660
+although the data will remain unchanged within the file itself. When the user add the terminal
+
+35
+00:03:36.660 --> 00:03:41.300
+inputs or modifies data at the terminal, the editor will translate the data entered from
+
+36
+00:03:41.300 --> 00:03:47.980
+the CCSID of the terminal to ASCII prior to storing the data in the file. The edit
+
+37
+00:03:47.980 --> 00:03:52.660
+reset primary command has been modified to support the source keyword, which will cause
+
+38
+00:03:52.660 --> 00:03:57.620
+the editor to revert back to a normal mode where the data is not translated from and
+
+39
+00:03:57.620 --> 00:04:03.460
+to ASCII when displaying and receiving input from the terminal.
+
+40
+00:04:03.460 --> 00:04:09.420
+In the final video in this module, we're going to revisit everybody's favourite topic,
+
+41
+00:04:09.420 --> 00:04:10.380
+code pages.

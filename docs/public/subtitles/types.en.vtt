@@ -1,0 +1,337 @@
+WEBVTT
+
+1
+00:00:03.820 --> 00:00:07.820
+The Hierarchical File System contains the following types of files.
+
+2
+00:00:07.820 --> 00:00:12.820
+There's directories, regular files, named pipes or FIFO,
+
+3
+00:00:12.820 --> 00:00:16.820
+character special files and symbolic links.
+
+4
+00:00:16.820 --> 00:00:18.820
+Users and programmers create directories,
+
+5
+00:00:18.820 --> 00:00:20.820
+regular files, pipes and symbolic links
+
+6
+00:00:20.820 --> 00:00:23.820
+and the system programmer creates character special files.
+
+7
+00:00:23.820 --> 00:00:27.820
+Let's take a look at these in turn.
+
+8
+00:00:27.820 --> 00:00:31.820
+A directory is just a file just like everything else
+
+9
+00:00:31.820 --> 00:00:33.820
+but it's a special kind of file.
+
+10
+00:00:33.820 --> 00:00:36.820
+It consists of the name of a set of files
+
+11
+00:00:36.820 --> 00:00:38.820
+and other information about them.
+
+12
+00:00:38.820 --> 00:00:42.820
+Usually the files in a directory are related to each other in some way
+
+13
+00:00:42.820 --> 00:00:47.820
+and of course a directory can have subdirectories.
+
+14
+00:00:47.820 --> 00:00:52.820
+A zos-unix user has a directory defined as its home directory.
+
+15
+00:00:52.820 --> 00:00:56.820
+After logon, the home directory becomes the working directory.
+
+16
+00:00:56.820 --> 00:01:01.820
+A regular file is a named unit of text or binary data information.
+
+17
+00:01:01.820 --> 00:01:04.820
+A file can be, for example, a piece of C source code,
+
+18
+00:01:04.820 --> 00:01:08.820
+a list of names or places, a printer formatted document,
+
+19
+00:01:08.820 --> 00:01:10.820
+a string of numbers organized in a certain way,
+
+20
+00:01:10.820 --> 00:01:13.820
+an employee record or a memo.
+
+21
+00:01:13.820 --> 00:01:16.820
+A user or application must understand how to access
+
+22
+00:01:16.820 --> 00:01:20.820
+and use the individual increments of data within a file.
+
+23
+00:01:20.820 --> 00:01:23.820
+When the sticky bit is set on for a directory,
+
+24
+00:01:23.820 --> 00:01:26.820
+only the super user or the owner can delete
+
+25
+00:01:26.820 --> 00:01:29.820
+or remove a file in the directory.
+
+26
+00:01:29.820 --> 00:01:33.820
+When the sticky bit is set on for an executable program,
+
+27
+00:01:33.820 --> 00:01:36.820
+zos-unix looks for that program in the user's step lib,
+
+28
+00:01:36.820 --> 00:01:40.820
+the link pack area or the link list concatenation.
+
+29
+00:01:40.820 --> 00:01:42.820
+This is done to reduce IO
+
+30
+00:01:42.820 --> 00:01:47.820
+and improve performance of frequently used programs.
+
+31
+00:01:47.820 --> 00:01:54.820
+A named pipe is also called a first-in, first-out or FIFO special file.
+
+32
+00:01:54.820 --> 00:01:59.820
+A FIFO is a file typically used to send data from one process to another
+
+33
+00:01:59.820 --> 00:02:04.820
+so that the receiving process reads the data in a first-in, first-out order.
+
+34
+00:02:04.820 --> 00:02:11.820
+Named pipes are created by the mkFIFO function or by JCL.
+
+35
+00:02:11.820 --> 00:02:16.820
+This results in a directory entry for the FIFO being created in the file system.
+
+36
+00:02:17.820 --> 00:02:22.820
+Named pipes have to be opened and closed by all processes that are using them.
+
+37
+00:02:22.820 --> 00:02:25.820
+Named pipes can be used between independent processes
+
+38
+00:02:25.820 --> 00:02:29.820
+or by parent and by child processes.
+
+39
+00:02:29.820 --> 00:02:38.820
+A character special file is located in the slash dev directory in the root file system.
+
+40
+00:02:38.820 --> 00:02:41.820
+It's a file that defines a number of things.
+
+41
+00:02:41.820 --> 00:02:49.820
+There's a system console file that's slash dev slash console or slash dev slash oper log.
+
+42
+00:02:49.820 --> 00:02:55.820
+That's used to direct data to the system console or the operator log facility of zos.
+
+43
+00:02:55.820 --> 00:03:01.820
+A null file or slash dev slash null is equivalent to a zos dummy file.
+
+44
+00:03:01.820 --> 00:03:05.820
+Slash dev slash zero is a character special device file.
+
+45
+00:03:05.820 --> 00:03:11.820
+Data written to this file is discarded and the data read from this file is in the form of binary zeros.
+
+46
+00:03:11.820 --> 00:03:16.820
+There's slash dev slash random which is a device file that produces random bytes.
+
+47
+00:03:16.820 --> 00:03:22.820
+A file descriptor file for example slash dev slash fdn used to create a duplicate of an open descriptor.
+
+48
+00:03:22.820 --> 00:03:30.820
+A terminal file slash dev slash ptypnnn and slash dev slash ttypnnn
+
+49
+00:03:30.820 --> 00:03:36.820
+where nnnn is a number used to represent a hardware device such as a terminal or a workstation.
+
+50
+00:03:36.820 --> 00:03:43.820
+These files are built in pairs and the system selects a pair of these files to represent a connection between a user and the system.
+
+51
+00:03:43.820 --> 00:03:51.820
+And finally the terminal file slash dev slash tty which is the default controlling terminal for a process.
+
+52
+00:03:51.820 --> 00:03:55.820
+A symbolic link is a file that contains the path name for another file.
+
+53
+00:03:55.820 --> 00:03:58.820
+In essence a reference to another file.
+
+54
+00:03:58.820 --> 00:04:01.820
+It's somewhat comparable to a zos alias.
+
+55
+00:04:01.820 --> 00:04:04.820
+A symbolic link can be created for a file or a directory.
+
+56
+00:04:04.820 --> 00:04:11.820
+A symbolic link can refer to files in another file system and the symbolic link is created by the simlink function.
+
+57
+00:04:11.820 --> 00:04:18.820
+A symbolic link can be used when a file is moved to a new directory and you want users to access the file with the old name.
+
+58
+00:04:18.820 --> 00:04:24.820
+Also it can be used to create an alias short path name for a file that has a long path name.
+
+59
+00:04:24.820 --> 00:04:31.820
+A hard link is a bit different from a symbolic link in that it's a new name for an existing file.
+
+60
+00:04:31.820 --> 00:04:36.820
+A hard link is a new entry in a directory that has the same inode as the original data.
+
+61
+00:04:36.820 --> 00:04:39.820
+A hard link can only point to a file in the same file system.
+
+62
+00:04:39.820 --> 00:04:45.820
+It can't point to a directory or across file systems and it's created with a link function.
+
+63
+00:04:45.820 --> 00:04:49.820
+An external link is a variation of a symbolic link.
+
+64
+00:04:49.820 --> 00:04:53.820
+An external link is a type of symbolic link which points to a zos dataset.
+
+65
+00:04:53.820 --> 00:05:02.820
+It can only be used by the network file system, the exec family of functions and to point to dynamic link libraries located in zos datasets.
+
+66
+00:05:02.820 --> 00:05:06.820
+The minus e option on the ln command creates an external link.
+
+67
+00:05:06.820 --> 00:05:09.820
+They can also be created through the i shell.
+
+68
+00:05:09.820 --> 00:05:14.820
+A shell user can browse data in a zos dataset through an external link.
+
+69
+00:05:14.820 --> 00:05:19.820
+They can only create, delete or look at the external link's attributes.
+
+70
+00:05:20.820 --> 00:05:26.820
+We've mentioned file name, symbolic link, hard link and file descriptors which are all used for referencing a file.
+
+71
+00:05:26.820 --> 00:05:30.820
+So let's look at an overview of these file identifiers.
+
+72
+00:05:30.820 --> 00:05:34.820
+A file can be identified by of course file and path name.
+
+73
+00:05:34.820 --> 00:05:39.820
+Each file has a unique identification number called an inode number as well.
+
+74
+00:05:39.820 --> 00:05:45.820
+The inode number refers to a physical file on DASD where the data is stored in a particular location.
+
+75
+00:05:46.820 --> 00:05:50.820
+The inode number is kept in the directory together with the file name.
+
+76
+00:05:50.820 --> 00:05:55.820
+A symbolic link is a separate physical file with a pointer to another physical file.
+
+77
+00:05:55.820 --> 00:06:01.820
+The two files have different inode numbers and they can reside in different file systems.
+
+78
+00:06:01.820 --> 00:06:10.820
+A hard link is a new name for an existing file and a hard link is a new entry in a directory with the same inode number as the existing file.
+
+79
+00:06:10.820 --> 00:06:14.820
+Hard links can't point to data across file systems.
+
+80
+00:06:14.820 --> 00:06:18.820
+And finally, a file descriptor is a number that represents an open file.
+
+81
+00:06:18.820 --> 00:06:21.820
+It's used to access files in C language programs.
+
+82
+00:06:21.820 --> 00:06:26.820
+When a program opens a file, the system returns a file descriptor for it.
+
+83
+00:06:26.820 --> 00:06:28.820
+OK, so that's file systems.
+
+84
+00:06:28.820 --> 00:06:31.820
+Next up, HFS and CFS datasets.

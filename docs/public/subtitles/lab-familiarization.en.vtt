@@ -1,0 +1,205 @@
+WEBVTT
+
+1
+00:00:04.690 --> 00:00:09.010
+Hello there! I want to make sure you have a good time and that you don't get stuck
+
+2
+00:00:09.010 --> 00:00:14.290
+on anything relating to connecting to our lab environment. Some of the material
+
+3
+00:00:14.290 --> 00:00:17.850
+you're going to be learning is tricky enough, so you'll have enough on your
+
+4
+00:00:17.850 --> 00:00:21.650
+mind with just that. Let's make sure that logging into our system and
+
+5
+00:00:21.650 --> 00:00:27.410
+navigating around is as smooth and painless as possible. You'll be logging
+
+6
+00:00:27.410 --> 00:00:32.890
+into an actual IBM Z system, and this is separate from whatever learning
+
+7
+00:00:32.890 --> 00:00:37.450
+platform you're on. To get you connected will also be giving you access to a
+
+8
+00:00:37.450 --> 00:00:42.730
+virtual Windows system, and that has all of the connection software preloaded on
+
+9
+00:00:42.730 --> 00:00:48.250
+it, and you'll use that to connect to the mainframe system. This is the easiest way
+
+10
+00:00:48.250 --> 00:00:52.490
+to get you connected without having you to install all sorts of software on your
+
+11
+00:00:52.490 --> 00:00:56.930
+own machine. When you go to connect to the lab system, you'll eventually see a
+
+12
+00:00:56.930 --> 00:01:02.450
+loading screen that looks something like this, and then something like this, and
+
+13
+00:01:02.450 --> 00:01:07.570
+then something like this, and then eventually you'll get to a screen that
+
+14
+00:01:07.570 --> 00:01:13.210
+looks something like this, with the green box and the course lab kit up here.
+
+15
+00:01:13.210 --> 00:01:18.290
+This is your connection to that system, and there's three important things on
+
+16
+00:01:18.290 --> 00:01:23.770
+here that I want to show you. First is the lab kit up top here. That link
+
+17
+00:01:23.770 --> 00:01:29.410
+wasn't there until the system was ready. This is a document made just for you, and
+
+18
+00:01:29.410 --> 00:01:34.490
+it has your connection information in it. You'll need that information, so maybe
+
+19
+00:01:34.490 --> 00:01:39.890
+bookmark it or print it out so you can find it easily later on. This page also
+
+20
+00:01:39.890 --> 00:01:45.050
+shows you the amount of time left. Now, this is not the amount of time left in
+
+21
+00:01:45.050 --> 00:01:49.570
+the course. Remember, two separate things. This is the amount of time left on the
+
+22
+00:01:49.570 --> 00:01:55.250
+hands-on system, and if you need more time to get your work done on the system,
+
+23
+00:01:55.250 --> 00:02:00.370
+go down to support. There's a link in your course lab kit, and then visit the
+
+24
+00:02:00.370 --> 00:02:06.050
+self-service portal to request an extension, and just so you know, the time
+
+25
+00:02:06.050 --> 00:02:10.250
+to do that is before you need that extra time, and the sooner the better.
+
+26
+00:02:10.250 --> 00:02:13.970
+Trust me on this, you don't want to wait until the last minute, or they
+
+27
+00:02:13.970 --> 00:02:18.010
+might not be able to change it in time, and you might lose all of your work
+
+28
+00:02:18.010 --> 00:02:24.010
+on that system. So pay attention to that date. Alright, you got that. Last thing is
+
+29
+00:02:24.010 --> 00:02:29.210
+your virtual system access. This is that virtual Windows system that I talked
+
+30
+00:02:29.210 --> 00:02:34.050
+about earlier, and you'll use this to connect to the IBM Z mainframe system.
+
+31
+00:02:34.050 --> 00:02:38.250
+This will normally say running, but if you ever come in here after a while and
+
+32
+00:02:38.250 --> 00:02:41.930
+it says busy, then you probably just have to wait a little while for it to come
+
+33
+00:02:41.930 --> 00:02:46.290
+back online. No big deal. This is also a good time to point out that
+
+34
+00:02:46.290 --> 00:02:51.730
+sometimes you'll see values on your screen that are just examples. Things
+
+35
+00:02:51.730 --> 00:02:57.730
+like user IDs and high-level qualifiers. Now eventually you'll be able to spot
+
+36
+00:02:57.730 --> 00:03:02.370
+those right away, no problem, but when you see something that maybe looks like
+
+37
+00:03:02.370 --> 00:03:08.570
+your user ID but isn't actually your user ID, you're probably expected to put
+
+38
+00:03:08.570 --> 00:03:14.130
+in your user ID, not the one you see on the screen. You wouldn't believe how
+
+39
+00:03:14.130 --> 00:03:19.290
+often someone copies and pastes a command exactly as it is into the system,
+
+40
+00:03:19.290 --> 00:03:23.010
+and then they get really frustrated when it doesn't work. So double-check the
+
+41
+00:03:23.010 --> 00:03:26.890
+examples, double-check the instructions, and make sure you're entering what
+
+42
+00:03:26.890 --> 00:03:31.210
+you're supposed to enter. To get into this system, you'll need a username and
+
+43
+00:03:31.210 --> 00:03:36.410
+password, and I can't tell it to you and we can't make it log in automatically.
+
+44
+00:03:36.410 --> 00:03:41.890
+The username and password are in your course lab kit. Remember that link up
+
+45
+00:03:41.890 --> 00:03:46.770
+at the top of the screen? Now there are two usernames and passwords in here. The
+
+46
+00:03:46.770 --> 00:03:50.850
+first one is for getting into that Windows system. It's in the remote
+
+47
+00:03:50.850 --> 00:03:56.930
+access information section. Then below that, in lab information, you'll find these
+
+48
+00:03:56.930 --> 00:04:03.250
+student TSO user IDs, and it might just be one, it might be two, it'll probably
+
+49
+00:04:03.250 --> 00:04:07.450
+just be one, but you'll use those credentials to log into the mainframe
+
+50
+00:04:07.450 --> 00:04:12.170
+system, which we'll cover in the next video. I hope that helps you get off to a
+
+51
+00:04:12.170 --> 00:04:18.530
+great start with the labs in your course. Have fun and learn a lot.

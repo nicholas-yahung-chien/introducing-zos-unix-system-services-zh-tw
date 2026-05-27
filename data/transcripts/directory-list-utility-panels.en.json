@@ -1,0 +1,418 @@
+{
+  "slug": "directory-list-utility-panels",
+  "title": "Directory List Utility panels",
+  "language": "en",
+  "duration": 350.7374375,
+  "segments": [
+    {
+      "start": 3.82,
+      "end": 8.86,
+      "text": "Ok, so let's look at some ways to actually get tasks done."
+    },
+    {
+      "start": 8.86,
+      "end": 12.7,
+      "text": "One way to make things happen is to use the command line of the zos-unix directory list"
+    },
+    {
+      "start": 12.7,
+      "end": 13.7,
+      "text": "panel."
+    },
+    {
+      "start": 13.7,
+      "end": 18.98,
+      "text": "You can enter commands such as edit to edit a file in a directory that's currently listed,"
+    },
+    {
+      "start": 18.98,
+      "end": 22.66,
+      "text": "find will find and display the next occurrence of a character string within the list of"
+    },
+    {
+      "start": 22.66,
+      "end": 28.3,
+      "text": "file names, reset cleans up the directory list display by removing pending line commands"
+    },
+    {
+      "start": 28.3,
+      "end": 31.0,
+      "text": "and messages and so forth."
+    },
+    {
+      "start": 31.0,
+      "end": 35.64,
+      "text": "The following line commands are available on the zos-unix directory list panel."
+    },
+    {
+      "start": 35.64,
+      "end": 39.12,
+      "text": "You can enter these line commands alongside the file you'd like to apply the command"
+    },
+    {
+      "start": 39.12,
+      "end": 40.12,
+      "text": "to."
+    },
+    {
+      "start": 40.12,
+      "end": 45.28,
+      "text": "So, if you want to rename a file, you'd enter the r line command alongside the file"
+    },
+    {
+      "start": 45.28,
+      "end": 47.4,
+      "text": "you want to rename."
+    },
+    {
+      "start": 47.4,
+      "end": 50.52,
+      "text": "These line commands result in panels being displayed."
+    },
+    {
+      "start": 50.52,
+      "end": 52.36,
+      "text": "Let's take a look."
+    },
+    {
+      "start": 52.36,
+      "end": 57.94,
+      "text": "The create new zos-unix file panel allows a user to create a file and is invoked using"
+    },
+    {
+      "start": 57.94,
+      "end": 60.12,
+      "text": "the n line command."
+    },
+    {
+      "start": 60.12,
+      "end": 65.58,
+      "text": "The user must enter the path name and permissions for the new file and identify the file type."
+    },
+    {
+      "start": 65.58,
+      "end": 69.6,
+      "text": "When creating a symbolic or an external link, the user must identify the file the link"
+    },
+    {
+      "start": 69.6,
+      "end": 71.24,
+      "text": "refers to."
+    },
+    {
+      "start": 71.24,
+      "end": 75.84,
+      "text": "Options are available to have data copied from another file or data set into the new"
+    },
+    {
+      "start": 75.84,
+      "end": 78.68,
+      "text": "file and to edit the new file."
+    },
+    {
+      "start": 78.68,
+      "end": 83.98,
+      "text": "The sticky bit can also be set on for the new file."
+    },
+    {
+      "start": 83.98,
+      "end": 89.4,
+      "text": "The copy from panel allows the data from a file to be copied to another file or to"
+    },
+    {
+      "start": 89.4,
+      "end": 94.28,
+      "text": "a sequential data set or member of a partition data set and it's invoked using"
+    },
+    {
+      "start": 94.28,
+      "end": 98.34,
+      "text": "the co-line command against a regular file."
+    },
+    {
+      "start": 98.34,
+      "end": 104.24,
+      "text": "The user must specify the name of the target zos-unix file or sequential data set or partition"
+    },
+    {
+      "start": 104.24,
+      "end": 107.4,
+      "text": "data set and member."
+    },
+    {
+      "start": 107.4,
+      "end": 111.4,
+      "text": "When the data is to be copied to a zos-unix file, the user can specify the permissions"
+    },
+    {
+      "start": 111.4,
+      "end": 113.0,
+      "text": "for this file."
+    },
+    {
+      "start": 113.0,
+      "end": 115.22,
+      "text": "The following options are available."
+    },
+    {
+      "start": 115.22,
+      "end": 119.62,
+      "text": "You can be warned if the data is being copied to a target that exists."
+    },
+    {
+      "start": 119.62,
+      "end": 126.02,
+      "text": "When the target isn't an existing zos-unix file, you can have its permissions updated."
+    },
+    {
+      "start": 126.02,
+      "end": 132.62,
+      "text": "You can cause a binary copy to occur when copying to a sequential data set or member."
+    },
+    {
+      "start": 132.62,
+      "end": 137.38,
+      "text": "And you can cause data conversion to take place during the copy operation where an"
+    },
+    {
+      "start": 137.38,
+      "end": 141.58,
+      "text": "optional conversion table can be specified."
+    },
+    {
+      "start": 141.58,
+      "end": 145.86,
+      "text": "The copy from panel allows the data from regular files in a directory to be copied to"
+    },
+    {
+      "start": 145.86,
+      "end": 151.38,
+      "text": "two members in a partition data set and it's invoked using the co-line command against"
+    },
+    {
+      "start": 151.38,
+      "end": 152.98,
+      "text": "the directory."
+    },
+    {
+      "start": 152.98,
+      "end": 156.86,
+      "text": "The user must specify the name of the target partition data set and the following options"
+    },
+    {
+      "start": 156.86,
+      "end": 158.36,
+      "text": "are available."
+    },
+    {
+      "start": 158.36,
+      "end": 162.42,
+      "text": "Data in existing members can be overridden with the data from the source file."
+    },
+    {
+      "start": 162.42,
+      "end": 166.5,
+      "text": "A selection list can be displayed where the user can select the files in the directory"
+    },
+    {
+      "start": 166.5,
+      "end": 168.54,
+      "text": "that are to be copied."
+    },
+    {
+      "start": 168.54,
+      "end": 173.02,
+      "text": "File names with names containing lowercase characters can be copied."
+    },
+    {
+      "start": 173.02,
+      "end": 178.02,
+      "text": "Files with names containing suffixes can be copied by having the suffix removed."
+    },
+    {
+      "start": 178.02,
+      "end": 184.02,
+      "text": "A binary copy can occur when copying to the target member and as with files, data conversion"
+    },
+    {
+      "start": 184.02,
+      "end": 188.14,
+      "text": "can take place during the copy operation."
+    },
+    {
+      "start": 188.14,
+      "end": 193.56,
+      "text": "The replace panel allows the data in a regular zos-unix file to be replaced with data from"
+    },
+    {
+      "start": 193.56,
+      "end": 199.68,
+      "text": "another file or replaced with the sequential data set or a member of a partition data set."
+    },
+    {
+      "start": 199.68,
+      "end": 204.64,
+      "text": "The user must specify the name of the source zos-unix file, sequential data set or partition"
+    },
+    {
+      "start": 204.64,
+      "end": 209.36,
+      "text": "data set and member and the following options are available for this."
+    },
+    {
+      "start": 209.36,
+      "end": 214.72,
+      "text": "A binary copy can occur when copying from a sequential data set or a member and, yep,"
+    },
+    {
+      "start": 214.72,
+      "end": 218.61,
+      "text": "we can do data conversion."
+    },
+    {
+      "start": 218.61,
+      "end": 224.51,
+      "text": "The copy into panel allows the data from members in a partition data set to be copied"
+    },
+    {
+      "start": 224.51,
+      "end": 232.67,
+      "text": "into regular files in a directory and that's invoked using the ci line command against a directory."
+    },
+    {
+      "start": 232.67,
+      "end": 237.75,
+      "text": "The user must specify the name of the source partition data set and the user can specify"
+    },
+    {
+      "start": 237.75,
+      "end": 241.95,
+      "text": "the permissions to apply to the files the members are copied into."
+    },
+    {
+      "start": 241.95,
+      "end": 245.99,
+      "text": "The user can also specify a suffix which is appended to the member name to make the"
+    },
+    {
+      "start": 245.99,
+      "end": 250.95,
+      "text": "name of the regular file created or updated during the copy operation and the usual array"
+    },
+    {
+      "start": 250.95,
+      "end": 253.75,
+      "text": "of options are available."
+    },
+    {
+      "start": 253.75,
+      "end": 258.69,
+      "text": "The file information panel displays the attributes for a file or a directory and is invoked using"
+    },
+    {
+      "start": 258.69,
+      "end": 261.41,
+      "text": "the i line command."
+    },
+    {
+      "start": 261.41,
+      "end": 267.17,
+      "text": "The modify pull down menu contains options to modify either the mode fields or the extended"
+    },
+    {
+      "start": 267.17,
+      "end": 270.99,
+      "text": "attributes for the file."
+    },
+    {
+      "start": 270.99,
+      "end": 277.85,
+      "text": "The modify mode panel allows the user to change the permissions, set uid bit, set gid"
+    },
+    {
+      "start": 277.85,
+      "end": 282.05,
+      "text": "bit and the sticky bit all for a file."
+    },
+    {
+      "start": 282.05,
+      "end": 287.89,
+      "text": "It's invoked using the mm line command or using the modify pull down menu on the zos"
+    },
+    {
+      "start": 287.89,
+      "end": 290.77,
+      "text": "unix file information panel."
+    },
+    {
+      "start": 290.77,
+      "end": 297.37,
+      "text": "The execute command panel allows the user to run a file or execute a zos unix command,"
+    },
+    {
+      "start": 297.37,
+      "end": 303.01,
+      "text": "a tso command, C list or rex exec against a file."
+    },
+    {
+      "start": 303.01,
+      "end": 308.17,
+      "text": "It's invoked using the x line command against a regular file, directory or symbolic link"
+    },
+    {
+      "start": 308.17,
+      "end": 310.13,
+      "text": "to a regular file."
+    },
+    {
+      "start": 310.13,
+      "end": 314.09,
+      "text": "For a command that runs in zos unix, the user has the option to run the command under the"
+    },
+    {
+      "start": 314.09,
+      "end": 317.93,
+      "text": "login shell or directly in zos unix."
+    },
+    {
+      "start": 317.93,
+      "end": 322.33,
+      "text": "To simply run the selected file, the user can leave the command for the file field blank."
+    },
+    {
+      "start": 322.33,
+      "end": 326.93,
+      "text": "By default, the path name of the selected file is appended to the end of the command"
+    },
+    {
+      "start": 326.93,
+      "end": 328.73,
+      "text": "entered by the user."
+    },
+    {
+      "start": 328.73,
+      "end": 334.29,
+      "text": "The panel here shows a request to run the C 89 command to compile, assemble and link"
+    },
+    {
+      "start": 334.29,
+      "end": 336.41,
+      "text": "edit a C program."
+    },
+    {
+      "start": 336.41,
+      "end": 340.33,
+      "text": "The command is run in the zos unix login shell."
+    },
+    {
+      "start": 340.33,
+      "end": 345.29,
+      "text": "Next up, we'll take a look at how zos unix works with ispf and for that, I'll see you"
+    },
+    {
+      "start": 345.29,
+      "end": 346.13,
+      "text": "back at the office."
+    }
+  ]
+}

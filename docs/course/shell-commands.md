@@ -24,18 +24,24 @@ shell command 是 z/OS UNIX 的日常操作語言。學習時要同時注意 UNI
   title="取得說明與使用 code pages"
   entry-id="1_bf9i3fo8"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193120"
+  video-src="/media/getting-help-and-working-with-code-pages.mp4"
+  subtitle-src="/subtitles/getting-help-and-working-with-code-pages.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="System shell commands"
   entry-id="1_bvrm90tq"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193121"
+  video-src="/media/system-shell-commands.mp4"
+  subtitle-src="/subtitles/system-shell-commands.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="更多 shell commands"
   entry-id="1_wp4d7ohx"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193122"
+  video-src="/media/more-shell-commands.mp4"
+  subtitle-src="/subtitles/more-shell-commands.zh-Hant-TW.vtt"
 />
 
 ## 閱讀材料

@@ -1,0 +1,293 @@
+WEBVTT
+
+1
+00:00:03.730 --> 00:00:09.890
+Fork is an XPGE 4.2 function which creates a duplicate process referred to as a child
+
+2
+00:00:09.890 --> 00:00:11.130
+process.
+
+3
+00:00:11.130 --> 00:00:14.770
+The process that issues the fork is referred to as the parent process.
+
+4
+00:00:14.770 --> 00:00:18.930
+A parent process can create multiple child processes.
+
+5
+00:00:18.930 --> 00:00:23.590
+With ZOS Unix, a program that issues a fork creates a new address base which is a copy
+
+6
+00:00:23.590 --> 00:00:26.270
+of the address base where the program is running.
+
+7
+00:00:26.270 --> 00:00:30.290
+The fork function does a program call to the kernel which uses Workload Manager to
+
+8
+00:00:30.290 --> 00:00:32.690
+create the child process.
+
+9
+00:00:32.690 --> 00:00:38.090
+The contents of the parent address space are then copied to the child address space.
+
+10
+00:00:38.090 --> 00:00:42.690
+After the fork function, the code in the child address space is at the same address as the
+
+11
+00:00:42.690 --> 00:00:44.450
+parent address space.
+
+12
+00:00:44.450 --> 00:00:47.930
+Control is returned to both programs at the same point.
+
+13
+00:00:47.930 --> 00:00:52.370
+The only difference that the application sees is the return code from the fork function.
+
+14
+00:00:52.370 --> 00:00:58.210
+A return code of 0 is returned to the child after a successful fork, or other return codes
+
+15
+00:00:58.210 --> 00:01:00.770
+are valid only for the parent.
+
+16
+00:01:00.770 --> 00:01:06.930
+A process can also be created when a non-ZOS Unix program requests a ZOS Unix service.
+
+17
+00:01:06.930 --> 00:01:12.090
+For example, an open of a file in the hierarchical file system from an assembler program.
+
+18
+00:01:12.090 --> 00:01:16.150
+This address space is dubbed as a ZOS Unix process.
+
+19
+00:01:16.150 --> 00:01:20.170
+The dub does not result in the new address space being created.
+
+20
+00:01:20.170 --> 00:01:25.890
+The child address space is almost an identical copy of the parent address space.
+
+21
+00:01:25.890 --> 00:01:30.770
+User data, for example, private subpools and system data like RTM or Recovery Termination
+
+22
+00:01:30.770 --> 00:01:33.770
+Management Control blocks are identical.
+
+23
+00:01:33.770 --> 00:01:38.970
+HFS files are allocated to the kernel and IO is done by coding the kernel.
+
+24
+00:01:38.970 --> 00:01:43.210
+On a fork, all open files are inherited by the child address space.
+
+25
+00:01:43.210 --> 00:01:47.230
+ZOS data sets are allocated to an individual address space.
+
+26
+00:01:47.230 --> 00:01:52.170
+After a fork, the child address space does not have access to the ZOS data sets allocated
+
+27
+00:01:52.170 --> 00:01:54.070
+by the parent.
+
+28
+00:01:54.070 --> 00:01:59.190
+Through system definitions, there is a way to improve the performance of fork calls.
+
+29
+00:01:59.190 --> 00:02:03.950
+The option allows the parent and child processes to share a copy of the storage areas until
+
+30
+00:02:03.950 --> 00:02:05.570
+they're modified.
+
+31
+00:02:05.570 --> 00:02:09.950
+When the area is modified, it's copied to the child process.
+
+32
+00:02:09.950 --> 00:02:14.630
+If this option is off, the system creates a copy of all storage areas at the time of
+
+33
+00:02:14.630 --> 00:02:18.190
+the fork for the child process.
+
+34
+00:02:18.190 --> 00:02:23.450
+The XPG 4.2 standard defines a family of exec function calls.
+
+35
+00:02:23.450 --> 00:02:28.330
+The exec functions are used to start execution of a new program.
+
+36
+00:02:28.330 --> 00:02:33.270
+The difference between the exec functions is the way the name of the program and the parameters
+
+37
+00:02:33.270 --> 00:02:36.490
+of the arguments are passed.
+
+38
+00:02:36.490 --> 00:02:41.210
+When a program issues an exec system call, the program, as well as all the data in the
+
+39
+00:02:41.210 --> 00:02:43.370
+address space, is destroyed.
+
+40
+00:02:43.370 --> 00:02:47.690
+The new program is loaded from the file system and given control.
+
+41
+00:02:47.690 --> 00:02:52.410
+The only information the new program has access to is the arguments passed on the exec
+
+42
+00:02:52.410 --> 00:02:53.650
+call.
+
+43
+00:02:53.650 --> 00:02:58.450
+The fork and exec functions are usually used together in a sequence.
+
+44
+00:02:58.450 --> 00:03:01.970
+First a process issues the fork to create a child process.
+
+45
+00:03:01.970 --> 00:03:06.690
+The result is two almost identical processes which run the same program, let's say Program
+
+46
+00:03:06.690 --> 00:03:07.690
+A.
+
+47
+00:03:07.690 --> 00:03:11.610
+An important difference between the processes is the return code from the fork.
+
+48
+00:03:11.610 --> 00:03:17.170
+Only the child process receives a return code of zero after a successful fork.
+
+49
+00:03:17.170 --> 00:03:20.650
+This can be used as a way of starting a new program.
+
+50
+00:03:20.650 --> 00:03:26.890
+Program A issues an exec to start a new program, Program C, if the return code is zero.
+
+51
+00:03:26.890 --> 00:03:31.970
+In this case the child has a zero return code and Program C is indeed started.
+
+52
+00:03:31.970 --> 00:03:36.450
+The parent gets a return code different from zero from the fork and it continues to run
+
+53
+00:03:36.450 --> 00:03:37.970
+Program A.
+
+54
+00:03:37.970 --> 00:03:42.770
+The result of all this is that the parent process runs the old program, Program A, while
+
+55
+00:03:42.770 --> 00:03:46.570
+the child process runs the new program, Program C.
+
+56
+00:03:46.570 --> 00:03:52.890
+The two processes are related and they can share data and information between them.
+
+57
+00:03:52.890 --> 00:03:57.310
+In order to enable multiprocess applications to run on ZOS Unix without the address space
+
+58
+00:03:57.310 --> 00:04:03.210
+resource overhead, ZOS Unix provides services that allow multiple processes within one address
+
+59
+00:04:03.210 --> 00:04:04.770
+space.
+
+60
+00:04:04.770 --> 00:04:08.530
+These types of processes are called local processes.
+
+61
+00:04:08.530 --> 00:04:11.910
+The child process is called a local child process.
+
+62
+00:04:11.910 --> 00:04:18.330
+The local child process has the same attributes as a child process after a fork and exec.
+
+63
+00:04:18.330 --> 00:04:24.270
+There is a setDubDefaultService which provides the ability for a ZOS task to attach a new
+
+64
+00:04:24.270 --> 00:04:28.050
+sub-task that runs as a new process.
+
+65
+00:04:28.050 --> 00:04:32.630
+This new process is called a non-forked local process.
+
+66
+00:04:32.630 --> 00:04:35.750
+The spawn function implements local processes.
+
+67
+00:04:35.750 --> 00:04:40.090
+It also combines the fork and the exec into a single call.
+
+68
+00:04:40.110 --> 00:04:45.270
+It extends the support for local processes to the standard family of C services.
+
+69
+00:04:45.270 --> 00:04:52.190
+If the environment variable underscore bpx underscore share as is set to yes, the parent
+
+70
+00:04:52.190 --> 00:04:56.270
+and child processes created by a spawn share the same address space.
+
+71
+00:04:56.270 --> 00:05:00.830
+If that environment variable is set to no, each process runs in its own address space
+
+72
+00:05:00.830 --> 00:05:03.390
+as in a fork.
+
+73
+00:05:03.390 --> 00:05:08.390
+In the next video, we'll talk about a communication for sending data between processes.

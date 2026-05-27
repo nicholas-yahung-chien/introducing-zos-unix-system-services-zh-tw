@@ -1,0 +1,398 @@
+{
+  "slug": "hfs-and-zfs-data-set-fundamentals",
+  "title": "HFS and zFS data set fundamentals",
+  "language": "en",
+  "duration": 361.4418125,
+  "segments": [
+    {
+      "start": 3.7,
+      "end": 11.7,
+      "text": "A hierarchical file system can be in a data set type called HFS or it can be in a ZFS data set."
+    },
+    {
+      "start": 11.7,
+      "end": 17.7,
+      "text": "HFS data sets can span many density volumes. If spanned, they must be SMS managed."
+    },
+    {
+      "start": 17.7,
+      "end": 23.7,
+      "text": "ZFS and HFS are both Unix file systems and both can participate in shared systplexes."
+    },
+    {
+      "start": 23.7,
+      "end": 27.7,
+      "text": "However, while HFS always has a single file system per data set,"
+    },
+    {
+      "start": 27.7,
+      "end": 31.7,
+      "text": "ZFS can have multiple file systems in a single data set."
+    },
+    {
+      "start": 31.7,
+      "end": 36.7,
+      "text": "These data sets are called aggregates and are a collection of data sets."
+    },
+    {
+      "start": 36.7,
+      "end": 42.7,
+      "text": "HFS data sets are like PDSE data sets. They're allocated like any other ZOS data set."
+    },
+    {
+      "start": 42.7,
+      "end": 47.7,
+      "text": "Although an HFS data set is a ZOS data set and MVS open request fails,"
+    },
+    {
+      "start": 47.7,
+      "end": 53.7,
+      "text": "users must use Unix system services to access data in such a data set."
+    },
+    {
+      "start": 53.7,
+      "end": 59.7,
+      "text": "The hierarchical file system consists of one root file system and multiple user file systems."
+    },
+    {
+      "start": 59.7,
+      "end": 64.7,
+      "text": "The root file system is the base for HFS and is at the top of the hierarchy."
+    },
+    {
+      "start": 64.7,
+      "end": 70.7,
+      "text": "HFS data sets are allocated as ZOS data sets, so DSN type equals HFS."
+    },
+    {
+      "start": 70.7,
+      "end": 75.7,
+      "text": "HFS data sets can only be opened by Unix system service kernel operations"
+    },
+    {
+      "start": 75.7,
+      "end": 81.7,
+      "text": "and HFS data sets can reside on the same volumes as other ZOS data sets."
+    },
+    {
+      "start": 81.7,
+      "end": 85.7,
+      "text": "Non-SMS managed HFS data sets are often used."
+    },
+    {
+      "start": 85.7,
+      "end": 92.7,
+      "text": "Now, a few other characteristics. The size of the data set is limited to two gigabytes if single volume."
+    },
+    {
+      "start": 92.7,
+      "end": 97.7,
+      "text": "A multi-volume HFS can span up to a maximum of 59 volumes."
+    },
+    {
+      "start": 97.7,
+      "end": 101.7,
+      "text": "HFS can have up to a maximum of 123 extents per volume"
+    },
+    {
+      "start": 101.7,
+      "end": 108.7,
+      "text": "and a multi-volume HFS can have up to a maximum of 255 total extents for all volumes."
+    },
+    {
+      "start": 108.7,
+      "end": 111.7,
+      "text": "Also, keep in mind that within a file system in HFS,"
+    },
+    {
+      "start": 111.7,
+      "end": 114.7,
+      "text": "there is no way to control the amount of space each user can use."
+    },
+    {
+      "start": 114.7,
+      "end": 119.7,
+      "text": "It's actually possible for one user to use the entire space in a file system."
+    },
+    {
+      "start": 119.7,
+      "end": 124.7,
+      "text": "So the recommendation here is that each user have their own file system."
+    },
+    {
+      "start": 124.7,
+      "end": 132.7,
+      "text": "A ZFS aggregate is a VSAM linear data set or an LDS that contains one or more ZFS file systems."
+    },
+    {
+      "start": 132.7,
+      "end": 136.7,
+      "text": "The name of the aggregate is its VSAM LDS name."
+    },
+    {
+      "start": 136.7,
+      "end": 141.7,
+      "text": "A ZVS file system is a logical named entity contained within the ZVS aggregate"
+    },
+    {
+      "start": 141.7,
+      "end": 144.7,
+      "text": "that has a root directory and can be mounted."
+    },
+    {
+      "start": 144.7,
+      "end": 147.7,
+      "text": "It has a logical maximum size known as its quota."
+    },
+    {
+      "start": 147.7,
+      "end": 152.7,
+      "text": "A ZFS file system is a named entity that resides in a ZFS aggregate."
+    },
+    {
+      "start": 152.7,
+      "end": 157.7,
+      "text": "It contains a root directory and can be mounted into the USS hierarchy."
+    },
+    {
+      "start": 157.7,
+      "end": 162.7,
+      "text": "File system is not really a new term, but a ZFS file system resides in a ZFS aggregate,"
+    },
+    {
+      "start": 162.7,
+      "end": 166.7,
+      "text": "which is different from an HFS file system."
+    },
+    {
+      "start": 167.7,
+      "end": 173.7,
+      "text": "For compatibility mode aggregates, the VSAM LDS name is the same as the ZFS aggregate name,"
+    },
+    {
+      "start": 173.7,
+      "end": 176.7,
+      "text": "is the same as the ZFS file system name."
+    },
+    {
+      "start": 176.7,
+      "end": 180.7,
+      "text": "The quota of these file systems is set to the size of the aggregate."
+    },
+    {
+      "start": 180.7,
+      "end": 185.7,
+      "text": "A compatibility mode aggregate can contain only one ZFS file system,"
+    },
+    {
+      "start": 185.7,
+      "end": 189.7,
+      "text": "making this type of aggregate more like an HFS file system."
+    },
+    {
+      "start": 189.7,
+      "end": 192.7,
+      "text": "This is flagged in the aggregate when it's created."
+    },
+    {
+      "start": 192.7,
+      "end": 196.7,
+      "text": "Version file systems in a shared file system that are no longer being used"
+    },
+    {
+      "start": 196.7,
+      "end": 198.7,
+      "text": "can be automatically unmounted."
+    },
+    {
+      "start": 198.7,
+      "end": 203.7,
+      "text": "Also, note that the multi-file system aggregates are no longer supported by ZOS."
+    },
+    {
+      "start": 203.7,
+      "end": 211.7,
+      "text": "A colony address space runs USS system code as an extension to the USS kernel address space."
+    },
+    {
+      "start": 211.7,
+      "end": 215.7,
+      "text": "ZFS runs as a Unix system services colony address space."
+    },
+    {
+      "start": 215.7,
+      "end": 220.7,
+      "text": "There must be an entry in a bpx-prm-palmlib member for ZVS,"
+    },
+    {
+      "start": 220.7,
+      "end": 222.7,
+      "text": "and the ZVS proc must be available."
+    },
+    {
+      "start": 222.7,
+      "end": 227.7,
+      "text": "The bpx-palm member in the palmlib contains a file-sys type statement"
+    },
+    {
+      "start": 227.7,
+      "end": 230.7,
+      "text": "for the ZVS physical file system."
+    },
+    {
+      "start": 230.7,
+      "end": 234.7,
+      "text": "It includes an AS name parameter specifying the ZFS proc."
+    },
+    {
+      "start": 234.7,
+      "end": 239.7,
+      "text": "AS name is required for PFSs that run in colony address spaces."
+    },
+    {
+      "start": 239.7,
+      "end": 244.7,
+      "text": "ZFS can now handle mounts of ZFS file systems contained in the bpx-palm."
+    },
+    {
+      "start": 244.7,
+      "end": 251.7,
+      "text": "Mount commands can be left in slash etc slash rc or moved into bpx-palm."
+    },
+    {
+      "start": 251.7,
+      "end": 254.7,
+      "text": "ZFS admin commands the query information, for example,"
+    },
+    {
+      "start": 254.7,
+      "end": 260.7,
+      "text": "lsfs and aggrinfo can be issued by any user."
+    },
+    {
+      "start": 260.7,
+      "end": 263.7,
+      "text": "ZFS admin commands that modify, so for example,"
+    },
+    {
+      "start": 263.7,
+      "end": 268.7,
+      "text": "ZFS admin create require that the user be logged in as root."
+    },
+    {
+      "start": 268.7,
+      "end": 272.7,
+      "text": "Now, what are the advantages of ZFS?"
+    },
+    {
+      "start": 272.7,
+      "end": 277.7,
+      "text": "Well, ZFS is a file system that is fundamentally different from HFS."
+    },
+    {
+      "start": 277.7,
+      "end": 281.7,
+      "text": "The administration view of ZFS is different from HFS."
+    },
+    {
+      "start": 281.7,
+      "end": 284.7,
+      "text": "ZFS file systems are created in a different manner"
+    },
+    {
+      "start": 284.7,
+      "end": 287.7,
+      "text": "from the way that HFS file systems are created."
+    },
+    {
+      "start": 287.7,
+      "end": 292.7,
+      "text": "But in general, however, the application view of ZFS is the same"
+    },
+    {
+      "start": 292.7,
+      "end": 294.7,
+      "text": "as the application view of HFS."
+    },
+    {
+      "start": 294.7,
+      "end": 301.7,
+      "text": "The same APIs and commands are used for ZFS as are used for HFS."
+    },
+    {
+      "start": 301.7,
+      "end": 304.7,
+      "text": "Once the ZFS file system is mounted,"
+    },
+    {
+      "start": 304.7,
+      "end": 309.7,
+      "text": "it's almost indistinguishable from a mounted HFS file system."
+    },
+    {
+      "start": 309.7,
+      "end": 313.7,
+      "text": "ZFS is a ZOS Unix file system that can be used in addition"
+    },
+    {
+      "start": 313.7,
+      "end": 316.7,
+      "text": "to the hierarchical file system."
+    },
+    {
+      "start": 316.7,
+      "end": 319.7,
+      "text": "ZFS file systems contain files and directories that can be accessed"
+    },
+    {
+      "start": 319.7,
+      "end": 322.7,
+      "text": "with the ZOS hierarchical file system"
+    },
+    {
+      "start": 322.7,
+      "end": 326.7,
+      "text": "file application programming interfaces or APIs."
+    },
+    {
+      "start": 326.7,
+      "end": 330.7,
+      "text": "ZFS file systems can be mounted into the ZOS Unix hierarchy"
+    },
+    {
+      "start": 330.7,
+      "end": 333.7,
+      "text": "along with other local or remote file system types,"
+    },
+    {
+      "start": 333.7,
+      "end": 338.7,
+      "text": "for example, HFS, TFS, AutoMount, NFS, and so forth."
+    },
+    {
+      "start": 338.7,
+      "end": 343.7,
+      "text": "ZFS does not replace HFS, rather it's complementary to it."
+    },
+    {
+      "start": 343.7,
+      "end": 350.7,
+      "text": "And importantly, ZFS is the strategic Unix system services file system for ZOS."
+    },
+    {
+      "start": 350.7,
+      "end": 353.7,
+      "text": "Now, in the next video, we'll take a closer look"
+    },
+    {
+      "start": 353.7,
+      "end": 356.7,
+      "text": "at using the HFS and ZFS file systems."
+    },
+    {
+      "start": 356.7,
+      "end": 358.7,
+      "text": "ZFS file systems contain file systems."
+    }
+  ]
+}

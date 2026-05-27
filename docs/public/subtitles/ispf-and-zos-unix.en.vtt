@@ -1,0 +1,305 @@
+WEBVTT
+
+1
+00:00:03.730 --> 00:00:10.610
+The ZOS provides ZOS UNIX file support into native ISPF edit and browse functions.
+
+2
+00:00:10.610 --> 00:00:15.410
+The panels are modified so that the other dataset name field is a scrollable field which
+
+3
+00:00:15.410 --> 00:00:20.850
+accepts ZOS UNIX path name of up to 1,023 characters in length.
+
+4
+00:00:20.850 --> 00:00:26.010
+ISPF assumes the ZOS UNIX path name is entered in this field when the first character is
+
+5
+00:00:26.010 --> 00:00:30.170
+a foreslash, a tilde, a dot or two dots.
+
+6
+00:00:30.170 --> 00:00:36.690
+A ZOS UNIX directory selection list is displayed when the path name for a directory is specified
+
+7
+00:00:36.690 --> 00:00:42.290
+on any of the following, the view and edit entry panels, a call to browse edit and view
+
+8
+00:00:42.290 --> 00:00:48.810
+services, the edit and view move copy browse edit and view primary commands or the browse
+
+9
+00:00:48.810 --> 00:00:51.490
+edit view and browse commands.
+
+10
+00:00:51.490 --> 00:00:56.930
+The directory selection list is almost identical to the list displayed from the ZOS UNIX directory
+
+11
+00:00:56.930 --> 00:00:58.530
+list utility.
+
+12
+00:00:58.530 --> 00:01:04.090
+The selection list supports the S for select line command allowing you to select the file
+
+13
+00:01:04.090 --> 00:01:10.810
+to be processed with the function, for example edit that info list.
+
+14
+00:01:10.810 --> 00:01:19.490
+The view entry panel displayed by using ISPF option one is changed to allow a ZOS UNIX file
+
+15
+00:01:19.490 --> 00:01:23.970
+path name to be entered in the other dataset name field.
+
+16
+00:01:23.970 --> 00:01:28.450
+Also the new record length field is added to allow a record length to be specified when
+
+17
+00:01:28.450 --> 00:01:31.450
+browsing a ZOS UNIX file.
+
+18
+00:01:31.450 --> 00:01:36.090
+The value entered in this field is used by ISPF to display the data in the file as a
+
+19
+00:01:36.090 --> 00:01:42.150
+fixed length record rather than using the new line character to delimit each record.
+
+20
+00:01:42.150 --> 00:01:46.130
+This is useful for browsing files which would otherwise have very large records if
+
+21
+00:01:46.130 --> 00:01:50.730
+the new line character is used as the record delimiter.
+
+22
+00:01:50.730 --> 00:01:55.010
+On the edit entry panel the record length field has a slightly different effect than
+
+23
+00:01:55.010 --> 00:01:56.930
+on the view entry panel.
+
+24
+00:01:56.930 --> 00:02:02.130
+With edit ISPF normally treats ZOS UNIX files as having variable length records.
+
+25
+00:02:02.130 --> 00:02:06.170
+The record length field on the edit entry panel allows you to specify a record length
+
+26
+00:02:06.170 --> 00:02:11.890
+which ISPF edit will use to load the records from the file into the edit session as fixed
+
+27
+00:02:11.890 --> 00:02:13.870
+length records.
+
+28
+00:02:13.870 --> 00:02:18.650
+When the file is saved it's saved with fixed length records.
+
+29
+00:02:18.650 --> 00:02:23.330
+So the record length field allows you to convert a variable length record file into
+
+30
+00:02:23.330 --> 00:02:26.170
+a fixed length records file.
+
+31
+00:02:26.230 --> 00:02:31.130
+On screen we see the difference between browsing a ZOS UNIX file without specifying a record
+
+32
+00:02:31.130 --> 00:02:37.750
+length and browsing a ZOS UNIX file with a record length of 40 specified.
+
+33
+00:02:37.750 --> 00:02:44.450
+The edit entry panel displayed using ISPF option 2 is changed to allow a ZOS UNIX file
+
+34
+00:02:44.450 --> 00:02:48.770
+path name to be entered in the other dataset name field.
+
+35
+00:02:48.770 --> 00:02:53.390
+Also the new record length field is added to allow a record length to be specified
+
+36
+00:02:53.390 --> 00:02:56.570
+when editing a ZOS UNIX file.
+
+37
+00:02:56.570 --> 00:03:04.650
+The following ISPF edit primary and macro commands support the specification of a ZOS UNIX path
+
+38
+00:03:04.650 --> 00:03:07.450
+name as an operand.
+
+39
+00:03:07.450 --> 00:03:13.930
+Those are compare, copy, create, move and replace.
+
+40
+00:03:13.930 --> 00:03:18.990
+A path name can be specified in the format accepted as input in the other dataset name
+
+41
+00:03:18.990 --> 00:03:19.990
+field.
+
+42
+00:03:20.270 --> 00:03:26.830
+Also if editing a ZOS UNIX file when these commands are used a plus sign can be specified
+
+43
+00:03:26.830 --> 00:03:31.810
+as the first character of the path name to represent the path name of the directory containing
+
+44
+00:03:31.810 --> 00:03:34.310
+the file being edited.
+
+45
+00:03:34.310 --> 00:03:37.310
+Let's take a look at a few examples.
+
+46
+00:03:37.310 --> 00:03:41.830
+The copy command can now be used to copy data from a ZOS UNIX file into the data being
+
+47
+00:03:41.830 --> 00:03:43.210
+edited.
+
+48
+00:03:43.210 --> 00:03:48.030
+This is done by specifying the path name for the ZOS UNIX regular file as a parameter with
+
+49
+00:03:48.030 --> 00:03:52.830
+the copy command or specifying the path name on the edit copy panel displayed when no data
+
+50
+00:03:52.830 --> 00:03:55.870
+source is specified with the copy command.
+
+51
+00:03:55.870 --> 00:04:00.950
+If the path name for a directory is specified a directory selection list is displayed allowing
+
+52
+00:04:00.950 --> 00:04:04.350
+you to select the regular file to be copied.
+
+53
+00:04:04.350 --> 00:04:10.310
+The move command can now be used to move data from a ZOS UNIX file into the data
+
+54
+00:04:10.310 --> 00:04:16.950
+being edited and it works in much the same way as copy by specifying the path name
+
+55
+00:04:16.950 --> 00:04:22.710
+for the ZOS UNIX regular file as a parameter with the move command or specifying the path
+
+56
+00:04:22.710 --> 00:04:27.110
+name on the edit move panel displayed when no data source is specified with the move
+
+57
+00:04:27.110 --> 00:04:28.990
+command.
+
+58
+00:04:28.990 --> 00:04:36.070
+Keep in mind here that the ZOS UNIX regular file is deleted after the data is moved.
+
+59
+00:04:36.070 --> 00:04:42.070
+ISPF personal dataset lists are enhanced to support the saving and retrieval of ZOS UNIX
+
+60
+00:04:42.070 --> 00:04:44.310
+file name paths.
+
+61
+00:04:44.310 --> 00:04:49.390
+Retrieval of path names is supported on those ISPF edit, view and browse panels that allow
+
+62
+00:04:49.390 --> 00:04:53.910
+a path name to be entered in the other dataset name field.
+
+63
+00:04:53.910 --> 00:04:59.870
+Retrieval of path names is also supported on the ZOS UNIX directory list entry panel.
+
+64
+00:04:59.870 --> 00:05:05.350
+The nretrieve command also supports the automatic retrieval of path names on those panels that
+
+65
+00:05:05.350 --> 00:05:09.390
+allow ZOS UNIX path names to be specified.
+
+66
+00:05:09.470 --> 00:05:16.430
+ISPF personal dataset lists support saving and retrieving ZOS UNIX file path names.
+
+67
+00:05:16.430 --> 00:05:22.870
+Users can now add UNIX style path names manually to their personal dataset lists.
+
+68
+00:05:22.870 --> 00:05:27.670
+Personal dataset lists are a good way to group, for example by project, datasets and
+
+69
+00:05:27.670 --> 00:05:31.870
+ZOS UNIX file path names that you use frequently.
+
+70
+00:05:31.870 --> 00:05:37.830
+You can use personal dataset lists to avoid typing in dataset names and ZOS UNIX file
+
+71
+00:05:37.830 --> 00:05:46.310
+path names and to create customized dataset lists similar to those using ISPF option 3.4.
+
+72
+00:05:46.310 --> 00:05:47.310
+Still with me?
+
+73
+00:05:47.310 --> 00:05:50.550
+We've covered a lot in this series of videos.
+
+74
+00:05:50.550 --> 00:05:54.390
+We're going to switch gears from here on in and start to look at recommendations for
+
+75
+00:05:54.390 --> 00:06:00.830
+file system structure, backup and recovery and use of the network file system.
+
+76
+00:06:00.830 --> 00:06:01.990
+That's coming up next.

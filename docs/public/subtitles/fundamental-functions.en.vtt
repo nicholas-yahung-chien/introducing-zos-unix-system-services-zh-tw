@@ -1,0 +1,177 @@
+WEBVTT
+
+1
+00:00:03.700 --> 00:00:09.300
+UNIX commands and utilities are distributed with the UNIX system, and there are over 100
+
+2
+00:00:09.300 --> 00:00:15.100
+to choose from. A command is a UNIX program that's executed in the shell. Commands are
+
+3
+00:00:15.100 --> 00:00:22.020
+sometimes referred to as tools. For some commands, the shell calls other programs called utilities.
+
+4
+00:00:22.020 --> 00:00:26.180
+For the user though, there's really no difference between a command and a utility. The table
+
+5
+00:00:26.180 --> 00:00:32.660
+here shows some examples of UNIX commands. Some of them might be similar to DOS commands
+
+6
+00:00:32.660 --> 00:00:36.460
+that you're familiar with. Note, though, that the commands are very short and are usually
+
+7
+00:00:36.460 --> 00:00:41.460
+in lower case. Remember that command names, well, like files and directories, they're
+
+8
+00:00:41.460 --> 00:00:47.700
+also case sensitive. They must be spelled correctly in the correct case. UNIX commands are usually
+
+9
+00:00:47.700 --> 00:00:53.700
+very small programs designed to do one simple task. Commands can be combined together in
+
+10
+00:00:53.700 --> 00:00:58.780
+a shell script, which then becomes a new, more powerful command, and we'll explain some
+
+11
+00:00:58.780 --> 00:01:03.580
+of these commands in more detail a bit later. Now, the meaning of some of these commands
+
+12
+00:01:03.580 --> 00:01:11.380
+is pretty self-explanatory. Date shows, well, the date. And some of them are a little bit
+
+13
+00:01:11.380 --> 00:01:19.380
+more cryptic. AWK represents the initials of the people who created them. Ahu, Weinberger,
+
+14
+00:01:19.380 --> 00:01:25.060
+and Kernigan, in case you were wondering. The UNIX file system is a hierarchical file
+
+15
+00:01:25.060 --> 00:01:31.020
+system. There's no concept of record structures. The applications are responsible for defining
+
+16
+00:01:31.020 --> 00:01:36.700
+the structure of the data that is read or written. A UNIX system can treat a file as
+
+17
+00:01:36.700 --> 00:01:42.460
+a text file or as a binary file. A text file consists of characters which use a new line
+
+18
+00:01:42.460 --> 00:01:49.820
+as a separator between lines. A binary file consists of sequences of binary words. File
+
+19
+00:01:49.820 --> 00:01:55.260
+name extensions are used to identify some common file types used by utility programs.
+
+20
+00:01:55.260 --> 00:02:01.580
+And there are four file types in UNIX system. There's ordinary disk files, directories,
+
+21
+00:02:01.580 --> 00:02:10.060
+special files, and first in, first out files. In a UNIX system, every device is associated
+
+22
+00:02:10.060 --> 00:02:17.100
+with a special file in the slash dev directory. The UNIX kernel uses device drivers to manage
+
+23
+00:02:17.100 --> 00:02:22.940
+the devices. There's a device driver for each type of device. So, for example, DASD,
+
+24
+00:02:22.940 --> 00:02:29.980
+tape, terminal, console, printers. Also, main memory can be accessed through a special file
+
+25
+00:02:29.980 --> 00:02:35.260
+called a pseudo device. Since a device is associated with a file in the file system,
+
+26
+00:02:35.260 --> 00:02:40.300
+users access a device in the same way as they would just access an ordinary file.
+
+27
+00:02:41.260 --> 00:02:48.300
+In UNIX, devices are divided into two categories. There's block devices and there are character
+
+28
+00:02:48.300 --> 00:02:54.860
+devices. Block devices are designed to transfer data at high speeds. So, for example, DASD and tape.
+
+29
+00:02:55.580 --> 00:03:01.500
+Character devices, also called raw I.O. devices, transfer data in small variable length blocks.
+
+30
+00:03:02.220 --> 00:03:08.780
+Example of character devices are terminals, printers, and plotters. By the way, TTY stands
+
+31
+00:03:08.860 --> 00:03:13.580
+for tele typewriter, an electromagnetical typewriter from back in the day.
+
+32
+00:03:15.420 --> 00:03:21.260
+In a UNIX system, I.O. to a data file and to a device, say, for example, a terminal,
+
+33
+00:03:21.260 --> 00:03:27.100
+is treated in the same way by using the same system calls. This provides simplicity and
+
+34
+00:03:27.100 --> 00:03:32.940
+flexibility for the UNIX user. The basic I.O. system calls, those are open, close,
+
+35
+00:03:32.940 --> 00:03:37.580
+read, and write, do not use I.O. buffering and can therefore be a little bit inefficient
+
+36
+00:03:37.580 --> 00:03:42.700
+in some situations. There is a portable C library which was designed to provide
+
+37
+00:03:42.700 --> 00:03:49.980
+portability of programs by using a common I.O. system. Standard I.O., usually abbreviated to
+
+38
+00:03:49.980 --> 00:03:57.020
+STD I.O., is the name of a library based on the portable C library. Standard I.O. provides a
+
+39
+00:03:57.020 --> 00:04:02.540
+higher level I.O. interface where the system calls do use I.O. buffering. The buffering,
+
+40
+00:04:02.620 --> 00:04:09.260
+though, is transparent to the user. Example of standard I.O. functions are F open to open a file
+
+41
+00:04:09.260 --> 00:04:15.980
+and F printf to write to a file. The big difference between a UNIX system and a ZOS system is that
+
+42
+00:04:15.980 --> 00:04:22.380
+in UNIX all files are allocated to the kernel. The process that uses the open call to allocate
+
+43
+00:04:22.380 --> 00:04:26.380
+a file gets file descriptors from the kernel which are used to access the file.
+
+44
+00:04:26.380 --> 00:04:31.180
+Now, in the next video, we'll continue our look at UNIX functions.

@@ -1,0 +1,249 @@
+WEBVTT
+
+1
+00:00:03.700 --> 00:00:08.900
+We're now going to look at some additional considerations for ZOS UNIX.
+
+2
+00:00:08.900 --> 00:00:12.860
+There are several ways to provide print services to an application.
+
+3
+00:00:12.860 --> 00:00:19.340
+A ZOS UNIX application can use the POSIX functions printf, fprint, write, or fwrite
+
+4
+00:00:19.340 --> 00:00:22.920
+to place output in the hierarchical file system.
+
+5
+00:00:22.920 --> 00:00:28.020
+The file can either be specified as standard out or by a file name depending on the function
+
+6
+00:00:28.020 --> 00:00:29.620
+call used.
+
+7
+00:00:29.620 --> 00:00:33.760
+The output residing in the file system can be printed by a batch job using dd statements
+
+8
+00:00:33.760 --> 00:00:40.940
+referring to the out file, by TSOE print options, or by using the lp shell command.
+
+9
+00:00:40.940 --> 00:00:46.600
+This command dynamically allocates a ZOS sysout data set, opens writes and closes it, and sends
+
+10
+00:00:46.600 --> 00:00:50.100
+it to the ges pool, which sends it to a printer.
+
+11
+00:00:50.100 --> 00:00:56.100
+Each ZOS UNIX user has a number of default printers specified in different ways.
+
+12
+00:00:56.100 --> 00:00:58.460
+The system will select a printer in the following order.
+
+13
+00:00:58.460 --> 00:01:05.380
+So first of all, the printer in the dest option of the lp shell command or the printf or fprintf
+
+14
+00:01:05.380 --> 00:01:06.460
+functions.
+
+15
+00:01:06.460 --> 00:01:10.620
+The printer specified in the lp dest environment variable is next.
+
+16
+00:01:10.620 --> 00:01:15.460
+And then three, the printer specified in the printer environment variable.
+
+17
+00:01:15.460 --> 00:01:20.620
+Finally there's four, which is the printer in the rackf user profile.
+
+18
+00:01:20.620 --> 00:01:24.700
+Currently HFS files are protected with POSIX permission bits.
+
+19
+00:01:24.940 --> 00:01:29.740
+HFS permission bits allow the installation to specify read authority, write authority, or
+
+20
+00:01:29.740 --> 00:01:33.180
+search authority for a directory.
+
+21
+00:01:33.180 --> 00:01:38.260
+They also allow specification of read, write, or execute authority for a file.
+
+22
+00:01:38.260 --> 00:01:42.820
+Because there are three sets of bits, separate authorities can be specified for the owner
+
+23
+00:01:42.820 --> 00:01:48.020
+of the file or the directory, the owning group, and everyone else, such as rackf's
+
+24
+00:01:48.020 --> 00:01:52.820
+Universal Access Authority or UACC.
+
+25
+00:01:52.820 --> 00:01:59.060
+The owner is represented by a UID, the owning group is represented by a GID.
+
+26
+00:01:59.060 --> 00:02:06.340
+Access checking compares the user's UID and GID to the one stored in the FSP.
+
+27
+00:02:06.340 --> 00:02:13.140
+When a security decision is needed, the file system calls rackf and supplies the FSP.
+
+28
+00:02:13.140 --> 00:02:18.340
+Rackf makes the decision, does any necessary auditing, and returns control back to the
+
+29
+00:02:18.340 --> 00:02:20.100
+file system.
+
+30
+00:02:20.100 --> 00:02:25.660
+Rackf does not provide commands to maintain the FSP, but it does provide SAF services
+
+31
+00:02:25.660 --> 00:02:29.220
+that do the FSP maintenance.
+
+32
+00:02:29.220 --> 00:02:34.260
+COS Unix provides commands that invoke these SAF services.
+
+33
+00:02:34.260 --> 00:02:40.460
+Access control lists or ACLs can be used to control access to files and directories
+
+34
+00:02:40.460 --> 00:02:45.420
+by individual user, UID, and by group, the GID.
+
+35
+00:02:45.420 --> 00:02:48.420
+ACLs are used along with permission bits.
+
+36
+00:02:48.580 --> 00:02:55.860
+ACLs are created, modified, and deleted using the setfacl shell command.
+
+37
+00:02:55.860 --> 00:02:59.980
+The HFS and ZFS file systems support ACLs.
+
+38
+00:02:59.980 --> 00:03:06.220
+The ACLs are created and checked by rackf, not by the kernel or file system.
+
+39
+00:03:06.220 --> 00:03:08.380
+There are two kinds of ACL entries.
+
+40
+00:03:08.380 --> 00:03:13.580
+Base ACL entries are the same as permission bits, so owner, group, and other.
+
+41
+00:03:13.580 --> 00:03:17.740
+They can be changed using chmod or setfacl.
+
+42
+00:03:17.740 --> 00:03:22.900
+Extended ACL entries are ACL entries for individual users or groups.
+
+43
+00:03:22.900 --> 00:03:27.260
+Like the permission bits, they're stored with the file, not in rackf profiles.
+
+44
+00:03:27.260 --> 00:03:36.300
+Each ACL type, access, file default, and directory default can contain up to 1024 extended ACL entries.
+
+45
+00:03:36.300 --> 00:03:42.300
+Each extended ACL entry specifies a qualifier to indicate whether the entry pertains to a user or a group,
+
+46
+00:03:42.300 --> 00:03:48.580
+the actual UID or GID itself, and the permissions being granted or denied by this entry.
+
+47
+00:03:48.580 --> 00:03:53.660
+The allowable permissions are read, write, and execute.
+
+48
+00:03:53.660 --> 00:04:02.740
+The commands setfacl and getfacl have been introduced in order to create, modify, and display ACL entries specified by the path,
+
+49
+00:04:02.740 --> 00:04:05.500
+and here's the syntax for those.
+
+50
+00:04:05.500 --> 00:04:09.980
+irrska00 is the file checking algorithm.
+
+51
+00:04:09.980 --> 00:04:15.340
+This callable service has been updated for ACLs and the new UNIX PRIV profiles.
+
+52
+00:04:15.340 --> 00:04:22.500
+Permissions bits, ACLs, and various UNIX PRIV profiles are used by rackf while performing file access checks.
+
+53
+00:04:22.500 --> 00:04:27.300
+The rackf basic file checking algorithm checks the owner bits, user ACL entries,
+
+54
+00:04:27.300 --> 00:04:32.540
+union of group bits, and group ACL entries, and other bits.
+
+55
+00:04:32.540 --> 00:04:39.500
+Now, it's not always necessary to apply ACLs on every file or directory within a subtree.
+
+56
+00:04:39.500 --> 00:04:46.900
+If you have a requirement to grant access to an entire subtree, for example, a subtree specific to a given application,
+
+57
+00:04:46.900 --> 00:04:50.580
+access can be established at the top directory.
+
+58
+00:04:50.580 --> 00:04:54.660
+If a given user or a group does not have search access to the top directory,
+
+59
+00:04:54.660 --> 00:05:03.260
+no files within the subtree will be accessible regardless of the permission bit set or ACL contents associated with those files.
+
+60
+00:05:03.260 --> 00:05:09.380
+The user or the group still needs permission to the files within the directory subtree where appropriate.
+
+61
+00:05:09.420 --> 00:05:16.260
+If this is already granted by the group or other bits, no ACLs are necessary below the top directory.
+
+62
+00:05:16.260 --> 00:05:20.780
+In the next video, we'll look at some remaining at ZOS UNIX considerations.

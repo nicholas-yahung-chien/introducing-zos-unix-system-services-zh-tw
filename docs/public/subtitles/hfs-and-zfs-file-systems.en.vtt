@@ -1,0 +1,321 @@
+WEBVTT
+
+1
+00:00:03.790 --> 00:00:08.670
+Alright, stepped out of the office for a little bit, new surroundings, and let's take this
+
+2
+00:00:08.670 --> 00:00:15.750
+opportunity for a bit of a recap. ZFS is a physical file system like HFS. It's
+
+3
+00:00:15.750 --> 00:00:21.390
+not an HFS replacement, it's complementary. However, note that HFS has
+
+4
+00:00:21.390 --> 00:00:27.070
+been functionally stabilized since ZOS version 1.6 and new enhancements are only
+
+5
+00:00:27.070 --> 00:00:32.630
+brought in the context of ZFS. A ZFS aggregate is a data set that contains
+
+6
+00:00:32.630 --> 00:00:38.930
+the ZFS file system. The aggregate is a VSAM linear data set or VSAM LDS and is
+
+7
+00:00:38.930 --> 00:00:44.510
+a container that can contain one or more ZFS file systems. The name of the aggregate
+
+8
+00:00:44.510 --> 00:00:50.450
+is the same as the VSAM LDS name. A ZFS aggregate that contains only a single
+
+9
+00:00:50.450 --> 00:00:55.510
+ZFS file system can be defined and is called a compatibility mode aggregate.
+
+10
+00:00:55.510 --> 00:01:00.310
+Compatibility mode aggregates are more like HFS. Aggregates that contain
+
+11
+00:01:00.310 --> 00:01:05.270
+multiple file systems are called multi-file system aggregates and this
+
+12
+00:01:05.270 --> 00:01:11.150
+type of aggregate is no longer supported. Okay, so you can choose whether each file
+
+13
+00:01:11.150 --> 00:01:17.390
+system is to be an HFS or a ZFS on the data set attributes panel or with the
+
+14
+00:01:17.390 --> 00:01:25.150
+change DSN type command. The root file system can also be a ZFS. VSAM files and
+
+15
+00:01:25.150 --> 00:01:29.910
+ZFSs are not quite as easy to work with as HFSs. For example, you can't
+
+16
+00:01:29.910 --> 00:01:34.550
+uncatalog them and renaming them is a bit more difficult. Although the HFS
+
+17
+00:01:34.550 --> 00:01:38.670
+data set does not have to be SMS managed it is still highly recommended.
+
+18
+00:01:38.670 --> 00:01:44.030
+Multivolume HFS data sets are only supported as SMS managed that is you
+
+19
+00:01:44.030 --> 00:01:49.710
+cannot have multivolume non-SMS managed data sets. Finally, you do not
+
+20
+00:01:49.710 --> 00:01:55.550
+need to migrate all of your file systems to ZFS all at once. HFS and ZFS
+
+21
+00:01:55.550 --> 00:02:01.430
+can coexist and you can migrate some or all at your own pace. Previously you could
+
+22
+00:02:01.430 --> 00:02:07.270
+only migrate mounted HFS file systems to ZFS but now with ZOS 2.1 you can use
+
+23
+00:02:07.270 --> 00:02:14.550
+the BPXWMIGF command to migrate mounted HFS file systems to ZFS. If you
+
+24
+00:02:14.550 --> 00:02:18.150
+expect a file system to grow larger than 4 gigabytes and it's not SMS
+
+25
+00:02:18.150 --> 00:02:22.430
+managed with extended addressability you'll need to copy it to an SMS
+
+26
+00:02:22.430 --> 00:02:27.910
+managed ZFS data set with a data class that includes extended addressability. If
+
+27
+00:02:27.910 --> 00:02:32.350
+a ZFS aggregate is to be larger than 4 gigabytes it must be SMS managed with a
+
+28
+00:02:32.350 --> 00:02:36.910
+data class that includes extended addressability. However, there can be
+
+29
+00:02:36.910 --> 00:02:41.230
+non-SMS managed VSAM linear data sets that are larger than 4 gigabytes with
+
+30
+00:02:41.230 --> 00:02:47.190
+the extended addressability feature. Hierarchical file system data sets have
+
+31
+00:02:47.190 --> 00:02:52.790
+partitioned organization, have the same structure as a PDSE and might or might
+
+32
+00:02:52.790 --> 00:02:58.190
+not be SMS managed. To create an HFS data set specify the usual DD statement
+
+33
+00:02:58.190 --> 00:03:04.270
+parameters which are necessary to create any ZOS data set. One way of using a file
+
+34
+00:03:04.270 --> 00:03:09.510
+in the hierarchical file system is to refer to it by JCL. The following
+
+35
+00:03:09.510 --> 00:03:14.670
+changes have been made to support hierarchical files. First off, DSN type
+
+36
+00:03:14.670 --> 00:03:21.270
+equals HFS or pipe. Specify HFS to create a hierarchical file system data set or
+
+37
+00:03:21.270 --> 00:03:26.950
+pipe to specify a named pipe. Path identifies a file in the hierarchical
+
+38
+00:03:26.950 --> 00:03:32.390
+file system. The JCL support allows a path name to be up to 255 characters
+
+39
+00:03:32.390 --> 00:03:36.550
+long including the slashes. If the path name contains lower case letters the
+
+40
+00:03:36.550 --> 00:03:42.350
+name must be enclosed by single quotes. Path DISP specifies the disposition of a
+
+41
+00:03:42.350 --> 00:03:48.070
+hierarchical file after normal or abnormal end. It can be keep or delete.
+
+42
+00:03:48.070 --> 00:03:52.750
+Path mode specifies the file access attributes when the file specified in the
+
+43
+00:03:52.750 --> 00:03:57.710
+path parameter is created. The file access attributes define who has access
+
+44
+00:03:57.710 --> 00:04:03.470
+to read, write or execute the file. And path ops specifies the access and
+
+45
+00:04:03.470 --> 00:04:08.990
+status for a file. There are two file option groups, the access group and the
+
+46
+00:04:08.990 --> 00:04:15.390
+status group. Now this shows an example of how to allocate an HFS data set for
+
+47
+00:04:15.390 --> 00:04:21.870
+the root file system. The important JCL keyword here is DSN type equals HFS.
+
+48
+00:04:21.870 --> 00:04:27.670
+Note that an HFS can be either SMS or non-SMS managed but must be cataloged for
+
+49
+00:04:27.670 --> 00:04:32.710
+them out to succeed. An alternative to using JCL would be to use the TSO
+
+50
+00:04:32.710 --> 00:04:40.230
+allocate command. The IOE AG FMT utility is used to format an existing VSAM LDS
+
+51
+00:04:40.230 --> 00:04:46.550
+as a ZFS aggregate. All ZFS aggregates must be formatted before use including
+
+52
+00:04:46.550 --> 00:04:52.950
+HFS compatibility mode aggregates. IOE AG FMT does not require the ZFS physical
+
+53
+00:04:52.950 --> 00:04:57.710
+file system to be active on the system. Here is an example of a job to create
+
+54
+00:04:57.710 --> 00:05:02.950
+and format a compatibility mode aggregate. It's a two-step job. The first
+
+55
+00:05:02.950 --> 00:05:07.670
+step creates the aggregate and the second step formats it. Since it's a
+
+56
+00:05:07.670 --> 00:05:12.390
+compatibility mode aggregate, the second step also creates a file system with
+
+57
+00:05:12.390 --> 00:05:17.790
+the same name as the VSAM LDS cluster entry name and sets the quota to the
+
+58
+00:05:17.790 --> 00:05:26.710
+size of the aggregate. Just briefly, ZOS 2.1 supports a new directory format V5
+
+59
+00:05:26.710 --> 00:05:32.630
+using an extensible hashing system. You can optionally migrate to a new version
+
+60
+00:05:32.630 --> 00:05:37.670
+1.5 file system. There are multiple means to convert to the new file system.
+
+61
+00:05:37.670 --> 00:05:43.630
+There are new parameters and commands in support of ZFS extended directories. A V5
+
+62
+00:05:43.630 --> 00:05:49.350
+directory can only exist in a V1.5 aggregate. Version 1.5 aggregates
+
+63
+00:05:49.350 --> 00:05:54.630
+support extended V5 directories. Extended V5 directories can support larger
+
+64
+00:05:54.630 --> 00:05:59.310
+directories, store names more efficiently than V4 directories, and reclaim space
+
+65
+00:05:59.310 --> 00:06:04.430
+when names are removed. A V5 directory cannot be created unless a file system
+
+66
+00:06:04.430 --> 00:06:10.270
+is V5. A file system can only be converted to V5 or created as V5 by
+
+67
+00:06:10.270 --> 00:06:18.870
+using either the IOE FSUTL convert format or ZFS ADM convert. This JCL
+
+68
+00:06:18.870 --> 00:06:23.830
+example shows a program in a ZOS data set being relinked to reside in the
+
+69
+00:06:23.830 --> 00:06:28.830
+hierarchical file system. PATH defines the path name of the directory where the
+
+70
+00:06:28.830 --> 00:06:33.790
+program payroll resides when linked edited. The path name is in lowercase
+
+71
+00:06:33.790 --> 00:06:38.790
+letters and therefore enclosed by single quotes. We have some PATH option
+
+72
+00:06:38.790 --> 00:06:44.750
+options. OWR only specifies the file will be opened. For write, Ocreate
+
+73
+00:06:44.750 --> 00:06:48.270
+specifies that if the file doesn't exist it's created and if it is
+
+74
+00:06:48.270 --> 00:06:53.430
+existing it is reused and OTR UNC specifies that the file length will be
+
+75
+00:06:53.430 --> 00:07:00.790
+truncated to zero if the file already exists. And for PATH mode SIRWXU
+
+76
+00:07:00.790 --> 00:07:06.710
+specifies that the file owner has read, write and execute permission. SIRWXG
+
+77
+00:07:06.710 --> 00:07:12.790
+specifies that the file group has read, write and execute permission and SIRWXO
+
+78
+00:07:12.790 --> 00:07:18.670
+specifies that all other users have read, write and execute permission. Next
+
+79
+00:07:18.670 --> 00:07:22.350
+we're going to talk about how to get some stuff done in your UNIX
+
+80
+00:07:22.350 --> 00:07:28.350
+environment using the iShell and directory list utility.

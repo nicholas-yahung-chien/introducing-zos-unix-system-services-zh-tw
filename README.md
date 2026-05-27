@@ -29,7 +29,7 @@ GitHub Pages base path 為 `/introducing-zos-unix-system-services-zh-tw/`，Clou
 ## 目前盤點結果
 
 - Live course inventory：10 個章節、64 個活動項目
-- 影片：35 支，已擷取 Kaltura entry ID，第一版標示為 source-only
+- 影片：35 支，已擷取 Kaltura entry ID，目前媒體狀態為 deployed
 - Lab：6 個 Exercise Lab 頁面
 - 靜態練習：8 個 H5P checkpoint 來源，共 19 題
 - 正式 quiz：每次 20 題，需 16 題正確通過；本站不重製正式題庫

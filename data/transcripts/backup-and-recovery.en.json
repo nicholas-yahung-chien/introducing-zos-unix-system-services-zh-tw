@@ -1,0 +1,158 @@
+{
+  "slug": "backup-and-recovery",
+  "title": "Backup and recovery",
+  "language": "en",
+  "duration": 288.7169375,
+  "segments": [
+    {
+      "start": 3.82,
+      "end": 11.18,
+      "text": "DFSMS is enhanced to provide ZOS version 2 release for support for individual Unix file backup and recovery."
+    },
+    {
+      "start": 11.18,
+      "end": 18.94,
+      "text": "Just keep in mind that DFSMS DSS and DFSMS HSM only process ZFS datasets."
+    },
+    {
+      "start": 18.94,
+      "end": 29.18,
+      "text": "So, look, in general, admins want to use the same tools and applications to backup and restore individual ZOS Unix files residing in ZFS datasets as with other ZOS datasets."
+    },
+    {
+      "start": 29.18,
+      "end": 43.9,
+      "text": "And that support is integrated into existing DFSMS HSM backup and recover and DFSMS DSS dump and restore capability, allowing for centralized data management across the ZOS platform."
+    },
+    {
+      "start": 43.9,
+      "end": 50.94,
+      "text": "In the shell, there are three native Unix utilities you can use to backup and restore files and directories."
+    },
+    {
+      "start": 50.94,
+      "end": 62.54,
+      "text": "CPIO, TAR and PAX. These utilities are used to create an archive file that records the contents of the files and directories in a special format."
+    },
+    {
+      "start": 62.54,
+      "end": 71.42,
+      "text": "This is useful for those who want to stick with the native interfaces and possibly exchange or transport the archives with other platforms."
+    },
+    {
+      "start": 71.42,
+      "end": 81.26,
+      "text": "CPIO reads and writes either a compact binary header or an ASCII format header. There's no limit on length of file name."
+    },
+    {
+      "start": 81.26,
+      "end": 89.02,
+      "text": "TAR reads and writes headers in either the TAR format from Unix systems or the USTAR format defined by POSIX."
+    },
+    {
+      "start": 89.02,
+      "end": 97.98,
+      "text": "With TAR format, the path name can be 100 characters. With USTAR, it can be 255 characters long."
+    },
+    {
+      "start": 97.98,
+      "end": 105.98,
+      "text": "During backup or restore, TAR preserves link information. PAX combines the power of CPIO and TAR."
+    },
+    {
+      "start": 105.98,
+      "end": 115.5,
+      "text": "PAX or PAX can read and write files in CPIO ASCII format, CPIO binary format, TAR format or USTAR format."
+    },
+    {
+      "start": 115.5,
+      "end": 124.54,
+      "text": "It can read files that were written by CPIO, TAR or PAX itself. PAX can do code page conversion."
+    },
+    {
+      "start": 124.54,
+      "end": 135.66,
+      "text": "To write these archive files to a tape, use OGet to copy them to a ZOS sequential data set and then use ZOS utilities to copy the data set to tape."
+    },
+    {
+      "start": 135.66,
+      "end": 154.38,
+      "text": "Now, we'll run through this fairly briefly, but the point here is in ZOS v2 release 4, storage admins are able to manage the backup and recovery of Unix files within ZFS file systems with DFS-MS-DSS and DFS-MS-HSM utilities which are normally used for standard ZOS data sets."
+    },
+    {
+      "start": 154.46,
+      "end": 167.5,
+      "text": "Here we see the use of BackDS where we specify things like the HSM backup target location, either DASD or tape, and how to traverse the directory structure with Recurse."
+    },
+    {
+      "start": 167.5,
+      "end": 180.86,
+      "text": "And here we have the TSO command HBackDS and the Unix shell command HBackup, again with multiple options as to how the backup should be performed."
+    },
+    {
+      "start": 180.86,
+      "end": 195.42,
+      "text": "We have support for Recursion and Wildcards. We can say things like backup everything in slash U slash DIR1 and its subdirectories, but don't span over into different file systems."
+    },
+    {
+      "start": 195.42,
+      "end": 204.06,
+      "text": "Or we can say backup any files that start with ab.txt with a directory structure and a single file system."
+    },
+    {
+      "start": 204.06,
+      "end": 210.54,
+      "text": "You can also define exclusions, things like don't backup log files."
+    },
+    {
+      "start": 210.54,
+      "end": 219.42,
+      "text": "Here's how to issue a recover command with the option for the file to recover and options for replacement and recursion."
+    },
+    {
+      "start": 219.42,
+      "end": 225.58,
+      "text": "Here we see a TSO command to recover file 2, specifying options for replace weight."
+    },
+    {
+      "start": 225.58,
+      "end": 230.54,
+      "text": "A Unix shell command example is also shown here."
+    },
+    {
+      "start": 230.54,
+      "end": 242.22,
+      "text": "And here's batch JCL to use the DFSMS DSS dump and restore command to request a backup of a ZOS Unix file using absolute path names."
+    },
+    {
+      "start": 242.22,
+      "end": 249.66,
+      "text": "To use DFSMS DSS to dump Unix files, we show an example here specifying a path to the files to be backed up,"
+    },
+    {
+      "start": 249.66,
+      "end": 259.34,
+      "text": "a working directory specifying the directory to be backed up, and out dd name describing the output data set that holds the backup contents."
+    },
+    {
+      "start": 259.34,
+      "end": 265.26,
+      "text": "And to perform a DFSMS DSS restore, we specify the path of the files to be restored,"
+    },
+    {
+      "start": 265.26,
+      "end": 273.74,
+      "text": "the working directory of where DSS should restore, and in dd name specifying the input dump data set."
+    },
+    {
+      "start": 273.74,
+      "end": 278.14,
+      "text": "So that's a whistle stop tour of backup and recovery."
+    },
+    {
+      "start": 278.14,
+      "end": 284.46,
+      "text": "Next, we'll see how hierarchical files on ZOS can be accessed from a workstation by using NFS."
+    }
+  ]
+}

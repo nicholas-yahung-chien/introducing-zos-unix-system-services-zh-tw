@@ -1,0 +1,513 @@
+WEBVTT
+
+1
+00:00:03.890 --> 00:00:08.770
+ZOS Unix is made up of a system and application services.
+
+2
+00:00:08.770 --> 00:00:10.810
+There's a system application programming interface,
+
+3
+00:00:10.810 --> 00:00:15.050
+or a system API, which is a set of C language functions
+
+4
+00:00:15.050 --> 00:00:18.890
+and the operating system interfaces that support them.
+
+5
+00:00:18.890 --> 00:00:23.290
+Some services are also accessible through a simple language.
+
+6
+00:00:23.290 --> 00:00:26.930
+There are shell and utility interactive interfaces
+
+7
+00:00:26.930 --> 00:00:29.810
+to ZOS Unix services.
+
+8
+00:00:29.810 --> 00:00:33.650
+A hierarchical file system is a byte-oriented file system
+
+9
+00:00:33.690 --> 00:00:35.730
+familiar to Unix programmers,
+
+10
+00:00:35.730 --> 00:00:38.930
+and DBX, or Debugger for Unix,
+
+11
+00:00:38.930 --> 00:00:40.690
+is an interactive tool for debugging
+
+12
+00:00:40.690 --> 00:00:45.690
+C and C++ language applications that use ZOS Unix services.
+
+13
+00:00:47.650 --> 00:00:52.330
+The picture shown here shows how ZOS Unix,
+
+14
+00:00:52.330 --> 00:00:55.130
+the shell interface, and the API
+
+15
+00:00:55.130 --> 00:00:58.410
+relate to the rest of the ZOS operating system.
+
+16
+00:00:58.410 --> 00:01:01.410
+Here we see the API interface and shell interface
+
+17
+00:01:01.410 --> 00:01:03.490
+leading into language environments,
+
+18
+00:01:03.490 --> 00:01:06.610
+which executes the shell and utilities.
+
+19
+00:01:06.610 --> 00:01:09.850
+BCP is the base control program.
+
+20
+00:01:09.850 --> 00:01:11.650
+We have multiple file systems here,
+
+21
+00:01:11.650 --> 00:01:14.850
+hierarchical file system, ZOS file system,
+
+22
+00:01:14.850 --> 00:01:17.890
+and network file system.
+
+23
+00:01:17.890 --> 00:01:21.450
+Support is going away for the HFS data structure
+
+24
+00:01:21.450 --> 00:01:23.250
+used by the ZOS Unix environment,
+
+25
+00:01:23.250 --> 00:01:26.650
+so you want to migrate your HFS to ZFS
+
+26
+00:01:26.650 --> 00:01:32.430
+and enjoy the performance gains that come from doing that.
+
+27
+00:01:32.430 --> 00:01:36.030
+The Unix file system itself is hierarchical
+
+28
+00:01:36.030 --> 00:01:37.910
+and byte-oriented.
+
+29
+00:01:37.910 --> 00:01:39.830
+Finding a file in this file system
+
+30
+00:01:39.830 --> 00:01:43.630
+is done by searching a directory or a series of directories.
+
+31
+00:01:43.630 --> 00:01:46.430
+There's no concept of like a ZOS catalog
+
+32
+00:01:46.430 --> 00:01:48.430
+that points directly to a file.
+
+33
+00:01:49.510 --> 00:01:51.710
+A path name identifies a file
+
+34
+00:01:51.710 --> 00:01:55.310
+and consists of directory names and a file name.
+
+35
+00:01:55.310 --> 00:01:56.910
+A fully qualified file name,
+
+36
+00:01:56.910 --> 00:01:58.910
+which consists of the name of each directory
+
+37
+00:01:58.910 --> 00:02:01.430
+in the path to a file plus the file name itself
+
+38
+00:02:01.430 --> 00:02:04.670
+can be up to 1,023 bytes long.
+
+39
+00:02:04.670 --> 00:02:07.390
+The hierarchical file system allows for file names
+
+40
+00:02:07.390 --> 00:02:09.390
+in mixed case.
+
+41
+00:02:09.390 --> 00:02:12.190
+Like Unix, ZOS Unix is case sensitive
+
+42
+00:02:12.190 --> 00:02:13.870
+to file and directory names.
+
+43
+00:02:13.870 --> 00:02:16.670
+So for example, in the same directory,
+
+44
+00:02:16.670 --> 00:02:20.590
+the file my file in uppercase is a different file
+
+45
+00:02:20.590 --> 00:02:23.110
+than my file in lowercase.
+
+46
+00:02:24.470 --> 00:02:27.630
+The ZOS Unix shell and utilities
+
+47
+00:02:27.630 --> 00:02:30.550
+is the interactive interface for users.
+
+48
+00:02:30.550 --> 00:02:32.470
+It provides a command interface
+
+49
+00:02:32.470 --> 00:02:34.670
+to the ZOS Unix environment.
+
+50
+00:02:34.670 --> 00:02:36.310
+A user gets access to the shell
+
+51
+00:02:36.310 --> 00:02:39.030
+by either logging on to TSOE
+
+52
+00:02:39.030 --> 00:02:43.910
+or by using the remote login features of TCP IP or login
+
+53
+00:02:43.910 --> 00:02:46.670
+by using telnet or SSH.
+
+54
+00:02:46.670 --> 00:02:47.950
+If they use TSOE,
+
+55
+00:02:47.950 --> 00:02:51.550
+a command called OMVS creates a shell for the user.
+
+56
+00:02:51.550 --> 00:02:53.710
+The user then works within the shell environment
+
+57
+00:02:53.710 --> 00:02:56.350
+until exiting or temporarily switching back
+
+58
+00:02:56.350 --> 00:02:58.510
+to the TSOE environment.
+
+59
+00:02:58.510 --> 00:03:00.950
+If the user enters ZOS through the R login
+
+60
+00:03:00.950 --> 00:03:03.750
+or telnet capabilities of TCP IP,
+
+61
+00:03:03.750 --> 00:03:06.950
+the shell environment is automatically created for them
+
+62
+00:03:06.950 --> 00:03:10.030
+and they have limited access to TSO services.
+
+63
+00:03:10.910 --> 00:03:13.270
+The shell is a command interpreter
+
+64
+00:03:13.270 --> 00:03:17.910
+which accepts commands defined in XPG 4.2 standard.
+
+65
+00:03:17.910 --> 00:03:20.870
+Some commands call programs called utilities.
+
+66
+00:03:20.870 --> 00:03:23.310
+The shell user can create named lists
+
+67
+00:03:23.310 --> 00:03:25.430
+of shell commands called a shell script,
+
+68
+00:03:25.430 --> 00:03:27.910
+which becomes a path on your command.
+
+69
+00:03:27.910 --> 00:03:30.830
+The shell provides support to invoke the ISP editor
+
+70
+00:03:30.830 --> 00:03:35.230
+to edit and browse HFS files for the TSOE user.
+
+71
+00:03:35.230 --> 00:03:37.630
+For the non-TSOE user,
+
+72
+00:03:37.630 --> 00:03:40.470
+the VI editor is supported.
+
+73
+00:03:41.990 --> 00:03:46.790
+Unix system services are included in the ZOS system.
+
+74
+00:03:46.790 --> 00:03:51.070
+Support is provided for enhanced ASCII functionality.
+
+75
+00:03:51.070 --> 00:03:52.790
+Enhanced ASCII makes it easier
+
+76
+00:03:52.790 --> 00:03:55.110
+to port internationalized applications
+
+77
+00:03:55.110 --> 00:03:59.750
+developed on or for ASCII platforms to ZOS platforms
+
+78
+00:03:59.750 --> 00:04:02.870
+by providing conversion from ASCII to epsidic
+
+79
+00:04:02.870 --> 00:04:06.430
+and the other way from epsidic to ASCII.
+
+80
+00:04:06.430 --> 00:04:08.630
+There's support to make it easier to shut down
+
+81
+00:04:08.630 --> 00:04:12.110
+and restart the Unix system services environment.
+
+82
+00:04:12.110 --> 00:04:16.190
+And support is also provided to allow access control lists
+
+83
+00:04:16.190 --> 00:04:19.830
+or ACLs to be used to control access to Unix files
+
+84
+00:04:19.830 --> 00:04:24.230
+and directories by individual user IDs and group IDs.
+
+85
+00:04:24.230 --> 00:04:27.910
+This support provides greater granularity of access
+
+86
+00:04:27.910 --> 00:04:30.030
+than the existing permission bit support.
+
+87
+00:04:30.950 --> 00:04:35.510
+And the key point here is what distinguishes ZOS Unix
+
+88
+00:04:35.510 --> 00:04:38.950
+from other variants is that Unix system services
+
+89
+00:04:38.950 --> 00:04:41.830
+are integrated into the ZOS base
+
+90
+00:04:41.830 --> 00:04:43.990
+instead of added as middleware
+
+91
+00:04:43.990 --> 00:04:46.430
+or shipped as a separate operating system.
+
+92
+00:04:46.430 --> 00:04:48.270
+And as a result of that,
+
+93
+00:04:48.270 --> 00:04:50.830
+not only can Unix applications be written
+
+94
+00:04:50.830 --> 00:04:52.630
+for the IBM Z platform,
+
+95
+00:04:52.630 --> 00:04:55.990
+they can also take advantage of the ZOS facilities
+
+96
+00:04:55.990 --> 00:04:58.190
+and IBM Z server hardware
+
+97
+00:04:58.190 --> 00:05:02.990
+to obtain enterprise level qualities of service.
+
+98
+00:05:02.990 --> 00:05:06.710
+The ZOS system includes application enablement services
+
+99
+00:05:06.710 --> 00:05:10.030
+that provide support for object oriented technology,
+
+100
+00:05:10.030 --> 00:05:12.230
+a common runtime environment
+
+101
+00:05:12.230 --> 00:05:15.070
+and tools for creating new user interfaces
+
+102
+00:05:15.070 --> 00:05:18.150
+to traditional ZOS applications.
+
+103
+00:05:18.150 --> 00:05:22.350
+Programmers can develop and run traditional ZOS applications,
+
+104
+00:05:22.390 --> 00:05:25.430
+Unix applications and even ported windows applications
+
+105
+00:05:25.430 --> 00:05:29.710
+and Java and web server applications just to name a few.
+
+106
+00:05:29.710 --> 00:05:32.470
+A C++ compiler is also provided
+
+107
+00:05:32.470 --> 00:05:36.870
+to simplify the porting of applications to ZOS.
+
+108
+00:05:36.870 --> 00:05:40.150
+Another real benefit of running Unix applications on IBM Z
+
+109
+00:05:40.150 --> 00:05:42.110
+is that those applications can run
+
+110
+00:05:42.110 --> 00:05:47.110
+on the system Z integrated information processor or zip.
+
+111
+00:05:47.710 --> 00:05:49.910
+When configured with general purpose processes
+
+112
+00:05:49.910 --> 00:05:52.510
+within logical partitions running ZOS,
+
+113
+00:05:52.510 --> 00:05:55.510
+zips might help increase general purpose
+
+114
+00:05:55.510 --> 00:05:58.390
+processor productivity and might contribute
+
+115
+00:05:58.390 --> 00:06:00.950
+to lowering the overall cost of computing
+
+116
+00:06:00.950 --> 00:06:03.710
+for ZOS Java technology based applications
+
+117
+00:06:03.710 --> 00:06:08.270
+and some other Unix based workload like XML and CIM.
+
+118
+00:06:08.270 --> 00:06:10.430
+Zips are designed to operate asynchronously
+
+119
+00:06:10.430 --> 00:06:13.270
+with the general processes to execute Java programming
+
+120
+00:06:13.270 --> 00:06:17.070
+under control of the IBM Java virtual machine or JVM.
+
+121
+00:06:17.070 --> 00:06:18.830
+This can help reduce the demands
+
+122
+00:06:18.830 --> 00:06:21.630
+and capability requirements on general purpose processes
+
+123
+00:06:21.630 --> 00:06:23.270
+which might then be available
+
+124
+00:06:23.270 --> 00:06:26.670
+for reallocation to other IBM Z workloads.
+
+125
+00:06:27.550 --> 00:06:29.950
+So that's a wrap of this overview.
+
+126
+00:06:29.950 --> 00:06:31.670
+We're gonna get into much more detail
+
+127
+00:06:31.670 --> 00:06:33.070
+in the upcoming modules,
+
+128
+00:06:33.070 --> 00:06:37.030
+starting with a more thorough introduction to ZOS Unix.

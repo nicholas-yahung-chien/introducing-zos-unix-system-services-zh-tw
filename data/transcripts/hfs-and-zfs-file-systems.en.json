@@ -1,0 +1,408 @@
+{
+  "slug": "hfs-and-zfs-file-systems",
+  "title": "HFS and zFS file systems",
+  "language": "en",
+  "duration": 451.256625,
+  "segments": [
+    {
+      "start": 3.79,
+      "end": 8.67,
+      "text": "Alright, stepped out of the office for a little bit, new surroundings, and let's take this"
+    },
+    {
+      "start": 8.67,
+      "end": 15.75,
+      "text": "opportunity for a bit of a recap. ZFS is a physical file system like HFS. It's"
+    },
+    {
+      "start": 15.75,
+      "end": 21.39,
+      "text": "not an HFS replacement, it's complementary. However, note that HFS has"
+    },
+    {
+      "start": 21.39,
+      "end": 27.07,
+      "text": "been functionally stabilized since ZOS version 1.6 and new enhancements are only"
+    },
+    {
+      "start": 27.07,
+      "end": 32.63,
+      "text": "brought in the context of ZFS. A ZFS aggregate is a data set that contains"
+    },
+    {
+      "start": 32.63,
+      "end": 38.93,
+      "text": "the ZFS file system. The aggregate is a VSAM linear data set or VSAM LDS and is"
+    },
+    {
+      "start": 38.93,
+      "end": 44.51,
+      "text": "a container that can contain one or more ZFS file systems. The name of the aggregate"
+    },
+    {
+      "start": 44.51,
+      "end": 50.45,
+      "text": "is the same as the VSAM LDS name. A ZFS aggregate that contains only a single"
+    },
+    {
+      "start": 50.45,
+      "end": 55.51,
+      "text": "ZFS file system can be defined and is called a compatibility mode aggregate."
+    },
+    {
+      "start": 55.51,
+      "end": 60.31,
+      "text": "Compatibility mode aggregates are more like HFS. Aggregates that contain"
+    },
+    {
+      "start": 60.31,
+      "end": 65.27,
+      "text": "multiple file systems are called multi-file system aggregates and this"
+    },
+    {
+      "start": 65.27,
+      "end": 71.15,
+      "text": "type of aggregate is no longer supported. Okay, so you can choose whether each file"
+    },
+    {
+      "start": 71.15,
+      "end": 77.39,
+      "text": "system is to be an HFS or a ZFS on the data set attributes panel or with the"
+    },
+    {
+      "start": 77.39,
+      "end": 85.15,
+      "text": "change DSN type command. The root file system can also be a ZFS. VSAM files and"
+    },
+    {
+      "start": 85.15,
+      "end": 89.91,
+      "text": "ZFSs are not quite as easy to work with as HFSs. For example, you can't"
+    },
+    {
+      "start": 89.91,
+      "end": 94.55,
+      "text": "uncatalog them and renaming them is a bit more difficult. Although the HFS"
+    },
+    {
+      "start": 94.55,
+      "end": 98.67,
+      "text": "data set does not have to be SMS managed it is still highly recommended."
+    },
+    {
+      "start": 98.67,
+      "end": 104.03,
+      "text": "Multivolume HFS data sets are only supported as SMS managed that is you"
+    },
+    {
+      "start": 104.03,
+      "end": 109.71,
+      "text": "cannot have multivolume non-SMS managed data sets. Finally, you do not"
+    },
+    {
+      "start": 109.71,
+      "end": 115.55,
+      "text": "need to migrate all of your file systems to ZFS all at once. HFS and ZFS"
+    },
+    {
+      "start": 115.55,
+      "end": 121.43,
+      "text": "can coexist and you can migrate some or all at your own pace. Previously you could"
+    },
+    {
+      "start": 121.43,
+      "end": 127.27,
+      "text": "only migrate mounted HFS file systems to ZFS but now with ZOS 2.1 you can use"
+    },
+    {
+      "start": 127.27,
+      "end": 134.55,
+      "text": "the BPXWMIGF command to migrate mounted HFS file systems to ZFS. If you"
+    },
+    {
+      "start": 134.55,
+      "end": 138.15,
+      "text": "expect a file system to grow larger than 4 gigabytes and it's not SMS"
+    },
+    {
+      "start": 138.15,
+      "end": 142.43,
+      "text": "managed with extended addressability you'll need to copy it to an SMS"
+    },
+    {
+      "start": 142.43,
+      "end": 147.91,
+      "text": "managed ZFS data set with a data class that includes extended addressability. If"
+    },
+    {
+      "start": 147.91,
+      "end": 152.35,
+      "text": "a ZFS aggregate is to be larger than 4 gigabytes it must be SMS managed with a"
+    },
+    {
+      "start": 152.35,
+      "end": 156.91,
+      "text": "data class that includes extended addressability. However, there can be"
+    },
+    {
+      "start": 156.91,
+      "end": 161.23,
+      "text": "non-SMS managed VSAM linear data sets that are larger than 4 gigabytes with"
+    },
+    {
+      "start": 161.23,
+      "end": 167.19,
+      "text": "the extended addressability feature. Hierarchical file system data sets have"
+    },
+    {
+      "start": 167.19,
+      "end": 172.79,
+      "text": "partitioned organization, have the same structure as a PDSE and might or might"
+    },
+    {
+      "start": 172.79,
+      "end": 178.19,
+      "text": "not be SMS managed. To create an HFS data set specify the usual DD statement"
+    },
+    {
+      "start": 178.19,
+      "end": 184.27,
+      "text": "parameters which are necessary to create any ZOS data set. One way of using a file"
+    },
+    {
+      "start": 184.27,
+      "end": 189.51,
+      "text": "in the hierarchical file system is to refer to it by JCL. The following"
+    },
+    {
+      "start": 189.51,
+      "end": 194.67,
+      "text": "changes have been made to support hierarchical files. First off, DSN type"
+    },
+    {
+      "start": 194.67,
+      "end": 201.27,
+      "text": "equals HFS or pipe. Specify HFS to create a hierarchical file system data set or"
+    },
+    {
+      "start": 201.27,
+      "end": 206.95,
+      "text": "pipe to specify a named pipe. Path identifies a file in the hierarchical"
+    },
+    {
+      "start": 206.95,
+      "end": 212.39,
+      "text": "file system. The JCL support allows a path name to be up to 255 characters"
+    },
+    {
+      "start": 212.39,
+      "end": 216.55,
+      "text": "long including the slashes. If the path name contains lower case letters the"
+    },
+    {
+      "start": 216.55,
+      "end": 222.35,
+      "text": "name must be enclosed by single quotes. Path DISP specifies the disposition of a"
+    },
+    {
+      "start": 222.35,
+      "end": 228.07,
+      "text": "hierarchical file after normal or abnormal end. It can be keep or delete."
+    },
+    {
+      "start": 228.07,
+      "end": 232.75,
+      "text": "Path mode specifies the file access attributes when the file specified in the"
+    },
+    {
+      "start": 232.75,
+      "end": 237.71,
+      "text": "path parameter is created. The file access attributes define who has access"
+    },
+    {
+      "start": 237.71,
+      "end": 243.47,
+      "text": "to read, write or execute the file. And path ops specifies the access and"
+    },
+    {
+      "start": 243.47,
+      "end": 248.99,
+      "text": "status for a file. There are two file option groups, the access group and the"
+    },
+    {
+      "start": 248.99,
+      "end": 255.39,
+      "text": "status group. Now this shows an example of how to allocate an HFS data set for"
+    },
+    {
+      "start": 255.39,
+      "end": 261.87,
+      "text": "the root file system. The important JCL keyword here is DSN type equals HFS."
+    },
+    {
+      "start": 261.87,
+      "end": 267.67,
+      "text": "Note that an HFS can be either SMS or non-SMS managed but must be cataloged for"
+    },
+    {
+      "start": 267.67,
+      "end": 272.71,
+      "text": "them out to succeed. An alternative to using JCL would be to use the TSO"
+    },
+    {
+      "start": 272.71,
+      "end": 280.23,
+      "text": "allocate command. The IOE AG FMT utility is used to format an existing VSAM LDS"
+    },
+    {
+      "start": 280.23,
+      "end": 286.55,
+      "text": "as a ZFS aggregate. All ZFS aggregates must be formatted before use including"
+    },
+    {
+      "start": 286.55,
+      "end": 292.95,
+      "text": "HFS compatibility mode aggregates. IOE AG FMT does not require the ZFS physical"
+    },
+    {
+      "start": 292.95,
+      "end": 297.71,
+      "text": "file system to be active on the system. Here is an example of a job to create"
+    },
+    {
+      "start": 297.71,
+      "end": 302.95,
+      "text": "and format a compatibility mode aggregate. It's a two-step job. The first"
+    },
+    {
+      "start": 302.95,
+      "end": 307.67,
+      "text": "step creates the aggregate and the second step formats it. Since it's a"
+    },
+    {
+      "start": 307.67,
+      "end": 312.39,
+      "text": "compatibility mode aggregate, the second step also creates a file system with"
+    },
+    {
+      "start": 312.39,
+      "end": 317.79,
+      "text": "the same name as the VSAM LDS cluster entry name and sets the quota to the"
+    },
+    {
+      "start": 317.79,
+      "end": 326.71,
+      "text": "size of the aggregate. Just briefly, ZOS 2.1 supports a new directory format V5"
+    },
+    {
+      "start": 326.71,
+      "end": 332.63,
+      "text": "using an extensible hashing system. You can optionally migrate to a new version"
+    },
+    {
+      "start": 332.63,
+      "end": 337.67,
+      "text": "1.5 file system. There are multiple means to convert to the new file system."
+    },
+    {
+      "start": 337.67,
+      "end": 343.63,
+      "text": "There are new parameters and commands in support of ZFS extended directories. A V5"
+    },
+    {
+      "start": 343.63,
+      "end": 349.35,
+      "text": "directory can only exist in a V1.5 aggregate. Version 1.5 aggregates"
+    },
+    {
+      "start": 349.35,
+      "end": 354.63,
+      "text": "support extended V5 directories. Extended V5 directories can support larger"
+    },
+    {
+      "start": 354.63,
+      "end": 359.31,
+      "text": "directories, store names more efficiently than V4 directories, and reclaim space"
+    },
+    {
+      "start": 359.31,
+      "end": 364.43,
+      "text": "when names are removed. A V5 directory cannot be created unless a file system"
+    },
+    {
+      "start": 364.43,
+      "end": 370.27,
+      "text": "is V5. A file system can only be converted to V5 or created as V5 by"
+    },
+    {
+      "start": 370.27,
+      "end": 378.87,
+      "text": "using either the IOE FSUTL convert format or ZFS ADM convert. This JCL"
+    },
+    {
+      "start": 378.87,
+      "end": 383.83,
+      "text": "example shows a program in a ZOS data set being relinked to reside in the"
+    },
+    {
+      "start": 383.83,
+      "end": 388.83,
+      "text": "hierarchical file system. PATH defines the path name of the directory where the"
+    },
+    {
+      "start": 388.83,
+      "end": 393.79,
+      "text": "program payroll resides when linked edited. The path name is in lowercase"
+    },
+    {
+      "start": 393.79,
+      "end": 398.79,
+      "text": "letters and therefore enclosed by single quotes. We have some PATH option"
+    },
+    {
+      "start": 398.79,
+      "end": 404.75,
+      "text": "options. OWR only specifies the file will be opened. For write, Ocreate"
+    },
+    {
+      "start": 404.75,
+      "end": 408.27,
+      "text": "specifies that if the file doesn't exist it's created and if it is"
+    },
+    {
+      "start": 408.27,
+      "end": 413.43,
+      "text": "existing it is reused and OTR UNC specifies that the file length will be"
+    },
+    {
+      "start": 413.43,
+      "end": 420.79,
+      "text": "truncated to zero if the file already exists. And for PATH mode SIRWXU"
+    },
+    {
+      "start": 420.79,
+      "end": 426.71,
+      "text": "specifies that the file owner has read, write and execute permission. SIRWXG"
+    },
+    {
+      "start": 426.71,
+      "end": 432.79,
+      "text": "specifies that the file group has read, write and execute permission and SIRWXO"
+    },
+    {
+      "start": 432.79,
+      "end": 438.67,
+      "text": "specifies that all other users have read, write and execute permission. Next"
+    },
+    {
+      "start": 438.67,
+      "end": 442.35,
+      "text": "we're going to talk about how to get some stuff done in your UNIX"
+    },
+    {
+      "start": 442.35,
+      "end": 448.35,
+      "text": "environment using the iShell and directory list utility."
+    }
+  ]
+}

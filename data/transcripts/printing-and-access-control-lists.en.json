@@ -1,0 +1,318 @@
+{
+  "slug": "printing-and-access-control-lists",
+  "title": "Printing and access control lists",
+  "language": "en",
+  "duration": 325.4044375,
+  "segments": [
+    {
+      "start": 3.7,
+      "end": 8.9,
+      "text": "We're now going to look at some additional considerations for ZOS UNIX."
+    },
+    {
+      "start": 8.9,
+      "end": 12.86,
+      "text": "There are several ways to provide print services to an application."
+    },
+    {
+      "start": 12.86,
+      "end": 19.34,
+      "text": "A ZOS UNIX application can use the POSIX functions printf, fprint, write, or fwrite"
+    },
+    {
+      "start": 19.34,
+      "end": 22.92,
+      "text": "to place output in the hierarchical file system."
+    },
+    {
+      "start": 22.92,
+      "end": 28.02,
+      "text": "The file can either be specified as standard out or by a file name depending on the function"
+    },
+    {
+      "start": 28.02,
+      "end": 29.62,
+      "text": "call used."
+    },
+    {
+      "start": 29.62,
+      "end": 33.76,
+      "text": "The output residing in the file system can be printed by a batch job using dd statements"
+    },
+    {
+      "start": 33.76,
+      "end": 40.94,
+      "text": "referring to the out file, by TSOE print options, or by using the lp shell command."
+    },
+    {
+      "start": 40.94,
+      "end": 46.6,
+      "text": "This command dynamically allocates a ZOS sysout data set, opens writes and closes it, and sends"
+    },
+    {
+      "start": 46.6,
+      "end": 50.1,
+      "text": "it to the ges pool, which sends it to a printer."
+    },
+    {
+      "start": 50.1,
+      "end": 56.1,
+      "text": "Each ZOS UNIX user has a number of default printers specified in different ways."
+    },
+    {
+      "start": 56.1,
+      "end": 58.46,
+      "text": "The system will select a printer in the following order."
+    },
+    {
+      "start": 58.46,
+      "end": 65.38,
+      "text": "So first of all, the printer in the dest option of the lp shell command or the printf or fprintf"
+    },
+    {
+      "start": 65.38,
+      "end": 66.46,
+      "text": "functions."
+    },
+    {
+      "start": 66.46,
+      "end": 70.62,
+      "text": "The printer specified in the lp dest environment variable is next."
+    },
+    {
+      "start": 70.62,
+      "end": 75.46,
+      "text": "And then three, the printer specified in the printer environment variable."
+    },
+    {
+      "start": 75.46,
+      "end": 80.62,
+      "text": "Finally there's four, which is the printer in the rackf user profile."
+    },
+    {
+      "start": 80.62,
+      "end": 84.7,
+      "text": "Currently HFS files are protected with POSIX permission bits."
+    },
+    {
+      "start": 84.94,
+      "end": 89.74,
+      "text": "HFS permission bits allow the installation to specify read authority, write authority, or"
+    },
+    {
+      "start": 89.74,
+      "end": 93.18,
+      "text": "search authority for a directory."
+    },
+    {
+      "start": 93.18,
+      "end": 98.26,
+      "text": "They also allow specification of read, write, or execute authority for a file."
+    },
+    {
+      "start": 98.26,
+      "end": 102.82,
+      "text": "Because there are three sets of bits, separate authorities can be specified for the owner"
+    },
+    {
+      "start": 102.82,
+      "end": 108.02,
+      "text": "of the file or the directory, the owning group, and everyone else, such as rackf's"
+    },
+    {
+      "start": 108.02,
+      "end": 112.82,
+      "text": "Universal Access Authority or UACC."
+    },
+    {
+      "start": 112.82,
+      "end": 119.06,
+      "text": "The owner is represented by a UID, the owning group is represented by a GID."
+    },
+    {
+      "start": 119.06,
+      "end": 126.34,
+      "text": "Access checking compares the user's UID and GID to the one stored in the FSP."
+    },
+    {
+      "start": 126.34,
+      "end": 133.14,
+      "text": "When a security decision is needed, the file system calls rackf and supplies the FSP."
+    },
+    {
+      "start": 133.14,
+      "end": 138.34,
+      "text": "Rackf makes the decision, does any necessary auditing, and returns control back to the"
+    },
+    {
+      "start": 138.34,
+      "end": 140.1,
+      "text": "file system."
+    },
+    {
+      "start": 140.1,
+      "end": 145.66,
+      "text": "Rackf does not provide commands to maintain the FSP, but it does provide SAF services"
+    },
+    {
+      "start": 145.66,
+      "end": 149.22,
+      "text": "that do the FSP maintenance."
+    },
+    {
+      "start": 149.22,
+      "end": 154.26,
+      "text": "COS Unix provides commands that invoke these SAF services."
+    },
+    {
+      "start": 154.26,
+      "end": 160.46,
+      "text": "Access control lists or ACLs can be used to control access to files and directories"
+    },
+    {
+      "start": 160.46,
+      "end": 165.42,
+      "text": "by individual user, UID, and by group, the GID."
+    },
+    {
+      "start": 165.42,
+      "end": 168.42,
+      "text": "ACLs are used along with permission bits."
+    },
+    {
+      "start": 168.58,
+      "end": 175.86,
+      "text": "ACLs are created, modified, and deleted using the setfacl shell command."
+    },
+    {
+      "start": 175.86,
+      "end": 179.98,
+      "text": "The HFS and ZFS file systems support ACLs."
+    },
+    {
+      "start": 179.98,
+      "end": 186.22,
+      "text": "The ACLs are created and checked by rackf, not by the kernel or file system."
+    },
+    {
+      "start": 186.22,
+      "end": 188.38,
+      "text": "There are two kinds of ACL entries."
+    },
+    {
+      "start": 188.38,
+      "end": 193.58,
+      "text": "Base ACL entries are the same as permission bits, so owner, group, and other."
+    },
+    {
+      "start": 193.58,
+      "end": 197.74,
+      "text": "They can be changed using chmod or setfacl."
+    },
+    {
+      "start": 197.74,
+      "end": 202.9,
+      "text": "Extended ACL entries are ACL entries for individual users or groups."
+    },
+    {
+      "start": 202.9,
+      "end": 207.26,
+      "text": "Like the permission bits, they're stored with the file, not in rackf profiles."
+    },
+    {
+      "start": 207.26,
+      "end": 216.3,
+      "text": "Each ACL type, access, file default, and directory default can contain up to 1024 extended ACL entries."
+    },
+    {
+      "start": 216.3,
+      "end": 222.3,
+      "text": "Each extended ACL entry specifies a qualifier to indicate whether the entry pertains to a user or a group,"
+    },
+    {
+      "start": 222.3,
+      "end": 228.58,
+      "text": "the actual UID or GID itself, and the permissions being granted or denied by this entry."
+    },
+    {
+      "start": 228.58,
+      "end": 233.66,
+      "text": "The allowable permissions are read, write, and execute."
+    },
+    {
+      "start": 233.66,
+      "end": 242.74,
+      "text": "The commands setfacl and getfacl have been introduced in order to create, modify, and display ACL entries specified by the path,"
+    },
+    {
+      "start": 242.74,
+      "end": 245.5,
+      "text": "and here's the syntax for those."
+    },
+    {
+      "start": 245.5,
+      "end": 249.98,
+      "text": "irrska00 is the file checking algorithm."
+    },
+    {
+      "start": 249.98,
+      "end": 255.34,
+      "text": "This callable service has been updated for ACLs and the new UNIX PRIV profiles."
+    },
+    {
+      "start": 255.34,
+      "end": 262.5,
+      "text": "Permissions bits, ACLs, and various UNIX PRIV profiles are used by rackf while performing file access checks."
+    },
+    {
+      "start": 262.5,
+      "end": 267.3,
+      "text": "The rackf basic file checking algorithm checks the owner bits, user ACL entries,"
+    },
+    {
+      "start": 267.3,
+      "end": 272.54,
+      "text": "union of group bits, and group ACL entries, and other bits."
+    },
+    {
+      "start": 272.54,
+      "end": 279.5,
+      "text": "Now, it's not always necessary to apply ACLs on every file or directory within a subtree."
+    },
+    {
+      "start": 279.5,
+      "end": 286.9,
+      "text": "If you have a requirement to grant access to an entire subtree, for example, a subtree specific to a given application,"
+    },
+    {
+      "start": 286.9,
+      "end": 290.58,
+      "text": "access can be established at the top directory."
+    },
+    {
+      "start": 290.58,
+      "end": 294.66,
+      "text": "If a given user or a group does not have search access to the top directory,"
+    },
+    {
+      "start": 294.66,
+      "end": 303.26,
+      "text": "no files within the subtree will be accessible regardless of the permission bit set or ACL contents associated with those files."
+    },
+    {
+      "start": 303.26,
+      "end": 309.38,
+      "text": "The user or the group still needs permission to the files within the directory subtree where appropriate."
+    },
+    {
+      "start": 309.42,
+      "end": 316.26,
+      "text": "If this is already granted by the group or other bits, no ACLs are necessary below the top directory."
+    },
+    {
+      "start": 316.26,
+      "end": 320.78,
+      "text": "In the next video, we'll look at some remaining at ZOS UNIX considerations."
+    }
+  ]
+}

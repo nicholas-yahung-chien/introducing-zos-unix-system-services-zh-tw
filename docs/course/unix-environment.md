@@ -24,18 +24,24 @@
   title="z/OS UNIX 應用程式設計"
   entry-id="1_8ihdkrd8"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193139"
+  video-src="/media/application-programming-in-zos-unix.mp4"
+  subtitle-src="/subtitles/application-programming-in-zos-unix.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="Printing 與 access control lists"
   entry-id="1_fxdv609j"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193140"
+  video-src="/media/printing-and-access-control-lists.mp4"
+  subtitle-src="/subtitles/printing-and-access-control-lists.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="其他考量"
   entry-id="1_jxyrdq28"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193141"
+  video-src="/media/additional-considerations.mp4"
+  subtitle-src="/subtitles/additional-considerations.zh-Hant-TW.vtt"
 />
 
 ## 閱讀材料

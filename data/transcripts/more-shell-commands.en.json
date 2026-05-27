@@ -1,0 +1,478 @@
+{
+  "slug": "more-shell-commands",
+  "title": "More shell commands",
+  "language": "en",
+  "duration": 653.6185,
+  "segments": [
+    {
+      "start": 3.89,
+      "end": 9.89,
+      "text": "Hi, my name is Mackenzie Manna, an IBM Redbooks project leader specializing in IBM Z."
+    },
+    {
+      "start": 9.89,
+      "end": 15.89,
+      "text": "When you enter a shell session, you are pointed to a particular directory in the file system hierarchy."
+    },
+    {
+      "start": 15.89,
+      "end": 20.89,
+      "text": "This directory is called the Current Working Directory, or CWD."
+    },
+    {
+      "start": 20.89,
+      "end": 25.89,
+      "text": "The value of the Current Working Directory is initially assigned as your home directory"
+    },
+    {
+      "start": 25.89,
+      "end": 34.89,
+      "text": "as found in the OMPS segment of your user security profile in the ZOS security system, like RACAF."
+    },
+    {
+      "start": 34.89,
+      "end": 37.89,
+      "text": "Your home directory is a directory that belongs to you."
+    },
+    {
+      "start": 37.89,
+      "end": 41.89,
+      "text": "It is where you place your personal files and subdirectories."
+    },
+    {
+      "start": 41.89,
+      "end": 47.89,
+      "text": "Your CWD is a directory which you happen to be pointed to at any given time."
+    },
+    {
+      "start": 47.89,
+      "end": 53.89,
+      "text": "The environment variable $Home holds the value of your home directory."
+    },
+    {
+      "start": 53.89,
+      "end": 58.89,
+      "text": "Your home directory never changes and neither does the value of $Home."
+    },
+    {
+      "start": 58.89,
+      "end": 63.89,
+      "text": "But your Current Working Directory might change from time to time."
+    },
+    {
+      "start": 63.89,
+      "end": 68.89,
+      "text": "Many shell commands allow you to specify a path name or a directory name."
+    },
+    {
+      "start": 68.89,
+      "end": 75.89,
+      "text": "If you do not specify a path name or directory name, the command often defaults to your Current Working Directory."
+    },
+    {
+      "start": 75.89,
+      "end": 79.89,
+      "text": "When you enter the eyeshell, you do not have a Current Working Directory."
+    },
+    {
+      "start": 79.89,
+      "end": 86.89,
+      "text": "You can assign yourself a CWD in the eyeshell, and once assigned, you can change it whenever you want."
+    },
+    {
+      "start": 86.89,
+      "end": 92.89,
+      "text": "Path names that are entered in the Unix environment are either absolute or relative path names."
+    },
+    {
+      "start": 92.89,
+      "end": 99.89,
+      "text": "Absolute path names always begin with a slash, and that leading slash indicates the root directory."
+    },
+    {
+      "start": 99.89,
+      "end": 105.89,
+      "text": "Therefore, an absolute path name always begins at search at the root directory."
+    },
+    {
+      "start": 105.89,
+      "end": 108.89,
+      "text": "Relative path names never begin with a slash."
+    },
+    {
+      "start": 108.89,
+      "end": 114.89,
+      "text": "A relative path name always begins at search at the Current Working Directory."
+    },
+    {
+      "start": 114.89,
+      "end": 119.89,
+      "text": "The CWD is the directory that you are pointed to at any given time."
+    },
+    {
+      "start": 119.89,
+      "end": 128.89,
+      "text": "In the shell, you can point to another directory, that is, change your CWD by using the shell cd command, change directory."
+    },
+    {
+      "start": 128.89,
+      "end": 137.89,
+      "text": "To assign or change a CWD in the eyeshell, type the directory that you want to assign in the path name field on the main menu."
+    },
+    {
+      "start": 137.89,
+      "end": 144.89,
+      "text": "Then, go to the directory action bar item and press enter to pull down the directory menu."
+    },
+    {
+      "start": 144.89,
+      "end": 149.89,
+      "text": "Finally, select the option Set Working Directory."
+    },
+    {
+      "start": 149.89,
+      "end": 154.89,
+      "text": "Alright, let's get into a whole bunch more commonly used shell commands."
+    },
+    {
+      "start": 154.89,
+      "end": 161.89,
+      "text": "The shell cd command allows you to, you know this from a few minutes back, change your working directory."
+    },
+    {
+      "start": 161.89,
+      "end": 172.89,
+      "text": "The cd command produces no output, but the CWD is changed and the environment variable $pwd is updated to reflect that change."
+    },
+    {
+      "start": 172.89,
+      "end": 178.89,
+      "text": "You can specify either a relative path name or an absolute path name on the cd command."
+    },
+    {
+      "start": 178.89,
+      "end": 184.89,
+      "text": "When any directory is created, it contains two entries created by Unix."
+    },
+    {
+      "start": 184.89,
+      "end": 188.89,
+      "text": "These entries are commonly called dot and dot dot."
+    },
+    {
+      "start": 188.89,
+      "end": 194.89,
+      "text": "The dot entry, typed as a single period, represents the directory itself."
+    },
+    {
+      "start": 194.89,
+      "end": 199.89,
+      "text": "This is useful when you want to execute a file in the current working directory."
+    },
+    {
+      "start": 199.89,
+      "end": 204.89,
+      "text": "And that directory is not specified in your $path variable."
+    },
+    {
+      "start": 204.89,
+      "end": 212.89,
+      "text": "Simply type dot slash file name, where file name is the name of the file to be executed."
+    },
+    {
+      "start": 213.89,
+      "end": 219.89,
+      "text": "There are also many commands which require a path name to be entered, for example the cp command."
+    },
+    {
+      "start": 219.89,
+      "end": 229.89,
+      "text": "If you wish to use the current working directory as a path name, simply type the dot rather than typing the absolute path name of the CWD."
+    },
+    {
+      "start": 229.89,
+      "end": 235.89,
+      "text": "The shell mkdir command, make directory, creates a directory for you."
+    },
+    {
+      "start": 236.89,
+      "end": 245.89,
+      "text": "As with the cd command, you can type either an absolute or relative path name to specify the directory that you want to create."
+    },
+    {
+      "start": 245.89,
+      "end": 254.89,
+      "text": "You can also create multiple directories at the same time by specifying multiple path names with a single mkdir command."
+    },
+    {
+      "start": 254.89,
+      "end": 259.89,
+      "text": "A directory cannot be created if there is no path to the directory."
+    },
+    {
+      "start": 259.89,
+      "end": 275.89,
+      "text": "In other words, if you were to type make directory slash u slash TSA-0011 slash DRA slash DIRB and DIRA did not exist, then DIRB cannot be created."
+    },
+    {
+      "start": 275.89,
+      "end": 284.89,
+      "text": "It was for this reason that the ability to create a directory tree structure was developed by using the dash p option of make directory."
+    },
+    {
+      "start": 284.89,
+      "end": 301.89,
+      "text": "Typing make directory dash p slash u slash TSA-0011 slash DIRA slash DIRB creates the necessary directories in the tree so that DIRB is successfully created."
+    },
+    {
+      "start": 301.89,
+      "end": 312.89,
+      "text": "If DIRA did not exist, it is created under TSA-0011 and then DIRB is created under DIRA."
+    },
+    {
+      "start": 312.89,
+      "end": 318.89,
+      "text": "The shell chmod command allows you to change the permission bits or mode of files or directories."
+    },
+    {
+      "start": 318.89,
+      "end": 325.89,
+      "text": "As before, you can enter an absolute or relative path name to identify the files to be changed."
+    },
+    {
+      "start": 325.89,
+      "end": 331.89,
+      "text": "Only a super user or the owner of a file can issue chmod against that file."
+    },
+    {
+      "start": 331.89,
+      "end": 339.89,
+      "text": "You can change multiple files to the same mode by typing multiple path name arguments in the chmod command."
+    },
+    {
+      "start": 339.89,
+      "end": 351.89,
+      "text": "Using the dash r, note this is an uppercase R option, which stands for recursive, allows you to specify a directory and change not only the mode of that directory,"
+    },
+    {
+      "start": 351.89,
+      "end": 356.89,
+      "text": "but also all files and subdirectors below that directory."
+    },
+    {
+      "start": 356.89,
+      "end": 360.89,
+      "text": "There is another form of chmod called the symbolic form."
+    },
+    {
+      "start": 360.89,
+      "end": 366.89,
+      "text": "With the symbolic form, you specify exactly which permission bits you want to change."
+    },
+    {
+      "start": 366.89,
+      "end": 369.89,
+      "text": "The rest of the permission bits are left unchanged."
+    },
+    {
+      "start": 369.89,
+      "end": 372.89,
+      "text": "Who can use the chmod command?"
+    },
+    {
+      "start": 372.89,
+      "end": 384.89,
+      "text": "Users with read access to UNIX PRIV class profiles superuser.filesys.changeperms can use the chmod command to change the permission bits of any file."
+    },
+    {
+      "start": 384.89,
+      "end": 395.89,
+      "text": "A super user with uid equals 0 or that has read access to the rackf facility class bpx.superuser and the owner."
+    },
+    {
+      "start": 396.89,
+      "end": 400.89,
+      "text": "The shell sort command sorts input data in many different ways."
+    },
+    {
+      "start": 400.89,
+      "end": 406.89,
+      "text": "The default sort order is an ASCII ascending sort against the first field of the file."
+    },
+    {
+      "start": 406.89,
+      "end": 411.89,
+      "text": "A field is a string of characters delimited by white space, blanks or tabs."
+    },
+    {
+      "start": 411.89,
+      "end": 422.89,
+      "text": "With other options, you can sort a numeric order, dictionary order ignoring case, month by month order, reverse or descending order, and so forth."
+    },
+    {
+      "start": 422.89,
+      "end": 426.89,
+      "text": "You can also select which fields to sort within the file."
+    },
+    {
+      "start": 426.89,
+      "end": 429.89,
+      "text": "That is what the dash k option does."
+    },
+    {
+      "start": 429.89,
+      "end": 437.89,
+      "text": "The start pos starting position keyword identifies the field by number against which to start the sort."
+    },
+    {
+      "start": 437.89,
+      "end": 450.89,
+      "text": "Entering sort dash k 3 my file sorts the file called my file in ASCII ascending order beginning at the third field of each record in the file."
+    },
+    {
+      "start": 451.89,
+      "end": 456.89,
+      "text": "The shell cat command stands for concatenate, which means to join together."
+    },
+    {
+      "start": 456.89,
+      "end": 460.89,
+      "text": "The cat command joins an input file with an output file."
+    },
+    {
+      "start": 460.89,
+      "end": 469.89,
+      "text": "The first argument passed to the cat is assumed to be an input file path name, and the default output file is the terminal screen."
+    },
+    {
+      "start": 469.89,
+      "end": 474.89,
+      "text": "Therefore, cat can be used to display file content on the screen."
+    },
+    {
+      "start": 474.89,
+      "end": 479.89,
+      "text": "The file content to be displayed might be more than fits on one screen."
+    },
+    {
+      "start": 479.89,
+      "end": 483.89,
+      "text": "In that case, the shell more command might be more appropriate."
+    },
+    {
+      "start": 483.89,
+      "end": 487.89,
+      "text": "The cat command can also be used to copy a file."
+    },
+    {
+      "start": 487.89,
+      "end": 497.89,
+      "text": "The all caps oedit and all caps obrowse commands are both TSO commands, but they also have Unix shell counterparts."
+    },
+    {
+      "start": 497.89,
+      "end": 502.89,
+      "text": "Note that the shell oedit and obrowse commands are both lowercase."
+    },
+    {
+      "start": 502.89,
+      "end": 509.89,
+      "text": "The oedit uppercase and oedit lowercase commands invoke the ISPF editor against a Unix file."
+    },
+    {
+      "start": 509.89,
+      "end": 513.89,
+      "text": "If the file does not exist, it is created dynamically."
+    },
+    {
+      "start": 513.89,
+      "end": 516.89,
+      "text": "You are placed into a true ISPF edit session."
+    },
+    {
+      "start": 516.89,
+      "end": 523.89,
+      "text": "When you save your changes or additions, the data is written into the Unix file you specified on the command."
+    },
+    {
+      "start": 523.89,
+      "end": 531.89,
+      "text": "When you invoke the TSO oedit command, you should specify an absolute path name enclosed with single quotes."
+    },
+    {
+      "start": 531.89,
+      "end": 541.89,
+      "text": "The obrowse uppercase and obrowse lowercase commands invoke ISPF browse, not ISPF view, against a Unix file."
+    },
+    {
+      "start": 541.89,
+      "end": 544.89,
+      "text": "Again, this is a true ISPF browse session."
+    },
+    {
+      "start": 544.89,
+      "end": 555.89,
+      "text": "If you invoke any of these four commands without specifying a path name, you are presented with an ISPF panel where you can enter the path name of the target file."
+    },
+    {
+      "start": 556.89,
+      "end": 564.89,
+      "text": "The oput command copies one sequential data set or one member of a partition data set into an hfs file."
+    },
+    {
+      "start": 564.89,
+      "end": 571.89,
+      "text": "The target file that you specify might not be a directory, and the file is created if it does not already exist."
+    },
+    {
+      "start": 571.89,
+      "end": 579.89,
+      "text": "The oput x command copies all members of a partition data set to files in a specified directory."
+    },
+    {
+      "start": 579.89,
+      "end": 588.89,
+      "text": "The oget command copies one hfs file to a sequential data set or to a member of a partition data set."
+    },
+    {
+      "start": 588.89,
+      "end": 595.89,
+      "text": "If you are copying to a partition data set member, you must specify the member name as well as the data set name."
+    },
+    {
+      "start": 595.89,
+      "end": 603.89,
+      "text": "The oget x command copies all of the files from a specified directory to members of a partition data set."
+    },
+    {
+      "start": 603.89,
+      "end": 608.89,
+      "text": "The member names are the uppercase equivalents of the hfs file names."
+    },
+    {
+      "start": 608.89,
+      "end": 618.89,
+      "text": "If a file name to be copied is longer than 8 characters or uses characters that are not allowed in a zos data set name, that file is not copied."
+    },
+    {
+      "start": 618.89,
+      "end": 630.89,
+      "text": "There are various oprands you can use on these commands to specify that the data to be copied is binary data, text data, and that data conversion should take place."
+    },
+    {
+      "start": 631.89,
+      "end": 640.89,
+      "text": "For example, from the ibm-1047 to the ibm-037 or ASCII code pages."
+    },
+    {
+      "start": 640.89,
+      "end": 645.89,
+      "text": "And there we go, a whole bunch of shell commands that you'll likely be able to make good use of."
+    },
+    {
+      "start": 645.89,
+      "end": 648.89,
+      "text": "In the next module, we'll be working with the shell."
+    }
+  ]
+}

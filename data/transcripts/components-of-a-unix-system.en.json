@@ -1,0 +1,258 @@
+{
+  "slug": "components-of-a-unix-system",
+  "title": "Components of a UNIX System",
+  "language": "en",
+  "duration": 294.2200625,
+  "segments": [
+    {
+      "start": 3.82,
+      "end": 9.82,
+      "text": "In this module, we're going to take a closer look at the components of the Unix system."
+    },
+    {
+      "start": 9.82,
+      "end": 15.82,
+      "text": "Let's start with a bit of background into how Unix was written."
+    },
+    {
+      "start": 15.82,
+      "end": 21.82,
+      "text": "C was developed to make Unix independent of hardware architecture."
+    },
+    {
+      "start": 21.82,
+      "end": 28.82,
+      "text": "When the Unix kernel and shell were written in C, it made programming and debugging easier."
+    },
+    {
+      "start": 28.82,
+      "end": 32.82,
+      "text": "C was developed by programmers for programmers."
+    },
+    {
+      "start": 32.82,
+      "end": 36.82,
+      "text": "C compilers were made available for different Unix versions."
+    },
+    {
+      "start": 36.82,
+      "end": 43.82,
+      "text": "In the late 1970s, the popularity of C grew and C compilers became available for a large number of processes"
+    },
+    {
+      "start": 43.82,
+      "end": 46.82,
+      "text": "and for a large number of operating systems."
+    },
+    {
+      "start": 46.82,
+      "end": 54.82,
+      "text": "C has a rich set of functions that deal with all aspects of data manipulation, I.O., math, and character functions."
+    },
+    {
+      "start": 54.82,
+      "end": 58.82,
+      "text": "The ability of C to use more traditional high-level constructs"
+    },
+    {
+      "start": 58.82,
+      "end": 64.82,
+      "text": "gives the programmer elegance and flexibility while maintaining the options for raw power."
+    },
+    {
+      "start": 64.82,
+      "end": 72.82,
+      "text": "C++ is an object-oriented version of C that has become popular with object-oriented design and programming."
+    },
+    {
+      "start": 72.82,
+      "end": 78.82,
+      "text": "A Unix system is usually represented as a set of circles with functions in layers."
+    },
+    {
+      "start": 78.82,
+      "end": 83.82,
+      "text": "The first layer is the hardware, which interfaces directly with the kernel."
+    },
+    {
+      "start": 83.82,
+      "end": 88.82,
+      "text": "The kernel is the base operating system which provides services for other layers."
+    },
+    {
+      "start": 88.82,
+      "end": 95.82,
+      "text": "Built on the kernel is the command interface, often called the shell, and the commands and the utilities."
+    },
+    {
+      "start": 95.82,
+      "end": 100.82,
+      "text": "There are a number of different shells available for Unix systems."
+    },
+    {
+      "start": 100.82,
+      "end": 107.82,
+      "text": "The last layer is the application programs, which are built on the application programming interfaces,"
+    },
+    {
+      "start": 107.82,
+      "end": 111.82,
+      "text": "the shell, and the commands and utilities."
+    },
+    {
+      "start": 111.82,
+      "end": 115.82,
+      "text": "The Unix kernel is the base operating system."
+    },
+    {
+      "start": 115.82,
+      "end": 121.82,
+      "text": "Most of the kernel is indeed written in C, which makes it easy to port to other processes."
+    },
+    {
+      "start": 121.82,
+      "end": 130.82,
+      "text": "There are routines that are dependent on the machine architecture for functions like memory mapping and interrupt handling."
+    },
+    {
+      "start": 130.82,
+      "end": 139.82,
+      "text": "The kernel provides basic functions like process scheduling, memory management, device control, and file management."
+    },
+    {
+      "start": 140.82,
+      "end": 145.82,
+      "text": "There's also a system call interface, and there's an operator interface."
+    },
+    {
+      "start": 145.82,
+      "end": 150.82,
+      "text": "Unix is implemented in the layered approach that's shown here."
+    },
+    {
+      "start": 150.82,
+      "end": 156.82,
+      "text": "So at the base, there is the specific manufacturer's hardware."
+    },
+    {
+      "start": 156.82,
+      "end": 161.82,
+      "text": "A unique hardware interface is provided to achieve complete hardware independence."
+    },
+    {
+      "start": 161.82,
+      "end": 166.82,
+      "text": "It's partially written in assembler and partially written in C."
+    },
+    {
+      "start": 166.82,
+      "end": 171.82,
+      "text": "This is the only vendor-specific part of the Unix implementation."
+    },
+    {
+      "start": 171.82,
+      "end": 176.82,
+      "text": "The upper levels of Unix, well, as we know, those are all written in C."
+    },
+    {
+      "start": 176.82,
+      "end": 179.82,
+      "text": "Now, the command interface in a Unix system is called the shell."
+    },
+    {
+      "start": 179.82,
+      "end": 185.82,
+      "text": "Why shell? Because it's the outermost layer of the Unix system."
+    },
+    {
+      "start": 185.82,
+      "end": 192.82,
+      "text": "It serves as a command language interpreter and programming language and allows foreground and background processing."
+    },
+    {
+      "start": 192.82,
+      "end": 197.82,
+      "text": "When you log on to a Unix system, you start to communicate with the shell."
+    },
+    {
+      "start": 197.82,
+      "end": 201.82,
+      "text": "The shell can be compared to TSO in a ZOS system."
+    },
+    {
+      "start": 201.82,
+      "end": 207.82,
+      "text": "Essentially, the shell is a program which allows users to communicate with the operating system."
+    },
+    {
+      "start": 207.82,
+      "end": 217.82,
+      "text": "The shell reads commands that are entered and interprets them as requests to execute other programs, access files, or provide output."
+    },
+    {
+      "start": 217.82,
+      "end": 220.82,
+      "text": "The shell doesn't really have a user-friendly interface."
+    },
+    {
+      "start": 220.82,
+      "end": 225.82,
+      "text": "It's driven by commands, which if you're unfamiliar with them, they can seem a bit cryptic,"
+    },
+    {
+      "start": 225.82,
+      "end": 229.82,
+      "text": "but programmers and system programmers like it because of its power."
+    },
+    {
+      "start": 229.82,
+      "end": 236.82,
+      "text": "Today, though, vendors do provide solutions for Unix users to replace the shell interface with a window interface or a menu-driven interface,"
+    },
+    {
+      "start": 236.82,
+      "end": 241.82,
+      "text": "which is easier to use for users who aren't already familiar with Unix command syntax."
+    },
+    {
+      "start": 241.82,
+      "end": 244.82,
+      "text": "There are two native command interface shells."
+    },
+    {
+      "start": 244.82,
+      "end": 250.82,
+      "text": "The Born shell is the most basic shell, and it's the default ZOS Unix shell."
+    },
+    {
+      "start": 250.82,
+      "end": 255.82,
+      "text": "The C shell has the functionality of the C language and is preferred by many programmers."
+    },
+    {
+      "start": 255.82,
+      "end": 262.82,
+      "text": "Access the command line of any Unix-like operating system, and there's a good chance you'll find a Bash shell."
+    },
+    {
+      "start": 262.82,
+      "end": 271.82,
+      "text": "Bash has become the default shell on both Linux and macOS, making the ability to work with it an essential skill for pretty much any software developer."
+    },
+    {
+      "start": 272.82,
+      "end": 280.82,
+      "text": "Bash, which stands for, wait for it, Born Again shell, was designed as a replacement for the Born shell"
+    },
+    {
+      "start": 280.82,
+      "end": 283.82,
+      "text": "and is available on Z through Rocket Software."
+    },
+    {
+      "start": 283.82,
+      "end": 289.82,
+      "text": "Now, in the next video, we'll look at some fundamental functions of Unix, starting with commands."
+    }
+  ]
+}

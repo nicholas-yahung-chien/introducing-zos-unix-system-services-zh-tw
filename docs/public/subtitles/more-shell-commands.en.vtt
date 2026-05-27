@@ -1,0 +1,377 @@
+WEBVTT
+
+1
+00:00:03.890 --> 00:00:09.890
+Hi, my name is Mackenzie Manna, an IBM Redbooks project leader specializing in IBM Z.
+
+2
+00:00:09.890 --> 00:00:15.890
+When you enter a shell session, you are pointed to a particular directory in the file system hierarchy.
+
+3
+00:00:15.890 --> 00:00:20.890
+This directory is called the Current Working Directory, or CWD.
+
+4
+00:00:20.890 --> 00:00:25.890
+The value of the Current Working Directory is initially assigned as your home directory
+
+5
+00:00:25.890 --> 00:00:34.890
+as found in the OMPS segment of your user security profile in the ZOS security system, like RACAF.
+
+6
+00:00:34.890 --> 00:00:37.890
+Your home directory is a directory that belongs to you.
+
+7
+00:00:37.890 --> 00:00:41.890
+It is where you place your personal files and subdirectories.
+
+8
+00:00:41.890 --> 00:00:47.890
+Your CWD is a directory which you happen to be pointed to at any given time.
+
+9
+00:00:47.890 --> 00:00:53.890
+The environment variable $Home holds the value of your home directory.
+
+10
+00:00:53.890 --> 00:00:58.890
+Your home directory never changes and neither does the value of $Home.
+
+11
+00:00:58.890 --> 00:01:03.890
+But your Current Working Directory might change from time to time.
+
+12
+00:01:03.890 --> 00:01:08.890
+Many shell commands allow you to specify a path name or a directory name.
+
+13
+00:01:08.890 --> 00:01:15.890
+If you do not specify a path name or directory name, the command often defaults to your Current Working Directory.
+
+14
+00:01:15.890 --> 00:01:19.890
+When you enter the eyeshell, you do not have a Current Working Directory.
+
+15
+00:01:19.890 --> 00:01:26.890
+You can assign yourself a CWD in the eyeshell, and once assigned, you can change it whenever you want.
+
+16
+00:01:26.890 --> 00:01:32.890
+Path names that are entered in the Unix environment are either absolute or relative path names.
+
+17
+00:01:32.890 --> 00:01:39.890
+Absolute path names always begin with a slash, and that leading slash indicates the root directory.
+
+18
+00:01:39.890 --> 00:01:45.890
+Therefore, an absolute path name always begins at search at the root directory.
+
+19
+00:01:45.890 --> 00:01:48.890
+Relative path names never begin with a slash.
+
+20
+00:01:48.890 --> 00:01:54.890
+A relative path name always begins at search at the Current Working Directory.
+
+21
+00:01:54.890 --> 00:01:59.890
+The CWD is the directory that you are pointed to at any given time.
+
+22
+00:01:59.890 --> 00:02:08.890
+In the shell, you can point to another directory, that is, change your CWD by using the shell cd command, change directory.
+
+23
+00:02:08.890 --> 00:02:17.890
+To assign or change a CWD in the eyeshell, type the directory that you want to assign in the path name field on the main menu.
+
+24
+00:02:17.890 --> 00:02:24.890
+Then, go to the directory action bar item and press enter to pull down the directory menu.
+
+25
+00:02:24.890 --> 00:02:29.890
+Finally, select the option Set Working Directory.
+
+26
+00:02:29.890 --> 00:02:34.890
+Alright, let's get into a whole bunch more commonly used shell commands.
+
+27
+00:02:34.890 --> 00:02:41.890
+The shell cd command allows you to, you know this from a few minutes back, change your working directory.
+
+28
+00:02:41.890 --> 00:02:52.890
+The cd command produces no output, but the CWD is changed and the environment variable $pwd is updated to reflect that change.
+
+29
+00:02:52.890 --> 00:02:58.890
+You can specify either a relative path name or an absolute path name on the cd command.
+
+30
+00:02:58.890 --> 00:03:04.890
+When any directory is created, it contains two entries created by Unix.
+
+31
+00:03:04.890 --> 00:03:08.890
+These entries are commonly called dot and dot dot.
+
+32
+00:03:08.890 --> 00:03:14.890
+The dot entry, typed as a single period, represents the directory itself.
+
+33
+00:03:14.890 --> 00:03:19.890
+This is useful when you want to execute a file in the current working directory.
+
+34
+00:03:19.890 --> 00:03:24.890
+And that directory is not specified in your $path variable.
+
+35
+00:03:24.890 --> 00:03:32.890
+Simply type dot slash file name, where file name is the name of the file to be executed.
+
+36
+00:03:33.890 --> 00:03:39.890
+There are also many commands which require a path name to be entered, for example the cp command.
+
+37
+00:03:39.890 --> 00:03:49.890
+If you wish to use the current working directory as a path name, simply type the dot rather than typing the absolute path name of the CWD.
+
+38
+00:03:49.890 --> 00:03:55.890
+The shell mkdir command, make directory, creates a directory for you.
+
+39
+00:03:56.890 --> 00:04:05.890
+As with the cd command, you can type either an absolute or relative path name to specify the directory that you want to create.
+
+40
+00:04:05.890 --> 00:04:14.890
+You can also create multiple directories at the same time by specifying multiple path names with a single mkdir command.
+
+41
+00:04:14.890 --> 00:04:19.890
+A directory cannot be created if there is no path to the directory.
+
+42
+00:04:19.890 --> 00:04:35.890
+In other words, if you were to type make directory slash u slash TSA-0011 slash DRA slash DIRB and DIRA did not exist, then DIRB cannot be created.
+
+43
+00:04:35.890 --> 00:04:44.890
+It was for this reason that the ability to create a directory tree structure was developed by using the dash p option of make directory.
+
+44
+00:04:44.890 --> 00:05:01.890
+Typing make directory dash p slash u slash TSA-0011 slash DIRA slash DIRB creates the necessary directories in the tree so that DIRB is successfully created.
+
+45
+00:05:01.890 --> 00:05:12.890
+If DIRA did not exist, it is created under TSA-0011 and then DIRB is created under DIRA.
+
+46
+00:05:12.890 --> 00:05:18.890
+The shell chmod command allows you to change the permission bits or mode of files or directories.
+
+47
+00:05:18.890 --> 00:05:25.890
+As before, you can enter an absolute or relative path name to identify the files to be changed.
+
+48
+00:05:25.890 --> 00:05:31.890
+Only a super user or the owner of a file can issue chmod against that file.
+
+49
+00:05:31.890 --> 00:05:39.890
+You can change multiple files to the same mode by typing multiple path name arguments in the chmod command.
+
+50
+00:05:39.890 --> 00:05:51.890
+Using the dash r, note this is an uppercase R option, which stands for recursive, allows you to specify a directory and change not only the mode of that directory,
+
+51
+00:05:51.890 --> 00:05:56.890
+but also all files and subdirectors below that directory.
+
+52
+00:05:56.890 --> 00:06:00.890
+There is another form of chmod called the symbolic form.
+
+53
+00:06:00.890 --> 00:06:06.890
+With the symbolic form, you specify exactly which permission bits you want to change.
+
+54
+00:06:06.890 --> 00:06:09.890
+The rest of the permission bits are left unchanged.
+
+55
+00:06:09.890 --> 00:06:12.890
+Who can use the chmod command?
+
+56
+00:06:12.890 --> 00:06:24.890
+Users with read access to UNIX PRIV class profiles superuser.filesys.changeperms can use the chmod command to change the permission bits of any file.
+
+57
+00:06:24.890 --> 00:06:35.890
+A super user with uid equals 0 or that has read access to the rackf facility class bpx.superuser and the owner.
+
+58
+00:06:36.890 --> 00:06:40.890
+The shell sort command sorts input data in many different ways.
+
+59
+00:06:40.890 --> 00:06:46.890
+The default sort order is an ASCII ascending sort against the first field of the file.
+
+60
+00:06:46.890 --> 00:06:51.890
+A field is a string of characters delimited by white space, blanks or tabs.
+
+61
+00:06:51.890 --> 00:07:02.890
+With other options, you can sort a numeric order, dictionary order ignoring case, month by month order, reverse or descending order, and so forth.
+
+62
+00:07:02.890 --> 00:07:06.890
+You can also select which fields to sort within the file.
+
+63
+00:07:06.890 --> 00:07:09.890
+That is what the dash k option does.
+
+64
+00:07:09.890 --> 00:07:17.890
+The start pos starting position keyword identifies the field by number against which to start the sort.
+
+65
+00:07:17.890 --> 00:07:30.890
+Entering sort dash k 3 my file sorts the file called my file in ASCII ascending order beginning at the third field of each record in the file.
+
+66
+00:07:31.890 --> 00:07:36.890
+The shell cat command stands for concatenate, which means to join together.
+
+67
+00:07:36.890 --> 00:07:40.890
+The cat command joins an input file with an output file.
+
+68
+00:07:40.890 --> 00:07:49.890
+The first argument passed to the cat is assumed to be an input file path name, and the default output file is the terminal screen.
+
+69
+00:07:49.890 --> 00:07:54.890
+Therefore, cat can be used to display file content on the screen.
+
+70
+00:07:54.890 --> 00:07:59.890
+The file content to be displayed might be more than fits on one screen.
+
+71
+00:07:59.890 --> 00:08:03.890
+In that case, the shell more command might be more appropriate.
+
+72
+00:08:03.890 --> 00:08:07.890
+The cat command can also be used to copy a file.
+
+73
+00:08:07.890 --> 00:08:17.890
+The all caps oedit and all caps obrowse commands are both TSO commands, but they also have Unix shell counterparts.
+
+74
+00:08:17.890 --> 00:08:22.890
+Note that the shell oedit and obrowse commands are both lowercase.
+
+75
+00:08:22.890 --> 00:08:29.890
+The oedit uppercase and oedit lowercase commands invoke the ISPF editor against a Unix file.
+
+76
+00:08:29.890 --> 00:08:33.890
+If the file does not exist, it is created dynamically.
+
+77
+00:08:33.890 --> 00:08:36.890
+You are placed into a true ISPF edit session.
+
+78
+00:08:36.890 --> 00:08:43.890
+When you save your changes or additions, the data is written into the Unix file you specified on the command.
+
+79
+00:08:43.890 --> 00:08:51.890
+When you invoke the TSO oedit command, you should specify an absolute path name enclosed with single quotes.
+
+80
+00:08:51.890 --> 00:09:01.890
+The obrowse uppercase and obrowse lowercase commands invoke ISPF browse, not ISPF view, against a Unix file.
+
+81
+00:09:01.890 --> 00:09:04.890
+Again, this is a true ISPF browse session.
+
+82
+00:09:04.890 --> 00:09:15.890
+If you invoke any of these four commands without specifying a path name, you are presented with an ISPF panel where you can enter the path name of the target file.
+
+83
+00:09:16.890 --> 00:09:24.890
+The oput command copies one sequential data set or one member of a partition data set into an hfs file.
+
+84
+00:09:24.890 --> 00:09:31.890
+The target file that you specify might not be a directory, and the file is created if it does not already exist.
+
+85
+00:09:31.890 --> 00:09:39.890
+The oput x command copies all members of a partition data set to files in a specified directory.
+
+86
+00:09:39.890 --> 00:09:48.890
+The oget command copies one hfs file to a sequential data set or to a member of a partition data set.
+
+87
+00:09:48.890 --> 00:09:55.890
+If you are copying to a partition data set member, you must specify the member name as well as the data set name.
+
+88
+00:09:55.890 --> 00:10:03.890
+The oget x command copies all of the files from a specified directory to members of a partition data set.
+
+89
+00:10:03.890 --> 00:10:08.890
+The member names are the uppercase equivalents of the hfs file names.
+
+90
+00:10:08.890 --> 00:10:18.890
+If a file name to be copied is longer than 8 characters or uses characters that are not allowed in a zos data set name, that file is not copied.
+
+91
+00:10:18.890 --> 00:10:30.890
+There are various oprands you can use on these commands to specify that the data to be copied is binary data, text data, and that data conversion should take place.
+
+92
+00:10:31.890 --> 00:10:40.890
+For example, from the ibm-1047 to the ibm-037 or ASCII code pages.
+
+93
+00:10:40.890 --> 00:10:45.890
+And there we go, a whole bunch of shell commands that you'll likely be able to make good use of.
+
+94
+00:10:45.890 --> 00:10:48.890
+In the next module, we'll be working with the shell.

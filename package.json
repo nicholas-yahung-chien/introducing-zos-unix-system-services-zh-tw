@@ -15,6 +15,7 @@
     "capture:course": "node scripts/capture-course.mjs",
     "capture:assets": "node scripts/extract-live-course-assets.mjs",
     "site:generate": "node scripts/build-unix-system-services-site.mjs",
+    "site:generate:media": "cross-env COURSE_MEDIA_STATUS=deployed node scripts/build-unix-system-services-site.mjs",
     "download:videos": "node scripts/download-kaltura-videos.mjs",
     "generate:hls": "node scripts/generate-hls.mjs",
     "glossary:import": "node scripts/import-glossary.mjs",

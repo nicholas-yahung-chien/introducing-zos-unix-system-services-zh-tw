@@ -1,0 +1,249 @@
+WEBVTT
+
+1
+00:00:03.860 --> 00:00:09.300
+Let's start with a quick bit of background of how UNIX was implemented before ZOS.
+
+2
+00:00:09.300 --> 00:00:13.220
+The name OpenEdition was used when the support was introduced.
+
+3
+00:00:13.220 --> 00:00:16.780
+At that time, IBM didn't have the right to call it UNIX.
+
+4
+00:00:16.780 --> 00:00:22.020
+The term OpenEdition is still seen in some documentation, but IBM does now have the
+
+5
+00:00:22.020 --> 00:00:28.060
+right to the word UNIX after the full UNIX branding was obtained in 1996.
+
+6
+00:00:28.060 --> 00:00:35.300
+The ZOS UNIX support is now known as UNIX system services and is often called USS.
+
+7
+00:00:35.300 --> 00:00:40.420
+When this UNIX support became available, the role of an MVS system changed.
+
+8
+00:00:40.420 --> 00:00:45.540
+This opened up new opportunities for MVS, OS390 and now ZOS.
+
+9
+00:00:45.540 --> 00:00:50.580
+UNIX applications can be ported from other UNIX environments to run on ZOS UNIX system
+
+10
+00:00:50.580 --> 00:00:51.580
+services.
+
+11
+00:00:51.580 --> 00:00:53.900
+However, porting might not be trivial.
+
+12
+00:00:53.900 --> 00:00:58.340
+There's the problem of ASCII and EBCDIC, which must be addressed and we'll get to
+
+13
+00:00:58.340 --> 00:01:01.020
+that later, believe me.
+
+14
+00:01:01.020 --> 00:01:06.540
+But first of all, let's see how workstation users can get access to ZOS applications and
+
+15
+00:01:06.540 --> 00:01:07.860
+data.
+
+16
+00:01:07.860 --> 00:01:13.460
+With ZOS UNIX, workstation users can access traditional MVS applications and data, as
+
+17
+00:01:13.460 --> 00:01:19.580
+well as POSIX and XPG 4.2 conforming applications and data on ZOS.
+
+18
+00:01:19.580 --> 00:01:25.780
+This diagram shows that a workstation application using Motif and XWindows can access data on
+
+19
+00:01:25.780 --> 00:01:27.420
+a ZOS system.
+
+20
+00:01:27.420 --> 00:01:33.540
+Motif refers to both a graphical user interface specification and the widget toolkit for building
+
+21
+00:01:33.540 --> 00:01:39.740
+applications that follow that specification under the XWindows system on UNIX operating
+
+22
+00:01:39.740 --> 00:01:40.740
+systems.
+
+23
+00:01:40.740 --> 00:01:46.140
+The XWindows system is the underlying graphic system on all modern UNIX systems.
+
+24
+00:01:46.300 --> 00:01:51.300
+XWindows provides the facilities to accept input from a mouse and keyboard and the ability
+
+25
+00:01:51.300 --> 00:01:54.900
+to draw graphical objects to a computer screen.
+
+26
+00:01:54.900 --> 00:01:58.180
+It's supported by all major workstation vendors.
+
+27
+00:01:58.180 --> 00:02:04.700
+XWindows is a TCPIP application and comes as part of the TCPIP product for ZOS.
+
+28
+00:02:04.700 --> 00:02:09.380
+The box on the picture that contains the XWindows client in the diagram symbolizes
+
+29
+00:02:09.380 --> 00:02:13.900
+the XWindows API on ZOS.
+
+30
+00:02:13.900 --> 00:02:20.540
+Now let's see how high-speed storage devices on Z can be useful for workstations.
+
+31
+00:02:20.540 --> 00:02:28.500
+The DFSMS-MVS product on ZOS provides data administration functions like backup and archiving
+
+32
+00:02:28.500 --> 00:02:31.380
+of data on a ZOS system.
+
+33
+00:02:31.380 --> 00:02:38.780
+With ZOS UNIX, DFSMS-MVS can be used to backup and archive the hierarchical file system.
+
+34
+00:02:38.780 --> 00:02:43.860
+A workstation application might be moved to ZOS if backup is critical.
+
+35
+00:02:43.860 --> 00:02:49.020
+An alternative solution is to use the Tivoli storage manager product on ZOS which can periodically
+
+36
+00:02:49.020 --> 00:02:53.300
+upload data on the workstation and archive it on the host.
+
+37
+00:02:53.300 --> 00:02:59.020
+Either way, folks want to use the same tools and applications to backup and restore individual
+
+38
+00:02:59.020 --> 00:03:07.940
+ZOS UNIX files residing in a ZOS file system, as they will do with any other ZOS datasets.
+
+39
+00:03:07.940 --> 00:03:12.180
+Another solution is to backup and restore individual ZOS UNIX files residing in something
+
+40
+00:03:12.180 --> 00:03:21.300
+called ZFS is integrated into existing DFSMS-HSM backup and recovery and DFSMS-DSS dump and
+
+41
+00:03:21.300 --> 00:03:29.430
+restore capability, allowing for centralized data management across the ZOS platform.
+
+42
+00:03:29.430 --> 00:03:35.950
+Now ZOS is well-suited to be a server for batch applications because of its large processing
+
+43
+00:03:35.950 --> 00:03:41.030
+capability, high-speed printers and high reliability and availability.
+
+44
+00:03:41.030 --> 00:03:45.390
+Large batch applications can be moved from a workstation to ZOS.
+
+45
+00:03:45.390 --> 00:03:52.270
+ZOS UNIX shell scripts which are similar to RexxXX can run in the shell session or they
+
+46
+00:03:52.270 --> 00:03:55.710
+can be submitted as a ZOS batch job.
+
+47
+00:03:55.710 --> 00:04:02.190
+BPX batch is a utility that you can use to run shell commands or executable files through
+
+48
+00:04:02.190 --> 00:04:03.970
+the batch facility.
+
+49
+00:04:03.990 --> 00:04:09.570
+You can invoke BPX batch from a batch job or from the TSLE environment as a command through
+
+50
+00:04:09.570 --> 00:04:14.890
+the call command or from a C list or a RexxXEC.
+
+51
+00:04:14.890 --> 00:04:24.690
+So we've seen some of the opportunities and some of the new ways to use ZOS with ZOS UNIX.
+
+52
+00:04:24.690 --> 00:04:31.570
+Let's look at two exploiters of these facilities which are IBM HTTP server and IBM WebSphere
+
+53
+00:04:31.570 --> 00:04:33.970
+application server.
+
+54
+00:04:33.970 --> 00:04:38.170
+Both of these provide a web server environment for ZOS.
+
+55
+00:04:38.170 --> 00:04:44.110
+This server is a standard compliant product which requires ZOS UNIX and its file system.
+
+56
+00:04:44.110 --> 00:04:50.450
+It uses the POSIX threading standard, enabling one server to handle multiple client requests.
+
+57
+00:04:50.450 --> 00:04:58.430
+The homepages stored on ZOS reside in the hierarchical file system or a ZOS-PDS or PDSE.
+
+58
+00:04:58.430 --> 00:05:03.310
+There are also services and samples provided to show access from a web browser through the
+
+59
+00:05:03.310 --> 00:05:08.990
+ZOS WebSphere and Liberty servers to Kix and DB2 data.
+
+60
+00:05:08.990 --> 00:05:13.950
+This is a way to bring your order transaction and processing applications to new users through
+
+61
+00:05:13.950 --> 00:05:16.470
+the internet.
+
+62
+00:05:16.470 --> 00:05:21.750
+In the next video, we'll take a look at the components of ZOS.

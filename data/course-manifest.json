@@ -6,6 +6,7 @@
     "locale": "zh-Hant-TW",
     "sourceUrl": "https://learn.ibm.com/course/view.php?id=9890",
     "capturedAt": "2026-05-26T16:13:19.104Z",
+    "mediaStatus": "deployed",
     "sourceNotes": "Captured from IBM Learn with an authenticated session. Public pages keep formal quiz, certificate, survey, lab runtime, and learner progress in IBM Learn."
   },
   "sections": [
@@ -39,7 +40,7 @@
             "uiconfId": "39954662",
             "entryId": "1_a3edezg7"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/introduction-to-unix-standards.mp4",
             "hlsSrc": "/hls/introduction-to-unix-standards/index.m3u8",
@@ -58,7 +59,7 @@
             "uiconfId": "39954662",
             "entryId": "1_kt2xnn6y"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/unix-implementation-on-zos.mp4",
             "hlsSrc": "/hls/unix-implementation-on-zos/index.m3u8",
@@ -77,7 +78,7 @@
             "uiconfId": "39954662",
             "entryId": "1_hipb0mvo"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/zos-unit-component.mp4",
             "hlsSrc": "/hls/zos-unit-component/index.m3u8",
@@ -117,7 +118,7 @@
             "uiconfId": "39954662",
             "entryId": "1_gb9hrqdy"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/components-of-a-unix-system.mp4",
             "hlsSrc": "/hls/components-of-a-unix-system/index.m3u8",
@@ -136,7 +137,7 @@
             "uiconfId": "39954662",
             "entryId": "1_aomv0tq1"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/fundamental-functions.mp4",
             "hlsSrc": "/hls/fundamental-functions/index.m3u8",
@@ -155,7 +156,7 @@
             "uiconfId": "39954662",
             "entryId": "1_8tq0t0g0"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/more-fundamental-functions.mp4",
             "hlsSrc": "/hls/more-fundamental-functions/index.m3u8",
@@ -195,7 +196,7 @@
             "uiconfId": "39954662",
             "entryId": "1_lk9agppe"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/hierarchical-system-introduction.mp4",
             "hlsSrc": "/hls/hierarchical-system-introduction/index.m3u8",
@@ -214,7 +215,7 @@
             "uiconfId": "39954662",
             "entryId": "1_jwoqqa5m"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/types.mp4",
             "hlsSrc": "/hls/types/index.m3u8",
@@ -233,7 +234,7 @@
             "uiconfId": "39954662",
             "entryId": "1_34nut98r"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/hfs-and-zfs-data-set-fundamentals.mp4",
             "hlsSrc": "/hls/hfs-and-zfs-data-set-fundamentals/index.m3u8",
@@ -252,7 +253,7 @@
             "uiconfId": "39954662",
             "entryId": "1_griczpau"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/hfs-and-zfs-file-systems.mp4",
             "hlsSrc": "/hls/hfs-and-zfs-file-systems/index.m3u8",
@@ -271,7 +272,7 @@
             "uiconfId": "39954662",
             "entryId": "1_f3el88sl"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/ishell-and-directory-list-utility.mp4",
             "hlsSrc": "/hls/ishell-and-directory-list-utility/index.m3u8",
@@ -290,7 +291,7 @@
             "uiconfId": "39954662",
             "entryId": "1_iugkoedg"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/directory-list-utility-panels.mp4",
             "hlsSrc": "/hls/directory-list-utility-panels/index.m3u8",
@@ -309,7 +310,7 @@
             "uiconfId": "39954662",
             "entryId": "1_te3t0o79"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/ispf-and-zos-unix.mp4",
             "hlsSrc": "/hls/ispf-and-zos-unix/index.m3u8",
@@ -328,7 +329,7 @@
             "uiconfId": "39954662",
             "entryId": "1_w37ha2pb"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/system-structure.mp4",
             "hlsSrc": "/hls/system-structure/index.m3u8",
@@ -347,7 +348,7 @@
             "uiconfId": "39954662",
             "entryId": "1_iov0qts1"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/backup-and-recovery.mp4",
             "hlsSrc": "/hls/backup-and-recovery/index.m3u8",
@@ -366,7 +367,7 @@
             "uiconfId": "39954662",
             "entryId": "1_pnx8ipij"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/network-file-system-and-file-security.mp4",
             "hlsSrc": "/hls/network-file-system-and-file-security/index.m3u8",
@@ -385,7 +386,7 @@
             "uiconfId": "39954662",
             "entryId": "1_599iixml"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/lab-familiarization.mp4",
             "hlsSrc": "/hls/lab-familiarization/index.m3u8",
@@ -453,7 +454,7 @@
             "uiconfId": "39954662",
             "entryId": "1_iv4h5dcz"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/the-zos-shell.mp4",
             "hlsSrc": "/hls/the-zos-shell/index.m3u8",
@@ -472,7 +473,7 @@
             "uiconfId": "39954662",
             "entryId": "1_ccnbuqha"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/tso-and-the-zos-unix-shell.mp4",
             "hlsSrc": "/hls/tso-and-the-zos-unix-shell/index.m3u8",
@@ -491,7 +492,7 @@
             "uiconfId": "39954662",
             "entryId": "1_q81uk4xi"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/commands-and-jobs.mp4",
             "hlsSrc": "/hls/commands-and-jobs/index.m3u8",
@@ -538,7 +539,7 @@
             "uiconfId": "39954662",
             "entryId": "1_bf9i3fo8"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/getting-help-and-working-with-code-pages.mp4",
             "hlsSrc": "/hls/getting-help-and-working-with-code-pages/index.m3u8",
@@ -557,7 +558,7 @@
             "uiconfId": "39954662",
             "entryId": "1_bvrm90tq"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/system-shell-commands.mp4",
             "hlsSrc": "/hls/system-shell-commands/index.m3u8",
@@ -576,7 +577,7 @@
             "uiconfId": "39954662",
             "entryId": "1_wp4d7ohx"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/more-shell-commands.mp4",
             "hlsSrc": "/hls/more-shell-commands/index.m3u8",
@@ -623,7 +624,7 @@
             "uiconfId": "39954662",
             "entryId": "1_udrgkkbw"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/working-with-the-shell.mp4",
             "hlsSrc": "/hls/working-with-the-shell/index.m3u8",
@@ -642,7 +643,7 @@
             "uiconfId": "39954662",
             "entryId": "1_ohj8iew1"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/shell-scripts-and-rexx.mp4",
             "hlsSrc": "/hls/shell-scripts-and-rexx/index.m3u8",
@@ -661,7 +662,7 @@
             "uiconfId": "39954662",
             "entryId": "1_3ggir589"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/bpxbatch.mp4",
             "hlsSrc": "/hls/bpxbatch/index.m3u8",
@@ -680,7 +681,7 @@
             "uiconfId": "39954662",
             "entryId": "1_xhceuc8r"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/ascii-and-ebcdic-considerations.mp4",
             "hlsSrc": "/hls/ascii-and-ebcdic-considerations/index.m3u8",
@@ -699,7 +700,7 @@
             "uiconfId": "39954662",
             "entryId": "1_cg8lhe0n"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/translation-considerations.mp4",
             "hlsSrc": "/hls/translation-considerations/index.m3u8",
@@ -746,7 +747,7 @@
             "uiconfId": "39954662",
             "entryId": "1_156jj3h4"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/functions-and-processes.mp4",
             "hlsSrc": "/hls/functions-and-processes/index.m3u8",
@@ -765,7 +766,7 @@
             "uiconfId": "39954662",
             "entryId": "1_yttr8bkz"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/daemons-and-superusers.mp4",
             "hlsSrc": "/hls/daemons-and-superusers/index.m3u8",
@@ -784,7 +785,7 @@
             "uiconfId": "39954662",
             "entryId": "1_9qo8xsow"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/child-processes.mp4",
             "hlsSrc": "/hls/child-processes/index.m3u8",
@@ -803,7 +804,7 @@
             "uiconfId": "39954662",
             "entryId": "1_ktj4ke4p"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/communications-and-threads.mp4",
             "hlsSrc": "/hls/communications-and-threads/index.m3u8",
@@ -836,7 +837,7 @@
             "uiconfId": "39954662",
             "entryId": "1_8ihdkrd8"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/application-programming-in-zos-unix.mp4",
             "hlsSrc": "/hls/application-programming-in-zos-unix/index.m3u8",
@@ -855,7 +856,7 @@
             "uiconfId": "39954662",
             "entryId": "1_fxdv609j"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/printing-and-access-control-lists.mp4",
             "hlsSrc": "/hls/printing-and-access-control-lists/index.m3u8",
@@ -874,7 +875,7 @@
             "uiconfId": "39954662",
             "entryId": "1_jxyrdq28"
           },
-          "mediaStatus": "source-only",
+          "mediaStatus": "deployed",
           "media": {
             "videoSrc": "/media/additional-considerations.mp4",
             "hlsSrc": "/hls/additional-considerations/index.m3u8",

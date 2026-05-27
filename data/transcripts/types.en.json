@@ -1,0 +1,428 @@
+{
+  "slug": "types",
+  "title": "Types",
+  "language": "en",
+  "duration": 396.5271875,
+  "segments": [
+    {
+      "start": 3.82,
+      "end": 7.82,
+      "text": "The Hierarchical File System contains the following types of files."
+    },
+    {
+      "start": 7.82,
+      "end": 12.82,
+      "text": "There's directories, regular files, named pipes or FIFO,"
+    },
+    {
+      "start": 12.82,
+      "end": 16.82,
+      "text": "character special files and symbolic links."
+    },
+    {
+      "start": 16.82,
+      "end": 18.82,
+      "text": "Users and programmers create directories,"
+    },
+    {
+      "start": 18.82,
+      "end": 20.82,
+      "text": "regular files, pipes and symbolic links"
+    },
+    {
+      "start": 20.82,
+      "end": 23.82,
+      "text": "and the system programmer creates character special files."
+    },
+    {
+      "start": 23.82,
+      "end": 27.82,
+      "text": "Let's take a look at these in turn."
+    },
+    {
+      "start": 27.82,
+      "end": 31.82,
+      "text": "A directory is just a file just like everything else"
+    },
+    {
+      "start": 31.82,
+      "end": 33.82,
+      "text": "but it's a special kind of file."
+    },
+    {
+      "start": 33.82,
+      "end": 36.82,
+      "text": "It consists of the name of a set of files"
+    },
+    {
+      "start": 36.82,
+      "end": 38.82,
+      "text": "and other information about them."
+    },
+    {
+      "start": 38.82,
+      "end": 42.82,
+      "text": "Usually the files in a directory are related to each other in some way"
+    },
+    {
+      "start": 42.82,
+      "end": 47.82,
+      "text": "and of course a directory can have subdirectories."
+    },
+    {
+      "start": 47.82,
+      "end": 52.82,
+      "text": "A zos-unix user has a directory defined as its home directory."
+    },
+    {
+      "start": 52.82,
+      "end": 56.82,
+      "text": "After logon, the home directory becomes the working directory."
+    },
+    {
+      "start": 56.82,
+      "end": 61.82,
+      "text": "A regular file is a named unit of text or binary data information."
+    },
+    {
+      "start": 61.82,
+      "end": 64.82,
+      "text": "A file can be, for example, a piece of C source code,"
+    },
+    {
+      "start": 64.82,
+      "end": 68.82,
+      "text": "a list of names or places, a printer formatted document,"
+    },
+    {
+      "start": 68.82,
+      "end": 70.82,
+      "text": "a string of numbers organized in a certain way,"
+    },
+    {
+      "start": 70.82,
+      "end": 73.82,
+      "text": "an employee record or a memo."
+    },
+    {
+      "start": 73.82,
+      "end": 76.82,
+      "text": "A user or application must understand how to access"
+    },
+    {
+      "start": 76.82,
+      "end": 80.82,
+      "text": "and use the individual increments of data within a file."
+    },
+    {
+      "start": 80.82,
+      "end": 83.82,
+      "text": "When the sticky bit is set on for a directory,"
+    },
+    {
+      "start": 83.82,
+      "end": 86.82,
+      "text": "only the super user or the owner can delete"
+    },
+    {
+      "start": 86.82,
+      "end": 89.82,
+      "text": "or remove a file in the directory."
+    },
+    {
+      "start": 89.82,
+      "end": 93.82,
+      "text": "When the sticky bit is set on for an executable program,"
+    },
+    {
+      "start": 93.82,
+      "end": 96.82,
+      "text": "zos-unix looks for that program in the user's step lib,"
+    },
+    {
+      "start": 96.82,
+      "end": 100.82,
+      "text": "the link pack area or the link list concatenation."
+    },
+    {
+      "start": 100.82,
+      "end": 102.82,
+      "text": "This is done to reduce IO"
+    },
+    {
+      "start": 102.82,
+      "end": 107.82,
+      "text": "and improve performance of frequently used programs."
+    },
+    {
+      "start": 107.82,
+      "end": 114.82,
+      "text": "A named pipe is also called a first-in, first-out or FIFO special file."
+    },
+    {
+      "start": 114.82,
+      "end": 119.82,
+      "text": "A FIFO is a file typically used to send data from one process to another"
+    },
+    {
+      "start": 119.82,
+      "end": 124.82,
+      "text": "so that the receiving process reads the data in a first-in, first-out order."
+    },
+    {
+      "start": 124.82,
+      "end": 131.82,
+      "text": "Named pipes are created by the mkFIFO function or by JCL."
+    },
+    {
+      "start": 131.82,
+      "end": 136.82,
+      "text": "This results in a directory entry for the FIFO being created in the file system."
+    },
+    {
+      "start": 137.82,
+      "end": 142.82,
+      "text": "Named pipes have to be opened and closed by all processes that are using them."
+    },
+    {
+      "start": 142.82,
+      "end": 145.82,
+      "text": "Named pipes can be used between independent processes"
+    },
+    {
+      "start": 145.82,
+      "end": 149.82,
+      "text": "or by parent and by child processes."
+    },
+    {
+      "start": 149.82,
+      "end": 158.82,
+      "text": "A character special file is located in the slash dev directory in the root file system."
+    },
+    {
+      "start": 158.82,
+      "end": 161.82,
+      "text": "It's a file that defines a number of things."
+    },
+    {
+      "start": 161.82,
+      "end": 169.82,
+      "text": "There's a system console file that's slash dev slash console or slash dev slash oper log."
+    },
+    {
+      "start": 169.82,
+      "end": 175.82,
+      "text": "That's used to direct data to the system console or the operator log facility of zos."
+    },
+    {
+      "start": 175.82,
+      "end": 181.82,
+      "text": "A null file or slash dev slash null is equivalent to a zos dummy file."
+    },
+    {
+      "start": 181.82,
+      "end": 185.82,
+      "text": "Slash dev slash zero is a character special device file."
+    },
+    {
+      "start": 185.82,
+      "end": 191.82,
+      "text": "Data written to this file is discarded and the data read from this file is in the form of binary zeros."
+    },
+    {
+      "start": 191.82,
+      "end": 196.82,
+      "text": "There's slash dev slash random which is a device file that produces random bytes."
+    },
+    {
+      "start": 196.82,
+      "end": 202.82,
+      "text": "A file descriptor file for example slash dev slash fdn used to create a duplicate of an open descriptor."
+    },
+    {
+      "start": 202.82,
+      "end": 210.82,
+      "text": "A terminal file slash dev slash ptypnnn and slash dev slash ttypnnn"
+    },
+    {
+      "start": 210.82,
+      "end": 216.82,
+      "text": "where nnnn is a number used to represent a hardware device such as a terminal or a workstation."
+    },
+    {
+      "start": 216.82,
+      "end": 223.82,
+      "text": "These files are built in pairs and the system selects a pair of these files to represent a connection between a user and the system."
+    },
+    {
+      "start": 223.82,
+      "end": 231.82,
+      "text": "And finally the terminal file slash dev slash tty which is the default controlling terminal for a process."
+    },
+    {
+      "start": 231.82,
+      "end": 235.82,
+      "text": "A symbolic link is a file that contains the path name for another file."
+    },
+    {
+      "start": 235.82,
+      "end": 238.82,
+      "text": "In essence a reference to another file."
+    },
+    {
+      "start": 238.82,
+      "end": 241.82,
+      "text": "It's somewhat comparable to a zos alias."
+    },
+    {
+      "start": 241.82,
+      "end": 244.82,
+      "text": "A symbolic link can be created for a file or a directory."
+    },
+    {
+      "start": 244.82,
+      "end": 251.82,
+      "text": "A symbolic link can refer to files in another file system and the symbolic link is created by the simlink function."
+    },
+    {
+      "start": 251.82,
+      "end": 258.82,
+      "text": "A symbolic link can be used when a file is moved to a new directory and you want users to access the file with the old name."
+    },
+    {
+      "start": 258.82,
+      "end": 264.82,
+      "text": "Also it can be used to create an alias short path name for a file that has a long path name."
+    },
+    {
+      "start": 264.82,
+      "end": 271.82,
+      "text": "A hard link is a bit different from a symbolic link in that it's a new name for an existing file."
+    },
+    {
+      "start": 271.82,
+      "end": 276.82,
+      "text": "A hard link is a new entry in a directory that has the same inode as the original data."
+    },
+    {
+      "start": 276.82,
+      "end": 279.82,
+      "text": "A hard link can only point to a file in the same file system."
+    },
+    {
+      "start": 279.82,
+      "end": 285.82,
+      "text": "It can't point to a directory or across file systems and it's created with a link function."
+    },
+    {
+      "start": 285.82,
+      "end": 289.82,
+      "text": "An external link is a variation of a symbolic link."
+    },
+    {
+      "start": 289.82,
+      "end": 293.82,
+      "text": "An external link is a type of symbolic link which points to a zos dataset."
+    },
+    {
+      "start": 293.82,
+      "end": 302.82,
+      "text": "It can only be used by the network file system, the exec family of functions and to point to dynamic link libraries located in zos datasets."
+    },
+    {
+      "start": 302.82,
+      "end": 306.82,
+      "text": "The minus e option on the ln command creates an external link."
+    },
+    {
+      "start": 306.82,
+      "end": 309.82,
+      "text": "They can also be created through the i shell."
+    },
+    {
+      "start": 309.82,
+      "end": 314.82,
+      "text": "A shell user can browse data in a zos dataset through an external link."
+    },
+    {
+      "start": 314.82,
+      "end": 319.82,
+      "text": "They can only create, delete or look at the external link's attributes."
+    },
+    {
+      "start": 320.82,
+      "end": 326.82,
+      "text": "We've mentioned file name, symbolic link, hard link and file descriptors which are all used for referencing a file."
+    },
+    {
+      "start": 326.82,
+      "end": 330.82,
+      "text": "So let's look at an overview of these file identifiers."
+    },
+    {
+      "start": 330.82,
+      "end": 334.82,
+      "text": "A file can be identified by of course file and path name."
+    },
+    {
+      "start": 334.82,
+      "end": 339.82,
+      "text": "Each file has a unique identification number called an inode number as well."
+    },
+    {
+      "start": 339.82,
+      "end": 345.82,
+      "text": "The inode number refers to a physical file on DASD where the data is stored in a particular location."
+    },
+    {
+      "start": 346.82,
+      "end": 350.82,
+      "text": "The inode number is kept in the directory together with the file name."
+    },
+    {
+      "start": 350.82,
+      "end": 355.82,
+      "text": "A symbolic link is a separate physical file with a pointer to another physical file."
+    },
+    {
+      "start": 355.82,
+      "end": 361.82,
+      "text": "The two files have different inode numbers and they can reside in different file systems."
+    },
+    {
+      "start": 361.82,
+      "end": 370.82,
+      "text": "A hard link is a new name for an existing file and a hard link is a new entry in a directory with the same inode number as the existing file."
+    },
+    {
+      "start": 370.82,
+      "end": 374.82,
+      "text": "Hard links can't point to data across file systems."
+    },
+    {
+      "start": 374.82,
+      "end": 378.82,
+      "text": "And finally, a file descriptor is a number that represents an open file."
+    },
+    {
+      "start": 378.82,
+      "end": 381.82,
+      "text": "It's used to access files in C language programs."
+    },
+    {
+      "start": 381.82,
+      "end": 386.82,
+      "text": "When a program opens a file, the system returns a file descriptor for it."
+    },
+    {
+      "start": 386.82,
+      "end": 388.82,
+      "text": "OK, so that's file systems."
+    },
+    {
+      "start": 388.82,
+      "end": 391.82,
+      "text": "Next up, HFS and CFS datasets."
+    }
+  ]
+}

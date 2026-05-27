@@ -1,0 +1,183 @@
+{
+  "slug": "the-zos-shell",
+  "title": "The zOS shell",
+  "language": "en",
+  "duration": 184.8773125,
+  "segments": [
+    {
+      "start": 3.76,
+      "end": 10.16,
+      "text": "In this series of videos, we're going to introduce the ZOS UNIX shell and utilities."
+    },
+    {
+      "start": 10.16,
+      "end": 16.76,
+      "text": "We'll learn how to use some basic shell commands and how to navigate between TSO and the shell."
+    },
+    {
+      "start": 16.76,
+      "end": 20.76,
+      "text": "The shell is the interactive interface to ZOS."
+    },
+    {
+      "start": 20.76,
+      "end": 26.76,
+      "text": "It's part of the ZOS UNIX application services base element of ZOS."
+    },
+    {
+      "start": 26.76,
+      "end": 29.76,
+      "text": "Although some functions can be performed by TSOE,"
+    },
+    {
+      "start": 29.76,
+      "end": 34.76,
+      "text": "it's recommended that you make use of the shell and know your way around it."
+    },
+    {
+      "start": 34.76,
+      "end": 38.76,
+      "text": "The shell enables you to invoke shell commands and utilities,"
+    },
+    {
+      "start": 38.76,
+      "end": 42.76,
+      "text": "write shell scripts using the shell programming language,"
+    },
+    {
+      "start": 42.76,
+      "end": 49.76,
+      "text": "and run shell scripts and C language programs interactively in the background or in batch."
+    },
+    {
+      "start": 49.76,
+      "end": 55.76,
+      "text": "Shell commands are typically short and they can be combined in pipes or shell scripts."
+    },
+    {
+      "start": 56.76,
+      "end": 61.76,
+      "text": "Once a shell command begins executing, it has access to the following three files."
+    },
+    {
+      "start": 61.76,
+      "end": 65.76,
+      "text": "First of all, there's std-ear-not-standard-input."
+    },
+    {
+      "start": 65.76,
+      "end": 68.76,
+      "text": "The default standard input is the keyboard."
+    },
+    {
+      "start": 68.76,
+      "end": 74.76,
+      "text": "std-out is standard output and the default is the screen."
+    },
+    {
+      "start": 74.76,
+      "end": 79.76,
+      "text": "And std-err is standard error where the default is also the screen."
+    },
+    {
+      "start": 79.76,
+      "end": 83.76,
+      "text": "There are no additional installation steps for the shell and the debugger"
+    },
+    {
+      "start": 83.76,
+      "end": 87.76,
+      "text": "if the application services feature has been installed."
+    },
+    {
+      "start": 87.76,
+      "end": 93.76,
+      "text": "This diagram shows a high-level overview of the ZOS UNIX terminal support."
+    },
+    {
+      "start": 93.76,
+      "end": 99.76,
+      "text": "A user invokes the shell from TSOE by issuing a TSOE command called OMVS."
+    },
+    {
+      "start": 99.76,
+      "end": 103.76,
+      "text": "A shell user must be a TSOE user."
+    },
+    {
+      "start": 103.76,
+      "end": 109.76,
+      "text": "The network connection to the shell by using TSOE can be either VTAM or TCPIP."
+    },
+    {
+      "start": 109.76,
+      "end": 115.76,
+      "text": "ZOS UNIX supports block mode and canonical mode 3270 type terminals."
+    },
+    {
+      "start": 115.76,
+      "end": 121.76,
+      "text": "Character asynchronous terminals and non-canonical raw mode terminals are not supported."
+    },
+    {
+      "start": 121.76,
+      "end": 126.76,
+      "text": "Alternatively, a user can connect directly to UNIX by using TCPIP."
+    },
+    {
+      "start": 126.76,
+      "end": 130.76,
+      "text": "This is the only way raw mode is possible."
+    },
+    {
+      "start": 130.76,
+      "end": 133.76,
+      "text": "A user can invoke the shell from an ASCII terminal."
+    },
+    {
+      "start": 133.76,
+      "end": 138.76,
+      "text": "The network connection to the shell in this attachment is TCPIP."
+    },
+    {
+      "start": 138.76,
+      "end": 145.76,
+      "text": "A terminal attached to ZOS directly through TCPIP uses RLogin or Telnet capability in the terminal"
+    },
+    {
+      "start": 145.76,
+      "end": 150.76,
+      "text": "to connect to a daemon in ZOS that will start a shell address space for that user."
+    },
+    {
+      "start": 150.76,
+      "end": 156.76,
+      "text": "In this case, the user is accessing a shell address space unique to them in ZOS."
+    },
+    {
+      "start": 156.76,
+      "end": 161.76,
+      "text": "The RLogin or Telnet users need a pair of pseudo-TTY files."
+    },
+    {
+      "start": 161.76,
+      "end": 166.76,
+      "text": "These come from the same pool the TSO attached terminals use."
+    },
+    {
+      "start": 166.76,
+      "end": 168.76,
+      "text": "Raw mode is supported."
+    },
+    {
+      "start": 168.76,
+      "end": 172.76,
+      "text": "VI Editor can be used in this environment."
+    },
+    {
+      "start": 172.76,
+      "end": 180.76,
+      "text": "Next, we're going to look at two choices that ZOS UNIX offers to TSOE interactive users."
+    }
+  ]
+}

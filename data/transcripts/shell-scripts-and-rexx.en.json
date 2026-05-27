@@ -1,0 +1,293 @@
+{
+  "slug": "shell-scripts-and-rexx",
+  "title": "Shell scripts and REXX",
+  "language": "en",
+  "duration": 272.346875,
+  "segments": [
+    {
+      "start": 3.82,
+      "end": 10.62,
+      "text": "The TSOE OMVS command will allow users to start more than one session with the shell."
+    },
+    {
+      "start": 10.62,
+      "end": 13.94,
+      "text": "Only one session is displayed at a time on the screen."
+    },
+    {
+      "start": 13.94,
+      "end": 18.6,
+      "text": "The multi-session support in the shell allows these shell processes to reside as tasks"
+    },
+    {
+      "start": 18.6,
+      "end": 20.76,
+      "text": "in the same address space."
+    },
+    {
+      "start": 20.76,
+      "end": 24.68,
+      "text": "The user can switch between different sessions using a PF key."
+    },
+    {
+      "start": 24.68,
+      "end": 29.38,
+      "text": "The following are OMVS sub-commands to control the multi-session support."
+    },
+    {
+      "start": 29.38,
+      "end": 33.2,
+      "text": "Those are open, which starts a new shell session."
+    },
+    {
+      "start": 33.2,
+      "end": 36.3,
+      "text": "Close or quit, closes a shell session."
+    },
+    {
+      "start": 36.3,
+      "end": 40.56,
+      "text": "Quit all, ends all sessions and returns to TSOE."
+    },
+    {
+      "start": 40.56,
+      "end": 47.42,
+      "text": "Next sesh, switches to the next session and previous sesh, switches to the previous session."
+    },
+    {
+      "start": 47.42,
+      "end": 53.76,
+      "text": "The non-TSOE user can log into multiple shell sessions using the same user ID and password."
+    },
+    {
+      "start": 53.76,
+      "end": 58.96,
+      "text": "You can also be logged onto the shell using the TSOE interface and the R login interface"
+    },
+    {
+      "start": 58.96,
+      "end": 63.12,
+      "text": "using the same user ID and password."
+    },
+    {
+      "start": 63.12,
+      "end": 67.14,
+      "text": "So here's an example of a shell script with some logic."
+    },
+    {
+      "start": 67.14,
+      "end": 70.96,
+      "text": "This example has a for loop, for do, done."
+    },
+    {
+      "start": 70.96,
+      "end": 76.9,
+      "text": "It also has an if condition that runs a sequence of commands if a particular condition is met."
+    },
+    {
+      "start": 76.9,
+      "end": 80.02,
+      "text": "If then fi."
+    },
+    {
+      "start": 80.02,
+      "end": 85.54,
+      "text": "This example of a shell script takes one positional parameter, giving the name of a file."
+    },
+    {
+      "start": 85.54,
+      "end": 90.92,
+      "text": "The script looks in the working directory and finds the names of all .c files."
+    },
+    {
+      "start": 90.92,
+      "end": 95.52,
+      "text": "The if control structure inside the for loop tests each file to see if it's older than"
+    },
+    {
+      "start": 95.52,
+      "end": 97.74,
+      "text": "the file named on the command line."
+    },
+    {
+      "start": 97.74,
+      "end": 104.86,
+      "text": "If the .c file is older, echo displays the name and the file is compiled."
+    },
+    {
+      "start": 104.86,
+      "end": 110.44,
+      "text": "So what we've seen there is a shell script that has the capability to run a sequence"
+    },
+    {
+      "start": 110.44,
+      "end": 114.08,
+      "text": "of commands stored in a text file."
+    },
+    {
+      "start": 114.08,
+      "end": 118.76,
+      "text": "The commands in the file can be run by entering the file name on the command line."
+    },
+    {
+      "start": 118.76,
+      "end": 124.68,
+      "text": "After a shell script is created, a user needs read and execute permission to run the script."
+    },
+    {
+      "start": 124.68,
+      "end": 128.54,
+      "text": "A shell is like a program made up of shell commands."
+    },
+    {
+      "start": 128.54,
+      "end": 133.36,
+      "text": "The shell supports many of the features of regular programming languages like variables,"
+    },
+    {
+      "start": 133.36,
+      "end": 136.34,
+      "text": "control structures and functions."
+    },
+    {
+      "start": 136.34,
+      "end": 143.34,
+      "text": "A set of zosunix extensions to TSOE Rex provides the capability for Rex execs to access zosunix"
+    },
+    {
+      "start": 143.34,
+      "end": 145.44,
+      "text": "callable services."
+    },
+    {
+      "start": 145.44,
+      "end": 150.68,
+      "text": "The zosunix extensions to Rex are called syscall commands and they have names that correspond"
+    },
+    {
+      "start": 150.68,
+      "end": 156.6,
+      "text": "to the names of the callable services they invoke, for example exec, fork and pipe."
+    },
+    {
+      "start": 156.6,
+      "end": 163.34,
+      "text": "Rex execs using zosunix extensions can run from TSOE or in zosbatch and access the zosunix"
+    },
+    {
+      "start": 163.34,
+      "end": 170.06,
+      "text": "functions and services through a host command environment rather than discrete external functions."
+    },
+    {
+      "start": 170.06,
+      "end": 172.94,
+      "text": "The host command environment is called syscall."
+    },
+    {
+      "start": 172.94,
+      "end": 179.02,
+      "text": "The environment must be initialized by a syscall's on statement in the beginning of the exec."
+    },
+    {
+      "start": 179.02,
+      "end": 184.48,
+      "text": "Rex execs can also be run in the zosunix shell or from a C program using the exec system"
+    },
+    {
+      "start": 184.48,
+      "end": 185.78,
+      "text": "call."
+    },
+    {
+      "start": 185.78,
+      "end": 189.94,
+      "text": "This is different from shell scripts which are only interpreted in the shell."
+    },
+    {
+      "start": 189.94,
+      "end": 194.82,
+      "text": "This also means that shell scripts can invoke a Rex exec just like they would invoke any"
+    },
+    {
+      "start": 194.82,
+      "end": 196.66,
+      "text": "program."
+    },
+    {
+      "start": 196.66,
+      "end": 201.0,
+      "text": "When running a Rex exec in the shell or from a C program, the syscall environment is"
+    },
+    {
+      "start": 201.0,
+      "end": 205.03,
+      "text": "automatically initialized."
+    },
+    {
+      "start": 205.03,
+      "end": 211.35,
+      "text": "There are many ways in zosunix to send a message to another user."
+    },
+    {
+      "start": 211.35,
+      "end": 216.91,
+      "text": "Which method to use depends on the requirements and the timeframes you want the message to"
+    },
+    {
+      "start": 216.91,
+      "end": 221.03,
+      "text": "be sent, such as logger and write."
+    },
+    {
+      "start": 221.03,
+      "end": 226.99,
+      "text": "As a TSO user, you might prefer to just use facilities provided by TSO instead."
+    },
+    {
+      "start": 226.99,
+      "end": 232.83,
+      "text": "The clock daemon cron is a facility that allows you to run a command at a specific time, run"
+    },
+    {
+      "start": 232.83,
+      "end": 238.09,
+      "text": "a command in batch when the system activity is low, or set up commands, scripts or programs"
+    },
+    {
+      "start": 238.09,
+      "end": 242.19,
+      "text": "to run at the same time every day or every week."
+    },
+    {
+      "start": 242.19,
+      "end": 244.63,
+      "text": "Batch work is assigned bottom priority."
+    },
+    {
+      "start": 244.63,
+      "end": 250.41,
+      "text": "The cron daemon examines the at, batch or crontab files at initialization or whenever"
+    },
+    {
+      "start": 250.41,
+      "end": 254.87,
+      "text": "they change and start the functions at the specified times."
+    },
+    {
+      "start": 254.89,
+      "end": 258.39,
+      "text": "It uses the timezone in effect when the command is executed."
+    },
+    {
+      "start": 258.39,
+      "end": 265.03,
+      "text": "Therefore, be sure to set the TZ environment variable before starting cron."
+    },
+    {
+      "start": 265.03,
+      "end": 267.75,
+      "text": "In the next video, we'll look at BPX batch."
+    }
+  ]
+}

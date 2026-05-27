@@ -1,0 +1,201 @@
+WEBVTT
+
+1
+00:00:03.600 --> 00:00:09.280
+The bpx-palm-xx-palm-lib-member contains the parameters used to influence user logon,
+
+2
+00:00:09.280 --> 00:00:14.240
+the maximum number of active processes, file handling and storage requirements
+
+3
+00:00:14.240 --> 00:00:16.960
+for the zos-unix-system-services environment.
+
+4
+00:00:17.680 --> 00:00:21.600
+These parameter values apply to all Unix processes in the system.
+
+5
+00:00:22.160 --> 00:00:27.280
+Many bpx-palm-xx-parameter values can be modified without re-initializing the system
+
+6
+00:00:27.920 --> 00:00:33.360
+using either the set-omvs or the set-omvs equals operator commands.
+
+7
+00:00:34.880 --> 00:00:40.560
+You can control the amount of resources that are consumed by individual zos-unix-system-services
+
+8
+00:00:40.560 --> 00:00:46.800
+users. bpx-palm-xx is still used to define resource limits, but it should be used to
+
+9
+00:00:46.800 --> 00:00:50.240
+set the limits to the values required by the majority of users.
+
+10
+00:00:51.680 --> 00:00:56.640
+The rackf-omvs segment of the user profile can be used to define the resource limits for
+
+11
+00:00:56.640 --> 00:01:01.280
+users that have higher requirements than the limits defined in bpx-palm-xx.
+
+12
+00:01:02.480 --> 00:01:08.720
+The add-user and alt-user commands can be used to specify or adjust the resource limits
+
+13
+00:01:08.720 --> 00:01:15.280
+for an individual user. This diagram illustrates the read-only ZFS HFS data sharing which was the
+
+14
+00:01:15.280 --> 00:01:22.480
+only supported file system data sharing for zos. ZOS provides support for simultaneous read-write
+
+15
+00:01:22.480 --> 00:01:28.560
+access to the same ZFS or HFS file system across instances of Unix system services running
+
+16
+00:01:28.560 --> 00:01:34.800
+on multiple ZOS images in a Sysplex. Only one Sysplex system owns a given file system.
+
+17
+00:01:35.360 --> 00:01:40.560
+Across system coupling facility or XCF services are used during the processing of shared
+
+18
+00:01:40.560 --> 00:01:46.720
+file systems in the Sysplex. With shared ZFS and HFS, all file systems that are mounted
+
+19
+00:01:46.720 --> 00:01:52.080
+by a system participating in the shared HFS are available to all participating systems.
+
+20
+00:01:52.080 --> 00:01:55.760
+In other words, once a file system is mounted by a participating system,
+
+21
+00:01:56.400 --> 00:02:00.480
+that file system is accessible by any other participating system.
+
+22
+00:02:02.400 --> 00:02:06.960
+Function shipping means that a request is forwarded to the owning system and the
+
+23
+00:02:06.960 --> 00:02:10.960
+response is returned back to the requester through XCF communications.
+
+24
+00:02:11.680 --> 00:02:16.480
+A file system can be mounted Sysplex aware or non-Sysplex aware.
+
+25
+00:02:17.280 --> 00:02:21.680
+When a file system is mounted Sysplex aware, it means that the file system is locally
+
+26
+00:02:21.680 --> 00:02:26.480
+mounted on every system when the PFS is capable of handling a local mount on every system,
+
+27
+00:02:26.480 --> 00:02:32.720
+that is the PFS is running Sysplex aware, and therefore file requests are handled by the local
+
+28
+00:02:32.720 --> 00:02:38.560
+PFS. All read-only mounted file systems are always mounted Sysplex aware.
+
+29
+00:02:39.520 --> 00:02:45.280
+HFS read-write mounted file systems are always mounted non-Sysplex aware. This means that
+
+30
+00:02:45.280 --> 00:02:52.320
+file requests from non-ZOS Unix owning systems are always function shipped by ZOS Unix to the
+
+31
+00:02:52.320 --> 00:02:58.160
+ZOS Unix owning system where the file system is locally mounted and the IO is actually done.
+
+32
+00:02:58.880 --> 00:03:02.800
+To enable ZFS Sysplex aware on a file system basis,
+
+33
+00:03:02.800 --> 00:03:09.840
+specify Sysplex equals file sys in IOE PRMXX or IOE FS PRM.
+
+34
+00:03:10.640 --> 00:03:19.200
+You can specify it in a shared IOE PRMXX, IOE FS PRM and each system picks up the specification
+
+35
+00:03:19.200 --> 00:03:26.400
+in a rolling IPL. This means that USS sends all file requests directly to the local CFS
+
+36
+00:03:26.400 --> 00:03:31.600
+physical file system. CFS direct IO is a performance
+
+37
+00:03:31.600 --> 00:03:37.120
+improvement for the shared file system environment using ZFS read-write Sysplex aware file systems.
+
+38
+00:03:37.840 --> 00:03:43.040
+ZFS direct IO enhances support for ZFS read-write Sysplex aware file systems.
+
+39
+00:03:43.040 --> 00:03:48.080
+CFS can directly read and write Sysplex aware file systems from all systems in the shared
+
+40
+00:03:48.080 --> 00:03:52.880
+file system environment. This makes file system ownership much less important.
+
+41
+00:03:54.320 --> 00:04:00.080
+If the ZFS file system is mounted Sysplex aware, any client ZFS can directly access the file
+
+42
+00:04:00.080 --> 00:04:06.000
+system for reading and writing data and partially also reading metadata. So any user or
+
+43
+00:04:06.000 --> 00:04:11.280
+application can exploit the functionality for ZFS read-write Sysplex aware file systems.
+
+44
+00:04:11.280 --> 00:04:19.680
+In this case, the Sysplex aware file system FS2 is ZFS owned by SY2 and is being directly
+
+45
+00:04:19.680 --> 00:04:26.240
+accessed from SY1 and SY3. Ownership will no longer move because we only keep count of metadata
+
+46
+00:04:26.240 --> 00:04:34.800
+update. The system route is a ZFS HFS data set that is used as the Sysplex wide route.
+
+47
+00:04:34.880 --> 00:04:42.400
+This ZFS HFS data set must be mounted read-write. Only one Sysplex route is allowed for all systems
+
+48
+00:04:42.400 --> 00:04:49.280
+participating in shared HFS. Directories in the system specified HFS data set are used as mount
+
+49
+00:04:49.280 --> 00:04:58.480
+points specifically for slash etc slash var slash temp and slash dev. And that wraps up this lecture
+
+50
+00:04:58.480 --> 00:05:04.720
+series on COS Unix system services. I hope you found it useful and thank you for watching.

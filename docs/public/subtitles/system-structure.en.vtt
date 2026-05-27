@@ -1,0 +1,373 @@
+WEBVTT
+
+1
+00:00:03.730 --> 00:00:06.990
+Let's take a look at how to structure your file system.
+
+2
+00:00:06.990 --> 00:00:08.610
+You should organize your user files
+
+3
+00:00:08.610 --> 00:00:10.690
+into multiple HFS datasets.
+
+4
+00:00:10.690 --> 00:00:13.150
+This better enables you to manage space,
+
+5
+00:00:13.150 --> 00:00:16.890
+control contention, and manage backup and recovery situations.
+
+6
+00:00:16.890 --> 00:00:19.410
+That said, this is just one way of managing an environment,
+
+7
+00:00:19.410 --> 00:00:22.130
+not the only one, and depending on individual requirements
+
+8
+00:00:22.130 --> 00:00:25.050
+might not necessarily be the best way.
+
+9
+00:00:25.050 --> 00:00:27.450
+For example, once the US dataset per user
+
+10
+00:00:27.450 --> 00:00:29.050
+might be difficult to manage,
+
+11
+00:00:29.050 --> 00:00:31.290
+another approach might be to divide the data
+
+12
+00:00:31.290 --> 00:00:33.610
+by application or by department.
+
+13
+00:00:33.610 --> 00:00:36.550
+Regardless, in many cases, this is the way to go.
+
+14
+00:00:36.550 --> 00:00:39.170
+The slash U directory in the root file system
+
+15
+00:00:39.170 --> 00:00:42.610
+should be an empty directory mount point for an HFS
+
+16
+00:00:42.610 --> 00:00:44.730
+that contains just directories or mount points
+
+17
+00:00:44.730 --> 00:00:47.210
+for each of your users.
+
+18
+00:00:47.210 --> 00:00:49.810
+This HFS dataset will be mounted automatically
+
+19
+00:00:49.810 --> 00:00:52.110
+at OMVS initialization.
+
+20
+00:00:52.110 --> 00:00:53.730
+As you add users to your system,
+
+21
+00:00:53.730 --> 00:00:55.850
+create a new HFS for each one,
+
+22
+00:00:55.850 --> 00:00:58.810
+mount that HFS at the specific mount point set aside
+
+23
+00:00:58.810 --> 00:01:01.170
+for that user, and then change the ownership
+
+24
+00:01:01.170 --> 00:01:04.490
+of the mount point directory to the user's ID.
+
+25
+00:01:04.490 --> 00:01:06.210
+This can be done in the Rex Exec
+
+26
+00:01:06.210 --> 00:01:09.250
+to simplify the process of adding a new user.
+
+27
+00:01:09.250 --> 00:01:12.330
+The advantages of this organization are that user files
+
+28
+00:01:12.330 --> 00:01:15.650
+are stored in a separate ZOS dataset for each user,
+
+29
+00:01:15.650 --> 00:01:19.610
+and the root dataset can be kept read-only.
+
+30
+00:01:19.610 --> 00:01:23.770
+Auto-mount is an optional facility that comes with ZOS Unix.
+
+31
+00:01:23.770 --> 00:01:26.050
+It can be implemented if you want it.
+
+32
+00:01:26.050 --> 00:01:30.590
+It mounts user datasets and other datasets as directed.
+
+33
+00:01:30.590 --> 00:01:33.650
+Auto-mount only mounts datasets as they are referenced,
+
+34
+00:01:33.650 --> 00:01:36.750
+and these mounts are transparent to the user.
+
+35
+00:01:36.750 --> 00:01:40.750
+Both HFS and ZFS can be auto-mounted.
+
+36
+00:01:40.750 --> 00:01:43.190
+You can use a single auto-mount policy
+
+37
+00:01:43.190 --> 00:01:48.280
+to manage both HFS and ZFS file systems.
+
+38
+00:01:48.280 --> 00:01:50.620
+The auto-mount facility is a way to ensure
+
+39
+00:01:50.620 --> 00:01:53.520
+that a user's file system is mounted automatically
+
+40
+00:01:53.520 --> 00:01:56.020
+whenever they access a file in it.
+
+41
+00:01:56.020 --> 00:02:00.100
+The support group builds a file to identify the users,
+
+42
+00:02:00.100 --> 00:02:03.980
+their file systems, and its mount characteristics.
+
+43
+00:02:03.980 --> 00:02:05.980
+When the auto-mount facility is started,
+
+44
+00:02:05.980 --> 00:02:08.480
+it monitors file access.
+
+45
+00:02:08.480 --> 00:02:11.460
+When a user attempts to access one of their files,
+
+46
+00:02:11.460 --> 00:02:14.980
+auto-mount recognizes the need for a mount.
+
+47
+00:02:14.980 --> 00:02:16.800
+If there's no activity to a file system
+
+48
+00:02:16.800 --> 00:02:18.260
+for a divine period of time,
+
+49
+00:02:18.260 --> 00:02:22.920
+well, then auto-mount can also unmount the file system.
+
+50
+00:02:22.920 --> 00:02:25.140
+This avoids the need for a super user
+
+51
+00:02:25.140 --> 00:02:28.240
+to mount file systems upon request.
+
+52
+00:02:28.240 --> 00:02:30.320
+Let's look at another facility
+
+53
+00:02:30.320 --> 00:02:35.320
+for enhanced performance of programs that access files.
+
+54
+00:02:35.440 --> 00:02:39.340
+Memory mapped files enable multiple processes
+
+55
+00:02:39.340 --> 00:02:42.960
+to share file data without each doing its own reads
+
+56
+00:02:42.960 --> 00:02:44.440
+and writes.
+
+57
+00:02:44.440 --> 00:02:48.720
+This is a function from the XPG 4.2 standard.
+
+58
+00:02:48.720 --> 00:02:51.040
+The kernel stores the pages of data
+
+59
+00:02:51.040 --> 00:02:53.960
+from the file in a data space.
+
+60
+00:02:53.960 --> 00:02:56.760
+A child process inherits the same mapping
+
+61
+00:02:56.760 --> 00:03:00.920
+as defined by the parent using the mmmap function.
+
+62
+00:03:01.800 --> 00:03:04.640
+Another process will need to open the file to map
+
+63
+00:03:04.640 --> 00:03:08.000
+to the same data pages in the data space.
+
+64
+00:03:08.000 --> 00:03:10.280
+There are associated commands to ensure
+
+65
+00:03:10.280 --> 00:03:12.720
+that the physical data on the storage device
+
+66
+00:03:12.720 --> 00:03:15.140
+is updated as necessary.
+
+67
+00:03:16.660 --> 00:03:19.360
+Now, this diagram provides a logical view
+
+68
+00:03:19.360 --> 00:03:21.320
+of the file system structure
+
+69
+00:03:21.320 --> 00:03:24.200
+and an overview of its interfaces.
+
+70
+00:03:24.200 --> 00:03:27.000
+A ZOS Unix user has multiple interfaces
+
+71
+00:03:27.000 --> 00:03:29.480
+to the hierarchical file system.
+
+72
+00:03:29.480 --> 00:03:32.360
+The POSIX interfaces are the C program functions
+
+73
+00:03:32.360 --> 00:03:34.080
+and the shell commands.
+
+74
+00:03:34.080 --> 00:03:37.400
+And there's the ZOS interfaces through the TSCoE commands
+
+75
+00:03:37.400 --> 00:03:38.840
+and from high level languages,
+
+76
+00:03:38.840 --> 00:03:41.240
+which can use ZOS callable services
+
+77
+00:03:41.240 --> 00:03:44.220
+to access the hierarchical files.
+
+78
+00:03:44.220 --> 00:03:46.320
+The hierarchical file system is divided
+
+79
+00:03:46.320 --> 00:03:49.280
+into a logical file system as LFS
+
+80
+00:03:49.280 --> 00:03:52.880
+and a physical file system PFS.
+
+81
+00:03:52.880 --> 00:03:56.120
+LFS presents a single interface to the file system.
+
+82
+00:03:56.120 --> 00:03:58.520
+LFS receives the access request from a user
+
+83
+00:03:58.520 --> 00:04:02.120
+and maps the request to the appropriate PFS.
+
+84
+00:04:02.120 --> 00:04:04.960
+The LFS assigns a descriptor to the request
+
+85
+00:04:04.960 --> 00:04:07.400
+from the file descriptor table.
+
+86
+00:04:07.400 --> 00:04:10.360
+PFS performs the actual work in the file system.
+
+87
+00:04:10.360 --> 00:04:13.880
+There are multiple PFSs in the file system.
+
+88
+00:04:13.880 --> 00:04:16.360
+HFS files support files on DASD.
+
+89
+00:04:16.360 --> 00:04:19.360
+PIPES support interprocess communication.
+
+90
+00:04:19.360 --> 00:04:22.160
+Character special files support terminal communication
+
+91
+00:04:22.180 --> 00:04:24.920
+and socket file systems support program
+
+92
+00:04:24.920 --> 00:04:26.600
+to program communications.
+
+93
+00:04:27.560 --> 00:04:30.760
+Next up, we're talking backup and recovery.

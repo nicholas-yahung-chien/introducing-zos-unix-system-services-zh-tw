@@ -1,0 +1,263 @@
+{
+  "slug": "lab-familiarization",
+  "title": "Lab familiarization",
+  "language": "en",
+  "duration": 262.5945,
+  "segments": [
+    {
+      "start": 4.69,
+      "end": 9.01,
+      "text": "Hello there! I want to make sure you have a good time and that you don't get stuck"
+    },
+    {
+      "start": 9.01,
+      "end": 14.29,
+      "text": "on anything relating to connecting to our lab environment. Some of the material"
+    },
+    {
+      "start": 14.29,
+      "end": 17.85,
+      "text": "you're going to be learning is tricky enough, so you'll have enough on your"
+    },
+    {
+      "start": 17.85,
+      "end": 21.65,
+      "text": "mind with just that. Let's make sure that logging into our system and"
+    },
+    {
+      "start": 21.65,
+      "end": 27.41,
+      "text": "navigating around is as smooth and painless as possible. You'll be logging"
+    },
+    {
+      "start": 27.41,
+      "end": 32.89,
+      "text": "into an actual IBM Z system, and this is separate from whatever learning"
+    },
+    {
+      "start": 32.89,
+      "end": 37.45,
+      "text": "platform you're on. To get you connected will also be giving you access to a"
+    },
+    {
+      "start": 37.45,
+      "end": 42.73,
+      "text": "virtual Windows system, and that has all of the connection software preloaded on"
+    },
+    {
+      "start": 42.73,
+      "end": 48.25,
+      "text": "it, and you'll use that to connect to the mainframe system. This is the easiest way"
+    },
+    {
+      "start": 48.25,
+      "end": 52.49,
+      "text": "to get you connected without having you to install all sorts of software on your"
+    },
+    {
+      "start": 52.49,
+      "end": 56.93,
+      "text": "own machine. When you go to connect to the lab system, you'll eventually see a"
+    },
+    {
+      "start": 56.93,
+      "end": 62.45,
+      "text": "loading screen that looks something like this, and then something like this, and"
+    },
+    {
+      "start": 62.45,
+      "end": 67.57,
+      "text": "then something like this, and then eventually you'll get to a screen that"
+    },
+    {
+      "start": 67.57,
+      "end": 73.21,
+      "text": "looks something like this, with the green box and the course lab kit up here."
+    },
+    {
+      "start": 73.21,
+      "end": 78.29,
+      "text": "This is your connection to that system, and there's three important things on"
+    },
+    {
+      "start": 78.29,
+      "end": 83.77,
+      "text": "here that I want to show you. First is the lab kit up top here. That link"
+    },
+    {
+      "start": 83.77,
+      "end": 89.41,
+      "text": "wasn't there until the system was ready. This is a document made just for you, and"
+    },
+    {
+      "start": 89.41,
+      "end": 94.49,
+      "text": "it has your connection information in it. You'll need that information, so maybe"
+    },
+    {
+      "start": 94.49,
+      "end": 99.89,
+      "text": "bookmark it or print it out so you can find it easily later on. This page also"
+    },
+    {
+      "start": 99.89,
+      "end": 105.05,
+      "text": "shows you the amount of time left. Now, this is not the amount of time left in"
+    },
+    {
+      "start": 105.05,
+      "end": 109.57,
+      "text": "the course. Remember, two separate things. This is the amount of time left on the"
+    },
+    {
+      "start": 109.57,
+      "end": 115.25,
+      "text": "hands-on system, and if you need more time to get your work done on the system,"
+    },
+    {
+      "start": 115.25,
+      "end": 120.37,
+      "text": "go down to support. There's a link in your course lab kit, and then visit the"
+    },
+    {
+      "start": 120.37,
+      "end": 126.05,
+      "text": "self-service portal to request an extension, and just so you know, the time"
+    },
+    {
+      "start": 126.05,
+      "end": 130.25,
+      "text": "to do that is before you need that extra time, and the sooner the better."
+    },
+    {
+      "start": 130.25,
+      "end": 133.97,
+      "text": "Trust me on this, you don't want to wait until the last minute, or they"
+    },
+    {
+      "start": 133.97,
+      "end": 138.01,
+      "text": "might not be able to change it in time, and you might lose all of your work"
+    },
+    {
+      "start": 138.01,
+      "end": 144.01,
+      "text": "on that system. So pay attention to that date. Alright, you got that. Last thing is"
+    },
+    {
+      "start": 144.01,
+      "end": 149.21,
+      "text": "your virtual system access. This is that virtual Windows system that I talked"
+    },
+    {
+      "start": 149.21,
+      "end": 154.05,
+      "text": "about earlier, and you'll use this to connect to the IBM Z mainframe system."
+    },
+    {
+      "start": 154.05,
+      "end": 158.25,
+      "text": "This will normally say running, but if you ever come in here after a while and"
+    },
+    {
+      "start": 158.25,
+      "end": 161.93,
+      "text": "it says busy, then you probably just have to wait a little while for it to come"
+    },
+    {
+      "start": 161.93,
+      "end": 166.29,
+      "text": "back online. No big deal. This is also a good time to point out that"
+    },
+    {
+      "start": 166.29,
+      "end": 171.73,
+      "text": "sometimes you'll see values on your screen that are just examples. Things"
+    },
+    {
+      "start": 171.73,
+      "end": 177.73,
+      "text": "like user IDs and high-level qualifiers. Now eventually you'll be able to spot"
+    },
+    {
+      "start": 177.73,
+      "end": 182.37,
+      "text": "those right away, no problem, but when you see something that maybe looks like"
+    },
+    {
+      "start": 182.37,
+      "end": 188.57,
+      "text": "your user ID but isn't actually your user ID, you're probably expected to put"
+    },
+    {
+      "start": 188.57,
+      "end": 194.13,
+      "text": "in your user ID, not the one you see on the screen. You wouldn't believe how"
+    },
+    {
+      "start": 194.13,
+      "end": 199.29,
+      "text": "often someone copies and pastes a command exactly as it is into the system,"
+    },
+    {
+      "start": 199.29,
+      "end": 203.01,
+      "text": "and then they get really frustrated when it doesn't work. So double-check the"
+    },
+    {
+      "start": 203.01,
+      "end": 206.89,
+      "text": "examples, double-check the instructions, and make sure you're entering what"
+    },
+    {
+      "start": 206.89,
+      "end": 211.21,
+      "text": "you're supposed to enter. To get into this system, you'll need a username and"
+    },
+    {
+      "start": 211.21,
+      "end": 216.41,
+      "text": "password, and I can't tell it to you and we can't make it log in automatically."
+    },
+    {
+      "start": 216.41,
+      "end": 221.89,
+      "text": "The username and password are in your course lab kit. Remember that link up"
+    },
+    {
+      "start": 221.89,
+      "end": 226.77,
+      "text": "at the top of the screen? Now there are two usernames and passwords in here. The"
+    },
+    {
+      "start": 226.77,
+      "end": 230.85,
+      "text": "first one is for getting into that Windows system. It's in the remote"
+    },
+    {
+      "start": 230.85,
+      "end": 236.93,
+      "text": "access information section. Then below that, in lab information, you'll find these"
+    },
+    {
+      "start": 236.93,
+      "end": 243.25,
+      "text": "student TSO user IDs, and it might just be one, it might be two, it'll probably"
+    },
+    {
+      "start": 243.25,
+      "end": 247.45,
+      "text": "just be one, but you'll use those credentials to log into the mainframe"
+    },
+    {
+      "start": 247.45,
+      "end": 252.17,
+      "text": "system, which we'll cover in the next video. I hope that helps you get off to a"
+    },
+    {
+      "start": 252.17,
+      "end": 258.53,
+      "text": "great start with the labs in your course. Have fun and learn a lot."
+    }
+  ]
+}

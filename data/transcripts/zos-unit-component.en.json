@@ -1,0 +1,648 @@
+{
+  "slug": "zos-unit-component",
+  "title": "z/OS Unit Component",
+  "language": "en",
+  "duration": 401.403375,
+  "segments": [
+    {
+      "start": 3.89,
+      "end": 8.77,
+      "text": "ZOS Unix is made up of a system and application services."
+    },
+    {
+      "start": 8.77,
+      "end": 10.81,
+      "text": "There's a system application programming interface,"
+    },
+    {
+      "start": 10.81,
+      "end": 15.05,
+      "text": "or a system API, which is a set of C language functions"
+    },
+    {
+      "start": 15.05,
+      "end": 18.89,
+      "text": "and the operating system interfaces that support them."
+    },
+    {
+      "start": 18.89,
+      "end": 23.29,
+      "text": "Some services are also accessible through a simple language."
+    },
+    {
+      "start": 23.29,
+      "end": 26.93,
+      "text": "There are shell and utility interactive interfaces"
+    },
+    {
+      "start": 26.93,
+      "end": 29.81,
+      "text": "to ZOS Unix services."
+    },
+    {
+      "start": 29.81,
+      "end": 33.65,
+      "text": "A hierarchical file system is a byte-oriented file system"
+    },
+    {
+      "start": 33.69,
+      "end": 35.73,
+      "text": "familiar to Unix programmers,"
+    },
+    {
+      "start": 35.73,
+      "end": 38.93,
+      "text": "and DBX, or Debugger for Unix,"
+    },
+    {
+      "start": 38.93,
+      "end": 40.69,
+      "text": "is an interactive tool for debugging"
+    },
+    {
+      "start": 40.69,
+      "end": 45.69,
+      "text": "C and C++ language applications that use ZOS Unix services."
+    },
+    {
+      "start": 47.65,
+      "end": 52.33,
+      "text": "The picture shown here shows how ZOS Unix,"
+    },
+    {
+      "start": 52.33,
+      "end": 55.13,
+      "text": "the shell interface, and the API"
+    },
+    {
+      "start": 55.13,
+      "end": 58.41,
+      "text": "relate to the rest of the ZOS operating system."
+    },
+    {
+      "start": 58.41,
+      "end": 61.41,
+      "text": "Here we see the API interface and shell interface"
+    },
+    {
+      "start": 61.41,
+      "end": 63.49,
+      "text": "leading into language environments,"
+    },
+    {
+      "start": 63.49,
+      "end": 66.61,
+      "text": "which executes the shell and utilities."
+    },
+    {
+      "start": 66.61,
+      "end": 69.85,
+      "text": "BCP is the base control program."
+    },
+    {
+      "start": 69.85,
+      "end": 71.65,
+      "text": "We have multiple file systems here,"
+    },
+    {
+      "start": 71.65,
+      "end": 74.85,
+      "text": "hierarchical file system, ZOS file system,"
+    },
+    {
+      "start": 74.85,
+      "end": 77.89,
+      "text": "and network file system."
+    },
+    {
+      "start": 77.89,
+      "end": 81.45,
+      "text": "Support is going away for the HFS data structure"
+    },
+    {
+      "start": 81.45,
+      "end": 83.25,
+      "text": "used by the ZOS Unix environment,"
+    },
+    {
+      "start": 83.25,
+      "end": 86.65,
+      "text": "so you want to migrate your HFS to ZFS"
+    },
+    {
+      "start": 86.65,
+      "end": 92.43,
+      "text": "and enjoy the performance gains that come from doing that."
+    },
+    {
+      "start": 92.43,
+      "end": 96.03,
+      "text": "The Unix file system itself is hierarchical"
+    },
+    {
+      "start": 96.03,
+      "end": 97.91,
+      "text": "and byte-oriented."
+    },
+    {
+      "start": 97.91,
+      "end": 99.83,
+      "text": "Finding a file in this file system"
+    },
+    {
+      "start": 99.83,
+      "end": 103.63,
+      "text": "is done by searching a directory or a series of directories."
+    },
+    {
+      "start": 103.63,
+      "end": 106.43,
+      "text": "There's no concept of like a ZOS catalog"
+    },
+    {
+      "start": 106.43,
+      "end": 108.43,
+      "text": "that points directly to a file."
+    },
+    {
+      "start": 109.51,
+      "end": 111.71,
+      "text": "A path name identifies a file"
+    },
+    {
+      "start": 111.71,
+      "end": 115.31,
+      "text": "and consists of directory names and a file name."
+    },
+    {
+      "start": 115.31,
+      "end": 116.91,
+      "text": "A fully qualified file name,"
+    },
+    {
+      "start": 116.91,
+      "end": 118.91,
+      "text": "which consists of the name of each directory"
+    },
+    {
+      "start": 118.91,
+      "end": 121.43,
+      "text": "in the path to a file plus the file name itself"
+    },
+    {
+      "start": 121.43,
+      "end": 124.67,
+      "text": "can be up to 1,023 bytes long."
+    },
+    {
+      "start": 124.67,
+      "end": 127.39,
+      "text": "The hierarchical file system allows for file names"
+    },
+    {
+      "start": 127.39,
+      "end": 129.39,
+      "text": "in mixed case."
+    },
+    {
+      "start": 129.39,
+      "end": 132.19,
+      "text": "Like Unix, ZOS Unix is case sensitive"
+    },
+    {
+      "start": 132.19,
+      "end": 133.87,
+      "text": "to file and directory names."
+    },
+    {
+      "start": 133.87,
+      "end": 136.67,
+      "text": "So for example, in the same directory,"
+    },
+    {
+      "start": 136.67,
+      "end": 140.59,
+      "text": "the file my file in uppercase is a different file"
+    },
+    {
+      "start": 140.59,
+      "end": 143.11,
+      "text": "than my file in lowercase."
+    },
+    {
+      "start": 144.47,
+      "end": 147.63,
+      "text": "The ZOS Unix shell and utilities"
+    },
+    {
+      "start": 147.63,
+      "end": 150.55,
+      "text": "is the interactive interface for users."
+    },
+    {
+      "start": 150.55,
+      "end": 152.47,
+      "text": "It provides a command interface"
+    },
+    {
+      "start": 152.47,
+      "end": 154.67,
+      "text": "to the ZOS Unix environment."
+    },
+    {
+      "start": 154.67,
+      "end": 156.31,
+      "text": "A user gets access to the shell"
+    },
+    {
+      "start": 156.31,
+      "end": 159.03,
+      "text": "by either logging on to TSOE"
+    },
+    {
+      "start": 159.03,
+      "end": 163.91,
+      "text": "or by using the remote login features of TCP IP or login"
+    },
+    {
+      "start": 163.91,
+      "end": 166.67,
+      "text": "by using telnet or SSH."
+    },
+    {
+      "start": 166.67,
+      "end": 167.95,
+      "text": "If they use TSOE,"
+    },
+    {
+      "start": 167.95,
+      "end": 171.55,
+      "text": "a command called OMVS creates a shell for the user."
+    },
+    {
+      "start": 171.55,
+      "end": 173.71,
+      "text": "The user then works within the shell environment"
+    },
+    {
+      "start": 173.71,
+      "end": 176.35,
+      "text": "until exiting or temporarily switching back"
+    },
+    {
+      "start": 176.35,
+      "end": 178.51,
+      "text": "to the TSOE environment."
+    },
+    {
+      "start": 178.51,
+      "end": 180.95,
+      "text": "If the user enters ZOS through the R login"
+    },
+    {
+      "start": 180.95,
+      "end": 183.75,
+      "text": "or telnet capabilities of TCP IP,"
+    },
+    {
+      "start": 183.75,
+      "end": 186.95,
+      "text": "the shell environment is automatically created for them"
+    },
+    {
+      "start": 186.95,
+      "end": 190.03,
+      "text": "and they have limited access to TSO services."
+    },
+    {
+      "start": 190.91,
+      "end": 193.27,
+      "text": "The shell is a command interpreter"
+    },
+    {
+      "start": 193.27,
+      "end": 197.91,
+      "text": "which accepts commands defined in XPG 4.2 standard."
+    },
+    {
+      "start": 197.91,
+      "end": 200.87,
+      "text": "Some commands call programs called utilities."
+    },
+    {
+      "start": 200.87,
+      "end": 203.31,
+      "text": "The shell user can create named lists"
+    },
+    {
+      "start": 203.31,
+      "end": 205.43,
+      "text": "of shell commands called a shell script,"
+    },
+    {
+      "start": 205.43,
+      "end": 207.91,
+      "text": "which becomes a path on your command."
+    },
+    {
+      "start": 207.91,
+      "end": 210.83,
+      "text": "The shell provides support to invoke the ISP editor"
+    },
+    {
+      "start": 210.83,
+      "end": 215.23,
+      "text": "to edit and browse HFS files for the TSOE user."
+    },
+    {
+      "start": 215.23,
+      "end": 217.63,
+      "text": "For the non-TSOE user,"
+    },
+    {
+      "start": 217.63,
+      "end": 220.47,
+      "text": "the VI editor is supported."
+    },
+    {
+      "start": 221.99,
+      "end": 226.79,
+      "text": "Unix system services are included in the ZOS system."
+    },
+    {
+      "start": 226.79,
+      "end": 231.07,
+      "text": "Support is provided for enhanced ASCII functionality."
+    },
+    {
+      "start": 231.07,
+      "end": 232.79,
+      "text": "Enhanced ASCII makes it easier"
+    },
+    {
+      "start": 232.79,
+      "end": 235.11,
+      "text": "to port internationalized applications"
+    },
+    {
+      "start": 235.11,
+      "end": 239.75,
+      "text": "developed on or for ASCII platforms to ZOS platforms"
+    },
+    {
+      "start": 239.75,
+      "end": 242.87,
+      "text": "by providing conversion from ASCII to epsidic"
+    },
+    {
+      "start": 242.87,
+      "end": 246.43,
+      "text": "and the other way from epsidic to ASCII."
+    },
+    {
+      "start": 246.43,
+      "end": 248.63,
+      "text": "There's support to make it easier to shut down"
+    },
+    {
+      "start": 248.63,
+      "end": 252.11,
+      "text": "and restart the Unix system services environment."
+    },
+    {
+      "start": 252.11,
+      "end": 256.19,
+      "text": "And support is also provided to allow access control lists"
+    },
+    {
+      "start": 256.19,
+      "end": 259.83,
+      "text": "or ACLs to be used to control access to Unix files"
+    },
+    {
+      "start": 259.83,
+      "end": 264.23,
+      "text": "and directories by individual user IDs and group IDs."
+    },
+    {
+      "start": 264.23,
+      "end": 267.91,
+      "text": "This support provides greater granularity of access"
+    },
+    {
+      "start": 267.91,
+      "end": 270.03,
+      "text": "than the existing permission bit support."
+    },
+    {
+      "start": 270.95,
+      "end": 275.51,
+      "text": "And the key point here is what distinguishes ZOS Unix"
+    },
+    {
+      "start": 275.51,
+      "end": 278.95,
+      "text": "from other variants is that Unix system services"
+    },
+    {
+      "start": 278.95,
+      "end": 281.83,
+      "text": "are integrated into the ZOS base"
+    },
+    {
+      "start": 281.83,
+      "end": 283.99,
+      "text": "instead of added as middleware"
+    },
+    {
+      "start": 283.99,
+      "end": 286.43,
+      "text": "or shipped as a separate operating system."
+    },
+    {
+      "start": 286.43,
+      "end": 288.27,
+      "text": "And as a result of that,"
+    },
+    {
+      "start": 288.27,
+      "end": 290.83,
+      "text": "not only can Unix applications be written"
+    },
+    {
+      "start": 290.83,
+      "end": 292.63,
+      "text": "for the IBM Z platform,"
+    },
+    {
+      "start": 292.63,
+      "end": 295.99,
+      "text": "they can also take advantage of the ZOS facilities"
+    },
+    {
+      "start": 295.99,
+      "end": 298.19,
+      "text": "and IBM Z server hardware"
+    },
+    {
+      "start": 298.19,
+      "end": 302.99,
+      "text": "to obtain enterprise level qualities of service."
+    },
+    {
+      "start": 302.99,
+      "end": 306.71,
+      "text": "The ZOS system includes application enablement services"
+    },
+    {
+      "start": 306.71,
+      "end": 310.03,
+      "text": "that provide support for object oriented technology,"
+    },
+    {
+      "start": 310.03,
+      "end": 312.23,
+      "text": "a common runtime environment"
+    },
+    {
+      "start": 312.23,
+      "end": 315.07,
+      "text": "and tools for creating new user interfaces"
+    },
+    {
+      "start": 315.07,
+      "end": 318.15,
+      "text": "to traditional ZOS applications."
+    },
+    {
+      "start": 318.15,
+      "end": 322.35,
+      "text": "Programmers can develop and run traditional ZOS applications,"
+    },
+    {
+      "start": 322.39,
+      "end": 325.43,
+      "text": "Unix applications and even ported windows applications"
+    },
+    {
+      "start": 325.43,
+      "end": 329.71,
+      "text": "and Java and web server applications just to name a few."
+    },
+    {
+      "start": 329.71,
+      "end": 332.47,
+      "text": "A C++ compiler is also provided"
+    },
+    {
+      "start": 332.47,
+      "end": 336.87,
+      "text": "to simplify the porting of applications to ZOS."
+    },
+    {
+      "start": 336.87,
+      "end": 340.15,
+      "text": "Another real benefit of running Unix applications on IBM Z"
+    },
+    {
+      "start": 340.15,
+      "end": 342.11,
+      "text": "is that those applications can run"
+    },
+    {
+      "start": 342.11,
+      "end": 347.11,
+      "text": "on the system Z integrated information processor or zip."
+    },
+    {
+      "start": 347.71,
+      "end": 349.91,
+      "text": "When configured with general purpose processes"
+    },
+    {
+      "start": 349.91,
+      "end": 352.51,
+      "text": "within logical partitions running ZOS,"
+    },
+    {
+      "start": 352.51,
+      "end": 355.51,
+      "text": "zips might help increase general purpose"
+    },
+    {
+      "start": 355.51,
+      "end": 358.39,
+      "text": "processor productivity and might contribute"
+    },
+    {
+      "start": 358.39,
+      "end": 360.95,
+      "text": "to lowering the overall cost of computing"
+    },
+    {
+      "start": 360.95,
+      "end": 363.71,
+      "text": "for ZOS Java technology based applications"
+    },
+    {
+      "start": 363.71,
+      "end": 368.27,
+      "text": "and some other Unix based workload like XML and CIM."
+    },
+    {
+      "start": 368.27,
+      "end": 370.43,
+      "text": "Zips are designed to operate asynchronously"
+    },
+    {
+      "start": 370.43,
+      "end": 373.27,
+      "text": "with the general processes to execute Java programming"
+    },
+    {
+      "start": 373.27,
+      "end": 377.07,
+      "text": "under control of the IBM Java virtual machine or JVM."
+    },
+    {
+      "start": 377.07,
+      "end": 378.83,
+      "text": "This can help reduce the demands"
+    },
+    {
+      "start": 378.83,
+      "end": 381.63,
+      "text": "and capability requirements on general purpose processes"
+    },
+    {
+      "start": 381.63,
+      "end": 383.27,
+      "text": "which might then be available"
+    },
+    {
+      "start": 383.27,
+      "end": 386.67,
+      "text": "for reallocation to other IBM Z workloads."
+    },
+    {
+      "start": 387.55,
+      "end": 389.95,
+      "text": "So that's a wrap of this overview."
+    },
+    {
+      "start": 389.95,
+      "end": 391.67,
+      "text": "We're gonna get into much more detail"
+    },
+    {
+      "start": 391.67,
+      "end": 393.07,
+      "text": "in the upcoming modules,"
+    },
+    {
+      "start": 393.07,
+      "end": 397.03,
+      "text": "starting with a more thorough introduction to ZOS Unix."
+    }
+  ]
+}

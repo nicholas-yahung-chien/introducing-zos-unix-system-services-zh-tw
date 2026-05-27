@@ -1,0 +1,353 @@
+WEBVTT
+
+1
+00:00:03.660 --> 00:00:09.540
+In this module, we're going to discuss UNIX processes along with program execution, pipes
+
+2
+00:00:09.540 --> 00:00:14.980
+and threads, and let's get started by asking what are the functions and interfaces for
+
+3
+00:00:14.980 --> 00:00:17.780
+ZOS UNIX system services.
+
+4
+00:00:17.780 --> 00:00:23.300
+The XPG 4.2 API is defined in a set of standards from the open group.
+
+5
+00:00:23.300 --> 00:00:27.940
+This API defines some general operating system functions as well as some functions that
+
+6
+00:00:27.940 --> 00:00:31.300
+are specific to a UNIX system.
+
+7
+00:00:31.300 --> 00:00:36.800
+Functions which conform to XPG 4.2 UNIX are fully supported by the UNIX System Services
+
+8
+00:00:36.800 --> 00:00:40.060
+or USS API.
+
+9
+00:00:40.060 --> 00:00:45.940
+The XPG 4.2 functions are defined in terms of C language bindings.
+
+10
+00:00:45.940 --> 00:00:51.900
+When a ZOS UNIX program requests a system service, the following events take place.
+
+11
+00:00:51.900 --> 00:00:56.980
+First of all, the application programmer codes a C language statement with a function request,
+
+12
+00:00:56.980 --> 00:00:59.020
+for example, fork.
+
+13
+00:00:59.020 --> 00:01:03.060
+Fork requests that a new process be created.
+
+14
+00:01:03.060 --> 00:01:08.140
+During compilation of the program, a section of code called a stub is included in the compiled
+
+15
+00:01:08.140 --> 00:01:09.460
+module.
+
+16
+00:01:09.460 --> 00:01:15.460
+When the program is run, the stub identifies the runtime library or the RTL routine corresponding
+
+17
+00:01:15.460 --> 00:01:21.020
+to the fork function and passes control to this routine.
+
+18
+00:01:21.020 --> 00:01:25.540
+For some functions, the service can be performed by the library routine itself.
+
+19
+00:01:25.540 --> 00:01:31.740
+For others such as fork, the library routine includes a call macro instruction that selects
+
+20
+00:01:31.740 --> 00:01:35.620
+the appropriate callable service to request by name.
+
+21
+00:01:35.620 --> 00:01:42.820
+The callable service named BPX1FRK in turn calls the appropriate ZOS service function.
+
+22
+00:01:42.820 --> 00:01:49.380
+And finally, the ZOS UNIX kernel performs the requested service.
+
+23
+00:01:49.380 --> 00:01:55.940
+The XPG 4.2 kernel is a ZOS address space which is started at IPL time and initialized
+
+24
+00:01:55.940 --> 00:02:00.580
+with system parameters in a sys1.palmlib member.
+
+25
+00:02:00.580 --> 00:02:06.780
+All files are allocated to the kernel and all IO operations result in calls to the kernel.
+
+26
+00:02:06.780 --> 00:02:13.420
+Interactive users of ZOS UNIX services can log on to TSOE and issue the command OMVS.
+
+27
+00:02:13.420 --> 00:02:19.820
+The OMVS command schedules a local process, which is FPR, which shares the TSO address
+
+28
+00:02:19.820 --> 00:02:21.620
+space.
+
+29
+00:02:21.620 --> 00:02:24.700
+Additional address spaces can be created by shell commands.
+
+30
+00:02:24.700 --> 00:02:30.940
+The workload manager, or WLM, is used to start these address spaces.
+
+31
+00:02:30.940 --> 00:02:37.300
+Users attached to ZOS through a TCPIP network can use the R login or telnet capability to
+
+32
+00:02:37.300 --> 00:02:39.580
+enter the ZOS system.
+
+33
+00:02:39.580 --> 00:02:44.500
+Their identity is checked and a shell address space is created for them.
+
+34
+00:02:44.500 --> 00:02:49.180
+Additional address spaces can be created for them by the workload manager for their shell
+
+35
+00:02:49.180 --> 00:02:50.180
+commands.
+
+36
+00:02:50.180 --> 00:02:57.020
+ZOS provides support to allow an installation to re-customize and re-initialize the ZOS USS
+
+37
+00:02:57.020 --> 00:02:59.620
+environment without re-IPLing the system.
+
+38
+00:02:59.620 --> 00:03:05.260
+The FOMVS comma shutdown operator command, along with the FOMS comma restart operator
+
+39
+00:03:05.260 --> 00:03:11.700
+command, can be used to shutdown and re-initialize the USS environment.
+
+40
+00:03:11.700 --> 00:03:17.420
+A process is created to run a program and associated resources to the program.
+
+41
+00:03:17.420 --> 00:03:22.140
+In ZOS UNIX a process resides in an address space and that is the basic unit of work
+
+42
+00:03:22.140 --> 00:03:24.620
+that runs within that address space.
+
+43
+00:03:24.620 --> 00:03:30.860
+A process is created by another process or by a request for a ZOS UNIX service.
+
+44
+00:03:30.860 --> 00:03:36.100
+A process that creates a new process is called a parent process and the new process is called
+
+45
+00:03:36.100 --> 00:03:37.300
+a child process.
+
+46
+00:03:37.300 --> 00:03:41.460
+A child process can be created by the fork callable service.
+
+47
+00:03:41.460 --> 00:03:47.640
+A process is identified by a process ID or a PID and it is associated with its parent
+
+48
+00:03:47.640 --> 00:03:52.260
+process by a parent process ID or PPID.
+
+49
+00:03:52.260 --> 00:03:54.580
+There are different types of processes.
+
+50
+00:03:54.580 --> 00:03:59.860
+There's user processes which are associated with the user program or a shell user.
+
+51
+00:03:59.860 --> 00:04:04.240
+Kernel processes perform system functions for the kernel and daemon processes perform
+
+52
+00:04:04.240 --> 00:04:08.120
+continuous or periodic system functions.
+
+53
+00:04:08.120 --> 00:04:13.440
+To get information about ZOS UNIX processes the shell command PS can be used.
+
+54
+00:04:13.440 --> 00:04:18.960
+A ZOS UNIX user can use this command to display information about all the active processes.
+
+55
+00:04:18.960 --> 00:04:23.300
+A super user can display information about all the processes in the system by using
+
+56
+00:04:23.300 --> 00:04:29.240
+the command PS minus uppercase A. PS is a very useful command when finding processes
+
+57
+00:04:29.240 --> 00:04:32.080
+and handling them.
+
+58
+00:04:32.080 --> 00:04:40.560
+COMVS, ASID equals NNN or A equals NNN displays process information for the specified hexadecimal
+
+59
+00:04:40.560 --> 00:04:43.680
+address space ID or ASID.
+
+60
+00:04:43.680 --> 00:04:48.640
+If the specified ASID is not a ZOS UNIX system services address space an error message will
+
+61
+00:04:48.640 --> 00:04:51.320
+be issued.
+
+62
+00:04:51.320 --> 00:04:57.160
+The operator can display the status of a particular OMVS process and its threads with the following
+
+63
+00:04:57.400 --> 00:05:04.400
+command D OMVS comma PID equals and then the process ID.
+
+64
+00:05:04.840 --> 00:05:09.400
+This shows information about each thread of a multi-threaded application.
+
+65
+00:05:09.400 --> 00:05:14.020
+The thread ID would be needed to cancel an individual thread.
+
+66
+00:05:14.020 --> 00:05:17.440
+There are several ways to stop a ZOS UNIX process.
+
+67
+00:05:17.440 --> 00:05:21.460
+One option is the operator modify command.
+
+68
+00:05:21.460 --> 00:05:28.020
+The term option allows the signal interface routine to receive control before termination.
+
+69
+00:05:28.020 --> 00:05:32.700
+The force option prevents the signal interface routine from receiving control before the
+
+70
+00:05:32.700 --> 00:05:34.500
+process is terminated.
+
+71
+00:05:34.500 --> 00:05:40.500
+A special option shut down equals fork in it can be used to bring down the system cleanly.
+
+72
+00:05:40.500 --> 00:05:49.140
+Be aware it cancels all current BPX-AS address spaces created as a result of spawn or fork.
+
+73
+00:05:49.140 --> 00:05:52.340
+The kill shell command can be used to cancel a process.
+
+74
+00:05:52.340 --> 00:05:57.000
+A user can cancel their own processes and a system administrator or a super user has authority
+
+75
+00:05:57.000 --> 00:06:00.060
+to kill other users' processes.
+
+76
+00:06:00.060 --> 00:06:05.060
+Term sends a SIGTERM signal and kill sends a SIGKILL signal.
+
+77
+00:06:05.060 --> 00:06:10.700
+And the ZOS cancel command can be used to cancel an address space that contains a ZOS
+
+78
+00:06:10.700 --> 00:06:12.260
+UNIX process.
+
+79
+00:06:12.260 --> 00:06:17.700
+If the address space contains multiple processes, cancel causes all of them to terminate.
+
+80
+00:06:18.100 --> 00:06:21.220
+UNIX System Services Processes is new.
+
+81
+00:06:21.220 --> 00:06:26.260
+Type PS to access the Processes panel, which allows authorized users to display information
+
+82
+00:06:26.260 --> 00:06:28.740
+about ZOS UNIX processes.
+
+83
+00:06:28.740 --> 00:06:33.700
+You can then use the command C to cancel the process and D to display information about
+
+84
+00:06:33.700 --> 00:06:35.020
+the process.
+
+85
+00:06:35.020 --> 00:06:41.180
+Use PRE, short for prefix, or other filters to limit the rows displayed to some processes.
+
+86
+00:06:41.180 --> 00:06:46.140
+Use ARR for Arrange to place interesting columns on the first panel.
+
+87
+00:06:46.140 --> 00:06:50.140
+Or on Job Name to keep rows from jumping around.
+
+88
+00:06:50.140 --> 00:06:53.380
+Next up, we're going to ask, what is a demon?

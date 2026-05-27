@@ -1,0 +1,329 @@
+WEBVTT
+
+1
+00:00:03.820 --> 00:00:08.860
+Ok, so let's look at some ways to actually get tasks done.
+
+2
+00:00:08.860 --> 00:00:12.700
+One way to make things happen is to use the command line of the zos-unix directory list
+
+3
+00:00:12.700 --> 00:00:13.700
+panel.
+
+4
+00:00:13.700 --> 00:00:18.980
+You can enter commands such as edit to edit a file in a directory that's currently listed,
+
+5
+00:00:18.980 --> 00:00:22.660
+find will find and display the next occurrence of a character string within the list of
+
+6
+00:00:22.660 --> 00:00:28.300
+file names, reset cleans up the directory list display by removing pending line commands
+
+7
+00:00:28.300 --> 00:00:31.000
+and messages and so forth.
+
+8
+00:00:31.000 --> 00:00:35.640
+The following line commands are available on the zos-unix directory list panel.
+
+9
+00:00:35.640 --> 00:00:39.120
+You can enter these line commands alongside the file you'd like to apply the command
+
+10
+00:00:39.120 --> 00:00:40.120
+to.
+
+11
+00:00:40.120 --> 00:00:45.280
+So, if you want to rename a file, you'd enter the r line command alongside the file
+
+12
+00:00:45.280 --> 00:00:47.400
+you want to rename.
+
+13
+00:00:47.400 --> 00:00:50.520
+These line commands result in panels being displayed.
+
+14
+00:00:50.520 --> 00:00:52.360
+Let's take a look.
+
+15
+00:00:52.360 --> 00:00:57.940
+The create new zos-unix file panel allows a user to create a file and is invoked using
+
+16
+00:00:57.940 --> 00:01:00.120
+the n line command.
+
+17
+00:01:00.120 --> 00:01:05.580
+The user must enter the path name and permissions for the new file and identify the file type.
+
+18
+00:01:05.580 --> 00:01:09.600
+When creating a symbolic or an external link, the user must identify the file the link
+
+19
+00:01:09.600 --> 00:01:11.240
+refers to.
+
+20
+00:01:11.240 --> 00:01:15.840
+Options are available to have data copied from another file or data set into the new
+
+21
+00:01:15.840 --> 00:01:18.680
+file and to edit the new file.
+
+22
+00:01:18.680 --> 00:01:23.980
+The sticky bit can also be set on for the new file.
+
+23
+00:01:23.980 --> 00:01:29.400
+The copy from panel allows the data from a file to be copied to another file or to
+
+24
+00:01:29.400 --> 00:01:34.280
+a sequential data set or member of a partition data set and it's invoked using
+
+25
+00:01:34.280 --> 00:01:38.340
+the co-line command against a regular file.
+
+26
+00:01:38.340 --> 00:01:44.240
+The user must specify the name of the target zos-unix file or sequential data set or partition
+
+27
+00:01:44.240 --> 00:01:47.400
+data set and member.
+
+28
+00:01:47.400 --> 00:01:51.400
+When the data is to be copied to a zos-unix file, the user can specify the permissions
+
+29
+00:01:51.400 --> 00:01:53.000
+for this file.
+
+30
+00:01:53.000 --> 00:01:55.220
+The following options are available.
+
+31
+00:01:55.220 --> 00:01:59.620
+You can be warned if the data is being copied to a target that exists.
+
+32
+00:01:59.620 --> 00:02:06.020
+When the target isn't an existing zos-unix file, you can have its permissions updated.
+
+33
+00:02:06.020 --> 00:02:12.620
+You can cause a binary copy to occur when copying to a sequential data set or member.
+
+34
+00:02:12.620 --> 00:02:17.380
+And you can cause data conversion to take place during the copy operation where an
+
+35
+00:02:17.380 --> 00:02:21.580
+optional conversion table can be specified.
+
+36
+00:02:21.580 --> 00:02:25.860
+The copy from panel allows the data from regular files in a directory to be copied to
+
+37
+00:02:25.860 --> 00:02:31.380
+two members in a partition data set and it's invoked using the co-line command against
+
+38
+00:02:31.380 --> 00:02:32.980
+the directory.
+
+39
+00:02:32.980 --> 00:02:36.860
+The user must specify the name of the target partition data set and the following options
+
+40
+00:02:36.860 --> 00:02:38.360
+are available.
+
+41
+00:02:38.360 --> 00:02:42.420
+Data in existing members can be overridden with the data from the source file.
+
+42
+00:02:42.420 --> 00:02:46.500
+A selection list can be displayed where the user can select the files in the directory
+
+43
+00:02:46.500 --> 00:02:48.540
+that are to be copied.
+
+44
+00:02:48.540 --> 00:02:53.020
+File names with names containing lowercase characters can be copied.
+
+45
+00:02:53.020 --> 00:02:58.020
+Files with names containing suffixes can be copied by having the suffix removed.
+
+46
+00:02:58.020 --> 00:03:04.020
+A binary copy can occur when copying to the target member and as with files, data conversion
+
+47
+00:03:04.020 --> 00:03:08.140
+can take place during the copy operation.
+
+48
+00:03:08.140 --> 00:03:13.560
+The replace panel allows the data in a regular zos-unix file to be replaced with data from
+
+49
+00:03:13.560 --> 00:03:19.680
+another file or replaced with the sequential data set or a member of a partition data set.
+
+50
+00:03:19.680 --> 00:03:24.640
+The user must specify the name of the source zos-unix file, sequential data set or partition
+
+51
+00:03:24.640 --> 00:03:29.360
+data set and member and the following options are available for this.
+
+52
+00:03:29.360 --> 00:03:34.720
+A binary copy can occur when copying from a sequential data set or a member and, yep,
+
+53
+00:03:34.720 --> 00:03:38.610
+we can do data conversion.
+
+54
+00:03:38.610 --> 00:03:44.510
+The copy into panel allows the data from members in a partition data set to be copied
+
+55
+00:03:44.510 --> 00:03:52.670
+into regular files in a directory and that's invoked using the ci line command against a directory.
+
+56
+00:03:52.670 --> 00:03:57.750
+The user must specify the name of the source partition data set and the user can specify
+
+57
+00:03:57.750 --> 00:04:01.950
+the permissions to apply to the files the members are copied into.
+
+58
+00:04:01.950 --> 00:04:05.990
+The user can also specify a suffix which is appended to the member name to make the
+
+59
+00:04:05.990 --> 00:04:10.950
+name of the regular file created or updated during the copy operation and the usual array
+
+60
+00:04:10.950 --> 00:04:13.750
+of options are available.
+
+61
+00:04:13.750 --> 00:04:18.690
+The file information panel displays the attributes for a file or a directory and is invoked using
+
+62
+00:04:18.690 --> 00:04:21.410
+the i line command.
+
+63
+00:04:21.410 --> 00:04:27.170
+The modify pull down menu contains options to modify either the mode fields or the extended
+
+64
+00:04:27.170 --> 00:04:30.990
+attributes for the file.
+
+65
+00:04:30.990 --> 00:04:37.850
+The modify mode panel allows the user to change the permissions, set uid bit, set gid
+
+66
+00:04:37.850 --> 00:04:42.050
+bit and the sticky bit all for a file.
+
+67
+00:04:42.050 --> 00:04:47.890
+It's invoked using the mm line command or using the modify pull down menu on the zos
+
+68
+00:04:47.890 --> 00:04:50.770
+unix file information panel.
+
+69
+00:04:50.770 --> 00:04:57.370
+The execute command panel allows the user to run a file or execute a zos unix command,
+
+70
+00:04:57.370 --> 00:05:03.010
+a tso command, C list or rex exec against a file.
+
+71
+00:05:03.010 --> 00:05:08.170
+It's invoked using the x line command against a regular file, directory or symbolic link
+
+72
+00:05:08.170 --> 00:05:10.130
+to a regular file.
+
+73
+00:05:10.130 --> 00:05:14.090
+For a command that runs in zos unix, the user has the option to run the command under the
+
+74
+00:05:14.090 --> 00:05:17.930
+login shell or directly in zos unix.
+
+75
+00:05:17.930 --> 00:05:22.330
+To simply run the selected file, the user can leave the command for the file field blank.
+
+76
+00:05:22.330 --> 00:05:26.930
+By default, the path name of the selected file is appended to the end of the command
+
+77
+00:05:26.930 --> 00:05:28.730
+entered by the user.
+
+78
+00:05:28.730 --> 00:05:34.290
+The panel here shows a request to run the C 89 command to compile, assemble and link
+
+79
+00:05:34.290 --> 00:05:36.410
+edit a C program.
+
+80
+00:05:36.410 --> 00:05:40.330
+The command is run in the zos unix login shell.
+
+81
+00:05:40.330 --> 00:05:45.290
+Next up, we'll take a look at how zos unix works with ispf and for that, I'll see you
+
+82
+00:05:45.290 --> 00:05:46.130
+back at the office.

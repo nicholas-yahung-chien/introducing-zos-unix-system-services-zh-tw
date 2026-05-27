@@ -1,0 +1,318 @@
+{
+  "slug": "unix-implementation-on-zos",
+  "title": "UNIX Implementation on z/OS",
+  "language": "en",
+  "duration": 326.54225,
+  "segments": [
+    {
+      "start": 3.86,
+      "end": 9.3,
+      "text": "Let's start with a quick bit of background of how UNIX was implemented before ZOS."
+    },
+    {
+      "start": 9.3,
+      "end": 13.22,
+      "text": "The name OpenEdition was used when the support was introduced."
+    },
+    {
+      "start": 13.22,
+      "end": 16.78,
+      "text": "At that time, IBM didn't have the right to call it UNIX."
+    },
+    {
+      "start": 16.78,
+      "end": 22.02,
+      "text": "The term OpenEdition is still seen in some documentation, but IBM does now have the"
+    },
+    {
+      "start": 22.02,
+      "end": 28.06,
+      "text": "right to the word UNIX after the full UNIX branding was obtained in 1996."
+    },
+    {
+      "start": 28.06,
+      "end": 35.3,
+      "text": "The ZOS UNIX support is now known as UNIX system services and is often called USS."
+    },
+    {
+      "start": 35.3,
+      "end": 40.42,
+      "text": "When this UNIX support became available, the role of an MVS system changed."
+    },
+    {
+      "start": 40.42,
+      "end": 45.54,
+      "text": "This opened up new opportunities for MVS, OS390 and now ZOS."
+    },
+    {
+      "start": 45.54,
+      "end": 50.58,
+      "text": "UNIX applications can be ported from other UNIX environments to run on ZOS UNIX system"
+    },
+    {
+      "start": 50.58,
+      "end": 51.58,
+      "text": "services."
+    },
+    {
+      "start": 51.58,
+      "end": 53.9,
+      "text": "However, porting might not be trivial."
+    },
+    {
+      "start": 53.9,
+      "end": 58.34,
+      "text": "There's the problem of ASCII and EBCDIC, which must be addressed and we'll get to"
+    },
+    {
+      "start": 58.34,
+      "end": 61.02,
+      "text": "that later, believe me."
+    },
+    {
+      "start": 61.02,
+      "end": 66.54,
+      "text": "But first of all, let's see how workstation users can get access to ZOS applications and"
+    },
+    {
+      "start": 66.54,
+      "end": 67.86,
+      "text": "data."
+    },
+    {
+      "start": 67.86,
+      "end": 73.46,
+      "text": "With ZOS UNIX, workstation users can access traditional MVS applications and data, as"
+    },
+    {
+      "start": 73.46,
+      "end": 79.58,
+      "text": "well as POSIX and XPG 4.2 conforming applications and data on ZOS."
+    },
+    {
+      "start": 79.58,
+      "end": 85.78,
+      "text": "This diagram shows that a workstation application using Motif and XWindows can access data on"
+    },
+    {
+      "start": 85.78,
+      "end": 87.42,
+      "text": "a ZOS system."
+    },
+    {
+      "start": 87.42,
+      "end": 93.54,
+      "text": "Motif refers to both a graphical user interface specification and the widget toolkit for building"
+    },
+    {
+      "start": 93.54,
+      "end": 99.74,
+      "text": "applications that follow that specification under the XWindows system on UNIX operating"
+    },
+    {
+      "start": 99.74,
+      "end": 100.74,
+      "text": "systems."
+    },
+    {
+      "start": 100.74,
+      "end": 106.14,
+      "text": "The XWindows system is the underlying graphic system on all modern UNIX systems."
+    },
+    {
+      "start": 106.3,
+      "end": 111.3,
+      "text": "XWindows provides the facilities to accept input from a mouse and keyboard and the ability"
+    },
+    {
+      "start": 111.3,
+      "end": 114.9,
+      "text": "to draw graphical objects to a computer screen."
+    },
+    {
+      "start": 114.9,
+      "end": 118.18,
+      "text": "It's supported by all major workstation vendors."
+    },
+    {
+      "start": 118.18,
+      "end": 124.7,
+      "text": "XWindows is a TCPIP application and comes as part of the TCPIP product for ZOS."
+    },
+    {
+      "start": 124.7,
+      "end": 129.38,
+      "text": "The box on the picture that contains the XWindows client in the diagram symbolizes"
+    },
+    {
+      "start": 129.38,
+      "end": 133.9,
+      "text": "the XWindows API on ZOS."
+    },
+    {
+      "start": 133.9,
+      "end": 140.54,
+      "text": "Now let's see how high-speed storage devices on Z can be useful for workstations."
+    },
+    {
+      "start": 140.54,
+      "end": 148.5,
+      "text": "The DFSMS-MVS product on ZOS provides data administration functions like backup and archiving"
+    },
+    {
+      "start": 148.5,
+      "end": 151.38,
+      "text": "of data on a ZOS system."
+    },
+    {
+      "start": 151.38,
+      "end": 158.78,
+      "text": "With ZOS UNIX, DFSMS-MVS can be used to backup and archive the hierarchical file system."
+    },
+    {
+      "start": 158.78,
+      "end": 163.86,
+      "text": "A workstation application might be moved to ZOS if backup is critical."
+    },
+    {
+      "start": 163.86,
+      "end": 169.02,
+      "text": "An alternative solution is to use the Tivoli storage manager product on ZOS which can periodically"
+    },
+    {
+      "start": 169.02,
+      "end": 173.3,
+      "text": "upload data on the workstation and archive it on the host."
+    },
+    {
+      "start": 173.3,
+      "end": 179.02,
+      "text": "Either way, folks want to use the same tools and applications to backup and restore individual"
+    },
+    {
+      "start": 179.02,
+      "end": 187.94,
+      "text": "ZOS UNIX files residing in a ZOS file system, as they will do with any other ZOS datasets."
+    },
+    {
+      "start": 187.94,
+      "end": 192.18,
+      "text": "Another solution is to backup and restore individual ZOS UNIX files residing in something"
+    },
+    {
+      "start": 192.18,
+      "end": 201.3,
+      "text": "called ZFS is integrated into existing DFSMS-HSM backup and recovery and DFSMS-DSS dump and"
+    },
+    {
+      "start": 201.3,
+      "end": 209.43,
+      "text": "restore capability, allowing for centralized data management across the ZOS platform."
+    },
+    {
+      "start": 209.43,
+      "end": 215.95,
+      "text": "Now ZOS is well-suited to be a server for batch applications because of its large processing"
+    },
+    {
+      "start": 215.95,
+      "end": 221.03,
+      "text": "capability, high-speed printers and high reliability and availability."
+    },
+    {
+      "start": 221.03,
+      "end": 225.39,
+      "text": "Large batch applications can be moved from a workstation to ZOS."
+    },
+    {
+      "start": 225.39,
+      "end": 232.27,
+      "text": "ZOS UNIX shell scripts which are similar to RexxXX can run in the shell session or they"
+    },
+    {
+      "start": 232.27,
+      "end": 235.71,
+      "text": "can be submitted as a ZOS batch job."
+    },
+    {
+      "start": 235.71,
+      "end": 242.19,
+      "text": "BPX batch is a utility that you can use to run shell commands or executable files through"
+    },
+    {
+      "start": 242.19,
+      "end": 243.97,
+      "text": "the batch facility."
+    },
+    {
+      "start": 243.99,
+      "end": 249.57,
+      "text": "You can invoke BPX batch from a batch job or from the TSLE environment as a command through"
+    },
+    {
+      "start": 249.57,
+      "end": 254.89,
+      "text": "the call command or from a C list or a RexxXEC."
+    },
+    {
+      "start": 254.89,
+      "end": 264.69,
+      "text": "So we've seen some of the opportunities and some of the new ways to use ZOS with ZOS UNIX."
+    },
+    {
+      "start": 264.69,
+      "end": 271.57,
+      "text": "Let's look at two exploiters of these facilities which are IBM HTTP server and IBM WebSphere"
+    },
+    {
+      "start": 271.57,
+      "end": 273.97,
+      "text": "application server."
+    },
+    {
+      "start": 273.97,
+      "end": 278.17,
+      "text": "Both of these provide a web server environment for ZOS."
+    },
+    {
+      "start": 278.17,
+      "end": 284.11,
+      "text": "This server is a standard compliant product which requires ZOS UNIX and its file system."
+    },
+    {
+      "start": 284.11,
+      "end": 290.45,
+      "text": "It uses the POSIX threading standard, enabling one server to handle multiple client requests."
+    },
+    {
+      "start": 290.45,
+      "end": 298.43,
+      "text": "The homepages stored on ZOS reside in the hierarchical file system or a ZOS-PDS or PDSE."
+    },
+    {
+      "start": 298.43,
+      "end": 303.31,
+      "text": "There are also services and samples provided to show access from a web browser through the"
+    },
+    {
+      "start": 303.31,
+      "end": 308.99,
+      "text": "ZOS WebSphere and Liberty servers to Kix and DB2 data."
+    },
+    {
+      "start": 308.99,
+      "end": 313.95,
+      "text": "This is a way to bring your order transaction and processing applications to new users through"
+    },
+    {
+      "start": 313.95,
+      "end": 316.47,
+      "text": "the internet."
+    },
+    {
+      "start": 316.47,
+      "end": 321.75,
+      "text": "In the next video, we'll take a look at the components of ZOS."
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+WEBVTT
+
+1
+00:00:03.820 --> 00:00:10.620
+The TSOE OMVS command will allow users to start more than one session with the shell.
+
+2
+00:00:10.620 --> 00:00:13.940
+Only one session is displayed at a time on the screen.
+
+3
+00:00:13.940 --> 00:00:18.600
+The multi-session support in the shell allows these shell processes to reside as tasks
+
+4
+00:00:18.600 --> 00:00:20.760
+in the same address space.
+
+5
+00:00:20.760 --> 00:00:24.680
+The user can switch between different sessions using a PF key.
+
+6
+00:00:24.680 --> 00:00:29.380
+The following are OMVS sub-commands to control the multi-session support.
+
+7
+00:00:29.380 --> 00:00:33.200
+Those are open, which starts a new shell session.
+
+8
+00:00:33.200 --> 00:00:36.300
+Close or quit, closes a shell session.
+
+9
+00:00:36.300 --> 00:00:40.560
+Quit all, ends all sessions and returns to TSOE.
+
+10
+00:00:40.560 --> 00:00:47.420
+Next sesh, switches to the next session and previous sesh, switches to the previous session.
+
+11
+00:00:47.420 --> 00:00:53.760
+The non-TSOE user can log into multiple shell sessions using the same user ID and password.
+
+12
+00:00:53.760 --> 00:00:58.960
+You can also be logged onto the shell using the TSOE interface and the R login interface
+
+13
+00:00:58.960 --> 00:01:03.120
+using the same user ID and password.
+
+14
+00:01:03.120 --> 00:01:07.140
+So here's an example of a shell script with some logic.
+
+15
+00:01:07.140 --> 00:01:10.960
+This example has a for loop, for do, done.
+
+16
+00:01:10.960 --> 00:01:16.900
+It also has an if condition that runs a sequence of commands if a particular condition is met.
+
+17
+00:01:16.900 --> 00:01:20.020
+If then fi.
+
+18
+00:01:20.020 --> 00:01:25.540
+This example of a shell script takes one positional parameter, giving the name of a file.
+
+19
+00:01:25.540 --> 00:01:30.920
+The script looks in the working directory and finds the names of all .c files.
+
+20
+00:01:30.920 --> 00:01:35.520
+The if control structure inside the for loop tests each file to see if it's older than
+
+21
+00:01:35.520 --> 00:01:37.740
+the file named on the command line.
+
+22
+00:01:37.740 --> 00:01:44.860
+If the .c file is older, echo displays the name and the file is compiled.
+
+23
+00:01:44.860 --> 00:01:50.440
+So what we've seen there is a shell script that has the capability to run a sequence
+
+24
+00:01:50.440 --> 00:01:54.080
+of commands stored in a text file.
+
+25
+00:01:54.080 --> 00:01:58.760
+The commands in the file can be run by entering the file name on the command line.
+
+26
+00:01:58.760 --> 00:02:04.680
+After a shell script is created, a user needs read and execute permission to run the script.
+
+27
+00:02:04.680 --> 00:02:08.540
+A shell is like a program made up of shell commands.
+
+28
+00:02:08.540 --> 00:02:13.360
+The shell supports many of the features of regular programming languages like variables,
+
+29
+00:02:13.360 --> 00:02:16.340
+control structures and functions.
+
+30
+00:02:16.340 --> 00:02:23.340
+A set of zosunix extensions to TSOE Rex provides the capability for Rex execs to access zosunix
+
+31
+00:02:23.340 --> 00:02:25.440
+callable services.
+
+32
+00:02:25.440 --> 00:02:30.680
+The zosunix extensions to Rex are called syscall commands and they have names that correspond
+
+33
+00:02:30.680 --> 00:02:36.600
+to the names of the callable services they invoke, for example exec, fork and pipe.
+
+34
+00:02:36.600 --> 00:02:43.340
+Rex execs using zosunix extensions can run from TSOE or in zosbatch and access the zosunix
+
+35
+00:02:43.340 --> 00:02:50.060
+functions and services through a host command environment rather than discrete external functions.
+
+36
+00:02:50.060 --> 00:02:52.940
+The host command environment is called syscall.
+
+37
+00:02:52.940 --> 00:02:59.020
+The environment must be initialized by a syscall's on statement in the beginning of the exec.
+
+38
+00:02:59.020 --> 00:03:04.480
+Rex execs can also be run in the zosunix shell or from a C program using the exec system
+
+39
+00:03:04.480 --> 00:03:05.780
+call.
+
+40
+00:03:05.780 --> 00:03:09.940
+This is different from shell scripts which are only interpreted in the shell.
+
+41
+00:03:09.940 --> 00:03:14.820
+This also means that shell scripts can invoke a Rex exec just like they would invoke any
+
+42
+00:03:14.820 --> 00:03:16.660
+program.
+
+43
+00:03:16.660 --> 00:03:21.000
+When running a Rex exec in the shell or from a C program, the syscall environment is
+
+44
+00:03:21.000 --> 00:03:25.030
+automatically initialized.
+
+45
+00:03:25.030 --> 00:03:31.350
+There are many ways in zosunix to send a message to another user.
+
+46
+00:03:31.350 --> 00:03:36.910
+Which method to use depends on the requirements and the timeframes you want the message to
+
+47
+00:03:36.910 --> 00:03:41.030
+be sent, such as logger and write.
+
+48
+00:03:41.030 --> 00:03:46.990
+As a TSO user, you might prefer to just use facilities provided by TSO instead.
+
+49
+00:03:46.990 --> 00:03:52.830
+The clock daemon cron is a facility that allows you to run a command at a specific time, run
+
+50
+00:03:52.830 --> 00:03:58.090
+a command in batch when the system activity is low, or set up commands, scripts or programs
+
+51
+00:03:58.090 --> 00:04:02.190
+to run at the same time every day or every week.
+
+52
+00:04:02.190 --> 00:04:04.630
+Batch work is assigned bottom priority.
+
+53
+00:04:04.630 --> 00:04:10.410
+The cron daemon examines the at, batch or crontab files at initialization or whenever
+
+54
+00:04:10.410 --> 00:04:14.870
+they change and start the functions at the specified times.
+
+55
+00:04:14.890 --> 00:04:18.390
+It uses the timezone in effect when the command is executed.
+
+56
+00:04:18.390 --> 00:04:25.030
+Therefore, be sure to set the TZ environment variable before starting cron.
+
+57
+00:04:25.030 --> 00:04:27.750
+In the next video, we'll look at BPX batch.

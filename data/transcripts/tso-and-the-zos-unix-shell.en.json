@@ -1,0 +1,348 @@
+{
+  "slug": "tso-and-the-zos-unix-shell",
+  "title": "TSO and the zOS UNIX shell",
+  "language": "en",
+  "duration": 448.8185,
+  "segments": [
+    {
+      "start": 3.7,
+      "end": 14.7,
+      "text": "ZOS UNIX offers TSO interactive users the choice and ability to switch between the UNIX-like interface of the ZOS UNIX shell and command interpreter"
+    },
+    {
+      "start": 14.7,
+      "end": 24.7,
+      "text": "and the traditional TSOE panel or command interface, so users of ZOS UNIX can choose the interface with which they're most familiar."
+    },
+    {
+      "start": 24.7,
+      "end": 32.7,
+      "text": "UNIX users can use the ZOS UNIX shell OMVS and TSO users can use the shell under TSO, the i-shell."
+    },
+    {
+      "start": 32.7,
+      "end": 40.7,
+      "text": "And installation can customize TSOE login so that users who prefer a UNIX-like interface are put directly into the ZOS UNIX shell."
+    },
+    {
+      "start": 40.7,
+      "end": 45.7,
+      "text": "From there, the users can choose to switch to TSOE when desired or required."
+    },
+    {
+      "start": 45.7,
+      "end": 50.7,
+      "text": "Now, what sort of interactions can occur between TSOE and the shell?"
+    },
+    {
+      "start": 50.7,
+      "end": 59.7,
+      "text": "Well, you might move data between ZOS datasets and the hierarchical file system or issue TSOE commands from the shell command line."
+    },
+    {
+      "start": 59.7,
+      "end": 64.7,
+      "text": "You can also write ZOS JCL that includes shell commands."
+    },
+    {
+      "start": 64.7,
+      "end": 78.7,
+      "text": "This is an example of how a user can log on to TSOE, do some work there, invoke the shell to perform some functions, switch back and forth between TSOE and the shell, and log off from the shell."
+    },
+    {
+      "start": 78.7,
+      "end": 86.7,
+      "text": "So first, a TSOE user logs on to TSOE and issues some TSOE commands or uses the iSPF PDF panels to do some work."
+    },
+    {
+      "start": 87.7,
+      "end": 92.7,
+      "text": "The user issues the OMVS command to invoke the ZOS UNIX shell."
+    },
+    {
+      "start": 92.7,
+      "end": 97.7,
+      "text": "After issuing that command, the TSOE user becomes a logged-on shell user."
+    },
+    {
+      "start": 97.7,
+      "end": 106.7,
+      "text": "The shell user is interactively communicating with the ZOS UNIX environment through the shell and has all the facilities of the shell available."
+    },
+    {
+      "start": 106.7,
+      "end": 112.7,
+      "text": "The user can jump back to TSOE, run a TSOE command, and return to the shell."
+    },
+    {
+      "start": 112.7,
+      "end": 119.7,
+      "text": "When jumping back and forth between TSOE and the shell, the user remains logged on to both environments."
+    },
+    {
+      "start": 119.7,
+      "end": 127.94,
+      "text": "Finally, in our example, the user issues an exit command to log off from the shell and returns to TSOE."
+    },
+    {
+      "start": 127.94,
+      "end": 133.94,
+      "text": "The iShell command is used to invoke the iSPF shell of UNIX system services."
+    },
+    {
+      "start": 133.94,
+      "end": 136.94,
+      "text": "iShell can only be used with TSO and iSPF."
+    },
+    {
+      "start": 136.94,
+      "end": 141.94,
+      "text": "Many people with a ZOS background prefer to use this interface."
+    },
+    {
+      "start": 141.94,
+      "end": 146.94,
+      "text": "The OMVS command is a TSO command that is used to invoke the shell."
+    },
+    {
+      "start": 146.94,
+      "end": 152.94,
+      "text": "OMVS can be entered from plain TSO or from the iSPF TSO panel."
+    },
+    {
+      "start": 152.94,
+      "end": 155.94,
+      "text": "Many people with a UNIX background like this interface better."
+    },
+    {
+      "start": 155.94,
+      "end": 160.94,
+      "text": "However, it's not exactly the same as the standard UNIX interface."
+    },
+    {
+      "start": 160.94,
+      "end": 165.94,
+      "text": "For example, raw mode is not possible, so the VI editor cannot be used."
+    },
+    {
+      "start": 165.94,
+      "end": 173.94,
+      "text": "Some users with a UNIX background prefer raw mode access, which can be established by using the Telnet and RLogin interface."
+    },
+    {
+      "start": 173.94,
+      "end": 181.58,
+      "text": "This is the screen that is displayed when a user invokes the shell from TSO."
+    },
+    {
+      "start": 181.58,
+      "end": 184.58,
+      "text": "At the bottom of the screen, you see the following."
+    },
+    {
+      "start": 184.58,
+      "end": 191.58,
+      "text": "The command line, that's those equal signs and the greater than sign, and that's used for input."
+    },
+    {
+      "start": 191.58,
+      "end": 197.58,
+      "text": "The default function key settings and the default escape character assignments are shown along the bottom."
+    },
+    {
+      "start": 197.58,
+      "end": 200.58,
+      "text": "The function keys can be customized or turned off."
+    },
+    {
+      "start": 200.58,
+      "end": 203.58,
+      "text": "The status indicator is in the right-hand corner."
+    },
+    {
+      "start": 203.58,
+      "end": 207.58,
+      "text": "When you first enter the shell, the status is running."
+    },
+    {
+      "start": 207.58,
+      "end": 213.58,
+      "text": "The prompt is an indication from the shell that it's ready to accept input from the command line."
+    },
+    {
+      "start": 213.58,
+      "end": 216.58,
+      "text": "The prompt is often customized."
+    },
+    {
+      "start": 216.58,
+      "end": 227.21,
+      "text": "In a plain, standard environment, the prompt is a dollar sign for a normal user and a hash sign for a super user."
+    },
+    {
+      "start": 227.21,
+      "end": 236.21,
+      "text": "Since OMVS Sessions 2 was used from TSO in the example here, two UNIX sessions were established."
+    },
+    {
+      "start": 236.21,
+      "end": 240.21,
+      "text": "You can see the session number at the bottom right corner."
+    },
+    {
+      "start": 240.21,
+      "end": 248.21,
+      "text": "To jump from one session to the next, use F2 to get the subcommand prompt and then enter the command to get to the next session."
+    },
+    {
+      "start": 248.21,
+      "end": 253.21,
+      "text": "Note also that some welcome text might be displayed when entering the shell."
+    },
+    {
+      "start": 253.21,
+      "end": 256.21,
+      "text": "Welcome text is defined by the system programmer."
+    },
+    {
+      "start": 256.21,
+      "end": 263.21,
+      "text": "The RLogin or Telnet commands used by the user are in the syntax of the remote system."
+    },
+    {
+      "start": 264.21,
+      "end": 273.21,
+      "text": "The RLogin command names the ZOS system that you want to connect to and a username if you are logged onto ZOS with a different user identity."
+    },
+    {
+      "start": 273.21,
+      "end": 284.21,
+      "text": "The Telnet command may name the terminal type, the hostname or IP address and the port number if different from the well-known ports used by TCPIP demons."
+    },
+    {
+      "start": 284.21,
+      "end": 290.21,
+      "text": "In either case, ZOS asks the user for a password or password phrase."
+    },
+    {
+      "start": 290.21,
+      "end": 296.21,
+      "text": "On the ZOS UNIX system, the INET-D system daemon must be running to receive these requests."
+    },
+    {
+      "start": 296.21,
+      "end": 305.21,
+      "text": "It creates an address space for each user which contains the appropriate server daemon, RLogin-D or OTELNET-D."
+    },
+    {
+      "start": 305.21,
+      "end": 310.21,
+      "text": "The shell is started by this daemon after it validates the user's identity."
+    },
+    {
+      "start": 310.21,
+      "end": 318.21,
+      "text": "The daemon is also responsible for ASCII-to-EPSIDIC conversion as data flows from the terminal to the host."
+    },
+    {
+      "start": 318.21,
+      "end": 329.21,
+      "text": "A password phrase is a string consisting of mixed-case letters, numbers and special characters including blanks that is used to control access to data and systems."
+    },
+    {
+      "start": 329.21,
+      "end": 337.21,
+      "text": "Support for a password phrase enables the user to enter a password phrase of between 9 and 100 characters."
+    },
+    {
+      "start": 337.21,
+      "end": 342.21,
+      "text": "There are several commands and daemons that are affected or enhanced with the password phrase support."
+    },
+    {
+      "start": 342.21,
+      "end": 348.21,
+      "text": "Obviously, there's the passwd command to change user passwords or phrases."
+    },
+    {
+      "start": 348.21,
+      "end": 353.21,
+      "text": "There's the su command to change the user ID associated with a session."
+    },
+    {
+      "start": 353.21,
+      "end": 361.21,
+      "text": "And the RLogin program is the server for the remote RLogin command commonly found on UNIX systems."
+    },
+    {
+      "start": 361.21,
+      "end": 371.21,
+      "text": "Passwords 1 to 8 characters long are assumed to be passwords and passwords 9 to 100 characters long are assumed to be password phrases."
+    },
+    {
+      "start": 371.21,
+      "end": 380.21,
+      "text": "This is an example of the screen that is displayed when a user invokes the shell after logging in with RLogin or OTELNET."
+    },
+    {
+      "start": 380.21,
+      "end": 383.21,
+      "text": "The dollar sign prompt is the standard prompt."
+    },
+    {
+      "start": 383.21,
+      "end": 388.21,
+      "text": "A user might decide to use a prompt other than dollar sign as this example shows."
+    },
+    {
+      "start": 388.21,
+      "end": 391.21,
+      "text": "The shell works in line mode."
+    },
+    {
+      "start": 391.21,
+      "end": 396.21,
+      "text": "This means the input is not processed until the user presses the enter key."
+    },
+    {
+      "start": 396.21,
+      "end": 404.21,
+      "text": "When an application that requires character mode or raw mode support is invoked, the shell will run the application as designed."
+    },
+    {
+      "start": 404.21,
+      "end": 414.21,
+      "text": "For example, the VI editor executes in character mode or raw mode and when you exit this editor, the shell returns back to line mode."
+    },
+    {
+      "start": 414.21,
+      "end": 419.21,
+      "text": "Here's a comparison of the capabilities available with the two login methods."
+    },
+    {
+      "start": 419.21,
+      "end": 422.21,
+      "text": "RLogin is direct to ZOS."
+    },
+    {
+      "start": 422.21,
+      "end": 427.21,
+      "text": "RLogin users have access to TSO only through the shell TSO command."
+    },
+    {
+      "start": 427.21,
+      "end": 432.21,
+      "text": "An RLogin terminal is an ASCII terminal. A TSO terminal is Epsonic."
+    },
+    {
+      "start": 432.21,
+      "end": 441.21,
+      "text": "To emulate an ASCII command under TSO, you must use the escape character as defined in the OMVS command."
+    },
+    {
+      "start": 441.21,
+      "end": 444.21,
+      "text": "Next up, it's commands and jobs."
+    }
+  ]
+}

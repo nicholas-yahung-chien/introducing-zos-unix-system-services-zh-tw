@@ -1,0 +1,173 @@
+WEBVTT
+
+1
+00:00:03.860 --> 00:00:13.960
+What is a demon? A supernatural being? A person with unusual drive? Well, yes. But in the
+
+2
+00:00:13.960 --> 00:00:19.040
+context of UNIX, a demon is a long-running background process that listens for requests
+
+3
+00:00:19.040 --> 00:00:26.120
+and performs service when needed. It's similar to a ZOS-started task. In Greek mythology,
+
+4
+00:00:26.120 --> 00:00:31.080
+demons were helpers, hence the name of these processes in UNIX.
+
+5
+00:00:31.080 --> 00:00:37.560
+ZOS-UNIX has several system demons. iNet-D is the listener program which receives incoming
+
+6
+00:00:37.560 --> 00:00:44.360
+logins. It now provides support for IPv6. R-Login and O-Telnet-D are the demons started
+
+7
+00:00:44.360 --> 00:00:49.920
+for each user by iNet-D, depending on the client program used to request the login.
+
+8
+00:00:49.920 --> 00:00:55.920
+The CRON demon is a time demon. It starts requests at specific times from inputs stored
+
+9
+00:00:55.920 --> 00:01:01.640
+in specific files. R-E-X-E-C-D is a demon that receives requests from remote clients
+
+10
+00:01:01.640 --> 00:01:06.240
+for execution of a command under the ZOS-UNIX shell.
+
+11
+00:01:06.240 --> 00:01:10.560
+As you know by now, there are two categories of ZOS-UNIX shell users that's superuser
+
+12
+00:01:10.560 --> 00:01:16.380
+and user, and the superuser has special authority to perform certain tasks, such as mounting
+
+13
+00:01:16.380 --> 00:01:21.880
+and unmounting a file system. The superuser can also access all ZOS-UNIX services and
+
+14
+00:01:21.880 --> 00:01:28.880
+all files in the hierarchical file system. ZOS-UNIX users have a numerical user identifier.
+
+15
+00:01:28.880 --> 00:01:37.640
+The superuser has a UID of 0, while all others have UIDs between 1 and 2 billion. ZOS-UNIX
+
+16
+00:01:37.640 --> 00:01:44.040
+users are ZOS users defined to RACF within an OMVS segment containing their UID, user
+
+17
+00:01:44.040 --> 00:01:49.040
+identification number, home, the user's initial working directory in the HFS, and
+
+18
+00:01:49.040 --> 00:01:57.280
+program, the program name path of the shell. These users may or may not have TSOE privileges.
+
+19
+00:01:57.280 --> 00:02:03.800
+All users should have a unique UID, although multiple users within the same UID are supported.
+
+20
+00:02:03.800 --> 00:02:08.000
+Superusers should have their own standard UID, and then they can switch into superuser
+
+21
+00:02:08.000 --> 00:02:11.320
+status when they need to perform authorised functions.
+
+22
+00:02:11.320 --> 00:02:17.580
+ZOS-UNIX users belong to groups similar to ZOS groups in RACF. The ZOS groups defined
+
+23
+00:02:17.580 --> 00:02:25.700
+in RACF can be defined as ZOS-UNIX groups by adding a group identifier number or a GID.
+
+24
+00:02:25.700 --> 00:02:33.100
+The SU shell command allows a user to change the user ID associated with a session. SU starts
+
+25
+00:02:33.100 --> 00:02:38.500
+a new shell and lets the user operate in it with the privileges of a superuser or another
+
+26
+00:02:38.500 --> 00:02:44.660
+user. If no user ID is specified on the command, SU changes the user's authorization to that
+
+27
+00:02:44.660 --> 00:02:50.420
+of the superuser. If a user ID is specified, SU changes the user's authorization to that
+
+28
+00:02:50.420 --> 00:02:57.860
+specific user's ID. The new environment is built, and then a new session is initiated.
+
+29
+00:02:57.860 --> 00:03:03.820
+The new session is run as a child shell of the shell issuing the SU command. There are
+
+30
+00:03:03.820 --> 00:03:08.380
+different methods that can be employed to switch to superuser. Using the SU command
+
+31
+00:03:08.380 --> 00:03:13.120
+creates a sub-shell, where the user has superuser authority, and authorised commands
+
+32
+00:03:13.120 --> 00:03:19.680
+can be executed. When the sub-shell session is ended, the user returns to the first shell
+
+33
+00:03:19.680 --> 00:03:26.840
+session as a regular user. The SU command, along with the bpx.superuser-racf facility
+
+34
+00:03:26.840 --> 00:03:35.520
+class, allows an installation to define system administrators in RACF with non-zero UIDs.
+
+35
+00:03:35.520 --> 00:03:41.040
+The superuser concept in standard UNIX is more or less all or nothing in relation to
+
+36
+00:03:41.040 --> 00:03:47.120
+security and special authority. However, by using the RACF bpx facility classes, you
+
+37
+00:03:47.120 --> 00:03:54.640
+can better control what users can and cannot do. Also, a RACF UNIX PRIV class exists, making
+
+38
+00:03:54.640 --> 00:04:00.160
+it possible to establish better granularity for some special authorisations. By defining
+
+39
+00:04:00.160 --> 00:04:06.040
+profiles in the UNIX PRIV class, you may specifically grant certain superuser privileges with a high
+
+40
+00:04:06.080 --> 00:04:12.160
+degree of granularity to users who do not have superuser authority. This allows you to minimise
+
+41
+00:04:12.160 --> 00:04:17.080
+the number of assignments of the superuser authority at your installation, and it reduces
+
+42
+00:04:17.080 --> 00:04:23.920
+your security risk. So, we've seen something about special privileges and authority related
+
+43
+00:04:23.920 --> 00:04:28.920
+to different users. In the next video, we'll return to talking about processes.

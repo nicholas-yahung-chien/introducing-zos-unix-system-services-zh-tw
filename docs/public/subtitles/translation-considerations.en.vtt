@@ -1,0 +1,193 @@
+WEBVTT
+
+1
+00:00:04.000 --> 00:00:09.520
+The world we live in today is a global world. We no longer conduct business solely within
+
+2
+00:00:09.520 --> 00:00:15.440
+one country. Our applications must make the transition from one country to another seamlessly.
+
+3
+00:00:16.320 --> 00:00:21.280
+The XPG standards are defining what services must be available to affect this transition.
+
+4
+00:00:22.080 --> 00:00:28.240
+This process is called internationalisation. This involves the display and printing of
+
+5
+00:00:28.240 --> 00:00:33.600
+characters, both common ones and ones unique to individual languages, the format of date
+
+6
+00:00:33.600 --> 00:00:37.680
+and monetary fields, and the collating sequence of the characters.
+
+7
+00:00:38.800 --> 00:00:46.080
+Now, to get a better grip on this, let's first off define some terms. A character set is the set of
+
+8
+00:00:46.080 --> 00:00:52.320
+characters that you see on your keyboards or your printers that you can print. Internally,
+
+9
+00:00:52.320 --> 00:00:58.160
+those characters are represented by unique hexadecimal values in memory. The relationship
+
+10
+00:00:58.160 --> 00:01:03.520
+between the hexadecimal value and the character diagram is defined in a list called a code page.
+
+11
+00:01:04.560 --> 00:01:12.000
+ZOS itself has no support for code pages. TSO-ISBF has support for code pages like ZOS-UNIX,
+
+12
+00:01:12.000 --> 00:01:18.400
+but differently. Each country and region might also have a unique code page called the country
+
+13
+00:01:18.400 --> 00:01:25.600
+extended code page, which relates the hexadecimal values from 00 to FF into a character set with
+
+14
+00:01:25.600 --> 00:01:29.840
+the different characters used, including the needed letters in that language.
+
+15
+00:01:30.320 --> 00:01:36.560
+Data coming from ZOS datasets or from a workstation could be in any of the code pages shown
+
+16
+00:01:36.560 --> 00:01:43.200
+here. The special characters shown here are the 14 variant characters that are often different
+
+17
+00:01:43.200 --> 00:01:49.600
+between the code pages. The individual country extended code page includes characters
+
+18
+00:01:49.600 --> 00:01:56.800
+letters in their alphabets that also require unique considerations. This diagram illustrates
+
+19
+00:01:57.600 --> 00:02:02.240
+some of the problems you meet in an international environment. Let's look at the various
+
+20
+00:02:02.240 --> 00:02:07.440
+translation issues and some solutions. First, let's look at a relatively simple situation
+
+21
+00:02:07.440 --> 00:02:15.200
+in a USA environment. Here are some possibilities to consider. Customize your keyboard using the
+
+22
+00:02:15.200 --> 00:02:20.000
+features of the emulator to create the correct hexadecimal coding for the characters.
+
+23
+00:02:20.720 --> 00:02:26.400
+If you are a TSO user, specify the omvsconvert parameter when you enter the shell.
+
+24
+00:02:27.200 --> 00:02:32.560
+If you are using the zos-unix shell through the TCPIPR login or telnet support,
+
+25
+00:02:32.560 --> 00:02:38.640
+use the chcp shell command to convert from ASCII to the zos-unix code page.
+
+26
+00:02:39.440 --> 00:02:45.520
+And when using oput, oget and ocopy, use the convert parameters on these statements.
+
+27
+00:02:45.520 --> 00:02:53.120
+But what about shell scripts and translation with international character sets?
+
+28
+00:02:54.320 --> 00:02:59.680
+Since many shell scripts use special characters, they must run the code page they were created
+
+29
+00:02:59.680 --> 00:03:06.560
+with. This means that users in other countries have to have their own translated copy of the
+
+30
+00:03:06.560 --> 00:03:10.560
+script or they'll have to change to the code page that goes with the script.
+
+31
+00:03:11.360 --> 00:03:17.200
+The icopy command can be used to translate the scripts from one code page to another.
+
+32
+00:03:18.000 --> 00:03:23.520
+Here you see that hash sign is represented as something else when you change the code page.
+
+33
+00:03:23.520 --> 00:03:28.320
+This character has a special meaning in a shell script. If this character is changed to something
+
+34
+00:03:28.320 --> 00:03:34.560
+else, well, the shell script will not work as it should. This visual illustrates the
+
+35
+00:03:34.560 --> 00:03:39.920
+problem from another angle. Here is a script with 3270 emulator program in IBM
+
+36
+00:03:40.720 --> 00:03:49.920
+1047 USA code page and IBM 277 Danish code page. These are all things to watch out for
+
+37
+00:03:49.920 --> 00:03:55.200
+when using international character sets. Let's wrap this up with a comparison of
+
+38
+00:03:55.200 --> 00:04:01.120
+different functions in TSO and the Unix shell. Command processing in the shell is similar to
+
+39
+00:04:01.120 --> 00:04:06.320
+command processing for C lists. In combination with the shell utilities, the shell provides
+
+40
+00:04:06.320 --> 00:04:12.400
+a programming environment as rich as the REX environment in COS. Hierarchical files can be
+
+41
+00:04:12.400 --> 00:04:19.200
+edited from COS using ISPF menus. The ISPF menus can be invoked by the TSO commands OEdit
+
+42
+00:04:19.200 --> 00:04:27.280
+and OBrowse. In the shell, the editor can be used to edit HFS files. In COS, SDSF is used to
+
+43
+00:04:27.280 --> 00:04:34.160
+monitor and control batch jobs. The TSOE commands status, cancel and output can also be used.
+
+44
+00:04:34.880 --> 00:04:38.800
+In the shell, there are multiple commands to control jobs including PS,
+
+45
+00:04:38.800 --> 00:04:45.920
+jobs, kill, FG, BG and wait. Background jobs are submitted by the TSOE commands submit
+
+46
+00:04:45.920 --> 00:04:53.120
+in a ZOS environment. In the shell, a command ended with an ampersand, runs in the background.
+
+47
+00:04:53.120 --> 00:04:59.040
+You can also use the shell submit command. Now in the next module,
+
+48
+00:04:59.040 --> 00:05:02.480
+we'll move on to address functions in COS Unix.

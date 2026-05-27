@@ -1,0 +1,305 @@
+WEBVTT
+
+1
+00:00:03.700 --> 00:00:10.700
+In ZOS Unix, pipes are a communication mechanism for sending arrays of data between two processes.
+
+2
+00:00:10.700 --> 00:00:13.700
+Pipes are conceptually like a sequential file.
+
+3
+00:00:13.700 --> 00:00:18.700
+Processes can write into a pipe and other processes can read from the pipe.
+
+4
+00:00:18.700 --> 00:00:21.700
+Pipes exist only during the time they're open.
+
+5
+00:00:21.700 --> 00:00:27.700
+The storage needed for the pipes is obtained from a data space associated with the kernel address space.
+
+6
+00:00:27.700 --> 00:00:29.700
+And there are two types of pipes.
+
+7
+00:00:29.700 --> 00:00:34.700
+Unnamed pipes are used between related processes, so for example between a parent and a child process.
+
+8
+00:00:34.700 --> 00:00:38.700
+An unnamed pipe is created by the pipe function.
+
+9
+00:00:38.700 --> 00:00:41.700
+The pipe function also opens the pipe to use.
+
+10
+00:00:41.700 --> 00:00:48.700
+No security checking is performed on unnamed pipes since they are available only to a process and its children.
+
+11
+00:00:48.700 --> 00:00:51.700
+And there's also named pipes which are also called FIFO.
+
+12
+00:00:51.700 --> 00:00:57.700
+A FIFO resides in the hierarchical file system and can be referenced by a name.
+
+13
+00:00:57.700 --> 00:01:02.700
+Thus, they can be used for communication between any two processes.
+
+14
+00:01:02.700 --> 00:01:07.700
+Once processes are created, there are many ways to communicate between them.
+
+15
+00:01:07.700 --> 00:01:10.700
+We've already talked about pipes being the most common way.
+
+16
+00:01:10.700 --> 00:01:13.700
+Other ways include wait and execute.
+
+17
+00:01:13.700 --> 00:01:16.700
+A parent process can wait on the exit of a child.
+
+18
+00:01:16.700 --> 00:01:18.700
+Signals.
+
+19
+00:01:18.700 --> 00:01:21.700
+One process can send a system or user signal to another.
+
+20
+00:01:21.700 --> 00:01:26.700
+The receiving process should be coded to receive and process the signal.
+
+21
+00:01:26.700 --> 00:01:28.700
+There's shared memory.
+
+22
+00:01:28.700 --> 00:01:34.700
+Since processes run in different address spaces, these services can be used to define specific memory to be shared.
+
+23
+00:01:34.700 --> 00:01:39.700
+The kernel will keep these pages in a shared data space.
+
+24
+00:01:39.700 --> 00:01:41.700
+Message queues.
+
+25
+00:01:41.700 --> 00:01:49.700
+This is a technique similar to piping but with the capability of reading and writing a message at a time rather than a string of characters.
+
+26
+00:01:49.700 --> 00:01:53.700
+The kernel also uses a shared data space for these messages.
+
+27
+00:01:53.700 --> 00:01:58.700
+And there's semaphores, which are used to control the use of shared memory by multiple processes.
+
+28
+00:01:58.700 --> 00:02:01.700
+They are kept in the kernel process.
+
+29
+00:02:01.700 --> 00:02:08.700
+The ZOS Unix interprocess communication or IPC functions are shared memory, message queues and semaphores.
+
+30
+00:02:08.700 --> 00:02:13.700
+Users can invoke applications that create IPC resources and wait for IPC resources.
+
+31
+00:02:13.700 --> 00:02:18.700
+IPC resources are not released when a process terminates or a user logs off.
+
+32
+00:02:18.700 --> 00:02:28.700
+Therefore, it is possible that an IPC user might need assistance to remove an IPC resource using the Shell's ipcrm command.
+
+33
+00:02:28.700 --> 00:02:33.700
+The ipcs shell command can be used to display the IPC resources in a system,
+
+34
+00:02:33.700 --> 00:02:39.700
+which users own the resources and which users are waiting for a resource.
+
+35
+00:02:39.700 --> 00:02:47.700
+Frequently used ZOS Unix programs can be placed into the ZOS link pack area or the LPA to improve performance.
+
+36
+00:02:47.700 --> 00:02:54.700
+The Shell's a good candidate for that because only one copy of it can be used by all requesters, saving space in IO.
+
+37
+00:02:54.700 --> 00:02:59.700
+When searching for a program with the sticky bit on, ZOS Unix will look in the user's step line,
+
+38
+00:02:59.700 --> 00:03:03.700
+the link pack area and the link list concatenation.
+
+39
+00:03:03.700 --> 00:03:08.700
+In order to keep a ZOS Unix program in, LPA, a number of things must be done.
+
+40
+00:03:08.700 --> 00:03:15.700
+The file in the hierarchical file system that contains the program must have the sticky bit set by an authorized user.
+
+41
+00:03:15.700 --> 00:03:18.700
+The sticky bit can also be set on a directory level.
+
+42
+00:03:18.700 --> 00:03:24.700
+It limits removing or renaming subdirectories or files to the owner or the super user.
+
+43
+00:03:24.700 --> 00:03:31.700
+Also, the program must be link edited and placed in sys1.lpalib or a dataset in LPA list.
+
+44
+00:03:31.700 --> 00:03:36.700
+The program is copied to LPA during the next IPL.
+
+45
+00:03:36.700 --> 00:03:42.700
+Threads provide support for multiple separate units of dispatchable work within a process.
+
+46
+00:03:42.700 --> 00:03:47.700
+A ZOS Unix thread can be compared with a ZOS task.
+
+47
+00:03:47.700 --> 00:03:52.700
+The thread support allows application programmers to develop multitasking server applications
+
+48
+00:03:52.700 --> 00:03:56.700
+that require multiple concurrent execution streams.
+
+49
+00:03:56.700 --> 00:04:02.700
+A program using threads can have significant performance benefits in a multiprocessor environment
+
+50
+00:04:02.700 --> 00:04:07.700
+where each thread in the process can run on an individual processor.
+
+51
+00:04:07.700 --> 00:04:13.700
+Threads are created with the pthread underscore create c function.
+
+52
+00:04:13.700 --> 00:04:18.700
+Since threads share address space, there are services to protect the memory of the address space
+
+53
+00:04:18.700 --> 00:04:21.700
+and to synchronize the execution of the threads.
+
+54
+00:04:21.700 --> 00:04:26.700
+These are mutex, which is a structure associated with the variable,
+
+55
+00:04:26.700 --> 00:04:30.700
+and used by threads to determine if a variable is in use,
+
+56
+00:04:30.700 --> 00:04:36.700
+and condition variable used to synchronize the execution of the activities of the threads.
+
+57
+00:04:36.700 --> 00:04:41.700
+So what are some of the differences between ZOS tasks and POSIX threads?
+
+58
+00:04:41.700 --> 00:04:44.700
+ZOS has a task hierarchy.
+
+59
+00:04:44.700 --> 00:04:49.700
+POSIX threads have no hierarchy except for the initial thread which behaves differently from the other threads.
+
+60
+00:04:49.700 --> 00:04:52.700
+ZOS tasks usually run different programs.
+
+61
+00:04:52.700 --> 00:04:56.700
+All POSIX threads in a process run the same program.
+
+62
+00:04:56.700 --> 00:04:59.700
+ZOS tasks can be independent or cooperating.
+
+63
+00:04:59.700 --> 00:05:03.700
+POSIX threads must cooperate, they do not operate independently.
+
+64
+00:05:03.700 --> 00:05:09.700
+ZOS allocates storage at task level, and some storage can be shared between tasks and some not.
+
+65
+00:05:09.700 --> 00:05:13.700
+The programs can be located in common storage, CSA or LPA,
+
+66
+00:05:13.700 --> 00:05:19.700
+in private area below the 16 megabyte line, or in private area above the 16 megabyte line.
+
+67
+00:05:19.700 --> 00:05:24.700
+All POSIX threads in a process share all storage allocated to the process.
+
+68
+00:05:24.700 --> 00:05:28.700
+Now, this diagram shows the ZOS program management functions
+
+69
+00:05:28.700 --> 00:05:32.700
+and the equivalent functions in ZOS Unix.
+
+70
+00:05:32.700 --> 00:05:36.700
+Some of these similarities include that programs can reside in different libraries
+
+71
+00:05:36.700 --> 00:05:40.700
+and there is an automatic search to locate them.
+
+72
+00:05:40.700 --> 00:05:46.700
+Both interfaces provide a method to replace the current executing program with a new program.
+
+73
+00:05:46.700 --> 00:05:51.700
+And both sets of interfaces have ways to create work in separate address spaces.
+
+74
+00:05:51.700 --> 00:05:59.700
+But there are also many differences, including with tasks, load and program execution.
+
+75
+00:05:59.700 --> 00:06:03.700
+And that's it for ZOS Unix functions.
+
+76
+00:06:03.700 --> 00:06:08.700
+In the next module, we'll look at working with the ZOS Unix environment.

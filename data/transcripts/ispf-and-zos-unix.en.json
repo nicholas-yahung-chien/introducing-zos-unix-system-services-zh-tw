@@ -1,0 +1,388 @@
+{
+  "slug": "ispf-and-zos-unix",
+  "title": "ISPF and zOS UNIX",
+  "language": "en",
+  "duration": 366.5501875,
+  "segments": [
+    {
+      "start": 3.73,
+      "end": 10.61,
+      "text": "The ZOS provides ZOS UNIX file support into native ISPF edit and browse functions."
+    },
+    {
+      "start": 10.61,
+      "end": 15.41,
+      "text": "The panels are modified so that the other dataset name field is a scrollable field which"
+    },
+    {
+      "start": 15.41,
+      "end": 20.85,
+      "text": "accepts ZOS UNIX path name of up to 1,023 characters in length."
+    },
+    {
+      "start": 20.85,
+      "end": 26.01,
+      "text": "ISPF assumes the ZOS UNIX path name is entered in this field when the first character is"
+    },
+    {
+      "start": 26.01,
+      "end": 30.17,
+      "text": "a foreslash, a tilde, a dot or two dots."
+    },
+    {
+      "start": 30.17,
+      "end": 36.69,
+      "text": "A ZOS UNIX directory selection list is displayed when the path name for a directory is specified"
+    },
+    {
+      "start": 36.69,
+      "end": 42.29,
+      "text": "on any of the following, the view and edit entry panels, a call to browse edit and view"
+    },
+    {
+      "start": 42.29,
+      "end": 48.81,
+      "text": "services, the edit and view move copy browse edit and view primary commands or the browse"
+    },
+    {
+      "start": 48.81,
+      "end": 51.49,
+      "text": "edit view and browse commands."
+    },
+    {
+      "start": 51.49,
+      "end": 56.93,
+      "text": "The directory selection list is almost identical to the list displayed from the ZOS UNIX directory"
+    },
+    {
+      "start": 56.93,
+      "end": 58.53,
+      "text": "list utility."
+    },
+    {
+      "start": 58.53,
+      "end": 64.09,
+      "text": "The selection list supports the S for select line command allowing you to select the file"
+    },
+    {
+      "start": 64.09,
+      "end": 70.81,
+      "text": "to be processed with the function, for example edit that info list."
+    },
+    {
+      "start": 70.81,
+      "end": 79.49,
+      "text": "The view entry panel displayed by using ISPF option one is changed to allow a ZOS UNIX file"
+    },
+    {
+      "start": 79.49,
+      "end": 83.97,
+      "text": "path name to be entered in the other dataset name field."
+    },
+    {
+      "start": 83.97,
+      "end": 88.45,
+      "text": "Also the new record length field is added to allow a record length to be specified when"
+    },
+    {
+      "start": 88.45,
+      "end": 91.45,
+      "text": "browsing a ZOS UNIX file."
+    },
+    {
+      "start": 91.45,
+      "end": 96.09,
+      "text": "The value entered in this field is used by ISPF to display the data in the file as a"
+    },
+    {
+      "start": 96.09,
+      "end": 102.15,
+      "text": "fixed length record rather than using the new line character to delimit each record."
+    },
+    {
+      "start": 102.15,
+      "end": 106.13,
+      "text": "This is useful for browsing files which would otherwise have very large records if"
+    },
+    {
+      "start": 106.13,
+      "end": 110.73,
+      "text": "the new line character is used as the record delimiter."
+    },
+    {
+      "start": 110.73,
+      "end": 115.01,
+      "text": "On the edit entry panel the record length field has a slightly different effect than"
+    },
+    {
+      "start": 115.01,
+      "end": 116.93,
+      "text": "on the view entry panel."
+    },
+    {
+      "start": 116.93,
+      "end": 122.13,
+      "text": "With edit ISPF normally treats ZOS UNIX files as having variable length records."
+    },
+    {
+      "start": 122.13,
+      "end": 126.17,
+      "text": "The record length field on the edit entry panel allows you to specify a record length"
+    },
+    {
+      "start": 126.17,
+      "end": 131.89,
+      "text": "which ISPF edit will use to load the records from the file into the edit session as fixed"
+    },
+    {
+      "start": 131.89,
+      "end": 133.87,
+      "text": "length records."
+    },
+    {
+      "start": 133.87,
+      "end": 138.65,
+      "text": "When the file is saved it's saved with fixed length records."
+    },
+    {
+      "start": 138.65,
+      "end": 143.33,
+      "text": "So the record length field allows you to convert a variable length record file into"
+    },
+    {
+      "start": 143.33,
+      "end": 146.17,
+      "text": "a fixed length records file."
+    },
+    {
+      "start": 146.23,
+      "end": 151.13,
+      "text": "On screen we see the difference between browsing a ZOS UNIX file without specifying a record"
+    },
+    {
+      "start": 151.13,
+      "end": 157.75,
+      "text": "length and browsing a ZOS UNIX file with a record length of 40 specified."
+    },
+    {
+      "start": 157.75,
+      "end": 164.45,
+      "text": "The edit entry panel displayed using ISPF option 2 is changed to allow a ZOS UNIX file"
+    },
+    {
+      "start": 164.45,
+      "end": 168.77,
+      "text": "path name to be entered in the other dataset name field."
+    },
+    {
+      "start": 168.77,
+      "end": 173.39,
+      "text": "Also the new record length field is added to allow a record length to be specified"
+    },
+    {
+      "start": 173.39,
+      "end": 176.57,
+      "text": "when editing a ZOS UNIX file."
+    },
+    {
+      "start": 176.57,
+      "end": 184.65,
+      "text": "The following ISPF edit primary and macro commands support the specification of a ZOS UNIX path"
+    },
+    {
+      "start": 184.65,
+      "end": 187.45,
+      "text": "name as an operand."
+    },
+    {
+      "start": 187.45,
+      "end": 193.93,
+      "text": "Those are compare, copy, create, move and replace."
+    },
+    {
+      "start": 193.93,
+      "end": 198.99,
+      "text": "A path name can be specified in the format accepted as input in the other dataset name"
+    },
+    {
+      "start": 198.99,
+      "end": 199.99,
+      "text": "field."
+    },
+    {
+      "start": 200.27,
+      "end": 206.83,
+      "text": "Also if editing a ZOS UNIX file when these commands are used a plus sign can be specified"
+    },
+    {
+      "start": 206.83,
+      "end": 211.81,
+      "text": "as the first character of the path name to represent the path name of the directory containing"
+    },
+    {
+      "start": 211.81,
+      "end": 214.31,
+      "text": "the file being edited."
+    },
+    {
+      "start": 214.31,
+      "end": 217.31,
+      "text": "Let's take a look at a few examples."
+    },
+    {
+      "start": 217.31,
+      "end": 221.83,
+      "text": "The copy command can now be used to copy data from a ZOS UNIX file into the data being"
+    },
+    {
+      "start": 221.83,
+      "end": 223.21,
+      "text": "edited."
+    },
+    {
+      "start": 223.21,
+      "end": 228.03,
+      "text": "This is done by specifying the path name for the ZOS UNIX regular file as a parameter with"
+    },
+    {
+      "start": 228.03,
+      "end": 232.83,
+      "text": "the copy command or specifying the path name on the edit copy panel displayed when no data"
+    },
+    {
+      "start": 232.83,
+      "end": 235.87,
+      "text": "source is specified with the copy command."
+    },
+    {
+      "start": 235.87,
+      "end": 240.95,
+      "text": "If the path name for a directory is specified a directory selection list is displayed allowing"
+    },
+    {
+      "start": 240.95,
+      "end": 244.35,
+      "text": "you to select the regular file to be copied."
+    },
+    {
+      "start": 244.35,
+      "end": 250.31,
+      "text": "The move command can now be used to move data from a ZOS UNIX file into the data"
+    },
+    {
+      "start": 250.31,
+      "end": 256.95,
+      "text": "being edited and it works in much the same way as copy by specifying the path name"
+    },
+    {
+      "start": 256.95,
+      "end": 262.71,
+      "text": "for the ZOS UNIX regular file as a parameter with the move command or specifying the path"
+    },
+    {
+      "start": 262.71,
+      "end": 267.11,
+      "text": "name on the edit move panel displayed when no data source is specified with the move"
+    },
+    {
+      "start": 267.11,
+      "end": 268.99,
+      "text": "command."
+    },
+    {
+      "start": 268.99,
+      "end": 276.07,
+      "text": "Keep in mind here that the ZOS UNIX regular file is deleted after the data is moved."
+    },
+    {
+      "start": 276.07,
+      "end": 282.07,
+      "text": "ISPF personal dataset lists are enhanced to support the saving and retrieval of ZOS UNIX"
+    },
+    {
+      "start": 282.07,
+      "end": 284.31,
+      "text": "file name paths."
+    },
+    {
+      "start": 284.31,
+      "end": 289.39,
+      "text": "Retrieval of path names is supported on those ISPF edit, view and browse panels that allow"
+    },
+    {
+      "start": 289.39,
+      "end": 293.91,
+      "text": "a path name to be entered in the other dataset name field."
+    },
+    {
+      "start": 293.91,
+      "end": 299.87,
+      "text": "Retrieval of path names is also supported on the ZOS UNIX directory list entry panel."
+    },
+    {
+      "start": 299.87,
+      "end": 305.35,
+      "text": "The nretrieve command also supports the automatic retrieval of path names on those panels that"
+    },
+    {
+      "start": 305.35,
+      "end": 309.39,
+      "text": "allow ZOS UNIX path names to be specified."
+    },
+    {
+      "start": 309.47,
+      "end": 316.43,
+      "text": "ISPF personal dataset lists support saving and retrieving ZOS UNIX file path names."
+    },
+    {
+      "start": 316.43,
+      "end": 322.87,
+      "text": "Users can now add UNIX style path names manually to their personal dataset lists."
+    },
+    {
+      "start": 322.87,
+      "end": 327.67,
+      "text": "Personal dataset lists are a good way to group, for example by project, datasets and"
+    },
+    {
+      "start": 327.67,
+      "end": 331.87,
+      "text": "ZOS UNIX file path names that you use frequently."
+    },
+    {
+      "start": 331.87,
+      "end": 337.83,
+      "text": "You can use personal dataset lists to avoid typing in dataset names and ZOS UNIX file"
+    },
+    {
+      "start": 337.83,
+      "end": 346.31,
+      "text": "path names and to create customized dataset lists similar to those using ISPF option 3.4."
+    },
+    {
+      "start": 346.31,
+      "end": 347.31,
+      "text": "Still with me?"
+    },
+    {
+      "start": 347.31,
+      "end": 350.55,
+      "text": "We've covered a lot in this series of videos."
+    },
+    {
+      "start": 350.55,
+      "end": 354.39,
+      "text": "We're going to switch gears from here on in and start to look at recommendations for"
+    },
+    {
+      "start": 354.39,
+      "end": 360.83,
+      "text": "file system structure, backup and recovery and use of the network file system."
+    },
+    {
+      "start": 360.83,
+      "end": 361.99,
+      "text": "That's coming up next."
+    }
+  ]
+}

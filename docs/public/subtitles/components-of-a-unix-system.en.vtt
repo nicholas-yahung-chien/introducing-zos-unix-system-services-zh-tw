@@ -1,0 +1,201 @@
+WEBVTT
+
+1
+00:00:03.820 --> 00:00:09.820
+In this module, we're going to take a closer look at the components of the Unix system.
+
+2
+00:00:09.820 --> 00:00:15.820
+Let's start with a bit of background into how Unix was written.
+
+3
+00:00:15.820 --> 00:00:21.820
+C was developed to make Unix independent of hardware architecture.
+
+4
+00:00:21.820 --> 00:00:28.820
+When the Unix kernel and shell were written in C, it made programming and debugging easier.
+
+5
+00:00:28.820 --> 00:00:32.820
+C was developed by programmers for programmers.
+
+6
+00:00:32.820 --> 00:00:36.820
+C compilers were made available for different Unix versions.
+
+7
+00:00:36.820 --> 00:00:43.820
+In the late 1970s, the popularity of C grew and C compilers became available for a large number of processes
+
+8
+00:00:43.820 --> 00:00:46.820
+and for a large number of operating systems.
+
+9
+00:00:46.820 --> 00:00:54.820
+C has a rich set of functions that deal with all aspects of data manipulation, I.O., math, and character functions.
+
+10
+00:00:54.820 --> 00:00:58.820
+The ability of C to use more traditional high-level constructs
+
+11
+00:00:58.820 --> 00:01:04.820
+gives the programmer elegance and flexibility while maintaining the options for raw power.
+
+12
+00:01:04.820 --> 00:01:12.820
+C++ is an object-oriented version of C that has become popular with object-oriented design and programming.
+
+13
+00:01:12.820 --> 00:01:18.820
+A Unix system is usually represented as a set of circles with functions in layers.
+
+14
+00:01:18.820 --> 00:01:23.820
+The first layer is the hardware, which interfaces directly with the kernel.
+
+15
+00:01:23.820 --> 00:01:28.820
+The kernel is the base operating system which provides services for other layers.
+
+16
+00:01:28.820 --> 00:01:35.820
+Built on the kernel is the command interface, often called the shell, and the commands and the utilities.
+
+17
+00:01:35.820 --> 00:01:40.820
+There are a number of different shells available for Unix systems.
+
+18
+00:01:40.820 --> 00:01:47.820
+The last layer is the application programs, which are built on the application programming interfaces,
+
+19
+00:01:47.820 --> 00:01:51.820
+the shell, and the commands and utilities.
+
+20
+00:01:51.820 --> 00:01:55.820
+The Unix kernel is the base operating system.
+
+21
+00:01:55.820 --> 00:02:01.820
+Most of the kernel is indeed written in C, which makes it easy to port to other processes.
+
+22
+00:02:01.820 --> 00:02:10.820
+There are routines that are dependent on the machine architecture for functions like memory mapping and interrupt handling.
+
+23
+00:02:10.820 --> 00:02:19.820
+The kernel provides basic functions like process scheduling, memory management, device control, and file management.
+
+24
+00:02:20.820 --> 00:02:25.820
+There's also a system call interface, and there's an operator interface.
+
+25
+00:02:25.820 --> 00:02:30.820
+Unix is implemented in the layered approach that's shown here.
+
+26
+00:02:30.820 --> 00:02:36.820
+So at the base, there is the specific manufacturer's hardware.
+
+27
+00:02:36.820 --> 00:02:41.820
+A unique hardware interface is provided to achieve complete hardware independence.
+
+28
+00:02:41.820 --> 00:02:46.820
+It's partially written in assembler and partially written in C.
+
+29
+00:02:46.820 --> 00:02:51.820
+This is the only vendor-specific part of the Unix implementation.
+
+30
+00:02:51.820 --> 00:02:56.820
+The upper levels of Unix, well, as we know, those are all written in C.
+
+31
+00:02:56.820 --> 00:02:59.820
+Now, the command interface in a Unix system is called the shell.
+
+32
+00:02:59.820 --> 00:03:05.820
+Why shell? Because it's the outermost layer of the Unix system.
+
+33
+00:03:05.820 --> 00:03:12.820
+It serves as a command language interpreter and programming language and allows foreground and background processing.
+
+34
+00:03:12.820 --> 00:03:17.820
+When you log on to a Unix system, you start to communicate with the shell.
+
+35
+00:03:17.820 --> 00:03:21.820
+The shell can be compared to TSO in a ZOS system.
+
+36
+00:03:21.820 --> 00:03:27.820
+Essentially, the shell is a program which allows users to communicate with the operating system.
+
+37
+00:03:27.820 --> 00:03:37.820
+The shell reads commands that are entered and interprets them as requests to execute other programs, access files, or provide output.
+
+38
+00:03:37.820 --> 00:03:40.820
+The shell doesn't really have a user-friendly interface.
+
+39
+00:03:40.820 --> 00:03:45.820
+It's driven by commands, which if you're unfamiliar with them, they can seem a bit cryptic,
+
+40
+00:03:45.820 --> 00:03:49.820
+but programmers and system programmers like it because of its power.
+
+41
+00:03:49.820 --> 00:03:56.820
+Today, though, vendors do provide solutions for Unix users to replace the shell interface with a window interface or a menu-driven interface,
+
+42
+00:03:56.820 --> 00:04:01.820
+which is easier to use for users who aren't already familiar with Unix command syntax.
+
+43
+00:04:01.820 --> 00:04:04.820
+There are two native command interface shells.
+
+44
+00:04:04.820 --> 00:04:10.820
+The Born shell is the most basic shell, and it's the default ZOS Unix shell.
+
+45
+00:04:10.820 --> 00:04:15.820
+The C shell has the functionality of the C language and is preferred by many programmers.
+
+46
+00:04:15.820 --> 00:04:22.820
+Access the command line of any Unix-like operating system, and there's a good chance you'll find a Bash shell.
+
+47
+00:04:22.820 --> 00:04:31.820
+Bash has become the default shell on both Linux and macOS, making the ability to work with it an essential skill for pretty much any software developer.
+
+48
+00:04:32.820 --> 00:04:40.820
+Bash, which stands for, wait for it, Born Again shell, was designed as a replacement for the Born shell
+
+49
+00:04:40.820 --> 00:04:43.820
+and is available on Z through Rocket Software.
+
+50
+00:04:43.820 --> 00:04:49.820
+Now, in the next video, we'll look at some fundamental functions of Unix, starting with commands.

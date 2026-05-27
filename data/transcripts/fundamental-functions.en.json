@@ -1,0 +1,228 @@
+{
+  "slug": "fundamental-functions",
+  "title": "Fundamental Functions",
+  "language": "en",
+  "duration": 276.5264375,
+  "segments": [
+    {
+      "start": 3.7,
+      "end": 9.3,
+      "text": "UNIX commands and utilities are distributed with the UNIX system, and there are over 100"
+    },
+    {
+      "start": 9.3,
+      "end": 15.1,
+      "text": "to choose from. A command is a UNIX program that's executed in the shell. Commands are"
+    },
+    {
+      "start": 15.1,
+      "end": 22.02,
+      "text": "sometimes referred to as tools. For some commands, the shell calls other programs called utilities."
+    },
+    {
+      "start": 22.02,
+      "end": 26.18,
+      "text": "For the user though, there's really no difference between a command and a utility. The table"
+    },
+    {
+      "start": 26.18,
+      "end": 32.66,
+      "text": "here shows some examples of UNIX commands. Some of them might be similar to DOS commands"
+    },
+    {
+      "start": 32.66,
+      "end": 36.46,
+      "text": "that you're familiar with. Note, though, that the commands are very short and are usually"
+    },
+    {
+      "start": 36.46,
+      "end": 41.46,
+      "text": "in lower case. Remember that command names, well, like files and directories, they're"
+    },
+    {
+      "start": 41.46,
+      "end": 47.7,
+      "text": "also case sensitive. They must be spelled correctly in the correct case. UNIX commands are usually"
+    },
+    {
+      "start": 47.7,
+      "end": 53.7,
+      "text": "very small programs designed to do one simple task. Commands can be combined together in"
+    },
+    {
+      "start": 53.7,
+      "end": 58.78,
+      "text": "a shell script, which then becomes a new, more powerful command, and we'll explain some"
+    },
+    {
+      "start": 58.78,
+      "end": 63.58,
+      "text": "of these commands in more detail a bit later. Now, the meaning of some of these commands"
+    },
+    {
+      "start": 63.58,
+      "end": 71.38,
+      "text": "is pretty self-explanatory. Date shows, well, the date. And some of them are a little bit"
+    },
+    {
+      "start": 71.38,
+      "end": 79.38,
+      "text": "more cryptic. AWK represents the initials of the people who created them. Ahu, Weinberger,"
+    },
+    {
+      "start": 79.38,
+      "end": 85.06,
+      "text": "and Kernigan, in case you were wondering. The UNIX file system is a hierarchical file"
+    },
+    {
+      "start": 85.06,
+      "end": 91.02,
+      "text": "system. There's no concept of record structures. The applications are responsible for defining"
+    },
+    {
+      "start": 91.02,
+      "end": 96.7,
+      "text": "the structure of the data that is read or written. A UNIX system can treat a file as"
+    },
+    {
+      "start": 96.7,
+      "end": 102.46,
+      "text": "a text file or as a binary file. A text file consists of characters which use a new line"
+    },
+    {
+      "start": 102.46,
+      "end": 109.82,
+      "text": "as a separator between lines. A binary file consists of sequences of binary words. File"
+    },
+    {
+      "start": 109.82,
+      "end": 115.26,
+      "text": "name extensions are used to identify some common file types used by utility programs."
+    },
+    {
+      "start": 115.26,
+      "end": 121.58,
+      "text": "And there are four file types in UNIX system. There's ordinary disk files, directories,"
+    },
+    {
+      "start": 121.58,
+      "end": 130.06,
+      "text": "special files, and first in, first out files. In a UNIX system, every device is associated"
+    },
+    {
+      "start": 130.06,
+      "end": 137.1,
+      "text": "with a special file in the slash dev directory. The UNIX kernel uses device drivers to manage"
+    },
+    {
+      "start": 137.1,
+      "end": 142.94,
+      "text": "the devices. There's a device driver for each type of device. So, for example, DASD,"
+    },
+    {
+      "start": 142.94,
+      "end": 149.98,
+      "text": "tape, terminal, console, printers. Also, main memory can be accessed through a special file"
+    },
+    {
+      "start": 149.98,
+      "end": 155.26,
+      "text": "called a pseudo device. Since a device is associated with a file in the file system,"
+    },
+    {
+      "start": 155.26,
+      "end": 160.3,
+      "text": "users access a device in the same way as they would just access an ordinary file."
+    },
+    {
+      "start": 161.26,
+      "end": 168.3,
+      "text": "In UNIX, devices are divided into two categories. There's block devices and there are character"
+    },
+    {
+      "start": 168.3,
+      "end": 174.86,
+      "text": "devices. Block devices are designed to transfer data at high speeds. So, for example, DASD and tape."
+    },
+    {
+      "start": 175.58,
+      "end": 181.5,
+      "text": "Character devices, also called raw I.O. devices, transfer data in small variable length blocks."
+    },
+    {
+      "start": 182.22,
+      "end": 188.78,
+      "text": "Example of character devices are terminals, printers, and plotters. By the way, TTY stands"
+    },
+    {
+      "start": 188.86,
+      "end": 193.58,
+      "text": "for tele typewriter, an electromagnetical typewriter from back in the day."
+    },
+    {
+      "start": 195.42,
+      "end": 201.26,
+      "text": "In a UNIX system, I.O. to a data file and to a device, say, for example, a terminal,"
+    },
+    {
+      "start": 201.26,
+      "end": 207.1,
+      "text": "is treated in the same way by using the same system calls. This provides simplicity and"
+    },
+    {
+      "start": 207.1,
+      "end": 212.94,
+      "text": "flexibility for the UNIX user. The basic I.O. system calls, those are open, close,"
+    },
+    {
+      "start": 212.94,
+      "end": 217.58,
+      "text": "read, and write, do not use I.O. buffering and can therefore be a little bit inefficient"
+    },
+    {
+      "start": 217.58,
+      "end": 222.7,
+      "text": "in some situations. There is a portable C library which was designed to provide"
+    },
+    {
+      "start": 222.7,
+      "end": 229.98,
+      "text": "portability of programs by using a common I.O. system. Standard I.O., usually abbreviated to"
+    },
+    {
+      "start": 229.98,
+      "end": 237.02,
+      "text": "STD I.O., is the name of a library based on the portable C library. Standard I.O. provides a"
+    },
+    {
+      "start": 237.02,
+      "end": 242.54,
+      "text": "higher level I.O. interface where the system calls do use I.O. buffering. The buffering,"
+    },
+    {
+      "start": 242.62,
+      "end": 249.26,
+      "text": "though, is transparent to the user. Example of standard I.O. functions are F open to open a file"
+    },
+    {
+      "start": 249.26,
+      "end": 255.98,
+      "text": "and F printf to write to a file. The big difference between a UNIX system and a ZOS system is that"
+    },
+    {
+      "start": 255.98,
+      "end": 262.38,
+      "text": "in UNIX all files are allocated to the kernel. The process that uses the open call to allocate"
+    },
+    {
+      "start": 262.38,
+      "end": 266.38,
+      "text": "a file gets file descriptors from the kernel which are used to access the file."
+    },
+    {
+      "start": 266.38,
+      "end": 271.18,
+      "text": "Now, in the next video, we'll continue our look at UNIX functions."
+    }
+  ]
+}

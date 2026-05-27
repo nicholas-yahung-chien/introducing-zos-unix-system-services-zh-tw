@@ -24,18 +24,24 @@ z/OS UNIX shell 是進入開放系統介面的主要入口。它可搭配 TSO、
   title="z/OS shell"
   entry-id="1_iv4h5dcz"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193114"
+  video-src="/media/the-zos-shell.mp4"
+  subtitle-src="/subtitles/the-zos-shell.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="TSO 與 z/OS UNIX shell"
   entry-id="1_ccnbuqha"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193115"
+  video-src="/media/tso-and-the-zos-unix-shell.mp4"
+  subtitle-src="/subtitles/tso-and-the-zos-unix-shell.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="Commands 與 jobs"
   entry-id="1_q81uk4xi"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193116"
+  video-src="/media/commands-and-jobs.mp4"
+  subtitle-src="/subtitles/commands-and-jobs.zh-Hant-TW.vtt"
 />
 
 ## 閱讀材料

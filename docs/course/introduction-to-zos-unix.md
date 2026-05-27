@@ -24,18 +24,24 @@ z/OS UNIX 並不是外掛的孤立工具，而是 z/OS 基本環境的一部分�
   title="UNIX 系統元件"
   entry-id="1_gb9hrqdy"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193096"
+  video-src="/media/components-of-a-unix-system.mp4"
+  subtitle-src="/subtitles/components-of-a-unix-system.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="基本功能"
   entry-id="1_aomv0tq1"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193097"
+  video-src="/media/fundamental-functions.mp4"
+  subtitle-src="/subtitles/fundamental-functions.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="更多基本功能"
   entry-id="1_8tq0t0g0"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193098"
+  video-src="/media/more-fundamental-functions.mp4"
+  subtitle-src="/subtitles/more-fundamental-functions.zh-Hant-TW.vtt"
 />
 
 ## 閱讀材料

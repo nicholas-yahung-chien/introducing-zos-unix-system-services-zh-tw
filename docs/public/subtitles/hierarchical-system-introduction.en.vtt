@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:03.700 --> 00:00:10.620
+We're going to take a look at the hierarchical file system of ZOS UNIX and understand its structure, concepts, and uses.
+
+2
+00:00:10.960 --> 00:00:15.860
+There's a lot to cover here, so we've broken this up into multiple sections. Stick with me.
+
+3
+00:00:16.280 --> 00:00:22.580
+Once we've established these file system fundamentals, we can really move on to the fun stuff of utilities, commands, and
+
+4
+00:00:23.100 --> 00:00:24.880
+functions. So
+
+5
+00:00:24.880 --> 00:00:26.540
+let's get started.
+
+6
+00:00:26.540 --> 00:00:29.420
+The ZOS UNIX file system is
+
+7
+00:00:30.260 --> 00:00:37.460
+hierarchical in structure in the same way as a UNIX file system is. All files are members of a directory and
+
+8
+00:00:37.620 --> 00:00:43.560
+each directory is in turn a member of another directory at a higher level in the hierarchy.
+
+9
+00:00:44.060 --> 00:00:52.900
+The highest level in the hierarchy is called the root directory. A file in the hierarchical file system is called an HFS file.
+
+10
+00:00:53.660 --> 00:00:58.180
+HFS files are byte oriented and there's no concept of a record structure. A
+
+11
+00:00:58.820 --> 00:01:05.220
+file system is contained in a ZOS data set called a hierarchical file system or HFS data set.
+
+12
+00:01:05.980 --> 00:01:10.940
+ZOS views an entire file system hierarchy as a collection of HFS data sets and
+
+13
+00:01:11.540 --> 00:01:16.420
+ZFS data sets. Each HFS data set is a mountable file system.
+
+14
+00:01:16.860 --> 00:01:20.780
+Connecting one file system to another is called mounting.
+
+15
+00:01:21.460 --> 00:01:25.600
+HFS and ZFS data sets can be mounted onto each other in the hierarchy.
+
+16
+00:01:25.860 --> 00:01:33.140
+The root file system is the first file system mounted and then subsequent file systems can be mounted on any directory within the root
+
+17
+00:01:33.140 --> 00:01:36.620
+file system or on a directory within any mounted file system.
+
+18
+00:01:37.260 --> 00:01:42.340
+The place within a file system where another file system is mounted is called a mount point.
+
+19
+00:01:43.180 --> 00:01:46.460
+A file system can be mounted only in one place at a time.
+
+20
+00:01:46.820 --> 00:01:54.900
+The mount command is used to mount a file system and unmount is used to disconnect a file system from the file system hierarchy.
+
+21
+00:01:55.780 --> 00:01:58.940
+Mount and unmount are both authorized commands.
+
+22
+00:02:00.100 --> 00:02:05.900
+The root file system is the starting point of the overall file system and it consists of the root directory
+
+23
+00:02:05.900 --> 00:02:07.900
+which is just a forward slash and
+
+24
+00:02:08.740 --> 00:02:10.740
+related directories and files.
+
+25
+00:02:10.900 --> 00:02:16.180
+The system programmer defines the root file system. The root file system usually contains
+
+26
+00:02:16.580 --> 00:02:19.820
+system related files and files that belong to a program product.
+
+27
+00:02:20.220 --> 00:02:24.420
+The root file system should be kept as non-volatile as possible.
+
+28
+00:02:24.540 --> 00:02:29.180
+It can be unmounted and remounted, but this activity really should be kept to a minimum.
+
+29
+00:02:29.900 --> 00:02:33.380
+User files are often located in other mountable file systems.
+
+30
+00:02:34.060 --> 00:02:40.580
+Altogether, the root file system and the mountable file systems contain the file systems used by shell users and by applications.
+
+31
+00:02:41.660 --> 00:02:48.580
+There's a temporary file system or TFS which can be mounted at slash TMP.
+
+32
+00:02:49.260 --> 00:02:56.260
+This file system type avoids physical I.O. since all files are kept in memory and such files are not kept permanently.
+
+33
+00:02:57.060 --> 00:03:03.380
+Because of its temporary nature and use of memory instead of I.O. TMP is a good option for users and
+
+34
+00:03:04.140 --> 00:03:06.140
+system temporary files.
+
+35
+00:03:06.740 --> 00:03:14.660
+The set of names required to specify a particular file in a hierarchy of directories is called the path to the file.
+
+36
+00:03:15.180 --> 00:03:22.060
+The path is specified as a path name. A path name can be absolute or it can be relative.
+
+37
+00:03:22.740 --> 00:03:30.140
+An absolute path name is a sequence which begins with a slash for the root followed by one or more directories and ends with the file name.
+
+38
+00:03:31.300 --> 00:03:35.780
+A relative path name is a path which is relative to the working directory.
+
+39
+00:03:36.380 --> 00:03:38.940
+A relative path name does not start with a slash.
+
+40
+00:03:39.700 --> 00:03:47.580
+Now, a path name can be up to 1023 characters long, including all directory names, separating slashes and the file name itself.
+
+41
+00:03:48.380 --> 00:03:54.860
+And a file name can be up to 255 characters long and consist of uppercase and lowercase letters.
+
+42
+00:03:56.060 --> 00:04:00.260
+As we mentioned before, ZOS Unix is case sensitive, so watch out for that.
+
+43
+00:04:00.700 --> 00:04:06.020
+File names can include extensions which identify the contents for a file, for example,
+
+44
+00:04:06.460 --> 00:04:09.580
+prog A.C or name.LST.
+
+45
+00:04:10.420 --> 00:04:13.740
+Now next up, we're going to turn our attention to file types.

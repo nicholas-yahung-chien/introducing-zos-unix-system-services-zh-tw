@@ -24,18 +24,24 @@ z/OS UNIX 讓 z/OS 能提供符合開放標準的 UNIX 介面，同時保留大�
   title="UNIX 標準入門"
   entry-id="1_a3edezg7"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193092"
+  video-src="/media/introduction-to-unix-standards.mp4"
+  subtitle-src="/subtitles/introduction-to-unix-standards.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="z/OS 上的 UNIX 實作"
   entry-id="1_kt2xnn6y"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193091"
+  video-src="/media/unix-implementation-on-zos.mp4"
+  subtitle-src="/subtitles/unix-implementation-on-zos.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="z/OS UNIX 元件"
   entry-id="1_hipb0mvo"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193093"
+  video-src="/media/zos-unit-component.mp4"
+  subtitle-src="/subtitles/zos-unit-component.zh-Hant-TW.vtt"
 />
 
 ## 閱讀材料

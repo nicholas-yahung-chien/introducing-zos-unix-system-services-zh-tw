@@ -1,0 +1,121 @@
+WEBVTT
+
+1
+00:00:03.820 --> 00:00:11.180
+DFSMS is enhanced to provide ZOS version 2 release for support for individual Unix file backup and recovery.
+
+2
+00:00:11.180 --> 00:00:18.940
+Just keep in mind that DFSMS DSS and DFSMS HSM only process ZFS datasets.
+
+3
+00:00:18.940 --> 00:00:29.180
+So, look, in general, admins want to use the same tools and applications to backup and restore individual ZOS Unix files residing in ZFS datasets as with other ZOS datasets.
+
+4
+00:00:29.180 --> 00:00:43.900
+And that support is integrated into existing DFSMS HSM backup and recover and DFSMS DSS dump and restore capability, allowing for centralized data management across the ZOS platform.
+
+5
+00:00:43.900 --> 00:00:50.940
+In the shell, there are three native Unix utilities you can use to backup and restore files and directories.
+
+6
+00:00:50.940 --> 00:01:02.540
+CPIO, TAR and PAX. These utilities are used to create an archive file that records the contents of the files and directories in a special format.
+
+7
+00:01:02.540 --> 00:01:11.420
+This is useful for those who want to stick with the native interfaces and possibly exchange or transport the archives with other platforms.
+
+8
+00:01:11.420 --> 00:01:21.260
+CPIO reads and writes either a compact binary header or an ASCII format header. There's no limit on length of file name.
+
+9
+00:01:21.260 --> 00:01:29.020
+TAR reads and writes headers in either the TAR format from Unix systems or the USTAR format defined by POSIX.
+
+10
+00:01:29.020 --> 00:01:37.980
+With TAR format, the path name can be 100 characters. With USTAR, it can be 255 characters long.
+
+11
+00:01:37.980 --> 00:01:45.980
+During backup or restore, TAR preserves link information. PAX combines the power of CPIO and TAR.
+
+12
+00:01:45.980 --> 00:01:55.500
+PAX or PAX can read and write files in CPIO ASCII format, CPIO binary format, TAR format or USTAR format.
+
+13
+00:01:55.500 --> 00:02:04.540
+It can read files that were written by CPIO, TAR or PAX itself. PAX can do code page conversion.
+
+14
+00:02:04.540 --> 00:02:15.660
+To write these archive files to a tape, use OGet to copy them to a ZOS sequential data set and then use ZOS utilities to copy the data set to tape.
+
+15
+00:02:15.660 --> 00:02:34.380
+Now, we'll run through this fairly briefly, but the point here is in ZOS v2 release 4, storage admins are able to manage the backup and recovery of Unix files within ZFS file systems with DFS-MS-DSS and DFS-MS-HSM utilities which are normally used for standard ZOS data sets.
+
+16
+00:02:34.460 --> 00:02:47.500
+Here we see the use of BackDS where we specify things like the HSM backup target location, either DASD or tape, and how to traverse the directory structure with Recurse.
+
+17
+00:02:47.500 --> 00:03:00.860
+And here we have the TSO command HBackDS and the Unix shell command HBackup, again with multiple options as to how the backup should be performed.
+
+18
+00:03:00.860 --> 00:03:15.420
+We have support for Recursion and Wildcards. We can say things like backup everything in slash U slash DIR1 and its subdirectories, but don't span over into different file systems.
+
+19
+00:03:15.420 --> 00:03:24.060
+Or we can say backup any files that start with ab.txt with a directory structure and a single file system.
+
+20
+00:03:24.060 --> 00:03:30.540
+You can also define exclusions, things like don't backup log files.
+
+21
+00:03:30.540 --> 00:03:39.420
+Here's how to issue a recover command with the option for the file to recover and options for replacement and recursion.
+
+22
+00:03:39.420 --> 00:03:45.580
+Here we see a TSO command to recover file 2, specifying options for replace weight.
+
+23
+00:03:45.580 --> 00:03:50.540
+A Unix shell command example is also shown here.
+
+24
+00:03:50.540 --> 00:04:02.220
+And here's batch JCL to use the DFSMS DSS dump and restore command to request a backup of a ZOS Unix file using absolute path names.
+
+25
+00:04:02.220 --> 00:04:09.660
+To use DFSMS DSS to dump Unix files, we show an example here specifying a path to the files to be backed up,
+
+26
+00:04:09.660 --> 00:04:19.340
+a working directory specifying the directory to be backed up, and out dd name describing the output data set that holds the backup contents.
+
+27
+00:04:19.340 --> 00:04:25.260
+And to perform a DFSMS DSS restore, we specify the path of the files to be restored,
+
+28
+00:04:25.260 --> 00:04:33.740
+the working directory of where DSS should restore, and in dd name specifying the input dump data set.
+
+29
+00:04:33.740 --> 00:04:38.140
+So that's a whistle stop tour of backup and recovery.
+
+30
+00:04:38.140 --> 00:04:44.460
+Next, we'll see how hierarchical files on ZOS can be accessed from a workstation by using NFS.

@@ -1,0 +1,233 @@
+{
+  "slug": "hierarchical-system-introduction",
+  "title": "Hierarchical System Introduction",
+  "language": "en",
+  "duration": 258.4613125,
+  "segments": [
+    {
+      "start": 3.7,
+      "end": 10.62,
+      "text": "We're going to take a look at the hierarchical file system of ZOS UNIX and understand its structure, concepts, and uses."
+    },
+    {
+      "start": 10.96,
+      "end": 15.86,
+      "text": "There's a lot to cover here, so we've broken this up into multiple sections. Stick with me."
+    },
+    {
+      "start": 16.28,
+      "end": 22.58,
+      "text": "Once we've established these file system fundamentals, we can really move on to the fun stuff of utilities, commands, and"
+    },
+    {
+      "start": 23.1,
+      "end": 24.88,
+      "text": "functions. So"
+    },
+    {
+      "start": 24.88,
+      "end": 26.54,
+      "text": "let's get started."
+    },
+    {
+      "start": 26.54,
+      "end": 29.42,
+      "text": "The ZOS UNIX file system is"
+    },
+    {
+      "start": 30.26,
+      "end": 37.46,
+      "text": "hierarchical in structure in the same way as a UNIX file system is. All files are members of a directory and"
+    },
+    {
+      "start": 37.62,
+      "end": 43.56,
+      "text": "each directory is in turn a member of another directory at a higher level in the hierarchy."
+    },
+    {
+      "start": 44.06,
+      "end": 52.9,
+      "text": "The highest level in the hierarchy is called the root directory. A file in the hierarchical file system is called an HFS file."
+    },
+    {
+      "start": 53.66,
+      "end": 58.18,
+      "text": "HFS files are byte oriented and there's no concept of a record structure. A"
+    },
+    {
+      "start": 58.82,
+      "end": 65.22,
+      "text": "file system is contained in a ZOS data set called a hierarchical file system or HFS data set."
+    },
+    {
+      "start": 65.98,
+      "end": 70.94,
+      "text": "ZOS views an entire file system hierarchy as a collection of HFS data sets and"
+    },
+    {
+      "start": 71.54,
+      "end": 76.42,
+      "text": "ZFS data sets. Each HFS data set is a mountable file system."
+    },
+    {
+      "start": 76.86,
+      "end": 80.78,
+      "text": "Connecting one file system to another is called mounting."
+    },
+    {
+      "start": 81.46,
+      "end": 85.6,
+      "text": "HFS and ZFS data sets can be mounted onto each other in the hierarchy."
+    },
+    {
+      "start": 85.86,
+      "end": 93.14,
+      "text": "The root file system is the first file system mounted and then subsequent file systems can be mounted on any directory within the root"
+    },
+    {
+      "start": 93.14,
+      "end": 96.62,
+      "text": "file system or on a directory within any mounted file system."
+    },
+    {
+      "start": 97.26,
+      "end": 102.34,
+      "text": "The place within a file system where another file system is mounted is called a mount point."
+    },
+    {
+      "start": 103.18,
+      "end": 106.46,
+      "text": "A file system can be mounted only in one place at a time."
+    },
+    {
+      "start": 106.82,
+      "end": 114.9,
+      "text": "The mount command is used to mount a file system and unmount is used to disconnect a file system from the file system hierarchy."
+    },
+    {
+      "start": 115.78,
+      "end": 118.94,
+      "text": "Mount and unmount are both authorized commands."
+    },
+    {
+      "start": 120.1,
+      "end": 125.9,
+      "text": "The root file system is the starting point of the overall file system and it consists of the root directory"
+    },
+    {
+      "start": 125.9,
+      "end": 127.9,
+      "text": "which is just a forward slash and"
+    },
+    {
+      "start": 128.74,
+      "end": 130.74,
+      "text": "related directories and files."
+    },
+    {
+      "start": 130.9,
+      "end": 136.18,
+      "text": "The system programmer defines the root file system. The root file system usually contains"
+    },
+    {
+      "start": 136.58,
+      "end": 139.82,
+      "text": "system related files and files that belong to a program product."
+    },
+    {
+      "start": 140.22,
+      "end": 144.42,
+      "text": "The root file system should be kept as non-volatile as possible."
+    },
+    {
+      "start": 144.54,
+      "end": 149.18,
+      "text": "It can be unmounted and remounted, but this activity really should be kept to a minimum."
+    },
+    {
+      "start": 149.9,
+      "end": 153.38,
+      "text": "User files are often located in other mountable file systems."
+    },
+    {
+      "start": 154.06,
+      "end": 160.58,
+      "text": "Altogether, the root file system and the mountable file systems contain the file systems used by shell users and by applications."
+    },
+    {
+      "start": 161.66,
+      "end": 168.58,
+      "text": "There's a temporary file system or TFS which can be mounted at slash TMP."
+    },
+    {
+      "start": 169.26,
+      "end": 176.26,
+      "text": "This file system type avoids physical I.O. since all files are kept in memory and such files are not kept permanently."
+    },
+    {
+      "start": 177.06,
+      "end": 183.38,
+      "text": "Because of its temporary nature and use of memory instead of I.O. TMP is a good option for users and"
+    },
+    {
+      "start": 184.14,
+      "end": 186.14,
+      "text": "system temporary files."
+    },
+    {
+      "start": 186.74,
+      "end": 194.66,
+      "text": "The set of names required to specify a particular file in a hierarchy of directories is called the path to the file."
+    },
+    {
+      "start": 195.18,
+      "end": 202.06,
+      "text": "The path is specified as a path name. A path name can be absolute or it can be relative."
+    },
+    {
+      "start": 202.74,
+      "end": 210.14,
+      "text": "An absolute path name is a sequence which begins with a slash for the root followed by one or more directories and ends with the file name."
+    },
+    {
+      "start": 211.3,
+      "end": 215.78,
+      "text": "A relative path name is a path which is relative to the working directory."
+    },
+    {
+      "start": 216.38,
+      "end": 218.94,
+      "text": "A relative path name does not start with a slash."
+    },
+    {
+      "start": 219.7,
+      "end": 227.58,
+      "text": "Now, a path name can be up to 1023 characters long, including all directory names, separating slashes and the file name itself."
+    },
+    {
+      "start": 228.38,
+      "end": 234.86,
+      "text": "And a file name can be up to 255 characters long and consist of uppercase and lowercase letters."
+    },
+    {
+      "start": 236.06,
+      "end": 240.26,
+      "text": "As we mentioned before, ZOS Unix is case sensitive, so watch out for that."
+    },
+    {
+      "start": 240.7,
+      "end": 246.02,
+      "text": "File names can include extensions which identify the contents for a file, for example,"
+    },
+    {
+      "start": 246.46,
+      "end": 249.58,
+      "text": "prog A.C or name.LST."
+    },
+    {
+      "start": 250.42,
+      "end": 253.74,
+      "text": "Now next up, we're going to turn our attention to file types."
+    }
+  ]
+}

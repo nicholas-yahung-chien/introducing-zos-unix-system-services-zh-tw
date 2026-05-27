@@ -1,0 +1,285 @@
+WEBVTT
+
+1
+00:00:03.760 --> 00:00:08.480
+In this series of videos, we're going to discuss some of the environments of ZOS UNIX,
+
+2
+00:00:08.480 --> 00:00:13.440
+such as the language environment, debugging, and callable services.
+
+3
+00:00:13.440 --> 00:00:18.160
+We're going to split the discussion between application programming in ZOS UNIX,
+
+4
+00:00:18.160 --> 00:00:24.720
+so we're talking here about things like compiling, running, porting, and debugging applications,
+
+5
+00:00:24.720 --> 00:00:30.800
+and some additional considerations like access control lists and data sharing.
+
+6
+00:00:30.800 --> 00:00:33.200
+So let's get started.
+
+7
+00:00:33.280 --> 00:00:39.680
+Shown here is an example of a C program which reads data from a hierarchical file
+
+8
+00:00:39.680 --> 00:00:43.120
+and displays the results on the screen.
+
+9
+00:00:43.120 --> 00:00:53.840
+The ZOS UNIX C89 CC C++ utility is used to compile and link edit ZOS UNIX C and ZOS applications.
+
+10
+00:00:53.840 --> 00:00:56.800
+Programs can be compiled and linked edited in one step,
+
+11
+00:00:56.800 --> 00:01:02.400
+or the link edit of the object modules can be performed in a separate step from the compilation.
+
+12
+00:01:02.400 --> 00:01:07.920
+In order for the C89 CC and C++ to perform C and C++ compiles,
+
+13
+00:01:07.920 --> 00:01:14.560
+the ZOS C and C++ optional feature must be installed on the system.
+
+14
+00:01:14.560 --> 00:01:20.560
+ZOS UNIX supports different environments where ZOS UNIX C and MVS applications can run.
+
+15
+00:01:20.560 --> 00:01:25.280
+A ZOS UNIX shell program can be run by specifying the program name on the command line,
+
+16
+00:01:25.280 --> 00:01:28.400
+or the program can be called from a shell script.
+
+17
+00:01:28.480 --> 00:01:32.000
+Also, a program residing in a ZOS dataset can be run from the shell
+
+18
+00:01:32.000 --> 00:01:37.920
+by using a tsoe call command to pass a call to the program through tsoe.
+
+19
+00:01:37.920 --> 00:01:44.480
+Applications can also run in a ZOS UNIX shell in the ZOS batch by using the bpx bags program,
+
+20
+00:01:44.480 --> 00:01:50.880
+or a ZOS UNIX program which resides in a ZOS dataset can be run from tsoe.
+
+21
+00:01:50.880 --> 00:01:55.680
+A ZOS UNIX program which resides in a ZOS dataset can be run in batch
+
+22
+00:01:55.680 --> 00:01:58.800
+using the JCL exec statement to start the program.
+
+23
+00:01:59.440 --> 00:02:04.000
+The appropriate locale for an application can be set by using the set locale function.
+
+24
+00:02:04.800 --> 00:02:10.400
+For example, an application can define set locale LC underscore all comma C,
+
+25
+00:02:10.400 --> 00:02:15.520
+meaning all the categories of variables must comply to the default C language definition,
+
+26
+00:02:16.240 --> 00:02:21.120
+or another example is set locale LC underscore monetary comma UK,
+
+27
+00:02:21.120 --> 00:02:25.040
+which would use the UK English monetary definition of pound sterling.
+
+28
+00:02:26.640 --> 00:02:31.440
+Enhanced ASCII support with file tagging and auto conversion makes it easier to port
+
+29
+00:02:31.440 --> 00:02:35.280
+UNIX programs from the original ASCII environment to the ZOS environment,
+
+30
+00:02:35.280 --> 00:02:40.320
+which is an EBSIDIC environment. Before this support, if the original program
+
+31
+00:02:40.320 --> 00:02:43.520
+was written with ASCII dependent data handling in C or C++,
+
+32
+00:02:43.520 --> 00:02:47.760
+it might not be ported directly to ZOS without changes in the program.
+
+33
+00:02:48.720 --> 00:02:52.640
+The CCSID of a program is set at compile time.
+
+34
+00:02:52.720 --> 00:02:58.000
+The CCSID tag of file can be set by the ch tag shell command.
+
+35
+00:02:58.640 --> 00:03:01.840
+With auto conversion, an EBSIDIC program does not need to know
+
+36
+00:03:01.840 --> 00:03:05.040
+that it is reading and writing to an ASCII file.
+
+37
+00:03:05.040 --> 00:03:07.120
+Conversion is done if it needs to be.
+
+38
+00:03:08.240 --> 00:03:14.320
+ZOS system components need fast any mode code page conversion and other services.
+
+39
+00:03:14.320 --> 00:03:19.360
+The solution is Unicode conversion services, along with IBM Z hardware assists.
+
+40
+00:03:20.000 --> 00:03:22.960
+ZOS can provide support for the conversion of Unicode data,
+
+41
+00:03:22.960 --> 00:03:29.760
+either UTF-8 or UTF-16, to any of the EBSIDIC CCSIDs currently supported by your applications.
+
+42
+00:03:30.480 --> 00:03:35.280
+If you intend to make use of this capability, you must enable the ZOS conversion services
+
+43
+00:03:35.280 --> 00:03:41.040
+and install a conversion image which specifies the conversion that you want your application to perform.
+
+44
+00:03:41.520 --> 00:03:46.640
+IBM Ported Tools for ZOS is a non-priced program product
+
+45
+00:03:46.640 --> 00:03:50.880
+designed to deliver tools and applications for the ZOS platform.
+
+46
+00:03:52.080 --> 00:03:56.400
+These applications have been modified to operate within the ZOS environment.
+
+47
+00:03:57.360 --> 00:04:03.120
+Ported Tools for ZOS includes the Perl scripting language as well as the OpenSSH secure shell.
+
+48
+00:04:04.000 --> 00:04:06.480
+After your C or C++ program has been developed,
+
+49
+00:04:07.440 --> 00:04:12.080
+you can take advantage of the ZOS Unix Debugger with its DBX utility
+
+50
+00:04:12.080 --> 00:04:15.840
+to debug the program from within the shell environment on a ZOS system.
+
+51
+00:04:16.640 --> 00:04:21.760
+DBX is a process-oriented debugger. It runs in a different process or address space than
+
+52
+00:04:21.760 --> 00:04:27.040
+the process being debugged. It provides multi-process debug across fork exec and
+
+53
+00:04:27.040 --> 00:04:32.160
+has the capability to attach to and debug a process that is already executing.
+
+54
+00:04:32.160 --> 00:04:35.680
+DBX debugged signals that are sent to the process being debugged.
+
+55
+00:04:35.760 --> 00:04:41.440
+It also debugs at machine level using machine registers and examines memory addresses.
+
+56
+00:04:42.960 --> 00:04:48.080
+High level languages or HLLs which support calls to assembler subroutines
+
+57
+00:04:48.080 --> 00:04:50.880
+can use the ZOS Unix callable services.
+
+58
+00:04:51.680 --> 00:04:56.800
+The application programmer is responsible for ensuring that the correct environment exists.
+
+59
+00:04:56.800 --> 00:05:01.840
+One reason to use the callable services from HLLs is to get access to data in the
+
+60
+00:05:01.840 --> 00:05:08.240
+hierarchical file system. The concept of sockets provides the application programmer
+
+61
+00:05:08.240 --> 00:05:13.200
+with an interface which is very similar to that used for file IO in the C language.
+
+62
+00:05:13.840 --> 00:05:18.400
+The IO operations used for file access and network access have the same names but the
+
+63
+00:05:18.400 --> 00:05:24.480
+functions performed are different. User-written socket applications can use TCPIP services as a
+
+64
+00:05:24.480 --> 00:05:30.720
+communication vehicle. Both client and server socket applications can use the socket interface
+
+65
+00:05:30.720 --> 00:05:36.160
+to communicate over the internet and between other socket applications by using local sockets.
+
+66
+00:05:37.200 --> 00:05:42.400
+An assembler interface is also provided for those applications that do not use the C or C++
+
+67
+00:05:42.400 --> 00:05:50.400
+runtime library. ZOS Unix supports two types of socket families. Unix domain sockets,
+
+68
+00:05:50.400 --> 00:05:55.760
+also called local sockets, are part of the Unix address family AF underscore Unix.
+
+69
+00:05:56.480 --> 00:06:02.400
+AF underscore Unix sockets provide communication between processes on a single system and internet
+
+70
+00:06:02.400 --> 00:06:08.480
+protocol sockets are part of the internet address family AF underscore INET for IPv4 and AF underscore
+
+71
+00:06:08.480 --> 00:06:15.120
+INET6 for IPv6. In the next video we'll look at printing and ACLs.

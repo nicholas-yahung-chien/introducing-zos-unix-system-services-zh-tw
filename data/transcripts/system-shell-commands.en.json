@@ -1,0 +1,273 @@
+{
+  "slug": "system-shell-commands",
+  "title": "system shell commands",
+  "language": "en",
+  "duration": 369.708125,
+  "segments": [
+    {
+      "start": 3.79,
+      "end": 18.79,
+      "text": "Hi, everyone. My name is Madison, and I am a rising junior studying computer science at Columbia University, and this summer I am a tech sales solutions specialist intern here at IBM."
+    },
+    {
+      "start": 18.79,
+      "end": 25.79,
+      "text": "Okay, so let's get into describing some common Unix shell commands. First up, ID."
+    },
+    {
+      "start": 25.79,
+      "end": 33.79,
+      "text": "The ID command has no options. It displays the UID, the username, the GID, and the group name that are assigned to the user."
+    },
+    {
+      "start": 33.79,
+      "end": 39.79,
+      "text": "If a user is a member of other supplemental groups, they are listed at the end of the output."
+    },
+    {
+      "start": 39.79,
+      "end": 45.79,
+      "text": "The date command produces the time and the date in a predefined format, depending on locale."
+    },
+    {
+      "start": 45.79,
+      "end": 53.79,
+      "text": "There are many options for the date command, which can be used to change the format and produce different parts of the time and date."
+    },
+    {
+      "start": 53.79,
+      "end": 59.79,
+      "text": "The ENV command displays the list of currently assigned environment variables and their current values."
+    },
+    {
+      "start": 59.79,
+      "end": 68.79,
+      "text": "There is also a command called set, which, when entered without options, displays all of the currently assigned shell variables and their values."
+    },
+    {
+      "start": 68.79,
+      "end": 75.79,
+      "text": "The environment variables are a subset of the shell variables, so set should normally produce a longer list than ENV."
+    },
+    {
+      "start": 75.79,
+      "end": 81.79,
+      "text": "The type command displays information about the command that is entered following type."
+    },
+    {
+      "start": 81.79,
+      "end": 89.79,
+      "text": "Commands can be built in, aliases, or utility programs that must be loaded and executed at invocation."
+    },
+    {
+      "start": 89.79,
+      "end": 93.79,
+      "text": "The type command tells you which command is which."
+    },
+    {
+      "start": 93.79,
+      "end": 99.79,
+      "text": "If a command is actually a utility program, type displays the path name of the program."
+    },
+    {
+      "start": 99.79,
+      "end": 107.79,
+      "text": "The type command can also tell you that the program has been cached, which means that it has been copied into storage for performance reasons."
+    },
+    {
+      "start": 108.79,
+      "end": 120.79,
+      "text": "The file system hierarchy, which consists of all directories and all files available to the Unix environment, is actually made up of many file systems interconnected together at various mount points."
+    },
+    {
+      "start": 120.79,
+      "end": 129.79,
+      "text": "In order for a file system to be usable by ZOS Unix and to be connected to the file system hierarchy, the file system must be mounted."
+    },
+    {
+      "start": 129.79,
+      "end": 132.79,
+      "text": "Mounting a file system does two things."
+    },
+    {
+      "start": 132.79,
+      "end": 137.79,
+      "text": "First, the file system is allocated to Unix kernel's address space."
+    },
+    {
+      "start": 137.79,
+      "end": 142.79,
+      "text": "Second, the file system is connected into the hierarchy at its defined mount point."
+    },
+    {
+      "start": 142.79,
+      "end": 148.79,
+      "text": "The mount point is defined by the command, statement, or function that mounts the file system."
+    },
+    {
+      "start": 148.79,
+      "end": 151.79,
+      "text": "A mount point must be a directory."
+    },
+    {
+      "start": 152.79,
+      "end": 159.79,
+      "text": "There are several ways to find out which file systems are currently mounted and available for use by ZOS Unix."
+    },
+    {
+      "start": 159.79,
+      "end": 168.79,
+      "text": "The ZOS operator command can be used to display a list of mounted file systems at the operator console and in the system log."
+    },
+    {
+      "start": 168.79,
+      "end": 174.79,
+      "text": "This command can be entered from a system console or from the SDSF log screen."
+    },
+    {
+      "start": 174.79,
+      "end": 179.79,
+      "text": "Another way to display the mounted file systems is to use the iShell."
+    },
+    {
+      "start": 179.79,
+      "end": 184.79,
+      "text": "From the iShell main menu, go to the file underscore systems action bar item."
+    },
+    {
+      "start": 184.79,
+      "end": 188.79,
+      "text": "Press enter to pull down the file underscore systems menu."
+    },
+    {
+      "start": 188.79,
+      "end": 193.79,
+      "text": "Select the mount table option to display the table of mounted file systems."
+    },
+    {
+      "start": 193.79,
+      "end": 196.79,
+      "text": "Any ZOS Unix user is allowed to do this."
+    },
+    {
+      "start": 196.79,
+      "end": 206.79,
+      "text": "The third method to display the mounted file systems is to use the ZOS Unix Shell DF command, which stands for display file systems."
+    },
+    {
+      "start": 206.79,
+      "end": 212.79,
+      "text": "Here is an example of output in SDSF from the DOMBSF command."
+    },
+    {
+      "start": 212.79,
+      "end": 216.79,
+      "text": "This displays information about the specified file systems."
+    },
+    {
+      "start": 216.79,
+      "end": 219.79,
+      "text": "One wildcard is permitted in the name provided."
+    },
+    {
+      "start": 219.79,
+      "end": 225.79,
+      "text": "Here is an example of output from iShell mount table showing all of our available file systems."
+    },
+    {
+      "start": 225.79,
+      "end": 235.79,
+      "text": "Historically, some functions related to Unix file systems have been provided by the options available on the file underscore systems pull down menu"
+    },
+    {
+      "start": 235.79,
+      "end": 239.79,
+      "text": "in the Unix system services ISPF shell."
+    },
+    {
+      "start": 239.79,
+      "end": 247.79,
+      "text": "At the same time, other functions related to Unix file systems have been provided by the ZOS Unix directory list utility,"
+    },
+    {
+      "start": 247.79,
+      "end": 251.79,
+      "text": "which is accessed by using ISPF option 3.17."
+    },
+    {
+      "start": 251.79,
+      "end": 258.79,
+      "text": "In ZOS, the 2.2 functions that were previously available within the Unix system services ISPF shell"
+    },
+    {
+      "start": 258.79,
+      "end": 263.79,
+      "text": "are now also available by using ISPF option 3.17."
+    },
+    {
+      "start": 263.79,
+      "end": 269.79,
+      "text": "With this change, these functions are combined with other Unix functions available in option 3.17."
+    },
+    {
+      "start": 269.79,
+      "end": 278.79,
+      "text": "When there are a large number of mounted Unix file systems, the file system list presented by the Unix system services ISPF shell can become unmanageable."
+    },
+    {
+      "start": 278.79,
+      "end": 286.79,
+      "text": "So you might be better accessing the new file system functions by using the file underscore systems pull down menu instead."
+    },
+    {
+      "start": 286.79,
+      "end": 292.79,
+      "text": "The DF command displays the currently mounted and available file systems in your ZOS Unix environment."
+    },
+    {
+      "start": 292.79,
+      "end": 300.79,
+      "text": "It also displays the size of the file system in blocks and the number of blocks that are available for use in each file system."
+    },
+    {
+      "start": 300.79,
+      "end": 310.79,
+      "text": "There is an option for DF-P, note that it is an uppercase P, which produces output that is a little different than the default DF option."
+    },
+    {
+      "start": 310.79,
+      "end": 316.79,
+      "text": "With the P option, the output also displays the percentage of the file system that is full."
+    },
+    {
+      "start": 316.79,
+      "end": 321.79,
+      "text": "You can ask the DF command to display information about only one file system."
+    },
+    {
+      "start": 321.79,
+      "end": 330.79,
+      "text": "If you do not include the name of a file system on the DF command, the default is to display information about all mounted file systems."
+    },
+    {
+      "start": 330.79,
+      "end": 340.79,
+      "text": "Here is an example of output from the DF command showing the currently mounted and available file systems in a ZOS Unix environment."
+    },
+    {
+      "start": 340.79,
+      "end": 346.79,
+      "text": "The FSINFO function is used to obtain detailed file system information."
+    },
+    {
+      "start": 347.79,
+      "end": 357.79,
+      "text": "FSINFO provides more detailed information for single, multiple file systems in a faster and more flexible manner, including Cisplex-wide information."
+    },
+    {
+      "start": 357.79,
+      "end": 364.79,
+      "text": "In the next video, we'll take a look at some more commonly used shell commands, starting with those related to the current working directory."
+    }
+  ]
+}

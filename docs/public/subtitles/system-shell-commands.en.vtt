@@ -1,0 +1,213 @@
+WEBVTT
+
+1
+00:00:03.790 --> 00:00:18.790
+Hi, everyone. My name is Madison, and I am a rising junior studying computer science at Columbia University, and this summer I am a tech sales solutions specialist intern here at IBM.
+
+2
+00:00:18.790 --> 00:00:25.790
+Okay, so let's get into describing some common Unix shell commands. First up, ID.
+
+3
+00:00:25.790 --> 00:00:33.790
+The ID command has no options. It displays the UID, the username, the GID, and the group name that are assigned to the user.
+
+4
+00:00:33.790 --> 00:00:39.790
+If a user is a member of other supplemental groups, they are listed at the end of the output.
+
+5
+00:00:39.790 --> 00:00:45.790
+The date command produces the time and the date in a predefined format, depending on locale.
+
+6
+00:00:45.790 --> 00:00:53.790
+There are many options for the date command, which can be used to change the format and produce different parts of the time and date.
+
+7
+00:00:53.790 --> 00:00:59.790
+The ENV command displays the list of currently assigned environment variables and their current values.
+
+8
+00:00:59.790 --> 00:01:08.790
+There is also a command called set, which, when entered without options, displays all of the currently assigned shell variables and their values.
+
+9
+00:01:08.790 --> 00:01:15.790
+The environment variables are a subset of the shell variables, so set should normally produce a longer list than ENV.
+
+10
+00:01:15.790 --> 00:01:21.790
+The type command displays information about the command that is entered following type.
+
+11
+00:01:21.790 --> 00:01:29.790
+Commands can be built in, aliases, or utility programs that must be loaded and executed at invocation.
+
+12
+00:01:29.790 --> 00:01:33.790
+The type command tells you which command is which.
+
+13
+00:01:33.790 --> 00:01:39.790
+If a command is actually a utility program, type displays the path name of the program.
+
+14
+00:01:39.790 --> 00:01:47.790
+The type command can also tell you that the program has been cached, which means that it has been copied into storage for performance reasons.
+
+15
+00:01:48.790 --> 00:02:00.790
+The file system hierarchy, which consists of all directories and all files available to the Unix environment, is actually made up of many file systems interconnected together at various mount points.
+
+16
+00:02:00.790 --> 00:02:09.790
+In order for a file system to be usable by ZOS Unix and to be connected to the file system hierarchy, the file system must be mounted.
+
+17
+00:02:09.790 --> 00:02:12.790
+Mounting a file system does two things.
+
+18
+00:02:12.790 --> 00:02:17.790
+First, the file system is allocated to Unix kernel's address space.
+
+19
+00:02:17.790 --> 00:02:22.790
+Second, the file system is connected into the hierarchy at its defined mount point.
+
+20
+00:02:22.790 --> 00:02:28.790
+The mount point is defined by the command, statement, or function that mounts the file system.
+
+21
+00:02:28.790 --> 00:02:31.790
+A mount point must be a directory.
+
+22
+00:02:32.790 --> 00:02:39.790
+There are several ways to find out which file systems are currently mounted and available for use by ZOS Unix.
+
+23
+00:02:39.790 --> 00:02:48.790
+The ZOS operator command can be used to display a list of mounted file systems at the operator console and in the system log.
+
+24
+00:02:48.790 --> 00:02:54.790
+This command can be entered from a system console or from the SDSF log screen.
+
+25
+00:02:54.790 --> 00:02:59.790
+Another way to display the mounted file systems is to use the iShell.
+
+26
+00:02:59.790 --> 00:03:04.790
+From the iShell main menu, go to the file underscore systems action bar item.
+
+27
+00:03:04.790 --> 00:03:08.790
+Press enter to pull down the file underscore systems menu.
+
+28
+00:03:08.790 --> 00:03:13.790
+Select the mount table option to display the table of mounted file systems.
+
+29
+00:03:13.790 --> 00:03:16.790
+Any ZOS Unix user is allowed to do this.
+
+30
+00:03:16.790 --> 00:03:26.790
+The third method to display the mounted file systems is to use the ZOS Unix Shell DF command, which stands for display file systems.
+
+31
+00:03:26.790 --> 00:03:32.790
+Here is an example of output in SDSF from the DOMBSF command.
+
+32
+00:03:32.790 --> 00:03:36.790
+This displays information about the specified file systems.
+
+33
+00:03:36.790 --> 00:03:39.790
+One wildcard is permitted in the name provided.
+
+34
+00:03:39.790 --> 00:03:45.790
+Here is an example of output from iShell mount table showing all of our available file systems.
+
+35
+00:03:45.790 --> 00:03:55.790
+Historically, some functions related to Unix file systems have been provided by the options available on the file underscore systems pull down menu
+
+36
+00:03:55.790 --> 00:03:59.790
+in the Unix system services ISPF shell.
+
+37
+00:03:59.790 --> 00:04:07.790
+At the same time, other functions related to Unix file systems have been provided by the ZOS Unix directory list utility,
+
+38
+00:04:07.790 --> 00:04:11.790
+which is accessed by using ISPF option 3.17.
+
+39
+00:04:11.790 --> 00:04:18.790
+In ZOS, the 2.2 functions that were previously available within the Unix system services ISPF shell
+
+40
+00:04:18.790 --> 00:04:23.790
+are now also available by using ISPF option 3.17.
+
+41
+00:04:23.790 --> 00:04:29.790
+With this change, these functions are combined with other Unix functions available in option 3.17.
+
+42
+00:04:29.790 --> 00:04:38.790
+When there are a large number of mounted Unix file systems, the file system list presented by the Unix system services ISPF shell can become unmanageable.
+
+43
+00:04:38.790 --> 00:04:46.790
+So you might be better accessing the new file system functions by using the file underscore systems pull down menu instead.
+
+44
+00:04:46.790 --> 00:04:52.790
+The DF command displays the currently mounted and available file systems in your ZOS Unix environment.
+
+45
+00:04:52.790 --> 00:05:00.790
+It also displays the size of the file system in blocks and the number of blocks that are available for use in each file system.
+
+46
+00:05:00.790 --> 00:05:10.790
+There is an option for DF-P, note that it is an uppercase P, which produces output that is a little different than the default DF option.
+
+47
+00:05:10.790 --> 00:05:16.790
+With the P option, the output also displays the percentage of the file system that is full.
+
+48
+00:05:16.790 --> 00:05:21.790
+You can ask the DF command to display information about only one file system.
+
+49
+00:05:21.790 --> 00:05:30.790
+If you do not include the name of a file system on the DF command, the default is to display information about all mounted file systems.
+
+50
+00:05:30.790 --> 00:05:40.790
+Here is an example of output from the DF command showing the currently mounted and available file systems in a ZOS Unix environment.
+
+51
+00:05:40.790 --> 00:05:46.790
+The FSINFO function is used to obtain detailed file system information.
+
+52
+00:05:47.790 --> 00:05:57.790
+FSINFO provides more detailed information for single, multiple file systems in a faster and more flexible manner, including Cisplex-wide information.
+
+53
+00:05:57.790 --> 00:06:04.790
+In the next video, we'll take a look at some more commonly used shell commands, starting with those related to the current working directory.

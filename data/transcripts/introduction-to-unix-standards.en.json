@@ -1,0 +1,313 @@
+{
+  "slug": "introduction-to-unix-standards",
+  "title": "Introduction to UNIX Standards",
+  "language": "en",
+  "duration": 297.633375,
+  "segments": [
+    {
+      "start": 3.98,
+      "end": 11.06,
+      "text": "Welcome, my name is Martin Keene and I'm delighted to be your instructor as we explore how open"
+    },
+    {
+      "start": 11.06,
+      "end": 16.06,
+      "text": "standards are implemented in a ZOS system by ZOS Unix."
+    },
+    {
+      "start": 16.06,
+      "end": 20.54,
+      "text": "We're going to be looking at all aspects from this, from the far system to the shell and"
+    },
+    {
+      "start": 20.54,
+      "end": 26.06,
+      "text": "beyond, and you'll get your chance to get your hands dirty with a series of lab exercises"
+    },
+    {
+      "start": 26.06,
+      "end": 29.86,
+      "text": "using a real IBM Z Unix system."
+    },
+    {
+      "start": 29.86,
+      "end": 33.22,
+      "text": "To try out the concepts that we will be covering here."
+    },
+    {
+      "start": 33.22,
+      "end": 35.66,
+      "text": "So let's get cracking."
+    },
+    {
+      "start": 35.66,
+      "end": 42.3,
+      "text": "Now, ZOS Unix brings together the open world and the ZOS world."
+    },
+    {
+      "start": 42.3,
+      "end": 47.78,
+      "text": "Both worlds can coexist independently while sharing the same processing and storage resources."
+    },
+    {
+      "start": 47.78,
+      "end": 52.58,
+      "text": "And it's a case of getting the best of both worlds, a standard interface and portability"
+    },
+    {
+      "start": 52.58,
+      "end": 59.9,
+      "text": "from the open part of ZOS Unix and a larger rate of services from the MVS part of ZOS."
+    },
+    {
+      "start": 60.22,
+      "end": 66.1,
+      "text": "ZOS Unix supports an environment of large operating systems or servers, distributed systems and"
+    },
+    {
+      "start": 66.1,
+      "end": 70.3,
+      "text": "workstations that share common interfaces."
+    },
+    {
+      "start": 70.3,
+      "end": 75.06,
+      "text": "ZOS Unix supports the set of standards being developed by the open group."
+    },
+    {
+      "start": 75.06,
+      "end": 80.9,
+      "text": "This includes the portable operating system interface better known as POSIX."
+    },
+    {
+      "start": 80.9,
+      "end": 86.22,
+      "text": "Users can concentrate their work in the environment where they're most comfortable, be that Unix"
+    },
+    {
+      "start": 86.22,
+      "end": 87.94,
+      "text": "or be that MVS."
+    },
+    {
+      "start": 88.06,
+      "end": 92.22,
+      "text": "So for example, application developers can develop most of their applications at their"
+    },
+    {
+      "start": 92.22,
+      "end": 98.14,
+      "text": "workstations and then use standard POSIX interfaces to compile, test and debug their"
+    },
+    {
+      "start": 98.14,
+      "end": 101.42,
+      "text": "programs on the ZOS system."
+    },
+    {
+      "start": 101.42,
+      "end": 104.86,
+      "text": "Current ZOS applications run as usual."
+    },
+    {
+      "start": 104.86,
+      "end": 109.06,
+      "text": "Current users continue to have all of the services of ZOS available."
+    },
+    {
+      "start": 109.06,
+      "end": 115.42,
+      "text": "And with ZOS Unix, the existing investment in ZOS applications and data is protected."
+    },
+    {
+      "start": 115.42,
+      "end": 120.46,
+      "text": "New applications will have access to existing data."
+    },
+    {
+      "start": 120.46,
+      "end": 123.46,
+      "text": "Now, what are open systems?"
+    },
+    {
+      "start": 123.46,
+      "end": 129.66,
+      "text": "Well, based on requirements from customers, the characteristics of an open system environment"
+    },
+    {
+      "start": 129.66,
+      "end": 132.98,
+      "text": "can be expressed by the following elements."
+    },
+    {
+      "start": 132.98,
+      "end": 135.66,
+      "text": "First off, there's portability."
+    },
+    {
+      "start": 135.66,
+      "end": 142.1,
+      "text": "This is the ability to relocate system resources such as applications, data and people between"
+    },
+    {
+      "start": 142.1,
+      "end": 147.7,
+      "text": "processing environments of different design and different architectures."
+    },
+    {
+      "start": 147.7,
+      "end": 149.94,
+      "text": "There's also interoperability."
+    },
+    {
+      "start": 149.94,
+      "end": 154.22,
+      "text": "This defines the ability to interconnect systems from different vendors and have them work"
+    },
+    {
+      "start": 154.22,
+      "end": 156.82,
+      "text": "together to solve a business problem."
+    },
+    {
+      "start": 156.82,
+      "end": 161.3,
+      "text": "And finally, there's investment protection, which is the ability to choose components"
+    },
+    {
+      "start": 161.3,
+      "end": 167.38,
+      "text": "from offerings of many vendors, many protocols and many architectures, all with the confidence"
+    },
+    {
+      "start": 167.38,
+      "end": 171.85,
+      "text": "that they're going to work together."
+    },
+    {
+      "start": 171.85,
+      "end": 180.05,
+      "text": "In an open system environment, a set of standards can provide the ability to interoperate and"
+    },
+    {
+      "start": 180.05,
+      "end": 185.41,
+      "text": "to port applications, data and people on different operating platforms."
+    },
+    {
+      "start": 185.41,
+      "end": 189.17,
+      "text": "Now, the vendor names that we're showing here, they're just an example."
+    },
+    {
+      "start": 189.17,
+      "end": 195.57,
+      "text": "But the point is, it's this defined set of standards in the middle that enable interoperability"
+    },
+    {
+      "start": 195.57,
+      "end": 198.45,
+      "text": "and portability of applications."
+    },
+    {
+      "start": 198.45,
+      "end": 200.41,
+      "text": "And there are two types of standards."
+    },
+    {
+      "start": 200.41,
+      "end": 204.97,
+      "text": "There are de facto standards and de jure standards."
+    },
+    {
+      "start": 204.97,
+      "end": 209.49,
+      "text": "De facto standards, those are established by broad industry usage of a technology."
+    },
+    {
+      "start": 209.49,
+      "end": 215.93,
+      "text": "And de jure standards are established and accepted by recognized standard bodies through a formal"
+    },
+    {
+      "start": 215.93,
+      "end": 218.53,
+      "text": "voting process."
+    },
+    {
+      "start": 218.53,
+      "end": 224.77,
+      "text": "The single Unix specification or SUS is the collective name of a family of standards for"
+    },
+    {
+      "start": 224.77,
+      "end": 230.09,
+      "text": "computer operating systems, compliance with which is required to qualify for using the"
+    },
+    {
+      "start": 230.09,
+      "end": 233.05,
+      "text": "Unix trademark."
+    },
+    {
+      "start": 233.05,
+      "end": 238.17,
+      "text": "If an operating system is submitted to the open group for certification and passes conformance"
+    },
+    {
+      "start": 238.17,
+      "end": 244.17,
+      "text": "tests, then it's deemed to be a compliant Unix standard."
+    },
+    {
+      "start": 244.17,
+      "end": 250.21,
+      "text": "ZOS Unix meets these open systems requirements."
+    },
+    {
+      "start": 250.21,
+      "end": 257.55,
+      "text": "Unix applications which conform to XPG 4.2 standards can be ported to ZOS."
+    },
+    {
+      "start": 257.55,
+      "end": 261.91,
+      "text": "These can be vendor applications or self-developed applications."
+    },
+    {
+      "start": 261.91,
+      "end": 266.91,
+      "text": "Now does this mean that every Unix application should run on Z?"
+    },
+    {
+      "start": 266.91,
+      "end": 272.15,
+      "text": "Well of course not, but applications that require true enterprise server qualities"
+    },
+    {
+      "start": 272.15,
+      "end": 274.99,
+      "text": "of service, they are well suited."
+    },
+    {
+      "start": 274.99,
+      "end": 280.59,
+      "text": "If your application has high DASD requirements, high security needs, or needs a high level"
+    },
+    {
+      "start": 280.59,
+      "end": 286.15,
+      "text": "of reliability, then you'll see a lot of benefit in moving that application to ZOS"
+    },
+    {
+      "start": 286.15,
+      "end": 287.15,
+      "text": "Unix."
+    },
+    {
+      "start": 287.15,
+      "end": 293.11,
+      "text": "In the next video, we'll take a look at how Unix is implemented with ZOS."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "bpxbatch",
+  "title": "BPXBATCH",
+  "language": "en",
+  "duration": 195.628125,
+  "segments": [
+    {
+      "start": 3.76,
+      "end": 13.76,
+      "text": "BPX batch is provided to make it easier to run shell scripts in ZOS UNIX application programs that reside in HFS through the ZOS batch environment."
+    },
+    {
+      "start": 13.76,
+      "end": 19.76,
+      "text": "Users that do most of their work in TSOE can use BPX batch instead of entering the shell."
+    },
+    {
+      "start": 19.76,
+      "end": 27.76,
+      "text": "BPX batch can be invoked by JCL as a batch job, as a command in TSOE, from within a rex exec or with oshell."
+    },
+    {
+      "start": 27.76,
+      "end": 33.76,
+      "text": "ZOS UNIX C programs require the standard in, standard out and standard error be defined."
+    },
+    {
+      "start": 33.76,
+      "end": 37.76,
+      "text": "Many C functions also use this to define input and output."
+    },
+    {
+      "start": 37.76,
+      "end": 46.76,
+      "text": "For BPX batch, the default for standard in and standard out is slash dev slash null, and standard error is the same as standard out."
+    },
+    {
+      "start": 46.76,
+      "end": 53.76,
+      "text": "This can be changed to far names by using the dd names stdin, stdout and stderr."
+    },
+    {
+      "start": 54.76,
+      "end": 63.76,
+      "text": "Limitations in BPX batch input and output make it more difficult to create and maintain BPX batch jobs compared to other batch utilities."
+    },
+    {
+      "start": 63.76,
+      "end": 73.76,
+      "text": "But BPX batch has been enhanced to allow far greater parameter input and to allow output to be directed to traditional ZOS datasets."
+    },
+    {
+      "start": 73.76,
+      "end": 79.76,
+      "text": "BPX batch allows up to 64k of parameter data to be supplied as input to BPX batch."
+    },
+    {
+      "start": 79.76,
+      "end": 89.76,
+      "text": "It also allows both standard out and standard error to specify additional ZOS datasets to be the target of the output of the BPX batch jobs."
+    },
+    {
+      "start": 89.76,
+      "end": 102.76,
+      "text": "BPX batch supports up to, and let's be more precise than 64k here, it supports 65,536 characters parameter data."
+    },
+    {
+      "start": 103.76,
+      "end": 112.76,
+      "text": "This is supported by using a standard palm dd that points to a ZOS dataset or Unix file that contains the parameter data."
+    },
+    {
+      "start": 112.76,
+      "end": 120.76,
+      "text": "The ZOS datasets that can be used include sysin, sequential and pds, pdse members."
+    },
+    {
+      "start": 120.76,
+      "end": 127.76,
+      "text": "BPX batch now also supports the specification of ZOS datasets on the standard out and standard error dd's."
+    },
+    {
+      "start": 127.76,
+      "end": 135.76,
+      "text": "This allows output from BPX batch jobs to be directed to sysout datasets, sequential datasets, or pdse members."
+    },
+    {
+      "start": 135.76,
+      "end": 147.76,
+      "text": "To avoid truncation of the output lines, the lraquel of one or more datasets should be large enough to handle lines of output from typical Unix commands."
+    },
+    {
+      "start": 147.76,
+      "end": 150.76,
+      "text": "Here's an example of a BPX batch job."
+    },
+    {
+      "start": 150.76,
+      "end": 161.76,
+      "text": "Notice BPX batch allows both standard out and standard error to specify traditional ZOS datasets to be the target of the output of the BPX batch jobs."
+    },
+    {
+      "start": 161.76,
+      "end": 175.76,
+      "text": "BPX batsl provides you with an alternative entry point into BPX batch and forces a program to run using a local spawn instead of fork or exec, as BPX batch does."
+    },
+    {
+      "start": 175.76,
+      "end": 178.76,
+      "text": "This ultimately allows a program to run faster."
+    },
+    {
+      "start": 178.76,
+      "end": 184.76,
+      "text": "Here we see BPX batsl running a local spawn of programs."
+    },
+    {
+      "start": 184.76,
+      "end": 190.76,
+      "text": "In the next video, we're going to look at solutions to address some common problems."
+    }
+  ]
+}

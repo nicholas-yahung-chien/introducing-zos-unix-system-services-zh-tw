@@ -1,0 +1,463 @@
+{
+  "slug": "working-with-the-shell",
+  "title": "Working with the shell",
+  "language": "en",
+  "duration": 278.8716875,
+  "segments": [
+    {
+      "start": 3.6,
+      "end": 5.8,
+      "text": "Okay, I'm back."
+    },
+    {
+      "start": 5.8,
+      "end": 7.6,
+      "text": "In this series of videos,"
+    },
+    {
+      "start": 7.6,
+      "end": 9.9,
+      "text": "we're gonna cover customization of the shell,"
+    },
+    {
+      "start": 9.9,
+      "end": 13.4,
+      "text": "multiple sessions support, scripts, race execs,"
+    },
+    {
+      "start": 13.4,
+      "end": 16.24,
+      "text": "batch support, and translation issues."
+    },
+    {
+      "start": 17.12,
+      "end": 20.76,
+      "text": "A shell user has several options to personalize the shell."
+    },
+    {
+      "start": 20.76,
+      "end": 23.48,
+      "text": "A user can create their own .profile file"
+    },
+    {
+      "start": 23.48,
+      "end": 26.2,
+      "text": "where user variables are defined to do things like"
+    },
+    {
+      "start": 26.2,
+      "end": 29.14,
+      "text": "point to a log on script or define a search path"
+    },
+    {
+      "start": 29.14,
+      "end": 31.9,
+      "text": "to be used when locating a file or a directory"
+    },
+    {
+      "start": 31.9,
+      "end": 34.42,
+      "text": "and identify the editor to be used."
+    },
+    {
+      "start": 34.42,
+      "end": 37.78,
+      "text": "Environment variables can be defined in the login script."
+    },
+    {
+      "start": 37.78,
+      "end": 41.98,
+      "text": "The login script is started each time a shell is started."
+    },
+    {
+      "start": 41.98,
+      "end": 44.9,
+      "text": "The login script can contain all alias definitions"
+    },
+    {
+      "start": 44.9,
+      "end": 47.22,
+      "text": "and other setup instructions."
+    },
+    {
+      "start": 47.22,
+      "end": 48.82,
+      "text": "By using the set command,"
+    },
+    {
+      "start": 48.82,
+      "end": 52.54,
+      "text": "the user can set options for the shell session."
+    },
+    {
+      "start": 52.54,
+      "end": 53.94,
+      "text": "These options control the way"
+    },
+    {
+      "start": 53.94,
+      "end": 56.7,
+      "text": "the shell handles certain situations."
+    },
+    {
+      "start": 58.26,
+      "end": 61.18,
+      "text": "When the shell is invoked as a login shell,"
+    },
+    {
+      "start": 61.54,
+      "end": 66.54,
+      "text": ".etc, .profile, and .home, .profile are used."
+    },
+    {
+      "start": 66.66,
+      "end": 68.54,
+      "text": "If users want environment variables"
+    },
+    {
+      "start": 68.54,
+      "end": 70.7,
+      "text": "in a shell invoked from the current shell,"
+    },
+    {
+      "start": 70.7,
+      "end": 74.44,
+      "text": "they should identify a file in an env environment variable"
+    },
+    {
+      "start": 74.44,
+      "end": 77.54,
+      "text": "and place shell commands in the file."
+    },
+    {
+      "start": 77.54,
+      "end": 80.46,
+      "text": "The system interprets the file named in env"
+    },
+    {
+      "start": 80.46,
+      "end": 83.2,
+      "text": "each time a new shell is invoked."
+    },
+    {
+      "start": 83.2,
+      "end": 85.7,
+      "text": "Depending on the commands used to set it,"
+    },
+    {
+      "start": 85.7,
+      "end": 87.88,
+      "text": "an environment variable can be local,"
+    },
+    {
+      "start": 87.88,
+      "end": 90.74,
+      "text": "meaning it's used only for the current process"
+    },
+    {
+      "start": 90.74,
+      "end": 93.62,
+      "text": "or exported, used for the current process"
+    },
+    {
+      "start": 93.62,
+      "end": 98.1,
+      "text": "and for any other processes spawned by the current process."
+    },
+    {
+      "start": 98.1,
+      "end": 100.9,
+      "text": "There are many environment variables"
+    },
+    {
+      "start": 100.9,
+      "end": 103.34,
+      "text": "set for your shell session,"
+    },
+    {
+      "start": 103.34,
+      "end": 107.6,
+      "text": "and if requested, they're available to all commands"
+    },
+    {
+      "start": 107.6,
+      "end": 112.4,
+      "text": "or all programs that the shell runs as child processes."
+    },
+    {
+      "start": 112.4,
+      "end": 115.86,
+      "text": "Variables like log name, home, and shell"
+    },
+    {
+      "start": 115.86,
+      "end": 117.22,
+      "text": "are set for you by RACF"
+    },
+    {
+      "start": 117.22,
+      "end": 120.14,
+      "text": "when you're validated as a user of the system."
+    },
+    {
+      "start": 120.14,
+      "end": 124.92,
+      "text": "Others like lock path, lib path, and man path"
+    },
+    {
+      "start": 124.92,
+      "end": 128.32,
+      "text": "are lists of directories, search for locales,"
+    },
+    {
+      "start": 128.32,
+      "end": 132.88,
+      "text": "dynamic load libraries, and online documentation pages."
+    },
+    {
+      "start": 132.88,
+      "end": 137.08,
+      "text": "The example shown here is from slash samples slash profile."
+    },
+    {
+      "start": 137.08,
+      "end": 139.36,
+      "text": "All shell users get the environment variables"
+    },
+    {
+      "start": 139.36,
+      "end": 141.36,
+      "text": "set by this profile."
+    },
+    {
+      "start": 141.36,
+      "end": 143.36,
+      "text": "Users can override some of the variables"
+    },
+    {
+      "start": 143.36,
+      "end": 145.88,
+      "text": "by setting the variables in their private profiles"
+    },
+    {
+      "start": 145.88,
+      "end": 148.04,
+      "text": "or in their shell sessions."
+    },
+    {
+      "start": 148.1,
+      "end": 149.9,
+      "text": "Note that all environment variables"
+    },
+    {
+      "start": 149.9,
+      "end": 152.14,
+      "text": "are written with uppercase letters,"
+    },
+    {
+      "start": 152.14,
+      "end": 155.3,
+      "text": "and the contents of slash etc slash profile"
+    },
+    {
+      "start": 155.3,
+      "end": 157.22,
+      "text": "are actually a shell script."
+    },
+    {
+      "start": 157.22,
+      "end": 160.36,
+      "text": "It contains examples of the script programming languages"
+    },
+    {
+      "start": 160.36,
+      "end": 162.2,
+      "text": "with if then statements."
+    },
+    {
+      "start": 162.2,
+      "end": 164.62,
+      "text": "It sets values for environment variables"
+    },
+    {
+      "start": 164.62,
+      "end": 166.26,
+      "text": "and it issues some shell commands"
+    },
+    {
+      "start": 166.26,
+      "end": 169.32,
+      "text": "like export, Umask, and read only."
+    },
+    {
+      "start": 170.26,
+      "end": 173.5,
+      "text": "Any changes made in slash etc slash profile"
+    },
+    {
+      "start": 173.5,
+      "end": 175.74,
+      "text": "will take effect the next time"
+    },
+    {
+      "start": 175.74,
+      "end": 177.52,
+      "text": "a user invokes the shell."
+    },
+    {
+      "start": 178.56,
+      "end": 182.16,
+      "text": "Here we see three methods that shell users can use"
+    },
+    {
+      "start": 182.16,
+      "end": 185.52,
+      "text": "to customize the environment variables for their shell."
+    },
+    {
+      "start": 185.52,
+      "end": 186.94,
+      "text": "They can all be used,"
+    },
+    {
+      "start": 186.94,
+      "end": 190.36,
+      "text": "but the last setting will take precedence."
+    },
+    {
+      "start": 190.36,
+      "end": 194.52,
+      "text": "First up, the dollar home slash dot profile file."
+    },
+    {
+      "start": 194.52,
+      "end": 198.14,
+      "text": "A sample is provided in slash samples slash dot profile,"
+    },
+    {
+      "start": 198.14,
+      "end": 199.32,
+      "text": "which can be copied"
+    },
+    {
+      "start": 199.32,
+      "end": 202.68,
+      "text": "to a shell user's home directory and modified."
+    },
+    {
+      "start": 202.68,
+      "end": 206.4,
+      "text": "The env variable in the dollar home slash dot profile file"
+    },
+    {
+      "start": 206.4,
+      "end": 207.92,
+      "text": "can be set to a file name,"
+    },
+    {
+      "start": 207.92,
+      "end": 211.8,
+      "text": "which is a shell script that sets environment variables."
+    },
+    {
+      "start": 211.8,
+      "end": 213.96,
+      "text": "Shell users can use the env command"
+    },
+    {
+      "start": 213.96,
+      "end": 216.92,
+      "text": "to display the environment variables for their session"
+    },
+    {
+      "start": 216.92,
+      "end": 219.68,
+      "text": "and to change any of these variables."
+    },
+    {
+      "start": 219.68,
+      "end": 224.22,
+      "text": "The change only lasts for the length of the session."
+    },
+    {
+      "start": 224.22,
+      "end": 228.96,
+      "text": "If you use the omvs command to log into the shell,"
+    },
+    {
+      "start": 228.96,
+      "end": 230.56,
+      "text": "you can improve performance"
+    },
+    {
+      "start": 230.56,
+      "end": 232.6,
+      "text": "by using a log on procedure"
+    },
+    {
+      "start": 232.6,
+      "end": 237.6,
+      "text": "that does not contain any job lib or step lib dd allocations."
+    },
+    {
+      "start": 238.8,
+      "end": 242.92,
+      "text": "This reduces the amount of storage that is copied for fork."
+    },
+    {
+      "start": 242.92,
+      "end": 247.12,
+      "text": "It also prevents extensive searching of step live datasets"
+    },
+    {
+      "start": 247.12,
+      "end": 249.76,
+      "text": "and the propagation of step live datasets"
+    },
+    {
+      "start": 249.76,
+      "end": 251.2,
+      "text": "from the shell process"
+    },
+    {
+      "start": 251.2,
+      "end": 254.36,
+      "text": "to the shell command process on exec."
+    },
+    {
+      "start": 254.36,
+      "end": 257.56,
+      "text": "Statements in either the slash etc slash profile"
+    },
+    {
+      "start": 257.56,
+      "end": 261.2,
+      "text": "or dollar home slash dot profile files as shown here,"
+    },
+    {
+      "start": 261.2,
+      "end": 263.12,
+      "text": "improve the shell's performance for users"
+    },
+    {
+      "start": 263.12,
+      "end": 266.4,
+      "text": "who enter the omvs command from ISPF"
+    },
+    {
+      "start": 266.4,
+      "end": 269.38,
+      "text": "or with step live datasets allocated."
+    },
+    {
+      "start": 269.38,
+      "end": 271.84,
+      "text": "We'll continue to look at the shell in the next video,"
+    },
+    {
+      "start": 271.84,
+      "end": 274.32,
+      "text": "starting with multi session support."
+    }
+  ]
+}

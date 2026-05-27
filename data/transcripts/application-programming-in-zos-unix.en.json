@@ -1,0 +1,363 @@
+{
+  "slug": "application-programming-in-zos-unix",
+  "title": "Application programming in zOS UNIX",
+  "language": "en",
+  "duration": 379.3444375,
+  "segments": [
+    {
+      "start": 3.76,
+      "end": 8.48,
+      "text": "In this series of videos, we're going to discuss some of the environments of ZOS UNIX,"
+    },
+    {
+      "start": 8.48,
+      "end": 13.44,
+      "text": "such as the language environment, debugging, and callable services."
+    },
+    {
+      "start": 13.44,
+      "end": 18.16,
+      "text": "We're going to split the discussion between application programming in ZOS UNIX,"
+    },
+    {
+      "start": 18.16,
+      "end": 24.72,
+      "text": "so we're talking here about things like compiling, running, porting, and debugging applications,"
+    },
+    {
+      "start": 24.72,
+      "end": 30.8,
+      "text": "and some additional considerations like access control lists and data sharing."
+    },
+    {
+      "start": 30.8,
+      "end": 33.2,
+      "text": "So let's get started."
+    },
+    {
+      "start": 33.28,
+      "end": 39.68,
+      "text": "Shown here is an example of a C program which reads data from a hierarchical file"
+    },
+    {
+      "start": 39.68,
+      "end": 43.12,
+      "text": "and displays the results on the screen."
+    },
+    {
+      "start": 43.12,
+      "end": 53.84,
+      "text": "The ZOS UNIX C89 CC C++ utility is used to compile and link edit ZOS UNIX C and ZOS applications."
+    },
+    {
+      "start": 53.84,
+      "end": 56.8,
+      "text": "Programs can be compiled and linked edited in one step,"
+    },
+    {
+      "start": 56.8,
+      "end": 62.4,
+      "text": "or the link edit of the object modules can be performed in a separate step from the compilation."
+    },
+    {
+      "start": 62.4,
+      "end": 67.92,
+      "text": "In order for the C89 CC and C++ to perform C and C++ compiles,"
+    },
+    {
+      "start": 67.92,
+      "end": 74.56,
+      "text": "the ZOS C and C++ optional feature must be installed on the system."
+    },
+    {
+      "start": 74.56,
+      "end": 80.56,
+      "text": "ZOS UNIX supports different environments where ZOS UNIX C and MVS applications can run."
+    },
+    {
+      "start": 80.56,
+      "end": 85.28,
+      "text": "A ZOS UNIX shell program can be run by specifying the program name on the command line,"
+    },
+    {
+      "start": 85.28,
+      "end": 88.4,
+      "text": "or the program can be called from a shell script."
+    },
+    {
+      "start": 88.48,
+      "end": 92.0,
+      "text": "Also, a program residing in a ZOS dataset can be run from the shell"
+    },
+    {
+      "start": 92.0,
+      "end": 97.92,
+      "text": "by using a tsoe call command to pass a call to the program through tsoe."
+    },
+    {
+      "start": 97.92,
+      "end": 104.48,
+      "text": "Applications can also run in a ZOS UNIX shell in the ZOS batch by using the bpx bags program,"
+    },
+    {
+      "start": 104.48,
+      "end": 110.88,
+      "text": "or a ZOS UNIX program which resides in a ZOS dataset can be run from tsoe."
+    },
+    {
+      "start": 110.88,
+      "end": 115.68,
+      "text": "A ZOS UNIX program which resides in a ZOS dataset can be run in batch"
+    },
+    {
+      "start": 115.68,
+      "end": 118.8,
+      "text": "using the JCL exec statement to start the program."
+    },
+    {
+      "start": 119.44,
+      "end": 124.0,
+      "text": "The appropriate locale for an application can be set by using the set locale function."
+    },
+    {
+      "start": 124.8,
+      "end": 130.4,
+      "text": "For example, an application can define set locale LC underscore all comma C,"
+    },
+    {
+      "start": 130.4,
+      "end": 135.52,
+      "text": "meaning all the categories of variables must comply to the default C language definition,"
+    },
+    {
+      "start": 136.24,
+      "end": 141.12,
+      "text": "or another example is set locale LC underscore monetary comma UK,"
+    },
+    {
+      "start": 141.12,
+      "end": 145.04,
+      "text": "which would use the UK English monetary definition of pound sterling."
+    },
+    {
+      "start": 146.64,
+      "end": 151.44,
+      "text": "Enhanced ASCII support with file tagging and auto conversion makes it easier to port"
+    },
+    {
+      "start": 151.44,
+      "end": 155.28,
+      "text": "UNIX programs from the original ASCII environment to the ZOS environment,"
+    },
+    {
+      "start": 155.28,
+      "end": 160.32,
+      "text": "which is an EBSIDIC environment. Before this support, if the original program"
+    },
+    {
+      "start": 160.32,
+      "end": 163.52,
+      "text": "was written with ASCII dependent data handling in C or C++,"
+    },
+    {
+      "start": 163.52,
+      "end": 167.76,
+      "text": "it might not be ported directly to ZOS without changes in the program."
+    },
+    {
+      "start": 168.72,
+      "end": 172.64,
+      "text": "The CCSID of a program is set at compile time."
+    },
+    {
+      "start": 172.72,
+      "end": 178.0,
+      "text": "The CCSID tag of file can be set by the ch tag shell command."
+    },
+    {
+      "start": 178.64,
+      "end": 181.84,
+      "text": "With auto conversion, an EBSIDIC program does not need to know"
+    },
+    {
+      "start": 181.84,
+      "end": 185.04,
+      "text": "that it is reading and writing to an ASCII file."
+    },
+    {
+      "start": 185.04,
+      "end": 187.12,
+      "text": "Conversion is done if it needs to be."
+    },
+    {
+      "start": 188.24,
+      "end": 194.32,
+      "text": "ZOS system components need fast any mode code page conversion and other services."
+    },
+    {
+      "start": 194.32,
+      "end": 199.36,
+      "text": "The solution is Unicode conversion services, along with IBM Z hardware assists."
+    },
+    {
+      "start": 200.0,
+      "end": 202.96,
+      "text": "ZOS can provide support for the conversion of Unicode data,"
+    },
+    {
+      "start": 202.96,
+      "end": 209.76,
+      "text": "either UTF-8 or UTF-16, to any of the EBSIDIC CCSIDs currently supported by your applications."
+    },
+    {
+      "start": 210.48,
+      "end": 215.28,
+      "text": "If you intend to make use of this capability, you must enable the ZOS conversion services"
+    },
+    {
+      "start": 215.28,
+      "end": 221.04,
+      "text": "and install a conversion image which specifies the conversion that you want your application to perform."
+    },
+    {
+      "start": 221.52,
+      "end": 226.64,
+      "text": "IBM Ported Tools for ZOS is a non-priced program product"
+    },
+    {
+      "start": 226.64,
+      "end": 230.88,
+      "text": "designed to deliver tools and applications for the ZOS platform."
+    },
+    {
+      "start": 232.08,
+      "end": 236.4,
+      "text": "These applications have been modified to operate within the ZOS environment."
+    },
+    {
+      "start": 237.36,
+      "end": 243.12,
+      "text": "Ported Tools for ZOS includes the Perl scripting language as well as the OpenSSH secure shell."
+    },
+    {
+      "start": 244.0,
+      "end": 246.48,
+      "text": "After your C or C++ program has been developed,"
+    },
+    {
+      "start": 247.44,
+      "end": 252.08,
+      "text": "you can take advantage of the ZOS Unix Debugger with its DBX utility"
+    },
+    {
+      "start": 252.08,
+      "end": 255.84,
+      "text": "to debug the program from within the shell environment on a ZOS system."
+    },
+    {
+      "start": 256.64,
+      "end": 261.76,
+      "text": "DBX is a process-oriented debugger. It runs in a different process or address space than"
+    },
+    {
+      "start": 261.76,
+      "end": 267.04,
+      "text": "the process being debugged. It provides multi-process debug across fork exec and"
+    },
+    {
+      "start": 267.04,
+      "end": 272.16,
+      "text": "has the capability to attach to and debug a process that is already executing."
+    },
+    {
+      "start": 272.16,
+      "end": 275.68,
+      "text": "DBX debugged signals that are sent to the process being debugged."
+    },
+    {
+      "start": 275.76,
+      "end": 281.44,
+      "text": "It also debugs at machine level using machine registers and examines memory addresses."
+    },
+    {
+      "start": 282.96,
+      "end": 288.08,
+      "text": "High level languages or HLLs which support calls to assembler subroutines"
+    },
+    {
+      "start": 288.08,
+      "end": 290.88,
+      "text": "can use the ZOS Unix callable services."
+    },
+    {
+      "start": 291.68,
+      "end": 296.8,
+      "text": "The application programmer is responsible for ensuring that the correct environment exists."
+    },
+    {
+      "start": 296.8,
+      "end": 301.84,
+      "text": "One reason to use the callable services from HLLs is to get access to data in the"
+    },
+    {
+      "start": 301.84,
+      "end": 308.24,
+      "text": "hierarchical file system. The concept of sockets provides the application programmer"
+    },
+    {
+      "start": 308.24,
+      "end": 313.2,
+      "text": "with an interface which is very similar to that used for file IO in the C language."
+    },
+    {
+      "start": 313.84,
+      "end": 318.4,
+      "text": "The IO operations used for file access and network access have the same names but the"
+    },
+    {
+      "start": 318.4,
+      "end": 324.48,
+      "text": "functions performed are different. User-written socket applications can use TCPIP services as a"
+    },
+    {
+      "start": 324.48,
+      "end": 330.72,
+      "text": "communication vehicle. Both client and server socket applications can use the socket interface"
+    },
+    {
+      "start": 330.72,
+      "end": 336.16,
+      "text": "to communicate over the internet and between other socket applications by using local sockets."
+    },
+    {
+      "start": 337.2,
+      "end": 342.4,
+      "text": "An assembler interface is also provided for those applications that do not use the C or C++"
+    },
+    {
+      "start": 342.4,
+      "end": 350.4,
+      "text": "runtime library. ZOS Unix supports two types of socket families. Unix domain sockets,"
+    },
+    {
+      "start": 350.4,
+      "end": 355.76,
+      "text": "also called local sockets, are part of the Unix address family AF underscore Unix."
+    },
+    {
+      "start": 356.48,
+      "end": 362.4,
+      "text": "AF underscore Unix sockets provide communication between processes on a single system and internet"
+    },
+    {
+      "start": 362.4,
+      "end": 368.48,
+      "text": "protocol sockets are part of the internet address family AF underscore INET for IPv4 and AF underscore"
+    },
+    {
+      "start": 368.48,
+      "end": 375.12,
+      "text": "INET6 for IPv6. In the next video we'll look at printing and ACLs."
+    }
+  ]
+}

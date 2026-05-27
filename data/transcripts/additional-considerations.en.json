@@ -1,0 +1,258 @@
+{
+  "slug": "additional-considerations",
+  "title": "Additional considerations",
+  "language": "en",
+  "duration": 309.1969375,
+  "segments": [
+    {
+      "start": 3.6,
+      "end": 9.28,
+      "text": "The bpx-palm-xx-palm-lib-member contains the parameters used to influence user logon,"
+    },
+    {
+      "start": 9.28,
+      "end": 14.24,
+      "text": "the maximum number of active processes, file handling and storage requirements"
+    },
+    {
+      "start": 14.24,
+      "end": 16.96,
+      "text": "for the zos-unix-system-services environment."
+    },
+    {
+      "start": 17.68,
+      "end": 21.6,
+      "text": "These parameter values apply to all Unix processes in the system."
+    },
+    {
+      "start": 22.16,
+      "end": 27.28,
+      "text": "Many bpx-palm-xx-parameter values can be modified without re-initializing the system"
+    },
+    {
+      "start": 27.92,
+      "end": 33.36,
+      "text": "using either the set-omvs or the set-omvs equals operator commands."
+    },
+    {
+      "start": 34.88,
+      "end": 40.56,
+      "text": "You can control the amount of resources that are consumed by individual zos-unix-system-services"
+    },
+    {
+      "start": 40.56,
+      "end": 46.8,
+      "text": "users. bpx-palm-xx is still used to define resource limits, but it should be used to"
+    },
+    {
+      "start": 46.8,
+      "end": 50.24,
+      "text": "set the limits to the values required by the majority of users."
+    },
+    {
+      "start": 51.68,
+      "end": 56.64,
+      "text": "The rackf-omvs segment of the user profile can be used to define the resource limits for"
+    },
+    {
+      "start": 56.64,
+      "end": 61.28,
+      "text": "users that have higher requirements than the limits defined in bpx-palm-xx."
+    },
+    {
+      "start": 62.48,
+      "end": 68.72,
+      "text": "The add-user and alt-user commands can be used to specify or adjust the resource limits"
+    },
+    {
+      "start": 68.72,
+      "end": 75.28,
+      "text": "for an individual user. This diagram illustrates the read-only ZFS HFS data sharing which was the"
+    },
+    {
+      "start": 75.28,
+      "end": 82.48,
+      "text": "only supported file system data sharing for zos. ZOS provides support for simultaneous read-write"
+    },
+    {
+      "start": 82.48,
+      "end": 88.56,
+      "text": "access to the same ZFS or HFS file system across instances of Unix system services running"
+    },
+    {
+      "start": 88.56,
+      "end": 94.8,
+      "text": "on multiple ZOS images in a Sysplex. Only one Sysplex system owns a given file system."
+    },
+    {
+      "start": 95.36,
+      "end": 100.56,
+      "text": "Across system coupling facility or XCF services are used during the processing of shared"
+    },
+    {
+      "start": 100.56,
+      "end": 106.72,
+      "text": "file systems in the Sysplex. With shared ZFS and HFS, all file systems that are mounted"
+    },
+    {
+      "start": 106.72,
+      "end": 112.08,
+      "text": "by a system participating in the shared HFS are available to all participating systems."
+    },
+    {
+      "start": 112.08,
+      "end": 115.76,
+      "text": "In other words, once a file system is mounted by a participating system,"
+    },
+    {
+      "start": 116.4,
+      "end": 120.48,
+      "text": "that file system is accessible by any other participating system."
+    },
+    {
+      "start": 122.4,
+      "end": 126.96,
+      "text": "Function shipping means that a request is forwarded to the owning system and the"
+    },
+    {
+      "start": 126.96,
+      "end": 130.96,
+      "text": "response is returned back to the requester through XCF communications."
+    },
+    {
+      "start": 131.68,
+      "end": 136.48,
+      "text": "A file system can be mounted Sysplex aware or non-Sysplex aware."
+    },
+    {
+      "start": 137.28,
+      "end": 141.68,
+      "text": "When a file system is mounted Sysplex aware, it means that the file system is locally"
+    },
+    {
+      "start": 141.68,
+      "end": 146.48,
+      "text": "mounted on every system when the PFS is capable of handling a local mount on every system,"
+    },
+    {
+      "start": 146.48,
+      "end": 152.72,
+      "text": "that is the PFS is running Sysplex aware, and therefore file requests are handled by the local"
+    },
+    {
+      "start": 152.72,
+      "end": 158.56,
+      "text": "PFS. All read-only mounted file systems are always mounted Sysplex aware."
+    },
+    {
+      "start": 159.52,
+      "end": 165.28,
+      "text": "HFS read-write mounted file systems are always mounted non-Sysplex aware. This means that"
+    },
+    {
+      "start": 165.28,
+      "end": 172.32,
+      "text": "file requests from non-ZOS Unix owning systems are always function shipped by ZOS Unix to the"
+    },
+    {
+      "start": 172.32,
+      "end": 178.16,
+      "text": "ZOS Unix owning system where the file system is locally mounted and the IO is actually done."
+    },
+    {
+      "start": 178.88,
+      "end": 182.8,
+      "text": "To enable ZFS Sysplex aware on a file system basis,"
+    },
+    {
+      "start": 182.8,
+      "end": 189.84,
+      "text": "specify Sysplex equals file sys in IOE PRMXX or IOE FS PRM."
+    },
+    {
+      "start": 190.64,
+      "end": 199.2,
+      "text": "You can specify it in a shared IOE PRMXX, IOE FS PRM and each system picks up the specification"
+    },
+    {
+      "start": 199.2,
+      "end": 206.4,
+      "text": "in a rolling IPL. This means that USS sends all file requests directly to the local CFS"
+    },
+    {
+      "start": 206.4,
+      "end": 211.6,
+      "text": "physical file system. CFS direct IO is a performance"
+    },
+    {
+      "start": 211.6,
+      "end": 217.12,
+      "text": "improvement for the shared file system environment using ZFS read-write Sysplex aware file systems."
+    },
+    {
+      "start": 217.84,
+      "end": 223.04,
+      "text": "ZFS direct IO enhances support for ZFS read-write Sysplex aware file systems."
+    },
+    {
+      "start": 223.04,
+      "end": 228.08,
+      "text": "CFS can directly read and write Sysplex aware file systems from all systems in the shared"
+    },
+    {
+      "start": 228.08,
+      "end": 232.88,
+      "text": "file system environment. This makes file system ownership much less important."
+    },
+    {
+      "start": 234.32,
+      "end": 240.08,
+      "text": "If the ZFS file system is mounted Sysplex aware, any client ZFS can directly access the file"
+    },
+    {
+      "start": 240.08,
+      "end": 246.0,
+      "text": "system for reading and writing data and partially also reading metadata. So any user or"
+    },
+    {
+      "start": 246.0,
+      "end": 251.28,
+      "text": "application can exploit the functionality for ZFS read-write Sysplex aware file systems."
+    },
+    {
+      "start": 251.28,
+      "end": 259.68,
+      "text": "In this case, the Sysplex aware file system FS2 is ZFS owned by SY2 and is being directly"
+    },
+    {
+      "start": 259.68,
+      "end": 266.24,
+      "text": "accessed from SY1 and SY3. Ownership will no longer move because we only keep count of metadata"
+    },
+    {
+      "start": 266.24,
+      "end": 274.8,
+      "text": "update. The system route is a ZFS HFS data set that is used as the Sysplex wide route."
+    },
+    {
+      "start": 274.88,
+      "end": 282.4,
+      "text": "This ZFS HFS data set must be mounted read-write. Only one Sysplex route is allowed for all systems"
+    },
+    {
+      "start": 282.4,
+      "end": 289.28,
+      "text": "participating in shared HFS. Directories in the system specified HFS data set are used as mount"
+    },
+    {
+      "start": 289.28,
+      "end": 298.48,
+      "text": "points specifically for slash etc slash var slash temp and slash dev. And that wraps up this lecture"
+    },
+    {
+      "start": 298.48,
+      "end": 304.72,
+      "text": "series on COS Unix system services. I hope you found it useful and thank you for watching."
+    }
+  ]
+}

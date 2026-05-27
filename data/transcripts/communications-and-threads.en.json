@@ -1,0 +1,388 @@
+{
+  "slug": "communications-and-threads",
+  "title": "Communications and threads",
+  "language": "en",
+  "duration": 373.0518125,
+  "segments": [
+    {
+      "start": 3.7,
+      "end": 10.7,
+      "text": "In ZOS Unix, pipes are a communication mechanism for sending arrays of data between two processes."
+    },
+    {
+      "start": 10.7,
+      "end": 13.7,
+      "text": "Pipes are conceptually like a sequential file."
+    },
+    {
+      "start": 13.7,
+      "end": 18.7,
+      "text": "Processes can write into a pipe and other processes can read from the pipe."
+    },
+    {
+      "start": 18.7,
+      "end": 21.7,
+      "text": "Pipes exist only during the time they're open."
+    },
+    {
+      "start": 21.7,
+      "end": 27.7,
+      "text": "The storage needed for the pipes is obtained from a data space associated with the kernel address space."
+    },
+    {
+      "start": 27.7,
+      "end": 29.7,
+      "text": "And there are two types of pipes."
+    },
+    {
+      "start": 29.7,
+      "end": 34.7,
+      "text": "Unnamed pipes are used between related processes, so for example between a parent and a child process."
+    },
+    {
+      "start": 34.7,
+      "end": 38.7,
+      "text": "An unnamed pipe is created by the pipe function."
+    },
+    {
+      "start": 38.7,
+      "end": 41.7,
+      "text": "The pipe function also opens the pipe to use."
+    },
+    {
+      "start": 41.7,
+      "end": 48.7,
+      "text": "No security checking is performed on unnamed pipes since they are available only to a process and its children."
+    },
+    {
+      "start": 48.7,
+      "end": 51.7,
+      "text": "And there's also named pipes which are also called FIFO."
+    },
+    {
+      "start": 51.7,
+      "end": 57.7,
+      "text": "A FIFO resides in the hierarchical file system and can be referenced by a name."
+    },
+    {
+      "start": 57.7,
+      "end": 62.7,
+      "text": "Thus, they can be used for communication between any two processes."
+    },
+    {
+      "start": 62.7,
+      "end": 67.7,
+      "text": "Once processes are created, there are many ways to communicate between them."
+    },
+    {
+      "start": 67.7,
+      "end": 70.7,
+      "text": "We've already talked about pipes being the most common way."
+    },
+    {
+      "start": 70.7,
+      "end": 73.7,
+      "text": "Other ways include wait and execute."
+    },
+    {
+      "start": 73.7,
+      "end": 76.7,
+      "text": "A parent process can wait on the exit of a child."
+    },
+    {
+      "start": 76.7,
+      "end": 78.7,
+      "text": "Signals."
+    },
+    {
+      "start": 78.7,
+      "end": 81.7,
+      "text": "One process can send a system or user signal to another."
+    },
+    {
+      "start": 81.7,
+      "end": 86.7,
+      "text": "The receiving process should be coded to receive and process the signal."
+    },
+    {
+      "start": 86.7,
+      "end": 88.7,
+      "text": "There's shared memory."
+    },
+    {
+      "start": 88.7,
+      "end": 94.7,
+      "text": "Since processes run in different address spaces, these services can be used to define specific memory to be shared."
+    },
+    {
+      "start": 94.7,
+      "end": 99.7,
+      "text": "The kernel will keep these pages in a shared data space."
+    },
+    {
+      "start": 99.7,
+      "end": 101.7,
+      "text": "Message queues."
+    },
+    {
+      "start": 101.7,
+      "end": 109.7,
+      "text": "This is a technique similar to piping but with the capability of reading and writing a message at a time rather than a string of characters."
+    },
+    {
+      "start": 109.7,
+      "end": 113.7,
+      "text": "The kernel also uses a shared data space for these messages."
+    },
+    {
+      "start": 113.7,
+      "end": 118.7,
+      "text": "And there's semaphores, which are used to control the use of shared memory by multiple processes."
+    },
+    {
+      "start": 118.7,
+      "end": 121.7,
+      "text": "They are kept in the kernel process."
+    },
+    {
+      "start": 121.7,
+      "end": 128.7,
+      "text": "The ZOS Unix interprocess communication or IPC functions are shared memory, message queues and semaphores."
+    },
+    {
+      "start": 128.7,
+      "end": 133.7,
+      "text": "Users can invoke applications that create IPC resources and wait for IPC resources."
+    },
+    {
+      "start": 133.7,
+      "end": 138.7,
+      "text": "IPC resources are not released when a process terminates or a user logs off."
+    },
+    {
+      "start": 138.7,
+      "end": 148.7,
+      "text": "Therefore, it is possible that an IPC user might need assistance to remove an IPC resource using the Shell's ipcrm command."
+    },
+    {
+      "start": 148.7,
+      "end": 153.7,
+      "text": "The ipcs shell command can be used to display the IPC resources in a system,"
+    },
+    {
+      "start": 153.7,
+      "end": 159.7,
+      "text": "which users own the resources and which users are waiting for a resource."
+    },
+    {
+      "start": 159.7,
+      "end": 167.7,
+      "text": "Frequently used ZOS Unix programs can be placed into the ZOS link pack area or the LPA to improve performance."
+    },
+    {
+      "start": 167.7,
+      "end": 174.7,
+      "text": "The Shell's a good candidate for that because only one copy of it can be used by all requesters, saving space in IO."
+    },
+    {
+      "start": 174.7,
+      "end": 179.7,
+      "text": "When searching for a program with the sticky bit on, ZOS Unix will look in the user's step line,"
+    },
+    {
+      "start": 179.7,
+      "end": 183.7,
+      "text": "the link pack area and the link list concatenation."
+    },
+    {
+      "start": 183.7,
+      "end": 188.7,
+      "text": "In order to keep a ZOS Unix program in, LPA, a number of things must be done."
+    },
+    {
+      "start": 188.7,
+      "end": 195.7,
+      "text": "The file in the hierarchical file system that contains the program must have the sticky bit set by an authorized user."
+    },
+    {
+      "start": 195.7,
+      "end": 198.7,
+      "text": "The sticky bit can also be set on a directory level."
+    },
+    {
+      "start": 198.7,
+      "end": 204.7,
+      "text": "It limits removing or renaming subdirectories or files to the owner or the super user."
+    },
+    {
+      "start": 204.7,
+      "end": 211.7,
+      "text": "Also, the program must be link edited and placed in sys1.lpalib or a dataset in LPA list."
+    },
+    {
+      "start": 211.7,
+      "end": 216.7,
+      "text": "The program is copied to LPA during the next IPL."
+    },
+    {
+      "start": 216.7,
+      "end": 222.7,
+      "text": "Threads provide support for multiple separate units of dispatchable work within a process."
+    },
+    {
+      "start": 222.7,
+      "end": 227.7,
+      "text": "A ZOS Unix thread can be compared with a ZOS task."
+    },
+    {
+      "start": 227.7,
+      "end": 232.7,
+      "text": "The thread support allows application programmers to develop multitasking server applications"
+    },
+    {
+      "start": 232.7,
+      "end": 236.7,
+      "text": "that require multiple concurrent execution streams."
+    },
+    {
+      "start": 236.7,
+      "end": 242.7,
+      "text": "A program using threads can have significant performance benefits in a multiprocessor environment"
+    },
+    {
+      "start": 242.7,
+      "end": 247.7,
+      "text": "where each thread in the process can run on an individual processor."
+    },
+    {
+      "start": 247.7,
+      "end": 253.7,
+      "text": "Threads are created with the pthread underscore create c function."
+    },
+    {
+      "start": 253.7,
+      "end": 258.7,
+      "text": "Since threads share address space, there are services to protect the memory of the address space"
+    },
+    {
+      "start": 258.7,
+      "end": 261.7,
+      "text": "and to synchronize the execution of the threads."
+    },
+    {
+      "start": 261.7,
+      "end": 266.7,
+      "text": "These are mutex, which is a structure associated with the variable,"
+    },
+    {
+      "start": 266.7,
+      "end": 270.7,
+      "text": "and used by threads to determine if a variable is in use,"
+    },
+    {
+      "start": 270.7,
+      "end": 276.7,
+      "text": "and condition variable used to synchronize the execution of the activities of the threads."
+    },
+    {
+      "start": 276.7,
+      "end": 281.7,
+      "text": "So what are some of the differences between ZOS tasks and POSIX threads?"
+    },
+    {
+      "start": 281.7,
+      "end": 284.7,
+      "text": "ZOS has a task hierarchy."
+    },
+    {
+      "start": 284.7,
+      "end": 289.7,
+      "text": "POSIX threads have no hierarchy except for the initial thread which behaves differently from the other threads."
+    },
+    {
+      "start": 289.7,
+      "end": 292.7,
+      "text": "ZOS tasks usually run different programs."
+    },
+    {
+      "start": 292.7,
+      "end": 296.7,
+      "text": "All POSIX threads in a process run the same program."
+    },
+    {
+      "start": 296.7,
+      "end": 299.7,
+      "text": "ZOS tasks can be independent or cooperating."
+    },
+    {
+      "start": 299.7,
+      "end": 303.7,
+      "text": "POSIX threads must cooperate, they do not operate independently."
+    },
+    {
+      "start": 303.7,
+      "end": 309.7,
+      "text": "ZOS allocates storage at task level, and some storage can be shared between tasks and some not."
+    },
+    {
+      "start": 309.7,
+      "end": 313.7,
+      "text": "The programs can be located in common storage, CSA or LPA,"
+    },
+    {
+      "start": 313.7,
+      "end": 319.7,
+      "text": "in private area below the 16 megabyte line, or in private area above the 16 megabyte line."
+    },
+    {
+      "start": 319.7,
+      "end": 324.7,
+      "text": "All POSIX threads in a process share all storage allocated to the process."
+    },
+    {
+      "start": 324.7,
+      "end": 328.7,
+      "text": "Now, this diagram shows the ZOS program management functions"
+    },
+    {
+      "start": 328.7,
+      "end": 332.7,
+      "text": "and the equivalent functions in ZOS Unix."
+    },
+    {
+      "start": 332.7,
+      "end": 336.7,
+      "text": "Some of these similarities include that programs can reside in different libraries"
+    },
+    {
+      "start": 336.7,
+      "end": 340.7,
+      "text": "and there is an automatic search to locate them."
+    },
+    {
+      "start": 340.7,
+      "end": 346.7,
+      "text": "Both interfaces provide a method to replace the current executing program with a new program."
+    },
+    {
+      "start": 346.7,
+      "end": 351.7,
+      "text": "And both sets of interfaces have ways to create work in separate address spaces."
+    },
+    {
+      "start": 351.7,
+      "end": 359.7,
+      "text": "But there are also many differences, including with tasks, load and program execution."
+    },
+    {
+      "start": 359.7,
+      "end": 363.7,
+      "text": "And that's it for ZOS Unix functions."
+    },
+    {
+      "start": 363.7,
+      "end": 368.7,
+      "text": "In the next module, we'll look at working with the ZOS Unix environment."
+    }
+  ]
+}

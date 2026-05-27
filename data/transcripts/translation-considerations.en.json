@@ -1,0 +1,248 @@
+{
+  "slug": "translation-considerations",
+  "title": "Translation considerations",
+  "language": "en",
+  "duration": 307.409,
+  "segments": [
+    {
+      "start": 4.0,
+      "end": 9.52,
+      "text": "The world we live in today is a global world. We no longer conduct business solely within"
+    },
+    {
+      "start": 9.52,
+      "end": 15.44,
+      "text": "one country. Our applications must make the transition from one country to another seamlessly."
+    },
+    {
+      "start": 16.32,
+      "end": 21.28,
+      "text": "The XPG standards are defining what services must be available to affect this transition."
+    },
+    {
+      "start": 22.08,
+      "end": 28.24,
+      "text": "This process is called internationalisation. This involves the display and printing of"
+    },
+    {
+      "start": 28.24,
+      "end": 33.6,
+      "text": "characters, both common ones and ones unique to individual languages, the format of date"
+    },
+    {
+      "start": 33.6,
+      "end": 37.68,
+      "text": "and monetary fields, and the collating sequence of the characters."
+    },
+    {
+      "start": 38.8,
+      "end": 46.08,
+      "text": "Now, to get a better grip on this, let's first off define some terms. A character set is the set of"
+    },
+    {
+      "start": 46.08,
+      "end": 52.32,
+      "text": "characters that you see on your keyboards or your printers that you can print. Internally,"
+    },
+    {
+      "start": 52.32,
+      "end": 58.16,
+      "text": "those characters are represented by unique hexadecimal values in memory. The relationship"
+    },
+    {
+      "start": 58.16,
+      "end": 63.52,
+      "text": "between the hexadecimal value and the character diagram is defined in a list called a code page."
+    },
+    {
+      "start": 64.56,
+      "end": 72.0,
+      "text": "ZOS itself has no support for code pages. TSO-ISBF has support for code pages like ZOS-UNIX,"
+    },
+    {
+      "start": 72.0,
+      "end": 78.4,
+      "text": "but differently. Each country and region might also have a unique code page called the country"
+    },
+    {
+      "start": 78.4,
+      "end": 85.6,
+      "text": "extended code page, which relates the hexadecimal values from 00 to FF into a character set with"
+    },
+    {
+      "start": 85.6,
+      "end": 89.84,
+      "text": "the different characters used, including the needed letters in that language."
+    },
+    {
+      "start": 90.32,
+      "end": 96.56,
+      "text": "Data coming from ZOS datasets or from a workstation could be in any of the code pages shown"
+    },
+    {
+      "start": 96.56,
+      "end": 103.2,
+      "text": "here. The special characters shown here are the 14 variant characters that are often different"
+    },
+    {
+      "start": 103.2,
+      "end": 109.6,
+      "text": "between the code pages. The individual country extended code page includes characters"
+    },
+    {
+      "start": 109.6,
+      "end": 116.8,
+      "text": "letters in their alphabets that also require unique considerations. This diagram illustrates"
+    },
+    {
+      "start": 117.6,
+      "end": 122.24,
+      "text": "some of the problems you meet in an international environment. Let's look at the various"
+    },
+    {
+      "start": 122.24,
+      "end": 127.44,
+      "text": "translation issues and some solutions. First, let's look at a relatively simple situation"
+    },
+    {
+      "start": 127.44,
+      "end": 135.2,
+      "text": "in a USA environment. Here are some possibilities to consider. Customize your keyboard using the"
+    },
+    {
+      "start": 135.2,
+      "end": 140.0,
+      "text": "features of the emulator to create the correct hexadecimal coding for the characters."
+    },
+    {
+      "start": 140.72,
+      "end": 146.4,
+      "text": "If you are a TSO user, specify the omvsconvert parameter when you enter the shell."
+    },
+    {
+      "start": 147.2,
+      "end": 152.56,
+      "text": "If you are using the zos-unix shell through the TCPIPR login or telnet support,"
+    },
+    {
+      "start": 152.56,
+      "end": 158.64,
+      "text": "use the chcp shell command to convert from ASCII to the zos-unix code page."
+    },
+    {
+      "start": 159.44,
+      "end": 165.52,
+      "text": "And when using oput, oget and ocopy, use the convert parameters on these statements."
+    },
+    {
+      "start": 165.52,
+      "end": 173.12,
+      "text": "But what about shell scripts and translation with international character sets?"
+    },
+    {
+      "start": 174.32,
+      "end": 179.68,
+      "text": "Since many shell scripts use special characters, they must run the code page they were created"
+    },
+    {
+      "start": 179.68,
+      "end": 186.56,
+      "text": "with. This means that users in other countries have to have their own translated copy of the"
+    },
+    {
+      "start": 186.56,
+      "end": 190.56,
+      "text": "script or they'll have to change to the code page that goes with the script."
+    },
+    {
+      "start": 191.36,
+      "end": 197.2,
+      "text": "The icopy command can be used to translate the scripts from one code page to another."
+    },
+    {
+      "start": 198.0,
+      "end": 203.52,
+      "text": "Here you see that hash sign is represented as something else when you change the code page."
+    },
+    {
+      "start": 203.52,
+      "end": 208.32,
+      "text": "This character has a special meaning in a shell script. If this character is changed to something"
+    },
+    {
+      "start": 208.32,
+      "end": 214.56,
+      "text": "else, well, the shell script will not work as it should. This visual illustrates the"
+    },
+    {
+      "start": 214.56,
+      "end": 219.92,
+      "text": "problem from another angle. Here is a script with 3270 emulator program in IBM"
+    },
+    {
+      "start": 220.72,
+      "end": 229.92,
+      "text": "1047 USA code page and IBM 277 Danish code page. These are all things to watch out for"
+    },
+    {
+      "start": 229.92,
+      "end": 235.2,
+      "text": "when using international character sets. Let's wrap this up with a comparison of"
+    },
+    {
+      "start": 235.2,
+      "end": 241.12,
+      "text": "different functions in TSO and the Unix shell. Command processing in the shell is similar to"
+    },
+    {
+      "start": 241.12,
+      "end": 246.32,
+      "text": "command processing for C lists. In combination with the shell utilities, the shell provides"
+    },
+    {
+      "start": 246.32,
+      "end": 252.4,
+      "text": "a programming environment as rich as the REX environment in COS. Hierarchical files can be"
+    },
+    {
+      "start": 252.4,
+      "end": 259.2,
+      "text": "edited from COS using ISPF menus. The ISPF menus can be invoked by the TSO commands OEdit"
+    },
+    {
+      "start": 259.2,
+      "end": 267.28,
+      "text": "and OBrowse. In the shell, the editor can be used to edit HFS files. In COS, SDSF is used to"
+    },
+    {
+      "start": 267.28,
+      "end": 274.16,
+      "text": "monitor and control batch jobs. The TSOE commands status, cancel and output can also be used."
+    },
+    {
+      "start": 274.88,
+      "end": 278.8,
+      "text": "In the shell, there are multiple commands to control jobs including PS,"
+    },
+    {
+      "start": 278.8,
+      "end": 285.92,
+      "text": "jobs, kill, FG, BG and wait. Background jobs are submitted by the TSOE commands submit"
+    },
+    {
+      "start": 285.92,
+      "end": 293.12,
+      "text": "in a ZOS environment. In the shell, a command ended with an ampersand, runs in the background."
+    },
+    {
+      "start": 293.12,
+      "end": 299.04,
+      "text": "You can also use the shell submit command. Now in the next module,"
+    },
+    {
+      "start": 299.04,
+      "end": 302.48,
+      "text": "we'll move on to address functions in COS Unix."
+    }
+  ]
+}

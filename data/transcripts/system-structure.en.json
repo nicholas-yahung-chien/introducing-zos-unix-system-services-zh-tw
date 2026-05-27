@@ -1,0 +1,473 @@
+{
+  "slug": "system-structure",
+  "title": "system structure",
+  "language": "en",
+  "duration": 274.9706875,
+  "segments": [
+    {
+      "start": 3.73,
+      "end": 6.99,
+      "text": "Let's take a look at how to structure your file system."
+    },
+    {
+      "start": 6.99,
+      "end": 8.61,
+      "text": "You should organize your user files"
+    },
+    {
+      "start": 8.61,
+      "end": 10.69,
+      "text": "into multiple HFS datasets."
+    },
+    {
+      "start": 10.69,
+      "end": 13.15,
+      "text": "This better enables you to manage space,"
+    },
+    {
+      "start": 13.15,
+      "end": 16.89,
+      "text": "control contention, and manage backup and recovery situations."
+    },
+    {
+      "start": 16.89,
+      "end": 19.41,
+      "text": "That said, this is just one way of managing an environment,"
+    },
+    {
+      "start": 19.41,
+      "end": 22.13,
+      "text": "not the only one, and depending on individual requirements"
+    },
+    {
+      "start": 22.13,
+      "end": 25.05,
+      "text": "might not necessarily be the best way."
+    },
+    {
+      "start": 25.05,
+      "end": 27.45,
+      "text": "For example, once the US dataset per user"
+    },
+    {
+      "start": 27.45,
+      "end": 29.05,
+      "text": "might be difficult to manage,"
+    },
+    {
+      "start": 29.05,
+      "end": 31.29,
+      "text": "another approach might be to divide the data"
+    },
+    {
+      "start": 31.29,
+      "end": 33.61,
+      "text": "by application or by department."
+    },
+    {
+      "start": 33.61,
+      "end": 36.55,
+      "text": "Regardless, in many cases, this is the way to go."
+    },
+    {
+      "start": 36.55,
+      "end": 39.17,
+      "text": "The slash U directory in the root file system"
+    },
+    {
+      "start": 39.17,
+      "end": 42.61,
+      "text": "should be an empty directory mount point for an HFS"
+    },
+    {
+      "start": 42.61,
+      "end": 44.73,
+      "text": "that contains just directories or mount points"
+    },
+    {
+      "start": 44.73,
+      "end": 47.21,
+      "text": "for each of your users."
+    },
+    {
+      "start": 47.21,
+      "end": 49.81,
+      "text": "This HFS dataset will be mounted automatically"
+    },
+    {
+      "start": 49.81,
+      "end": 52.11,
+      "text": "at OMVS initialization."
+    },
+    {
+      "start": 52.11,
+      "end": 53.73,
+      "text": "As you add users to your system,"
+    },
+    {
+      "start": 53.73,
+      "end": 55.85,
+      "text": "create a new HFS for each one,"
+    },
+    {
+      "start": 55.85,
+      "end": 58.81,
+      "text": "mount that HFS at the specific mount point set aside"
+    },
+    {
+      "start": 58.81,
+      "end": 61.17,
+      "text": "for that user, and then change the ownership"
+    },
+    {
+      "start": 61.17,
+      "end": 64.49,
+      "text": "of the mount point directory to the user's ID."
+    },
+    {
+      "start": 64.49,
+      "end": 66.21,
+      "text": "This can be done in the Rex Exec"
+    },
+    {
+      "start": 66.21,
+      "end": 69.25,
+      "text": "to simplify the process of adding a new user."
+    },
+    {
+      "start": 69.25,
+      "end": 72.33,
+      "text": "The advantages of this organization are that user files"
+    },
+    {
+      "start": 72.33,
+      "end": 75.65,
+      "text": "are stored in a separate ZOS dataset for each user,"
+    },
+    {
+      "start": 75.65,
+      "end": 79.61,
+      "text": "and the root dataset can be kept read-only."
+    },
+    {
+      "start": 79.61,
+      "end": 83.77,
+      "text": "Auto-mount is an optional facility that comes with ZOS Unix."
+    },
+    {
+      "start": 83.77,
+      "end": 86.05,
+      "text": "It can be implemented if you want it."
+    },
+    {
+      "start": 86.05,
+      "end": 90.59,
+      "text": "It mounts user datasets and other datasets as directed."
+    },
+    {
+      "start": 90.59,
+      "end": 93.65,
+      "text": "Auto-mount only mounts datasets as they are referenced,"
+    },
+    {
+      "start": 93.65,
+      "end": 96.75,
+      "text": "and these mounts are transparent to the user."
+    },
+    {
+      "start": 96.75,
+      "end": 100.75,
+      "text": "Both HFS and ZFS can be auto-mounted."
+    },
+    {
+      "start": 100.75,
+      "end": 103.19,
+      "text": "You can use a single auto-mount policy"
+    },
+    {
+      "start": 103.19,
+      "end": 108.28,
+      "text": "to manage both HFS and ZFS file systems."
+    },
+    {
+      "start": 108.28,
+      "end": 110.62,
+      "text": "The auto-mount facility is a way to ensure"
+    },
+    {
+      "start": 110.62,
+      "end": 113.52,
+      "text": "that a user's file system is mounted automatically"
+    },
+    {
+      "start": 113.52,
+      "end": 116.02,
+      "text": "whenever they access a file in it."
+    },
+    {
+      "start": 116.02,
+      "end": 120.1,
+      "text": "The support group builds a file to identify the users,"
+    },
+    {
+      "start": 120.1,
+      "end": 123.98,
+      "text": "their file systems, and its mount characteristics."
+    },
+    {
+      "start": 123.98,
+      "end": 125.98,
+      "text": "When the auto-mount facility is started,"
+    },
+    {
+      "start": 125.98,
+      "end": 128.48,
+      "text": "it monitors file access."
+    },
+    {
+      "start": 128.48,
+      "end": 131.46,
+      "text": "When a user attempts to access one of their files,"
+    },
+    {
+      "start": 131.46,
+      "end": 134.98,
+      "text": "auto-mount recognizes the need for a mount."
+    },
+    {
+      "start": 134.98,
+      "end": 136.8,
+      "text": "If there's no activity to a file system"
+    },
+    {
+      "start": 136.8,
+      "end": 138.26,
+      "text": "for a divine period of time,"
+    },
+    {
+      "start": 138.26,
+      "end": 142.92,
+      "text": "well, then auto-mount can also unmount the file system."
+    },
+    {
+      "start": 142.92,
+      "end": 145.14,
+      "text": "This avoids the need for a super user"
+    },
+    {
+      "start": 145.14,
+      "end": 148.24,
+      "text": "to mount file systems upon request."
+    },
+    {
+      "start": 148.24,
+      "end": 150.32,
+      "text": "Let's look at another facility"
+    },
+    {
+      "start": 150.32,
+      "end": 155.32,
+      "text": "for enhanced performance of programs that access files."
+    },
+    {
+      "start": 155.44,
+      "end": 159.34,
+      "text": "Memory mapped files enable multiple processes"
+    },
+    {
+      "start": 159.34,
+      "end": 162.96,
+      "text": "to share file data without each doing its own reads"
+    },
+    {
+      "start": 162.96,
+      "end": 164.44,
+      "text": "and writes."
+    },
+    {
+      "start": 164.44,
+      "end": 168.72,
+      "text": "This is a function from the XPG 4.2 standard."
+    },
+    {
+      "start": 168.72,
+      "end": 171.04,
+      "text": "The kernel stores the pages of data"
+    },
+    {
+      "start": 171.04,
+      "end": 173.96,
+      "text": "from the file in a data space."
+    },
+    {
+      "start": 173.96,
+      "end": 176.76,
+      "text": "A child process inherits the same mapping"
+    },
+    {
+      "start": 176.76,
+      "end": 180.92,
+      "text": "as defined by the parent using the mmmap function."
+    },
+    {
+      "start": 181.8,
+      "end": 184.64,
+      "text": "Another process will need to open the file to map"
+    },
+    {
+      "start": 184.64,
+      "end": 188.0,
+      "text": "to the same data pages in the data space."
+    },
+    {
+      "start": 188.0,
+      "end": 190.28,
+      "text": "There are associated commands to ensure"
+    },
+    {
+      "start": 190.28,
+      "end": 192.72,
+      "text": "that the physical data on the storage device"
+    },
+    {
+      "start": 192.72,
+      "end": 195.14,
+      "text": "is updated as necessary."
+    },
+    {
+      "start": 196.66,
+      "end": 199.36,
+      "text": "Now, this diagram provides a logical view"
+    },
+    {
+      "start": 199.36,
+      "end": 201.32,
+      "text": "of the file system structure"
+    },
+    {
+      "start": 201.32,
+      "end": 204.2,
+      "text": "and an overview of its interfaces."
+    },
+    {
+      "start": 204.2,
+      "end": 207.0,
+      "text": "A ZOS Unix user has multiple interfaces"
+    },
+    {
+      "start": 207.0,
+      "end": 209.48,
+      "text": "to the hierarchical file system."
+    },
+    {
+      "start": 209.48,
+      "end": 212.36,
+      "text": "The POSIX interfaces are the C program functions"
+    },
+    {
+      "start": 212.36,
+      "end": 214.08,
+      "text": "and the shell commands."
+    },
+    {
+      "start": 214.08,
+      "end": 217.4,
+      "text": "And there's the ZOS interfaces through the TSCoE commands"
+    },
+    {
+      "start": 217.4,
+      "end": 218.84,
+      "text": "and from high level languages,"
+    },
+    {
+      "start": 218.84,
+      "end": 221.24,
+      "text": "which can use ZOS callable services"
+    },
+    {
+      "start": 221.24,
+      "end": 224.22,
+      "text": "to access the hierarchical files."
+    },
+    {
+      "start": 224.22,
+      "end": 226.32,
+      "text": "The hierarchical file system is divided"
+    },
+    {
+      "start": 226.32,
+      "end": 229.28,
+      "text": "into a logical file system as LFS"
+    },
+    {
+      "start": 229.28,
+      "end": 232.88,
+      "text": "and a physical file system PFS."
+    },
+    {
+      "start": 232.88,
+      "end": 236.12,
+      "text": "LFS presents a single interface to the file system."
+    },
+    {
+      "start": 236.12,
+      "end": 238.52,
+      "text": "LFS receives the access request from a user"
+    },
+    {
+      "start": 238.52,
+      "end": 242.12,
+      "text": "and maps the request to the appropriate PFS."
+    },
+    {
+      "start": 242.12,
+      "end": 244.96,
+      "text": "The LFS assigns a descriptor to the request"
+    },
+    {
+      "start": 244.96,
+      "end": 247.4,
+      "text": "from the file descriptor table."
+    },
+    {
+      "start": 247.4,
+      "end": 250.36,
+      "text": "PFS performs the actual work in the file system."
+    },
+    {
+      "start": 250.36,
+      "end": 253.88,
+      "text": "There are multiple PFSs in the file system."
+    },
+    {
+      "start": 253.88,
+      "end": 256.36,
+      "text": "HFS files support files on DASD."
+    },
+    {
+      "start": 256.36,
+      "end": 259.36,
+      "text": "PIPES support interprocess communication."
+    },
+    {
+      "start": 259.36,
+      "end": 262.16,
+      "text": "Character special files support terminal communication"
+    },
+    {
+      "start": 262.18,
+      "end": 264.92,
+      "text": "and socket file systems support program"
+    },
+    {
+      "start": 264.92,
+      "end": 266.6,
+      "text": "to program communications."
+    },
+    {
+      "start": 267.56,
+      "end": 270.76,
+      "text": "Next up, we're talking backup and recovery."
+    }
+  ]
+}

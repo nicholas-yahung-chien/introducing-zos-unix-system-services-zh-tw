@@ -25,24 +25,32 @@ z/OS UNIX 不只提供指令，也提供 runtime library 與 callable services�
   title="Functions 與 processes"
   entry-id="1_156jj3h4"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193134"
+  video-src="/media/functions-and-processes.mp4"
+  subtitle-src="/subtitles/functions-and-processes.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="Daemons 與 superusers"
   entry-id="1_yttr8bkz"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193135"
+  video-src="/media/daemons-and-superusers.mp4"
+  subtitle-src="/subtitles/daemons-and-superusers.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="Child processes"
   entry-id="1_9qo8xsow"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193136"
+  video-src="/media/child-processes.mp4"
+  subtitle-src="/subtitles/child-processes.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="Communications 與 threads"
   entry-id="1_ktj4ke4p"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193137"
+  video-src="/media/communications-and-threads.mp4"
+  subtitle-src="/subtitles/communications-and-threads.zh-Hant-TW.vtt"
 />
 
 ## 閱讀材料

@@ -1,0 +1,245 @@
+WEBVTT
+
+1
+00:00:03.980 --> 00:00:11.060
+Welcome, my name is Martin Keene and I'm delighted to be your instructor as we explore how open
+
+2
+00:00:11.060 --> 00:00:16.060
+standards are implemented in a ZOS system by ZOS Unix.
+
+3
+00:00:16.060 --> 00:00:20.540
+We're going to be looking at all aspects from this, from the far system to the shell and
+
+4
+00:00:20.540 --> 00:00:26.060
+beyond, and you'll get your chance to get your hands dirty with a series of lab exercises
+
+5
+00:00:26.060 --> 00:00:29.860
+using a real IBM Z Unix system.
+
+6
+00:00:29.860 --> 00:00:33.220
+To try out the concepts that we will be covering here.
+
+7
+00:00:33.220 --> 00:00:35.660
+So let's get cracking.
+
+8
+00:00:35.660 --> 00:00:42.300
+Now, ZOS Unix brings together the open world and the ZOS world.
+
+9
+00:00:42.300 --> 00:00:47.780
+Both worlds can coexist independently while sharing the same processing and storage resources.
+
+10
+00:00:47.780 --> 00:00:52.580
+And it's a case of getting the best of both worlds, a standard interface and portability
+
+11
+00:00:52.580 --> 00:00:59.900
+from the open part of ZOS Unix and a larger rate of services from the MVS part of ZOS.
+
+12
+00:01:00.220 --> 00:01:06.100
+ZOS Unix supports an environment of large operating systems or servers, distributed systems and
+
+13
+00:01:06.100 --> 00:01:10.300
+workstations that share common interfaces.
+
+14
+00:01:10.300 --> 00:01:15.060
+ZOS Unix supports the set of standards being developed by the open group.
+
+15
+00:01:15.060 --> 00:01:20.900
+This includes the portable operating system interface better known as POSIX.
+
+16
+00:01:20.900 --> 00:01:26.220
+Users can concentrate their work in the environment where they're most comfortable, be that Unix
+
+17
+00:01:26.220 --> 00:01:27.940
+or be that MVS.
+
+18
+00:01:28.060 --> 00:01:32.220
+So for example, application developers can develop most of their applications at their
+
+19
+00:01:32.220 --> 00:01:38.140
+workstations and then use standard POSIX interfaces to compile, test and debug their
+
+20
+00:01:38.140 --> 00:01:41.420
+programs on the ZOS system.
+
+21
+00:01:41.420 --> 00:01:44.860
+Current ZOS applications run as usual.
+
+22
+00:01:44.860 --> 00:01:49.060
+Current users continue to have all of the services of ZOS available.
+
+23
+00:01:49.060 --> 00:01:55.420
+And with ZOS Unix, the existing investment in ZOS applications and data is protected.
+
+24
+00:01:55.420 --> 00:02:00.460
+New applications will have access to existing data.
+
+25
+00:02:00.460 --> 00:02:03.460
+Now, what are open systems?
+
+26
+00:02:03.460 --> 00:02:09.660
+Well, based on requirements from customers, the characteristics of an open system environment
+
+27
+00:02:09.660 --> 00:02:12.980
+can be expressed by the following elements.
+
+28
+00:02:12.980 --> 00:02:15.660
+First off, there's portability.
+
+29
+00:02:15.660 --> 00:02:22.100
+This is the ability to relocate system resources such as applications, data and people between
+
+30
+00:02:22.100 --> 00:02:27.700
+processing environments of different design and different architectures.
+
+31
+00:02:27.700 --> 00:02:29.940
+There's also interoperability.
+
+32
+00:02:29.940 --> 00:02:34.220
+This defines the ability to interconnect systems from different vendors and have them work
+
+33
+00:02:34.220 --> 00:02:36.820
+together to solve a business problem.
+
+34
+00:02:36.820 --> 00:02:41.300
+And finally, there's investment protection, which is the ability to choose components
+
+35
+00:02:41.300 --> 00:02:47.380
+from offerings of many vendors, many protocols and many architectures, all with the confidence
+
+36
+00:02:47.380 --> 00:02:51.850
+that they're going to work together.
+
+37
+00:02:51.850 --> 00:03:00.050
+In an open system environment, a set of standards can provide the ability to interoperate and
+
+38
+00:03:00.050 --> 00:03:05.410
+to port applications, data and people on different operating platforms.
+
+39
+00:03:05.410 --> 00:03:09.170
+Now, the vendor names that we're showing here, they're just an example.
+
+40
+00:03:09.170 --> 00:03:15.570
+But the point is, it's this defined set of standards in the middle that enable interoperability
+
+41
+00:03:15.570 --> 00:03:18.450
+and portability of applications.
+
+42
+00:03:18.450 --> 00:03:20.410
+And there are two types of standards.
+
+43
+00:03:20.410 --> 00:03:24.970
+There are de facto standards and de jure standards.
+
+44
+00:03:24.970 --> 00:03:29.490
+De facto standards, those are established by broad industry usage of a technology.
+
+45
+00:03:29.490 --> 00:03:35.930
+And de jure standards are established and accepted by recognized standard bodies through a formal
+
+46
+00:03:35.930 --> 00:03:38.530
+voting process.
+
+47
+00:03:38.530 --> 00:03:44.770
+The single Unix specification or SUS is the collective name of a family of standards for
+
+48
+00:03:44.770 --> 00:03:50.090
+computer operating systems, compliance with which is required to qualify for using the
+
+49
+00:03:50.090 --> 00:03:53.050
+Unix trademark.
+
+50
+00:03:53.050 --> 00:03:58.170
+If an operating system is submitted to the open group for certification and passes conformance
+
+51
+00:03:58.170 --> 00:04:04.170
+tests, then it's deemed to be a compliant Unix standard.
+
+52
+00:04:04.170 --> 00:04:10.210
+ZOS Unix meets these open systems requirements.
+
+53
+00:04:10.210 --> 00:04:17.550
+Unix applications which conform to XPG 4.2 standards can be ported to ZOS.
+
+54
+00:04:17.550 --> 00:04:21.910
+These can be vendor applications or self-developed applications.
+
+55
+00:04:21.910 --> 00:04:26.910
+Now does this mean that every Unix application should run on Z?
+
+56
+00:04:26.910 --> 00:04:32.150
+Well of course not, but applications that require true enterprise server qualities
+
+57
+00:04:32.150 --> 00:04:34.990
+of service, they are well suited.
+
+58
+00:04:34.990 --> 00:04:40.590
+If your application has high DASD requirements, high security needs, or needs a high level
+
+59
+00:04:40.590 --> 00:04:46.150
+of reliability, then you'll see a lot of benefit in moving that application to ZOS
+
+60
+00:04:46.150 --> 00:04:47.150
+Unix.
+
+61
+00:04:47.150 --> 00:04:53.110
+In the next video, we'll take a look at how Unix is implemented with ZOS.

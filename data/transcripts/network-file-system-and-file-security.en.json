@@ -1,0 +1,368 @@
+{
+  "slug": "network-file-system-and-file-security",
+  "title": "Network file system and file security",
+  "language": "en",
+  "duration": 474.1515,
+  "segments": [
+    {
+      "start": 4.03,
+      "end": 9.39,
+      "text": "Network File System, NFS, is the strategic file sharing protocol for the ZOS platform."
+    },
+    {
+      "start": 9.95,
+      "end": 16.75,
+      "text": "The DFSMS MVS MVS server, or NFSS, feature implements the NFS protocols."
+    },
+    {
+      "start": 17.63,
+      "end": 23.95,
+      "text": "NFSS enables the host processor to act as a file server to authorize NFS clients and a TCP IP"
+    },
+    {
+      "start": 23.95,
+      "end": 30.99,
+      "text": "network. NFSS allows remote access to data on the ZOS host from workstations, personal computers,"
+    },
+    {
+      "start": 30.99,
+      "end": 36.67,
+      "text": "or any system in the network that is using NFS client software. A client system can be"
+    },
+    {
+      "start": 36.67,
+      "end": 44.11,
+      "text": "Windows or any Unix or Linux system with the NFS client software and ZOS. And the NFS server allows"
+    },
+    {
+      "start": 44.11,
+      "end": 50.67,
+      "text": "access to ZOS data sets and HFS files on the ZOS host as if they were local files on the client"
+    },
+    {
+      "start": 50.67,
+      "end": 57.95,
+      "text": "system. A workstation user can access the ZOS file system by using the NVS logging command to log"
+    },
+    {
+      "start": 57.95,
+      "end": 64.67,
+      "text": "into ZOS. A ZOS user ID, password and authorization to access requested files is needed."
+    },
+    {
+      "start": 65.39,
+      "end": 70.99,
+      "text": "The mount command is used to create a temporary link between specific ZOS data sets and an empty"
+    },
+    {
+      "start": 70.99,
+      "end": 77.47,
+      "text": "Unix directory or a dummy PC drive. A ZOS high level qualifier is used in the mount command"
+    },
+    {
+      "start": 77.47,
+      "end": 83.63,
+      "text": "to specify which ZOS data sets to mount at a mount point. The ZOS data sets beginning with"
+    },
+    {
+      "start": 83.63,
+      "end": 88.99,
+      "text": "the specified high level qualifier appear as files under the mount point. If the specified"
+    },
+    {
+      "start": 88.99,
+      "end": 96.27,
+      "text": "data sets include partition data sets, a second level of hierarchy is shown. The NFS support"
+    },
+    {
+      "start": 96.27,
+      "end": 102.51,
+      "text": "for ZOS Unix provides transparent access to HFS file systems mounted by an NFS client."
+    },
+    {
+      "start": 103.23,
+      "end": 108.27,
+      "text": "The NFS client user is not restricted to the ZOS naming conventions for HFS data access."
+    },
+    {
+      "start": 108.99,
+      "end": 113.87,
+      "text": "Path names and file names can contain special characters and can be mixed cased, just go wild."
+    },
+    {
+      "start": 114.59,
+      "end": 122.27,
+      "text": "An NFS client user can mount a part of the ZOS Unix HFS on their local file system and thereafter"
+    },
+    {
+      "start": 122.27,
+      "end": 127.63,
+      "text": "create, delete, rewrite and otherwise treat that part of the ZOS Unix file system"
+    },
+    {
+      "start": 127.63,
+      "end": 131.07,
+      "text": "as an extension to their local workstation file system."
+    },
+    {
+      "start": 131.95,
+      "end": 140.11,
+      "text": "Okay, so let's transition into file security. In ZOS Unix, each user has a user ID, a UID and"
+    },
+    {
+      "start": 140.11,
+      "end": 146.83,
+      "text": "a group ID, a GID. When a user creates a directory or a file, it's automatically associated with the"
+    },
+    {
+      "start": 146.83,
+      "end": 155.15,
+      "text": "user's GID and the GID is set to the GID of the parent directory. A user's UID and GID can be"
+    },
+    {
+      "start": 155.15,
+      "end": 160.59,
+      "text": "defined in RACF or an equivalent security product. The system verifies that the user or"
+    },
+    {
+      "start": 160.59,
+      "end": 166.19,
+      "text": "a program has access to a file by comparing the UID and GID in RACF with the definitions"
+    },
+    {
+      "start": 166.19,
+      "end": 172.43,
+      "text": "in the hierarchical file system. There are three classes of users, there's owner, the user's UID"
+    },
+    {
+      "start": 172.43,
+      "end": 178.27,
+      "text": "must match the UID for the file, there's group, a member of any group whose GID matches the GID of"
+    },
+    {
+      "start": 178.27,
+      "end": 184.03,
+      "text": "the file, and other which is anyone else. Access to files on directories is controlled"
+    },
+    {
+      "start": 184.03,
+      "end": 189.95,
+      "text": "by permission bits. Each file gets its permission bits set when it's created. The permission bits"
+    },
+    {
+      "start": 189.95,
+      "end": 196.59,
+      "text": "can be changed by the chmod command. Those are read notated by R, write notated by W and execute"
+    },
+    {
+      "start": 196.59,
+      "end": 203.07,
+      "text": "notated by X. The diagram here shows a conceptual overview of how file security is controlled."
+    },
+    {
+      "start": 203.07,
+      "end": 210.35,
+      "text": "A user with UID 103 and GID 42 wants to open file slash user slash lib slash lib dot a."
+    },
+    {
+      "start": 210.35,
+      "end": 216.35,
+      "text": "The system checks with RACF if UID 103 and GID 42 are valid and if they are valid what authority"
+    },
+    {
+      "start": 216.35,
+      "end": 222.83,
+      "text": "they have to access the file lib dot a. User GID 103 is not the owner of this file but belongs to"
+    },
+    {
+      "start": 222.83,
+      "end": 229.23,
+      "text": "the same group the file is associated with. The group permission is RWX which means this user will"
+    },
+    {
+      "start": 229.23,
+      "end": 235.15,
+      "text": "have rewrite and execute access to the file. Now as this chart shows the permission bits have"
+    },
+    {
+      "start": 235.15,
+      "end": 239.95,
+      "text": "different meanings when related to files and directories. If you want to put a new file in a"
+    },
+    {
+      "start": 239.95,
+      "end": 245.87,
+      "text": "directory you need both search and write access to the directory. The system needs to search the"
+    },
+    {
+      "start": 245.87,
+      "end": 251.47,
+      "text": "directory to determine if the entry is already there. As you create files on directories default"
+    },
+    {
+      "start": 251.47,
+      "end": 256.91,
+      "text": "permission bits are defined. These differ depending on the method used to create the entity."
+    },
+    {
+      "start": 257.63,
+      "end": 263.39,
+      "text": "The zosunix file system can be accessed by using a bunch of methods. TCOE has commands for browsing"
+    },
+    {
+      "start": 263.39,
+      "end": 269.07,
+      "text": "and editing HFS files, copying data between HFS files and zos datasets, mounting file"
+    },
+    {
+      "start": 269.07,
+      "end": 274.67,
+      "text": "systems and invoking the zosunix shell. There's also a command called ishell which provides an"
+    },
+    {
+      "start": 274.67,
+      "end": 280.91,
+      "text": "ISPF menu driven interface to the file system. GCL provides keywords which support the specification"
+    },
+    {
+      "start": 280.91,
+      "end": 288.11,
+      "text": "of HFS path names. REX has a set of zosunix extensions, syscall commands to access zosunix"
+    },
+    {
+      "start": 288.11,
+      "end": 294.35,
+      "text": "callable services. zosunix shell is the Unix interface to the file system. It contains"
+    },
+    {
+      "start": 294.35,
+      "end": 301.79,
+      "text": "commands and utilities to access HFS files. zosunix supports many C functions to access HFS files and"
+    },
+    {
+      "start": 301.79,
+      "end": 307.15,
+      "text": "finally shell script which are similar to REX execs where shell commands and utilities can be stored"
+    },
+    {
+      "start": 307.15,
+      "end": 314.51,
+      "text": "in a text file which can be executed. There are TSOE commands which support the hierarchical files."
+    },
+    {
+      "start": 314.51,
+      "end": 321.15,
+      "text": "So for example mkdir creates a new directory and mknod creates a character special file."
+    },
+    {
+      "start": 321.79,
+      "end": 327.95,
+      "text": "oedit creates or edits a file using the ISPF editor and obrowse browses a file using ISPF"
+    },
+    {
+      "start": 327.95,
+      "end": 333.15,
+      "text": "and ishell or ish invokes the zosispf shell PAL interface."
+    },
+    {
+      "start": 334.67,
+      "end": 339.95,
+      "text": "File copy between zos datasets and HFS files can be useful if you need to send and"
+    },
+    {
+      "start": 339.95,
+      "end": 347.47,
+      "text": "receive files between zos systems for DFSMS backup and restore of HFS files or to copy HFS files to"
+    },
+    {
+      "start": 347.47,
+      "end": 354.51,
+      "text": "tapes. oget copies an HFS file into a zos sequential file or to a pds pdsc member."
+    },
+    {
+      "start": 355.63,
+      "end": 361.47,
+      "text": "copage conversion can also be specified. oget x does the same thing for an HFS directory."
+    },
+    {
+      "start": 362.03,
+      "end": 369.31,
+      "text": "oput copies a zos sequential file or a pdsc member into an HFS file and oput x copies all members of"
+    },
+    {
+      "start": 369.31,
+      "end": 376.43,
+      "text": "a pds or pdsc into an HFS directory. And ocopy copies data in either direction between a zos"
+    },
+    {
+      "start": 376.43,
+      "end": 385.63,
+      "text": "dataset and an HFS file using dd names. The cp and mv Unix commands have support for zos datasets."
+    },
+    {
+      "start": 386.19,
+      "end": 390.67,
+      "text": "To specify a zos dataset name proceed the name with double forward slashes."
+    },
+    {
+      "start": 391.55,
+      "end": 398.11,
+      "text": "To cp or mv to a pds or a pdse the dataset must be allocated before the copy or move."
+    },
+    {
+      "start": 398.27,
+      "end": 406.51,
+      "text": "The same is true for pax and tar for creating portable archives or extracting files from the"
+    },
+    {
+      "start": 406.51,
+      "end": 413.63,
+      "text": "archive. Don't forget those double forward slashes for zos dataset names. And speaking of which let's"
+    },
+    {
+      "start": 413.63,
+      "end": 420.35,
+      "text": "quickly recap the difference in file identification. In zos a dataset is identified by a dataset name."
+    },
+    {
+      "start": 420.35,
+      "end": 426.67,
+      "text": "If the dataset is a pds or a pdse the file has a member name. The characteristics of the"
+    },
+    {
+      "start": 427.55,
+      "end": 433.71,
+      "text": "dataset are kept in catalogs or the VTOC, the volume table of contents. Executable modules"
+    },
+    {
+      "start": 433.71,
+      "end": 439.39,
+      "text": "can have multiple names for an alias. In the hierarchical file systems files are identified"
+    },
+    {
+      "start": 439.39,
+      "end": 445.07,
+      "text": "by path names which consists of directory names and file name. Files can have multiple names"
+    },
+    {
+      "start": 445.07,
+      "end": 451.07,
+      "text": "created by symbolic links and hardlinks. There's no concept of a defined record format or block"
+    },
+    {
+      "start": 451.07,
+      "end": 457.71,
+      "text": "size but despite these differences as you can see there's some great support between zos datasets"
+    },
+    {
+      "start": 457.71,
+      "end": 464.03,
+      "text": "and zos Unix files. And that wraps up the module. Like I said at the beginning there"
+    },
+    {
+      "start": 464.03,
+      "end": 469.63,
+      "text": "was a lot to cover here but this gives us a great grounding for the rest of the class."
+    }
+  ]
+}

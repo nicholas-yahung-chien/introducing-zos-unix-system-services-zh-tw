@@ -1,0 +1,313 @@
+WEBVTT
+
+1
+00:00:03.700 --> 00:00:11.700
+A hierarchical file system can be in a data set type called HFS or it can be in a ZFS data set.
+
+2
+00:00:11.700 --> 00:00:17.700
+HFS data sets can span many density volumes. If spanned, they must be SMS managed.
+
+3
+00:00:17.700 --> 00:00:23.700
+ZFS and HFS are both Unix file systems and both can participate in shared systplexes.
+
+4
+00:00:23.700 --> 00:00:27.700
+However, while HFS always has a single file system per data set,
+
+5
+00:00:27.700 --> 00:00:31.700
+ZFS can have multiple file systems in a single data set.
+
+6
+00:00:31.700 --> 00:00:36.700
+These data sets are called aggregates and are a collection of data sets.
+
+7
+00:00:36.700 --> 00:00:42.700
+HFS data sets are like PDSE data sets. They're allocated like any other ZOS data set.
+
+8
+00:00:42.700 --> 00:00:47.700
+Although an HFS data set is a ZOS data set and MVS open request fails,
+
+9
+00:00:47.700 --> 00:00:53.700
+users must use Unix system services to access data in such a data set.
+
+10
+00:00:53.700 --> 00:00:59.700
+The hierarchical file system consists of one root file system and multiple user file systems.
+
+11
+00:00:59.700 --> 00:01:04.700
+The root file system is the base for HFS and is at the top of the hierarchy.
+
+12
+00:01:04.700 --> 00:01:10.700
+HFS data sets are allocated as ZOS data sets, so DSN type equals HFS.
+
+13
+00:01:10.700 --> 00:01:15.700
+HFS data sets can only be opened by Unix system service kernel operations
+
+14
+00:01:15.700 --> 00:01:21.700
+and HFS data sets can reside on the same volumes as other ZOS data sets.
+
+15
+00:01:21.700 --> 00:01:25.700
+Non-SMS managed HFS data sets are often used.
+
+16
+00:01:25.700 --> 00:01:32.700
+Now, a few other characteristics. The size of the data set is limited to two gigabytes if single volume.
+
+17
+00:01:32.700 --> 00:01:37.700
+A multi-volume HFS can span up to a maximum of 59 volumes.
+
+18
+00:01:37.700 --> 00:01:41.700
+HFS can have up to a maximum of 123 extents per volume
+
+19
+00:01:41.700 --> 00:01:48.700
+and a multi-volume HFS can have up to a maximum of 255 total extents for all volumes.
+
+20
+00:01:48.700 --> 00:01:51.700
+Also, keep in mind that within a file system in HFS,
+
+21
+00:01:51.700 --> 00:01:54.700
+there is no way to control the amount of space each user can use.
+
+22
+00:01:54.700 --> 00:01:59.700
+It's actually possible for one user to use the entire space in a file system.
+
+23
+00:01:59.700 --> 00:02:04.700
+So the recommendation here is that each user have their own file system.
+
+24
+00:02:04.700 --> 00:02:12.700
+A ZFS aggregate is a VSAM linear data set or an LDS that contains one or more ZFS file systems.
+
+25
+00:02:12.700 --> 00:02:16.700
+The name of the aggregate is its VSAM LDS name.
+
+26
+00:02:16.700 --> 00:02:21.700
+A ZVS file system is a logical named entity contained within the ZVS aggregate
+
+27
+00:02:21.700 --> 00:02:24.700
+that has a root directory and can be mounted.
+
+28
+00:02:24.700 --> 00:02:27.700
+It has a logical maximum size known as its quota.
+
+29
+00:02:27.700 --> 00:02:32.700
+A ZFS file system is a named entity that resides in a ZFS aggregate.
+
+30
+00:02:32.700 --> 00:02:37.700
+It contains a root directory and can be mounted into the USS hierarchy.
+
+31
+00:02:37.700 --> 00:02:42.700
+File system is not really a new term, but a ZFS file system resides in a ZFS aggregate,
+
+32
+00:02:42.700 --> 00:02:46.700
+which is different from an HFS file system.
+
+33
+00:02:47.700 --> 00:02:53.700
+For compatibility mode aggregates, the VSAM LDS name is the same as the ZFS aggregate name,
+
+34
+00:02:53.700 --> 00:02:56.700
+is the same as the ZFS file system name.
+
+35
+00:02:56.700 --> 00:03:00.700
+The quota of these file systems is set to the size of the aggregate.
+
+36
+00:03:00.700 --> 00:03:05.700
+A compatibility mode aggregate can contain only one ZFS file system,
+
+37
+00:03:05.700 --> 00:03:09.700
+making this type of aggregate more like an HFS file system.
+
+38
+00:03:09.700 --> 00:03:12.700
+This is flagged in the aggregate when it's created.
+
+39
+00:03:12.700 --> 00:03:16.700
+Version file systems in a shared file system that are no longer being used
+
+40
+00:03:16.700 --> 00:03:18.700
+can be automatically unmounted.
+
+41
+00:03:18.700 --> 00:03:23.700
+Also, note that the multi-file system aggregates are no longer supported by ZOS.
+
+42
+00:03:23.700 --> 00:03:31.700
+A colony address space runs USS system code as an extension to the USS kernel address space.
+
+43
+00:03:31.700 --> 00:03:35.700
+ZFS runs as a Unix system services colony address space.
+
+44
+00:03:35.700 --> 00:03:40.700
+There must be an entry in a bpx-prm-palmlib member for ZVS,
+
+45
+00:03:40.700 --> 00:03:42.700
+and the ZVS proc must be available.
+
+46
+00:03:42.700 --> 00:03:47.700
+The bpx-palm member in the palmlib contains a file-sys type statement
+
+47
+00:03:47.700 --> 00:03:50.700
+for the ZVS physical file system.
+
+48
+00:03:50.700 --> 00:03:54.700
+It includes an AS name parameter specifying the ZFS proc.
+
+49
+00:03:54.700 --> 00:03:59.700
+AS name is required for PFSs that run in colony address spaces.
+
+50
+00:03:59.700 --> 00:04:04.700
+ZFS can now handle mounts of ZFS file systems contained in the bpx-palm.
+
+51
+00:04:04.700 --> 00:04:11.700
+Mount commands can be left in slash etc slash rc or moved into bpx-palm.
+
+52
+00:04:11.700 --> 00:04:14.700
+ZFS admin commands the query information, for example,
+
+53
+00:04:14.700 --> 00:04:20.700
+lsfs and aggrinfo can be issued by any user.
+
+54
+00:04:20.700 --> 00:04:23.700
+ZFS admin commands that modify, so for example,
+
+55
+00:04:23.700 --> 00:04:28.700
+ZFS admin create require that the user be logged in as root.
+
+56
+00:04:28.700 --> 00:04:32.700
+Now, what are the advantages of ZFS?
+
+57
+00:04:32.700 --> 00:04:37.700
+Well, ZFS is a file system that is fundamentally different from HFS.
+
+58
+00:04:37.700 --> 00:04:41.700
+The administration view of ZFS is different from HFS.
+
+59
+00:04:41.700 --> 00:04:44.700
+ZFS file systems are created in a different manner
+
+60
+00:04:44.700 --> 00:04:47.700
+from the way that HFS file systems are created.
+
+61
+00:04:47.700 --> 00:04:52.700
+But in general, however, the application view of ZFS is the same
+
+62
+00:04:52.700 --> 00:04:54.700
+as the application view of HFS.
+
+63
+00:04:54.700 --> 00:05:01.700
+The same APIs and commands are used for ZFS as are used for HFS.
+
+64
+00:05:01.700 --> 00:05:04.700
+Once the ZFS file system is mounted,
+
+65
+00:05:04.700 --> 00:05:09.700
+it's almost indistinguishable from a mounted HFS file system.
+
+66
+00:05:09.700 --> 00:05:13.700
+ZFS is a ZOS Unix file system that can be used in addition
+
+67
+00:05:13.700 --> 00:05:16.700
+to the hierarchical file system.
+
+68
+00:05:16.700 --> 00:05:19.700
+ZFS file systems contain files and directories that can be accessed
+
+69
+00:05:19.700 --> 00:05:22.700
+with the ZOS hierarchical file system
+
+70
+00:05:22.700 --> 00:05:26.700
+file application programming interfaces or APIs.
+
+71
+00:05:26.700 --> 00:05:30.700
+ZFS file systems can be mounted into the ZOS Unix hierarchy
+
+72
+00:05:30.700 --> 00:05:33.700
+along with other local or remote file system types,
+
+73
+00:05:33.700 --> 00:05:38.700
+for example, HFS, TFS, AutoMount, NFS, and so forth.
+
+74
+00:05:38.700 --> 00:05:43.700
+ZFS does not replace HFS, rather it's complementary to it.
+
+75
+00:05:43.700 --> 00:05:50.700
+And importantly, ZFS is the strategic Unix system services file system for ZOS.
+
+76
+00:05:50.700 --> 00:05:53.700
+Now, in the next video, we'll take a closer look
+
+77
+00:05:53.700 --> 00:05:56.700
+at using the HFS and ZFS file systems.
+
+78
+00:05:56.700 --> 00:05:58.700
+ZFS file systems contain file systems.

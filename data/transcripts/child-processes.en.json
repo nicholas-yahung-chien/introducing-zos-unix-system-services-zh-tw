@@ -1,0 +1,373 @@
+{
+  "slug": "child-processes",
+  "title": "Child processes",
+  "language": "en",
+  "duration": 312.81925,
+  "segments": [
+    {
+      "start": 3.73,
+      "end": 9.89,
+      "text": "Fork is an XPGE 4.2 function which creates a duplicate process referred to as a child"
+    },
+    {
+      "start": 9.89,
+      "end": 11.13,
+      "text": "process."
+    },
+    {
+      "start": 11.13,
+      "end": 14.77,
+      "text": "The process that issues the fork is referred to as the parent process."
+    },
+    {
+      "start": 14.77,
+      "end": 18.93,
+      "text": "A parent process can create multiple child processes."
+    },
+    {
+      "start": 18.93,
+      "end": 23.59,
+      "text": "With ZOS Unix, a program that issues a fork creates a new address base which is a copy"
+    },
+    {
+      "start": 23.59,
+      "end": 26.27,
+      "text": "of the address base where the program is running."
+    },
+    {
+      "start": 26.27,
+      "end": 30.29,
+      "text": "The fork function does a program call to the kernel which uses Workload Manager to"
+    },
+    {
+      "start": 30.29,
+      "end": 32.69,
+      "text": "create the child process."
+    },
+    {
+      "start": 32.69,
+      "end": 38.09,
+      "text": "The contents of the parent address space are then copied to the child address space."
+    },
+    {
+      "start": 38.09,
+      "end": 42.69,
+      "text": "After the fork function, the code in the child address space is at the same address as the"
+    },
+    {
+      "start": 42.69,
+      "end": 44.45,
+      "text": "parent address space."
+    },
+    {
+      "start": 44.45,
+      "end": 47.93,
+      "text": "Control is returned to both programs at the same point."
+    },
+    {
+      "start": 47.93,
+      "end": 52.37,
+      "text": "The only difference that the application sees is the return code from the fork function."
+    },
+    {
+      "start": 52.37,
+      "end": 58.21,
+      "text": "A return code of 0 is returned to the child after a successful fork, or other return codes"
+    },
+    {
+      "start": 58.21,
+      "end": 60.77,
+      "text": "are valid only for the parent."
+    },
+    {
+      "start": 60.77,
+      "end": 66.93,
+      "text": "A process can also be created when a non-ZOS Unix program requests a ZOS Unix service."
+    },
+    {
+      "start": 66.93,
+      "end": 72.09,
+      "text": "For example, an open of a file in the hierarchical file system from an assembler program."
+    },
+    {
+      "start": 72.09,
+      "end": 76.15,
+      "text": "This address space is dubbed as a ZOS Unix process."
+    },
+    {
+      "start": 76.15,
+      "end": 80.17,
+      "text": "The dub does not result in the new address space being created."
+    },
+    {
+      "start": 80.17,
+      "end": 85.89,
+      "text": "The child address space is almost an identical copy of the parent address space."
+    },
+    {
+      "start": 85.89,
+      "end": 90.77,
+      "text": "User data, for example, private subpools and system data like RTM or Recovery Termination"
+    },
+    {
+      "start": 90.77,
+      "end": 93.77,
+      "text": "Management Control blocks are identical."
+    },
+    {
+      "start": 93.77,
+      "end": 98.97,
+      "text": "HFS files are allocated to the kernel and IO is done by coding the kernel."
+    },
+    {
+      "start": 98.97,
+      "end": 103.21,
+      "text": "On a fork, all open files are inherited by the child address space."
+    },
+    {
+      "start": 103.21,
+      "end": 107.23,
+      "text": "ZOS data sets are allocated to an individual address space."
+    },
+    {
+      "start": 107.23,
+      "end": 112.17,
+      "text": "After a fork, the child address space does not have access to the ZOS data sets allocated"
+    },
+    {
+      "start": 112.17,
+      "end": 114.07,
+      "text": "by the parent."
+    },
+    {
+      "start": 114.07,
+      "end": 119.19,
+      "text": "Through system definitions, there is a way to improve the performance of fork calls."
+    },
+    {
+      "start": 119.19,
+      "end": 123.95,
+      "text": "The option allows the parent and child processes to share a copy of the storage areas until"
+    },
+    {
+      "start": 123.95,
+      "end": 125.57,
+      "text": "they're modified."
+    },
+    {
+      "start": 125.57,
+      "end": 129.95,
+      "text": "When the area is modified, it's copied to the child process."
+    },
+    {
+      "start": 129.95,
+      "end": 134.63,
+      "text": "If this option is off, the system creates a copy of all storage areas at the time of"
+    },
+    {
+      "start": 134.63,
+      "end": 138.19,
+      "text": "the fork for the child process."
+    },
+    {
+      "start": 138.19,
+      "end": 143.45,
+      "text": "The XPG 4.2 standard defines a family of exec function calls."
+    },
+    {
+      "start": 143.45,
+      "end": 148.33,
+      "text": "The exec functions are used to start execution of a new program."
+    },
+    {
+      "start": 148.33,
+      "end": 153.27,
+      "text": "The difference between the exec functions is the way the name of the program and the parameters"
+    },
+    {
+      "start": 153.27,
+      "end": 156.49,
+      "text": "of the arguments are passed."
+    },
+    {
+      "start": 156.49,
+      "end": 161.21,
+      "text": "When a program issues an exec system call, the program, as well as all the data in the"
+    },
+    {
+      "start": 161.21,
+      "end": 163.37,
+      "text": "address space, is destroyed."
+    },
+    {
+      "start": 163.37,
+      "end": 167.69,
+      "text": "The new program is loaded from the file system and given control."
+    },
+    {
+      "start": 167.69,
+      "end": 172.41,
+      "text": "The only information the new program has access to is the arguments passed on the exec"
+    },
+    {
+      "start": 172.41,
+      "end": 173.65,
+      "text": "call."
+    },
+    {
+      "start": 173.65,
+      "end": 178.45,
+      "text": "The fork and exec functions are usually used together in a sequence."
+    },
+    {
+      "start": 178.45,
+      "end": 181.97,
+      "text": "First a process issues the fork to create a child process."
+    },
+    {
+      "start": 181.97,
+      "end": 186.69,
+      "text": "The result is two almost identical processes which run the same program, let's say Program"
+    },
+    {
+      "start": 186.69,
+      "end": 187.69,
+      "text": "A."
+    },
+    {
+      "start": 187.69,
+      "end": 191.61,
+      "text": "An important difference between the processes is the return code from the fork."
+    },
+    {
+      "start": 191.61,
+      "end": 197.17,
+      "text": "Only the child process receives a return code of zero after a successful fork."
+    },
+    {
+      "start": 197.17,
+      "end": 200.65,
+      "text": "This can be used as a way of starting a new program."
+    },
+    {
+      "start": 200.65,
+      "end": 206.89,
+      "text": "Program A issues an exec to start a new program, Program C, if the return code is zero."
+    },
+    {
+      "start": 206.89,
+      "end": 211.97,
+      "text": "In this case the child has a zero return code and Program C is indeed started."
+    },
+    {
+      "start": 211.97,
+      "end": 216.45,
+      "text": "The parent gets a return code different from zero from the fork and it continues to run"
+    },
+    {
+      "start": 216.45,
+      "end": 217.97,
+      "text": "Program A."
+    },
+    {
+      "start": 217.97,
+      "end": 222.77,
+      "text": "The result of all this is that the parent process runs the old program, Program A, while"
+    },
+    {
+      "start": 222.77,
+      "end": 226.57,
+      "text": "the child process runs the new program, Program C."
+    },
+    {
+      "start": 226.57,
+      "end": 232.89,
+      "text": "The two processes are related and they can share data and information between them."
+    },
+    {
+      "start": 232.89,
+      "end": 237.31,
+      "text": "In order to enable multiprocess applications to run on ZOS Unix without the address space"
+    },
+    {
+      "start": 237.31,
+      "end": 243.21,
+      "text": "resource overhead, ZOS Unix provides services that allow multiple processes within one address"
+    },
+    {
+      "start": 243.21,
+      "end": 244.77,
+      "text": "space."
+    },
+    {
+      "start": 244.77,
+      "end": 248.53,
+      "text": "These types of processes are called local processes."
+    },
+    {
+      "start": 248.53,
+      "end": 251.91,
+      "text": "The child process is called a local child process."
+    },
+    {
+      "start": 251.91,
+      "end": 258.33,
+      "text": "The local child process has the same attributes as a child process after a fork and exec."
+    },
+    {
+      "start": 258.33,
+      "end": 264.27,
+      "text": "There is a setDubDefaultService which provides the ability for a ZOS task to attach a new"
+    },
+    {
+      "start": 264.27,
+      "end": 268.05,
+      "text": "sub-task that runs as a new process."
+    },
+    {
+      "start": 268.05,
+      "end": 272.63,
+      "text": "This new process is called a non-forked local process."
+    },
+    {
+      "start": 272.63,
+      "end": 275.75,
+      "text": "The spawn function implements local processes."
+    },
+    {
+      "start": 275.75,
+      "end": 280.09,
+      "text": "It also combines the fork and the exec into a single call."
+    },
+    {
+      "start": 280.11,
+      "end": 285.27,
+      "text": "It extends the support for local processes to the standard family of C services."
+    },
+    {
+      "start": 285.27,
+      "end": 292.19,
+      "text": "If the environment variable underscore bpx underscore share as is set to yes, the parent"
+    },
+    {
+      "start": 292.19,
+      "end": 296.27,
+      "text": "and child processes created by a spawn share the same address space."
+    },
+    {
+      "start": 296.27,
+      "end": 300.83,
+      "text": "If that environment variable is set to no, each process runs in its own address space"
+    },
+    {
+      "start": 300.83,
+      "end": 303.39,
+      "text": "as in a fork."
+    },
+    {
+      "start": 303.39,
+      "end": 308.39,
+      "text": "In the next video, we'll talk about a communication for sending data between processes."
+    }
+  ]
+}

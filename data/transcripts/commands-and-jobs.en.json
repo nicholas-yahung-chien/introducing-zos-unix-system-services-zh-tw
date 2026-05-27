@@ -1,0 +1,388 @@
+{
+  "slug": "commands-and-jobs",
+  "title": "Commands and jobs",
+  "language": "en",
+  "duration": 429.778125,
+  "segments": [
+    {
+      "start": 3.63,
+      "end": 9.17,
+      "text": "Now we can talk about some shell commands that are the same for everyone once you're logged on to shell"
+    },
+    {
+      "start": 9.53,
+      "end": 13.65,
+      "text": "The zos-unix shell is above all a programmer's interface"
+    },
+    {
+      "start": 13.65,
+      "end": 21.37,
+      "text": "The shell has many general tools that can help any programmer and in addition there are several commands designed especially for the C programmer"
+    },
+    {
+      "start": 22.21,
+      "end": 24.53,
+      "text": "Shell commands are entered on the command line"
+    },
+    {
+      "start": 24.97,
+      "end": 30.21,
+      "text": "Shell command options are usually specified by a minus sign followed by a single character"
+    },
+    {
+      "start": 30.21,
+      "end": 36.43,
+      "text": "So for example LS minus L some commands except options that have accompanying arguments"
+    },
+    {
+      "start": 36.43,
+      "end": 43.89,
+      "text": "For example LS minus L slash user slash lib the argument may be a number a string a file name or something else a"
+    },
+    {
+      "start": 44.59,
+      "end": 48.93,
+      "text": "Shell command can be interrupted and stopped by typing escape character and C"
+    },
+    {
+      "start": 49.47,
+      "end": 55.93,
+      "text": "Entering a command with minus question mark or entering it incorrectly results in the command syntax being displayed"
+    },
+    {
+      "start": 56.93,
+      "end": 62.13,
+      "text": "Once a shell command begins running it has access to the following three files"
+    },
+    {
+      "start": 63.17,
+      "end": 67.41,
+      "text": "standard input with a file descriptor or identifier of zero"
+    },
+    {
+      "start": 68.21,
+      "end": 70.71,
+      "text": "standard output file descriptor of one and"
+    },
+    {
+      "start": 71.29,
+      "end": 74.21,
+      "text": "standard error with the file descriptor of two a"
+    },
+    {
+      "start": 74.65,
+      "end": 80.97,
+      "text": "Shell user can redirect the input output and error files to redirect an output to a file"
+    },
+    {
+      "start": 81.37,
+      "end": 89.01,
+      "text": "Enter greater than a file name at the end of a command. For example sort minus you file one greater than out file"
+    },
+    {
+      "start": 89.61,
+      "end": 96.09,
+      "text": "If the file does not exist it will be created and if it does exist the output writes over any information in the file"
+    },
+    {
+      "start": 96.09,
+      "end": 102.77,
+      "text": "Unless greater than greater than file name is specified to append the output to the existing file"
+    },
+    {
+      "start": 103.29,
+      "end": 112.3,
+      "text": "The shell commands are a powerful tool for the shell user because multiple commands can be combined on a single command line"
+    },
+    {
+      "start": 112.7,
+      "end": 120.98,
+      "text": "To run a series of commands one after another use a semicolon or use double ampersand and double vertical bar"
+    },
+    {
+      "start": 121.34,
+      "end": 127.9,
+      "text": "When stringing multiple commands together these characters can be used to control whether or not the second command should be run"
+    },
+    {
+      "start": 127.9,
+      "end": 133.8,
+      "text": "If the command proceeds ampersand ampersand then it completes successfully the second command is run"
+    },
+    {
+      "start": 134.3,
+      "end": 140.38,
+      "text": "If the command that proceeds double pipe fails the command following double pipe is run"
+    },
+    {
+      "start": 140.9,
+      "end": 145.62,
+      "text": "You can also run more than one command concurrently by using a pipe between the commands"
+    },
+    {
+      "start": 145.66,
+      "end": 152.5,
+      "text": "Now the idea of a pipeline is that the output from one command is piped in as input to the next command"
+    },
+    {
+      "start": 153.1,
+      "end": 156.9,
+      "text": "Many shell commands are well suited to be used in a pipeline"
+    },
+    {
+      "start": 157.66,
+      "end": 166.14,
+      "text": "When a command is entered in the shell another command cannot be entered until the shell prompt appears the job runs as a foreground job"
+    },
+    {
+      "start": 166.78,
+      "end": 170.94,
+      "text": "Shell commands that take a long time to complete can be run in the background"
+    },
+    {
+      "start": 170.94,
+      "end": 176.54,
+      "text": "The shell does not wait for a job running in the background to complete before presenting a prompt"
+    },
+    {
+      "start": 176.54,
+      "end": 179.98,
+      "text": "Because you know it's running in the background"
+    },
+    {
+      "start": 181.9,
+      "end": 187.18,
+      "text": "When a shell command is entered a new process is started"
+    },
+    {
+      "start": 187.98,
+      "end": 191.5,
+      "text": "The shell runs the command in its own process group"
+    },
+    {
+      "start": 191.5,
+      "end": 197.02,
+      "text": "It's considered a separate job and the shell assigns it a job identifier"
+    },
+    {
+      "start": 197.9,
+      "end": 201.66,
+      "text": "The job identifier is a number known only to the shell"
+    },
+    {
+      "start": 202.38,
+      "end": 211.18,
+      "text": "The system assigns the process a process group identifier or PGID and a process identifier PID"
+    },
+    {
+      "start": 212.46,
+      "end": 217.34,
+      "text": "When only one command is entered the PGID is the same as the PID"
+    },
+    {
+      "start": 217.9,
+      "end": 223.9,
+      "text": "When multiple commands are entered using a pipe several processes with their own PID will be started"
+    },
+    {
+      "start": 225.02,
+      "end": 228.86,
+      "text": "All these processes have the same PGID and shell job number"
+    },
+    {
+      "start": 229.82,
+      "end": 236.22,
+      "text": "To check the status of shell commands the commands jobs or PS can be used"
+    },
+    {
+      "start": 236.22,
+      "end": 240.7,
+      "text": "The jobs command displays the status of currently running background jobs"
+    },
+    {
+      "start": 240.7,
+      "end": 244.94,
+      "text": "And the PS command displays the status of currently running processes"
+    },
+    {
+      "start": 245.9,
+      "end": 250.38,
+      "text": "A foreground job can be cancelled by entering a state character plus C"
+    },
+    {
+      "start": 251.18,
+      "end": 255.66,
+      "text": "A background job is cancelled by using the kill or super kill command"
+    },
+    {
+      "start": 255.66,
+      "end": 259.18,
+      "text": "To stop a foreground job enter escape character and Z"
+    },
+    {
+      "start": 259.18,
+      "end": 262.86,
+      "text": "To stop a background job use the kill command for this stop option"
+    },
+    {
+      "start": 263.66,
+      "end": 268.22,
+      "text": "And a job can be delayed from running until another background job has completed"
+    },
+    {
+      "start": 268.22,
+      "end": 269.74,
+      "text": "by using the wait command"
+    },
+    {
+      "start": 271.82,
+      "end": 278.22,
+      "text": "The submit command sends a batch job to the primary job entry subsystem or JES for processing"
+    },
+    {
+      "start": 278.86,
+      "end": 284.7,
+      "text": "The file name argument can either be a Unix path name data set or input from the standard input"
+    },
+    {
+      "start": 285.58,
+      "end": 290.14,
+      "text": "If the submit command is successful the job ID of the submitted job and the file name are"
+    },
+    {
+      "start": 290.14,
+      "end": 295.98,
+      "text": "displayed as part of the output written to standard output unless modified by the minus J option"
+    },
+    {
+      "start": 297.02,
+      "end": 300.78,
+      "text": "The JCL must have a job card if a job card is not present"
+    },
+    {
+      "start": 300.78,
+      "end": 302.94,
+      "text": "Then the submit command will fail"
+    },
+    {
+      "start": 305.18,
+      "end": 313.26,
+      "text": "TSO CMD allows you to run a TSOE command from the shell invoking authorized TSOE commands"
+    },
+    {
+      "start": 313.98,
+      "end": 316.22,
+      "text": "Invoke it from a shell script or a prompt"
+    },
+    {
+      "start": 316.78,
+      "end": 323.18,
+      "text": "It's best that the TSOE command and its parameters be enclosed in quotes to avoid shell parsing"
+    },
+    {
+      "start": 324.14,
+      "end": 330.06,
+      "text": "The COS Unix shell uses environment variables to define characteristics of the shell environment"
+    },
+    {
+      "start": 330.94,
+      "end": 335.66,
+      "text": "These variables can be modified to a specific installation or user's needs"
+    },
+    {
+      "start": 336.22,
+      "end": 340.14,
+      "text": "Using environment variables provides a flexible method for customizing the shell"
+    },
+    {
+      "start": 340.78,
+      "end": 345.74,
+      "text": "The system initiates the shell for the user after the user enters a command to log into the shell"
+    },
+    {
+      "start": 346.62,
+      "end": 351.74,
+      "text": "During the initialization the system sets environment variables for the user log name,"
+    },
+    {
+      "start": 351.74,
+      "end": 356.06,
+      "text": "home, and shell from information in the rackf user profile"
+    },
+    {
+      "start": 356.7,
+      "end": 360.86,
+      "text": "Log name is the user ID that remote systems use when diving into your system"
+    },
+    {
+      "start": 361.5,
+      "end": 365.42,
+      "text": "Home is a variable for the path name of the user's working directory"
+    },
+    {
+      "start": 365.42,
+      "end": 368.38,
+      "text": "And shell identifies the shell to be invoked"
+    },
+    {
+      "start": 369.5,
+      "end": 375.02,
+      "text": "Environment variables can be defined in the rackf user profile, the slash etc slash profile,"
+    },
+    {
+      "start": 375.02,
+      "end": 381.26,
+      "text": "the dollar home slash dot profile file, and the file name named in the env environment"
+    },
+    {
+      "start": 381.26,
+      "end": 383.82,
+      "text": "variable in a shell command or a shell script"
+    },
+    {
+      "start": 383.82,
+      "end": 391.02,
+      "text": "The C shell with all its commands and tools provides a real programmer's interface"
+    },
+    {
+      "start": 391.02,
+      "end": 395.58,
+      "text": "It's specifically designed to have a syntax similar to the C programming language"
+    },
+    {
+      "start": 396.3,
+      "end": 400.7,
+      "text": "The comparison between the standard and the C shell shows which files are related"
+    },
+    {
+      "start": 400.7,
+      "end": 404.62,
+      "text": "and which have to be customized from the system programmer's point of view"
+    },
+    {
+      "start": 406.22,
+      "end": 411.1,
+      "text": "Okay, that's a wrap on the COS Unix shell and utilities"
+    },
+    {
+      "start": 411.74,
+      "end": 414.86,
+      "text": "You can now escape character in Z out of this process"
+    },
+    {
+      "start": 414.86,
+      "end": 418.3,
+      "text": "But before you go, let me share a little bit of good news"
+    },
+    {
+      "start": 418.3,
+      "end": 423.74,
+      "text": "The next set of modules I've invited some guest speakers to give you a break from me"
+    },
+    {
+      "start": 424.3,
+      "end": 425.5,
+      "text": "So enjoy them!"
+    }
+  ]
+}

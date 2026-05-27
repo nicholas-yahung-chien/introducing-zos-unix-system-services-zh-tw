@@ -26,30 +26,40 @@
   title="使用 shell 工作"
   entry-id="1_udrgkkbw"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193126"
+  video-src="/media/working-with-the-shell.mp4"
+  subtitle-src="/subtitles/working-with-the-shell.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="Shell scripts 與 REXX"
   entry-id="1_ohj8iew1"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193127"
+  video-src="/media/shell-scripts-and-rexx.mp4"
+  subtitle-src="/subtitles/shell-scripts-and-rexx.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="BPXBATCH"
   entry-id="1_3ggir589"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193128"
+  video-src="/media/bpxbatch.mp4"
+  subtitle-src="/subtitles/bpxbatch.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="ASCII 與 EBCDIC 考量"
   entry-id="1_xhceuc8r"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193129"
+  video-src="/media/ascii-and-ebcdic-considerations.mp4"
+  subtitle-src="/subtitles/ascii-and-ebcdic-considerations.zh-Hant-TW.vtt"
 />
 
 <VideoLesson
   title="轉換考量"
   entry-id="1_cg8lhe0n"
   source-url="https://learn.ibm.com/mod/video/view.php?id=193130"
+  video-src="/media/translation-considerations.mp4"
+  subtitle-src="/subtitles/translation-considerations.zh-Hant-TW.vtt"
 />
 
 ## 閱讀材料

@@ -1,0 +1,221 @@
+WEBVTT
+
+1
+00:00:03.760 --> 00:00:10.840
+The iShell is an alternative to using shell commands. For a ZOS user familiar with iSPF,
+
+2
+00:00:10.840 --> 00:00:16.040
+this can be easier to use. If you've completed any of the lab exercises so far, you'll also
+
+3
+00:00:16.040 --> 00:00:20.880
+be familiar with the iShell. Most of the functions that can be performed using the
+
+4
+00:00:20.880 --> 00:00:25.400
+iShell are related to the file system. A regular user can use the iShell to work with
+
+5
+00:00:25.400 --> 00:00:31.960
+directories, regular files, FIFO special files and symbolic links. A sysadmin can do all
+
+6
+00:00:32.040 --> 00:00:37.960
+of this and a good deal more, including mount and unmount a file system, set up ZOS Unix
+
+7
+00:00:37.960 --> 00:00:44.200
+users and groups, change attributes for ZOS Unix users, create character special files and
+
+8
+00:00:44.200 --> 00:00:49.880
+set up the root file system. Now if you look across the top here, you'll see a number
+
+9
+00:00:49.880 --> 00:00:55.880
+of pulldown menus and we're showing the directory menu here. The first option, directory
+
+10
+00:00:55.880 --> 00:01:00.840
+list, has been enhanced to include all sorts of features such as sorting columns, using
+
+11
+00:01:00.840 --> 00:01:07.080
+color highlighting and executing actions based upon cursor location. Here is the directory
+
+12
+00:01:07.080 --> 00:01:15.080
+list and it, you ready for this? Lists the files of a directory. Other new features of
+
+13
+00:01:15.080 --> 00:01:21.960
+the directory list since ZOS version 1.6 include wildcard support on the directory list and an
+
+14
+00:01:21.960 --> 00:01:27.960
+option to inherit the command line position from the previous dialogue. Sorting is available
+
+15
+00:01:27.960 --> 00:01:32.440
+for any column that can be displayed even if that column is not selected for display.
+
+16
+00:01:33.080 --> 00:01:38.600
+A secondary sort column can also be specified. This support allows you to arrange the list
+
+17
+00:01:38.600 --> 00:01:44.680
+by file type for example and within file type by another attribute such as name, date or size.
+
+18
+00:01:45.240 --> 00:01:49.880
+The highlighting enhancements allow entries in the directory list to be highlighted based on
+
+19
+00:01:49.880 --> 00:01:55.000
+a number of different criteria. There are no defaults defined so if you want to highlight
+
+20
+00:01:55.000 --> 00:02:01.320
+entries in the directory list, you must set it up to do so. The terminal must support colors for
+
+21
+00:02:01.320 --> 00:02:06.600
+this feature to work. The use of this feature on terminals that don't support color might
+
+22
+00:02:06.600 --> 00:02:13.640
+produce some interesting and wildly arbitrary highlighting for file names. We can set the
+
+23
+00:02:13.640 --> 00:02:18.200
+highlighting criteria for things like when the sticky bit is on, when a file is marked as
+
+24
+00:02:18.200 --> 00:02:27.160
+executable and so forth. Support has been added to ISPF for the processing of ZOS Unix files.
+
+25
+00:02:27.800 --> 00:02:36.040
+This support includes the ability to edit, browse, create, delete, rename, copy and replace
+
+26
+00:02:36.040 --> 00:02:43.400
+ZOS Unix files. This new support is implemented as a directory list utility known as the ZOS
+
+27
+00:02:43.400 --> 00:02:50.280
+Unix directory list utility available as option 17 on the ISPF utilities menu. This initial
+
+28
+00:02:50.280 --> 00:02:54.760
+implementation of the directory list utility provides a subset of the functions that are
+
+29
+00:02:54.760 --> 00:02:59.800
+supported by iShell. The set of functions supported by the directory list facility are
+
+30
+00:02:59.800 --> 00:03:05.320
+aimed to assist with basic tasks undertaken by programmers. The utility is not really aimed at
+
+31
+00:03:05.880 --> 00:03:12.360
+users like the ZOS Unix file system admins. Now as much as possible, the directory list
+
+32
+00:03:12.360 --> 00:03:17.720
+utility is designed to behave and support commands similar to the data set list utility
+
+33
+00:03:17.720 --> 00:03:24.040
+which is ISPF option 3.4 and that's done on purpose to assist users who are familiar with
+
+34
+00:03:24.040 --> 00:03:29.400
+the operation of the data set list utility but maybe have less experience working with ZOS Unix
+
+35
+00:03:29.400 --> 00:03:37.880
+files through utilities such as OMVS or iShell. When option 17 on the ISPF utility selection panel
+
+36
+00:03:37.880 --> 00:03:45.240
+so that's ISPF option 3.17 is entered the ZOS Unix directory list utility entry panel is displayed.
+
+37
+00:03:45.800 --> 00:03:51.160
+This panel supports the following options blank to display a list of files in a directory and
+
+38
+00:03:51.160 --> 00:03:57.400
+p to print a list of files in a directory to the ISPF list data set. For either option the user
+
+39
+00:03:57.400 --> 00:04:02.360
+must enter in the path name field the path name of the directory they want to display or to
+
+40
+00:04:02.360 --> 00:04:10.040
+print. If a path name is not entered well then the user's home path is assumed. The ZOS Unix directory
+
+41
+00:04:10.040 --> 00:04:15.080
+list panel is displayed when the option field is left blank and enter is pressed on the entry panel.
+
+42
+00:04:15.640 --> 00:04:21.080
+This panel lists all the files in a directory. The information for each entry in the directory
+
+43
+00:04:21.080 --> 00:04:26.440
+is displayed in column fields across the screen. Now keep in mind that the number of columns
+
+44
+00:04:26.440 --> 00:04:32.840
+displayed depends upon the available screen width. This example here shows the initial directory
+
+45
+00:04:32.840 --> 00:04:39.240
+list display on a terminal with a screen width of 85 and a screen depth of 31.
+
+46
+00:04:41.080 --> 00:04:48.200
+Horizontal scrolling is supported using the right and left primary commands or function keys 11 and
+
+47
+00:04:48.200 --> 00:04:54.920
+10. This example shows the directory list display after entering the command right 5 on
+
+48
+00:04:54.920 --> 00:05:00.680
+the directory list shown on a previous screenshot. The order in which columns appear in the directory
+
+49
+00:05:00.680 --> 00:05:05.720
+list display and the size of the fields can be customized using the ZOS Unix directory list
+
+50
+00:05:05.720 --> 00:05:11.160
+column arrangement panel. This panel is accessed by using the pull down menu displayed under
+
+51
+00:05:11.160 --> 00:05:15.720
+options on the action bar on the ZOS Unix directory list entry and display panels.
+
+52
+00:05:16.440 --> 00:05:20.360
+Here the user can change the order in which the columns are displayed and the width of
+
+53
+00:05:20.360 --> 00:05:25.960
+the column fields. If a column fields width is set to zero the column is not displayed
+
+54
+00:05:25.960 --> 00:05:32.360
+in the directory list. In the next video we'll discuss how to perform tasks by using the
+
+55
+00:05:32.360 --> 00:05:34.920
+directory list utility panels.

@@ -1,0 +1,273 @@
+WEBVTT
+
+1
+00:00:03.700 --> 00:00:14.700
+ZOS UNIX offers TSO interactive users the choice and ability to switch between the UNIX-like interface of the ZOS UNIX shell and command interpreter
+
+2
+00:00:14.700 --> 00:00:24.700
+and the traditional TSOE panel or command interface, so users of ZOS UNIX can choose the interface with which they're most familiar.
+
+3
+00:00:24.700 --> 00:00:32.700
+UNIX users can use the ZOS UNIX shell OMVS and TSO users can use the shell under TSO, the i-shell.
+
+4
+00:00:32.700 --> 00:00:40.700
+And installation can customize TSOE login so that users who prefer a UNIX-like interface are put directly into the ZOS UNIX shell.
+
+5
+00:00:40.700 --> 00:00:45.700
+From there, the users can choose to switch to TSOE when desired or required.
+
+6
+00:00:45.700 --> 00:00:50.700
+Now, what sort of interactions can occur between TSOE and the shell?
+
+7
+00:00:50.700 --> 00:00:59.700
+Well, you might move data between ZOS datasets and the hierarchical file system or issue TSOE commands from the shell command line.
+
+8
+00:00:59.700 --> 00:01:04.700
+You can also write ZOS JCL that includes shell commands.
+
+9
+00:01:04.700 --> 00:01:18.700
+This is an example of how a user can log on to TSOE, do some work there, invoke the shell to perform some functions, switch back and forth between TSOE and the shell, and log off from the shell.
+
+10
+00:01:18.700 --> 00:01:26.700
+So first, a TSOE user logs on to TSOE and issues some TSOE commands or uses the iSPF PDF panels to do some work.
+
+11
+00:01:27.700 --> 00:01:32.700
+The user issues the OMVS command to invoke the ZOS UNIX shell.
+
+12
+00:01:32.700 --> 00:01:37.700
+After issuing that command, the TSOE user becomes a logged-on shell user.
+
+13
+00:01:37.700 --> 00:01:46.700
+The shell user is interactively communicating with the ZOS UNIX environment through the shell and has all the facilities of the shell available.
+
+14
+00:01:46.700 --> 00:01:52.700
+The user can jump back to TSOE, run a TSOE command, and return to the shell.
+
+15
+00:01:52.700 --> 00:01:59.700
+When jumping back and forth between TSOE and the shell, the user remains logged on to both environments.
+
+16
+00:01:59.700 --> 00:02:07.940
+Finally, in our example, the user issues an exit command to log off from the shell and returns to TSOE.
+
+17
+00:02:07.940 --> 00:02:13.940
+The iShell command is used to invoke the iSPF shell of UNIX system services.
+
+18
+00:02:13.940 --> 00:02:16.940
+iShell can only be used with TSO and iSPF.
+
+19
+00:02:16.940 --> 00:02:21.940
+Many people with a ZOS background prefer to use this interface.
+
+20
+00:02:21.940 --> 00:02:26.940
+The OMVS command is a TSO command that is used to invoke the shell.
+
+21
+00:02:26.940 --> 00:02:32.940
+OMVS can be entered from plain TSO or from the iSPF TSO panel.
+
+22
+00:02:32.940 --> 00:02:35.940
+Many people with a UNIX background like this interface better.
+
+23
+00:02:35.940 --> 00:02:40.940
+However, it's not exactly the same as the standard UNIX interface.
+
+24
+00:02:40.940 --> 00:02:45.940
+For example, raw mode is not possible, so the VI editor cannot be used.
+
+25
+00:02:45.940 --> 00:02:53.940
+Some users with a UNIX background prefer raw mode access, which can be established by using the Telnet and RLogin interface.
+
+26
+00:02:53.940 --> 00:03:01.580
+This is the screen that is displayed when a user invokes the shell from TSO.
+
+27
+00:03:01.580 --> 00:03:04.580
+At the bottom of the screen, you see the following.
+
+28
+00:03:04.580 --> 00:03:11.580
+The command line, that's those equal signs and the greater than sign, and that's used for input.
+
+29
+00:03:11.580 --> 00:03:17.580
+The default function key settings and the default escape character assignments are shown along the bottom.
+
+30
+00:03:17.580 --> 00:03:20.580
+The function keys can be customized or turned off.
+
+31
+00:03:20.580 --> 00:03:23.580
+The status indicator is in the right-hand corner.
+
+32
+00:03:23.580 --> 00:03:27.580
+When you first enter the shell, the status is running.
+
+33
+00:03:27.580 --> 00:03:33.580
+The prompt is an indication from the shell that it's ready to accept input from the command line.
+
+34
+00:03:33.580 --> 00:03:36.580
+The prompt is often customized.
+
+35
+00:03:36.580 --> 00:03:47.210
+In a plain, standard environment, the prompt is a dollar sign for a normal user and a hash sign for a super user.
+
+36
+00:03:47.210 --> 00:03:56.210
+Since OMVS Sessions 2 was used from TSO in the example here, two UNIX sessions were established.
+
+37
+00:03:56.210 --> 00:04:00.210
+You can see the session number at the bottom right corner.
+
+38
+00:04:00.210 --> 00:04:08.210
+To jump from one session to the next, use F2 to get the subcommand prompt and then enter the command to get to the next session.
+
+39
+00:04:08.210 --> 00:04:13.210
+Note also that some welcome text might be displayed when entering the shell.
+
+40
+00:04:13.210 --> 00:04:16.210
+Welcome text is defined by the system programmer.
+
+41
+00:04:16.210 --> 00:04:23.210
+The RLogin or Telnet commands used by the user are in the syntax of the remote system.
+
+42
+00:04:24.210 --> 00:04:33.210
+The RLogin command names the ZOS system that you want to connect to and a username if you are logged onto ZOS with a different user identity.
+
+43
+00:04:33.210 --> 00:04:44.210
+The Telnet command may name the terminal type, the hostname or IP address and the port number if different from the well-known ports used by TCPIP demons.
+
+44
+00:04:44.210 --> 00:04:50.210
+In either case, ZOS asks the user for a password or password phrase.
+
+45
+00:04:50.210 --> 00:04:56.210
+On the ZOS UNIX system, the INET-D system daemon must be running to receive these requests.
+
+46
+00:04:56.210 --> 00:05:05.210
+It creates an address space for each user which contains the appropriate server daemon, RLogin-D or OTELNET-D.
+
+47
+00:05:05.210 --> 00:05:10.210
+The shell is started by this daemon after it validates the user's identity.
+
+48
+00:05:10.210 --> 00:05:18.210
+The daemon is also responsible for ASCII-to-EPSIDIC conversion as data flows from the terminal to the host.
+
+49
+00:05:18.210 --> 00:05:29.210
+A password phrase is a string consisting of mixed-case letters, numbers and special characters including blanks that is used to control access to data and systems.
+
+50
+00:05:29.210 --> 00:05:37.210
+Support for a password phrase enables the user to enter a password phrase of between 9 and 100 characters.
+
+51
+00:05:37.210 --> 00:05:42.210
+There are several commands and daemons that are affected or enhanced with the password phrase support.
+
+52
+00:05:42.210 --> 00:05:48.210
+Obviously, there's the passwd command to change user passwords or phrases.
+
+53
+00:05:48.210 --> 00:05:53.210
+There's the su command to change the user ID associated with a session.
+
+54
+00:05:53.210 --> 00:06:01.210
+And the RLogin program is the server for the remote RLogin command commonly found on UNIX systems.
+
+55
+00:06:01.210 --> 00:06:11.210
+Passwords 1 to 8 characters long are assumed to be passwords and passwords 9 to 100 characters long are assumed to be password phrases.
+
+56
+00:06:11.210 --> 00:06:20.210
+This is an example of the screen that is displayed when a user invokes the shell after logging in with RLogin or OTELNET.
+
+57
+00:06:20.210 --> 00:06:23.210
+The dollar sign prompt is the standard prompt.
+
+58
+00:06:23.210 --> 00:06:28.210
+A user might decide to use a prompt other than dollar sign as this example shows.
+
+59
+00:06:28.210 --> 00:06:31.210
+The shell works in line mode.
+
+60
+00:06:31.210 --> 00:06:36.210
+This means the input is not processed until the user presses the enter key.
+
+61
+00:06:36.210 --> 00:06:44.210
+When an application that requires character mode or raw mode support is invoked, the shell will run the application as designed.
+
+62
+00:06:44.210 --> 00:06:54.210
+For example, the VI editor executes in character mode or raw mode and when you exit this editor, the shell returns back to line mode.
+
+63
+00:06:54.210 --> 00:06:59.210
+Here's a comparison of the capabilities available with the two login methods.
+
+64
+00:06:59.210 --> 00:07:02.210
+RLogin is direct to ZOS.
+
+65
+00:07:02.210 --> 00:07:07.210
+RLogin users have access to TSO only through the shell TSO command.
+
+66
+00:07:07.210 --> 00:07:12.210
+An RLogin terminal is an ASCII terminal. A TSO terminal is Epsonic.
+
+67
+00:07:12.210 --> 00:07:21.210
+To emulate an ASCII command under TSO, you must use the escape character as defined in the OMVS command.
+
+68
+00:07:21.210 --> 00:07:24.210
+Next up, it's commands and jobs.

@@ -1,0 +1,283 @@
+{
+  "slug": "ishell-and-directory-list-utility",
+  "title": "ISHELL and Directory List Utility",
+  "language": "en",
+  "duration": 339.2203125,
+  "segments": [
+    {
+      "start": 3.76,
+      "end": 10.84,
+      "text": "The iShell is an alternative to using shell commands. For a ZOS user familiar with iSPF,"
+    },
+    {
+      "start": 10.84,
+      "end": 16.04,
+      "text": "this can be easier to use. If you've completed any of the lab exercises so far, you'll also"
+    },
+    {
+      "start": 16.04,
+      "end": 20.88,
+      "text": "be familiar with the iShell. Most of the functions that can be performed using the"
+    },
+    {
+      "start": 20.88,
+      "end": 25.4,
+      "text": "iShell are related to the file system. A regular user can use the iShell to work with"
+    },
+    {
+      "start": 25.4,
+      "end": 31.96,
+      "text": "directories, regular files, FIFO special files and symbolic links. A sysadmin can do all"
+    },
+    {
+      "start": 32.04,
+      "end": 37.96,
+      "text": "of this and a good deal more, including mount and unmount a file system, set up ZOS Unix"
+    },
+    {
+      "start": 37.96,
+      "end": 44.2,
+      "text": "users and groups, change attributes for ZOS Unix users, create character special files and"
+    },
+    {
+      "start": 44.2,
+      "end": 49.88,
+      "text": "set up the root file system. Now if you look across the top here, you'll see a number"
+    },
+    {
+      "start": 49.88,
+      "end": 55.88,
+      "text": "of pulldown menus and we're showing the directory menu here. The first option, directory"
+    },
+    {
+      "start": 55.88,
+      "end": 60.84,
+      "text": "list, has been enhanced to include all sorts of features such as sorting columns, using"
+    },
+    {
+      "start": 60.84,
+      "end": 67.08,
+      "text": "color highlighting and executing actions based upon cursor location. Here is the directory"
+    },
+    {
+      "start": 67.08,
+      "end": 75.08,
+      "text": "list and it, you ready for this? Lists the files of a directory. Other new features of"
+    },
+    {
+      "start": 75.08,
+      "end": 81.96,
+      "text": "the directory list since ZOS version 1.6 include wildcard support on the directory list and an"
+    },
+    {
+      "start": 81.96,
+      "end": 87.96,
+      "text": "option to inherit the command line position from the previous dialogue. Sorting is available"
+    },
+    {
+      "start": 87.96,
+      "end": 92.44,
+      "text": "for any column that can be displayed even if that column is not selected for display."
+    },
+    {
+      "start": 93.08,
+      "end": 98.6,
+      "text": "A secondary sort column can also be specified. This support allows you to arrange the list"
+    },
+    {
+      "start": 98.6,
+      "end": 104.68,
+      "text": "by file type for example and within file type by another attribute such as name, date or size."
+    },
+    {
+      "start": 105.24,
+      "end": 109.88,
+      "text": "The highlighting enhancements allow entries in the directory list to be highlighted based on"
+    },
+    {
+      "start": 109.88,
+      "end": 115.0,
+      "text": "a number of different criteria. There are no defaults defined so if you want to highlight"
+    },
+    {
+      "start": 115.0,
+      "end": 121.32,
+      "text": "entries in the directory list, you must set it up to do so. The terminal must support colors for"
+    },
+    {
+      "start": 121.32,
+      "end": 126.6,
+      "text": "this feature to work. The use of this feature on terminals that don't support color might"
+    },
+    {
+      "start": 126.6,
+      "end": 133.64,
+      "text": "produce some interesting and wildly arbitrary highlighting for file names. We can set the"
+    },
+    {
+      "start": 133.64,
+      "end": 138.2,
+      "text": "highlighting criteria for things like when the sticky bit is on, when a file is marked as"
+    },
+    {
+      "start": 138.2,
+      "end": 147.16,
+      "text": "executable and so forth. Support has been added to ISPF for the processing of ZOS Unix files."
+    },
+    {
+      "start": 147.8,
+      "end": 156.04,
+      "text": "This support includes the ability to edit, browse, create, delete, rename, copy and replace"
+    },
+    {
+      "start": 156.04,
+      "end": 163.4,
+      "text": "ZOS Unix files. This new support is implemented as a directory list utility known as the ZOS"
+    },
+    {
+      "start": 163.4,
+      "end": 170.28,
+      "text": "Unix directory list utility available as option 17 on the ISPF utilities menu. This initial"
+    },
+    {
+      "start": 170.28,
+      "end": 174.76,
+      "text": "implementation of the directory list utility provides a subset of the functions that are"
+    },
+    {
+      "start": 174.76,
+      "end": 179.8,
+      "text": "supported by iShell. The set of functions supported by the directory list facility are"
+    },
+    {
+      "start": 179.8,
+      "end": 185.32,
+      "text": "aimed to assist with basic tasks undertaken by programmers. The utility is not really aimed at"
+    },
+    {
+      "start": 185.88,
+      "end": 192.36,
+      "text": "users like the ZOS Unix file system admins. Now as much as possible, the directory list"
+    },
+    {
+      "start": 192.36,
+      "end": 197.72,
+      "text": "utility is designed to behave and support commands similar to the data set list utility"
+    },
+    {
+      "start": 197.72,
+      "end": 204.04,
+      "text": "which is ISPF option 3.4 and that's done on purpose to assist users who are familiar with"
+    },
+    {
+      "start": 204.04,
+      "end": 209.4,
+      "text": "the operation of the data set list utility but maybe have less experience working with ZOS Unix"
+    },
+    {
+      "start": 209.4,
+      "end": 217.88,
+      "text": "files through utilities such as OMVS or iShell. When option 17 on the ISPF utility selection panel"
+    },
+    {
+      "start": 217.88,
+      "end": 225.24,
+      "text": "so that's ISPF option 3.17 is entered the ZOS Unix directory list utility entry panel is displayed."
+    },
+    {
+      "start": 225.8,
+      "end": 231.16,
+      "text": "This panel supports the following options blank to display a list of files in a directory and"
+    },
+    {
+      "start": 231.16,
+      "end": 237.4,
+      "text": "p to print a list of files in a directory to the ISPF list data set. For either option the user"
+    },
+    {
+      "start": 237.4,
+      "end": 242.36,
+      "text": "must enter in the path name field the path name of the directory they want to display or to"
+    },
+    {
+      "start": 242.36,
+      "end": 250.04,
+      "text": "print. If a path name is not entered well then the user's home path is assumed. The ZOS Unix directory"
+    },
+    {
+      "start": 250.04,
+      "end": 255.08,
+      "text": "list panel is displayed when the option field is left blank and enter is pressed on the entry panel."
+    },
+    {
+      "start": 255.64,
+      "end": 261.08,
+      "text": "This panel lists all the files in a directory. The information for each entry in the directory"
+    },
+    {
+      "start": 261.08,
+      "end": 266.44,
+      "text": "is displayed in column fields across the screen. Now keep in mind that the number of columns"
+    },
+    {
+      "start": 266.44,
+      "end": 272.84,
+      "text": "displayed depends upon the available screen width. This example here shows the initial directory"
+    },
+    {
+      "start": 272.84,
+      "end": 279.24,
+      "text": "list display on a terminal with a screen width of 85 and a screen depth of 31."
+    },
+    {
+      "start": 281.08,
+      "end": 288.2,
+      "text": "Horizontal scrolling is supported using the right and left primary commands or function keys 11 and"
+    },
+    {
+      "start": 288.2,
+      "end": 294.92,
+      "text": "10. This example shows the directory list display after entering the command right 5 on"
+    },
+    {
+      "start": 294.92,
+      "end": 300.68,
+      "text": "the directory list shown on a previous screenshot. The order in which columns appear in the directory"
+    },
+    {
+      "start": 300.68,
+      "end": 305.72,
+      "text": "list display and the size of the fields can be customized using the ZOS Unix directory list"
+    },
+    {
+      "start": 305.72,
+      "end": 311.16,
+      "text": "column arrangement panel. This panel is accessed by using the pull down menu displayed under"
+    },
+    {
+      "start": 311.16,
+      "end": 315.72,
+      "text": "options on the action bar on the ZOS Unix directory list entry and display panels."
+    },
+    {
+      "start": 316.44,
+      "end": 320.36,
+      "text": "Here the user can change the order in which the columns are displayed and the width of"
+    },
+    {
+      "start": 320.36,
+      "end": 325.96,
+      "text": "the column fields. If a column fields width is set to zero the column is not displayed"
+    },
+    {
+      "start": 325.96,
+      "end": 332.36,
+      "text": "in the directory list. In the next video we'll discuss how to perform tasks by using the"
+    },
+    {
+      "start": 332.36,
+      "end": 334.92,
+      "text": "directory list utility panels."
+    }
+  ]
+}
